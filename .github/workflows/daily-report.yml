@@ -1,0 +1,45 @@
+name: Daily Submission Report (IST)
+
+on:
+  schedule:
+    # Runs daily at 18:40 UTC, which is 00:10 IST (next day)
+    - cron: "40 18 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run daily report script
+        run: |
+          python scripts/daily_report.py
+
+      - name: Commit and push reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add reports/*.md reports/*.csv
+
+          # Only commit if there are changes
+          if git diff --cached --quiet; then
+            echo "No report changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Daily submission report (IST)"
+          git push
