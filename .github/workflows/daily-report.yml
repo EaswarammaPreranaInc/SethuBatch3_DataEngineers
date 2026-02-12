@@ -1,45 +1,40 @@
-name: Daily Submission Report (IST)
+- name: Checkout repository (full history)
+  uses: actions/checkout@v4
+  with:
+    fetch-depth: 0
 
-on:
-  schedule:
-    # Runs daily at 18:40 UTC, which is 00:10 IST (next day)
-    - cron: "40 18 * * *"
-  workflow_dispatch: {}
+- name: Fetch all branches
+  run: |
+    git fetch --all --prune --tags
 
-permissions:
-  contents: write
+- name: Set up Python
+  uses: actions/setup-python@v5
+  with:
+    python-version: "3.11"
 
-jobs:
-  generate-report:
-    runs-on: ubuntu-latest
+- name: Install Excel dependency
+  run: |
+    python -m pip install --upgrade pip
+    pip install openpyxl==3.1.5
 
-    steps:
-      - name: Checkout repository (full history)
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+- name: Run daily report script
+  env:
+    VERBOSE: "1"
+    # Optional strictness/fallbacks:
+    # ENFORCE_SINGLE_FILE: "1"
+    # INCLUDE_MAIN_FALLBACK: "1"
+    # MAIN_BRANCH_NAME: "main"
+  run: |
+    python scripts/daily_report.py
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Run daily report script
-        run: |
-          python scripts/daily_report.py
-
-      - name: Commit and push reports
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add reports/*.md reports/*.csv
-
-          # Only commit if there are changes
-          if git diff --cached --quiet; then
-            echo "No report changes to commit."
-            exit 0
-          fi
-
-          git commit -m "Daily submission report (IST)"
-          git push
+- name: Commit and push reports
+  run: |
+    git config user.name "github-actions[bot]"
+    git config user.email "github-actions[bot]@users.noreply.github.com"
+    git add reports/*.md reports/*.csv reports/*.xlsx || true
+    if git diff --cached --quiet; then
+      echo "No report changes to commit."
+      exit 0
+    fi
+    git commit -m "Daily IST report + updated submissions_daily_matrix.xlsx"
+    git push
