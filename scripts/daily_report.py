@@ -1,36 +1,51 @@
 #!/usr/bin/env python3
 """
-Daily submission report (IST) – supports multiple files per day:
-- Filenames accepted:
+Daily submission report (IST) – with Day-by-Day Excel Matrix.
+
+Outputs per run (for the IST date that just ended):
+- reports/daily_report_YYYYMMDD.md
+- reports/submitted_YYYYMMDD.csv
+- reports/not_submitted_YYYYMMDD.csv
+- reports/late_YYYYMMDD.csv
+- reports/naming_issues_YYYYMMDD.csv
+- NEW: reports/submissions_daily_matrix.xlsx
+    Sheet "daily_counts":
+      roll_number | full_name | github_username | 2026-02-01 | 2026-02-02 | ... | total_files | unique_days
+
+Key behaviors:
+- Scans student branches (local or 'origin/<username>') after 'git fetch --all --prune --tags'.
+- Accepts multiple files per day:
     firstname_lastname_YYYYMMDD.py
     firstname_lastname_YYYYMMDD_1.py
     firstname_lastname_YYYYMMDD_2.py
-    ...
-- A student is counted as "submitted" if at least one matching file exists for the target day.
-- Each matching file is listed in submitted CSV and checked separately for lateness.
+- For 'late' marking uses the file’s last commit time vs 23:59:59 IST of that day.
+- Rebuilds the Excel matrix from ALL reports/submitted_*.csv files each run (stateless & robust).
 
-Environment variables:
+Environment variables (optional):
 - TARGET_DATE_IST: YYYYMMDD or YYYY-MM-DD  (default: yesterday in IST)
 - INCLUDE_MAIN_FALLBACK: "1" to also search 'main' if student branch is missing (default: off)
 - MAIN_BRANCH_NAME: default "main"
 - VERBOSE: "1" for extra diagnostic output
 - ENFORCE_SINGLE_FILE: "1" to flag MULTIPLE_FILES as a naming issue (default: off)
-
-Outputs:
-- reports/daily_report_YYYYMMDD.md
-- reports/submitted_YYYYMMDD.csv             (one row per file)
-- reports/not_submitted_YYYYMMDD.csv
-- reports/late_YYYYMMDD.csv                  (one row per file)
-- reports/naming_issues_YYYYMMDD.csv
 """
 
 import os
 import re
 import csv
 import sys
+import glob
 import subprocess
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
+
+# Excel deps
+try:
+    from openpyxl import Workbook
+    from openpyxl.styles import Alignment, Font, PatternFill
+    from openpyxl.utils import get_column_letter
+    OPENPYXL_AVAILABLE = True
+except Exception:
+    OPENPYXL_AVAILABLE = False
 
 IST = ZoneInfo("Asia/Kolkata")
 
@@ -75,7 +90,7 @@ def ensure_dirs():
 def git_fetch_all():
     ok, out = try_run(["git", "fetch", "--all", "--prune", "--tags"])
     if not ok:
-        print("WARNING: 'git fetch --all --prune' failed. The script may miss remote branches.", file=sys.stderr)
+        print("WARNING: 'git fetch --all --prune --tags' failed. The script may miss remote branches.", file=sys.stderr)
         verbose(out)
 
 def ref_exists(ref: str) -> bool:
@@ -128,18 +143,114 @@ def read_students() -> list[dict]:
         reader = csv.DictReader(f)
         if "github_username" not in reader.fieldnames:
             raise ValueError("students.csv must contain a 'github_username' column.")
+        has_full = "full_name" in reader.fieldnames
+        has_roll = "roll_number" in reader.fieldnames
         for row in reader:
             username = (row.get("github_username") or "").strip()
             if not username:
                 continue
             students.append({
                 "github_username": username,
-                "full_name": (row.get("full_name") or "").strip(),
+                "full_name": (row.get("full_name") or "").strip() if has_full else "",
+                "roll_number": (row.get("roll_number") or "").strip() if has_roll else "",
             })
     return students
 
 def ist_deadline_for_date(d: datetime.date) -> datetime:
     return datetime(d.year, d.month, d.day, 23, 59, 59, tzinfo=IST)
+
+def build_daily_counts_from_reports(reports_dir: str) -> tuple[list[str], dict[str, dict[str, int]]]:
+    """
+    Parse all 'submitted_YYYYMMDD.csv' under reports/ and build:
+    - dates: sorted list of 'YYYY-MM-DD' strings
+    - counts: dict[date_str][github_username] = files_count_on_that_date
+    """
+    pattern = os.path.join(reports_dir, "submitted_*.csv")
+    date_to_counts: dict[str, dict[str, int]] = {}
+    for path in sorted(glob.glob(pattern)):
+        base = os.path.basename(path)
+        # Expect: submitted_YYYYMMDD.csv
+        m = re.match(r"submitted_(\d{8})\.csv$", base)
+        if not m:
+            continue
+        yyyymmdd = m.group(1)
+        date_str = datetime.strptime(yyyymmdd, "%Y%m%d").date().isoformat()  # YYYY-MM-DD
+        per_user = date_to_counts.setdefault(date_str, {})
+        try:
+            with open(path, newline="", encoding="utf-8") as f:
+                r = csv.DictReader(f)
+                for row in r:
+                    u = (row.get("github_username") or "").strip()
+                    if not u:
+                        continue
+                    per_user[u] = per_user.get(u, 0) + 1  # count files
+        except Exception as e:
+            print(f"WARNING: Could not read {path}: {e}", file=sys.stderr)
+
+    dates = sorted(date_to_counts.keys())
+    return dates, date_to_counts
+
+def write_excel_daily_matrix(path: str, students: list[dict], dates: list[str], date_to_counts: dict[str, dict[str, int]]):
+    if not OPENPYXL_AVAILABLE:
+        print("WARNING: openpyxl not available; skipping Excel matrix.", file=sys.stderr)
+        return
+
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "daily_counts"
+
+    # Header row
+    fixed_headers = ["roll_number", "full_name", "github_username"]
+    headers = fixed_headers + dates + ["total_files", "unique_days"]
+    ws.append(headers)
+
+    # Sort student rows by roll_number if present, else by username
+    def sort_key(s):
+        rn = s.get("roll_number", "")
+        return (rn if rn else "ZZZ", s["github_username"])
+
+    bold = Font(bold=True)
+    center = Alignment(horizontal="center")
+    gray = PatternFill("solid", fgColor="EEEEEE")
+
+    # Apply header styles
+    for col_idx, header in enumerate(headers, start=1):
+        cell = ws.cell(row=1, column=col_idx, value=header)
+        cell.font = bold
+        cell.alignment = center
+        if header in ("total_files", "unique_days"):
+            cell.fill = gray
+
+    # Data rows
+    for s in sorted(students, key=sort_key):
+        u = s["github_username"]
+        row_values = [
+            s.get("roll_number", "") or "",
+            s.get("full_name", "") or "",
+            u,
+        ]
+        total = 0
+        unique_days = 0
+        for d in dates:
+            c = date_to_counts.get(d, {}).get(u, 0)
+            row_values.append(c)
+            total += c
+            if c > 0:
+                unique_days += 1
+        row_values += [total, unique_days]
+        ws.append(row_values)
+
+    # Simple autosize
+    for col_idx in range(1, ws.max_column + 1):
+        max_len = 0
+        col_letter = get_column_letter(col_idx)
+        for cell in ws[col_letter]:
+            if cell.value is not None:
+                max_len = max(max_len, len(str(cell.value)))
+        ws.column_dimensions[col_letter].width = min(max_len + 2, 50)
+
+    wb.save(path)
+    print(f"Wrote Excel daily matrix: {path}")
 
 def main():
     ensure_dirs()
@@ -160,13 +271,9 @@ def main():
 
     students = read_students()
 
-    # One row per *file*
     submitted_rows: list[tuple[str, str, str, str]] = []   # (username, full_name, file_name, commit_time_ist)
     late_rows: list[tuple[str, str, str, str]] = []        # (username, full_name, file_name, commit_time_ist)
-
-    # One row per *student* with zero files
     not_submitted_rows: list[tuple[str, str]] = []         # (username, full_name)
-
     naming_issues: list[tuple[str, str, str, str]] = []    # (username, full_name, issue, details)
 
     for s in students:
@@ -195,7 +302,6 @@ def main():
             if not m:
                 continue
             if m.group("yyyymmdd") == yyyymmdd:
-                # Extract optional numeric index for future use/sorting
                 idx_str = m.group("idx")
                 idx = int(idx_str) if idx_str is not None else 0
                 matches.append((idx, fn))
@@ -207,13 +313,12 @@ def main():
         # Sort by index then filename for stable output
         matches.sort(key=lambda t: (t[0], t[1]))
 
-        # If enforcing a single file/day policy, flag a naming issue when >1
         if enforce_single_file and len(matches) > 1:
             naming_issues.append(
                 (username, full_name, "MULTIPLE_FILES", ";".join([fn for _, fn in matches]))
             )
 
-        # Basic prefix sanity checks on each file
+        # Prefix sanity on each file
         for _, fn in matches:
             prefix = fn.rsplit("_", 1)[0] if fn.lower().endswith(".py") else fn
             if len(prefix) < 3:
@@ -246,15 +351,13 @@ def main():
                  f"Scanned on {main_branch}; commit times may reflect merge/squash time.")
             )
 
-    # File paths
-    yyyymmdd = target_date.strftime("%Y%m%d")
+    # === Write per-day CSVs and Markdown ===
     submitted_csv = os.path.join(REPORTS_DIR, f"submitted_{yyyymmdd}.csv")
     not_submitted_csv = os.path.join(REPORTS_DIR, f"not_submitted_{yyyymmdd}.csv")
     late_csv = os.path.join(REPORTS_DIR, f"late_{yyyymmdd}.csv")
     naming_csv = os.path.join(REPORTS_DIR, f"naming_issues_{yyyymmdd}.csv")
     md_report = os.path.join(REPORTS_DIR, f"daily_report_{yyyymmdd}.md")
 
-    # CSV outputs
     with open(submitted_csv, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["github_username", "full_name", "file_name", "commit_time_ist"])
@@ -275,13 +378,11 @@ def main():
         w.writerow(["github_username", "full_name", "issue", "details"])
         w.writerows(naming_issues)
 
-    # Markdown summary
     with open(md_report, "w", encoding="utf-8") as f:
         f.write(f"# Daily Submission Report - {target_date.isoformat()} (IST)\n\n")
         f.write(f"**Deadline:** {deadline_ist.strftime('%Y-%m-%d %H:%M:%S %Z')}\n\n")
         f.write(f"## Summary\n")
         f.write(f"- Total students: **{len(students)}**\n")
-        # Submitted students = unique users who had >= 1 file
         submitted_students = sorted({u for (u, *_rest) in submitted_rows})
         f.write(f"- Submitted (students): **{len(submitted_students)}**\n")
         f.write(f"- Total files submitted: **{len(submitted_rows)}**\n")
@@ -327,6 +428,11 @@ def main():
     print(f"- {not_submitted_csv}")
     print(f"- {late_csv}")
     print(f"- {naming_csv}")
+
+    # === Build & write Excel daily matrix ===
+    dates, date_to_counts = build_daily_counts_from_reports(REPORTS_DIR)
+    excel_path = os.path.join(REPORTS_DIR, "submissions_daily_matrix.xlsx")
+    write_excel_daily_matrix(excel_path, students, dates, date_to_counts)
 
 if __name__ == "__main__":
     try:
