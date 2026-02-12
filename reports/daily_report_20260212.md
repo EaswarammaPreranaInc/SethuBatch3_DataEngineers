@@ -4,12 +4,13 @@
 
 ## Summary
 - Total students: **108**
-- Submitted: **0**
-- Not submitted: **108**
+- Submitted: **1**
+- Not submitted: **107**
 - Late submissions: **0**
 - Naming/duplicate issues: **0**
 
 ## Submitted
+- Akhil-11001 (Edapu Akhil) — `Akhil_Edapu_20260212.py` — 2026-02-12T04:15:49+05:30
 
 ## Not Submitted
 - vishnureddy182 (kondam Vishnu)
@@ -18,7 +19,6 @@
 - pyarasani05 (Srilakshmi Pyarasani)
 - DhruvaGupta (Dhruva Gupta)
 - Shilpa2001-k (Kambhampati Shilpa)
-- Akhil-11001 (Edapu Akhil)
 - rakesh-kasina (Rakesh kasina)
 - chinnukanimeraka (KANIMERAKA DHANALAKSHMI)
 - nsspankaj123 (Namavarapu Subrahmanya Sai Pankaj)
@@ -124,5 +124,5 @@
 ## Late Submissions
 - None
 
-## Naming / Duplicate Issues
+## Naming / Duplicate / Warnings
 - None
