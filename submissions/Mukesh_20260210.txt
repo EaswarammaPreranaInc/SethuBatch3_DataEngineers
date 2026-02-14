@@ -1,0 +1,80 @@
+# float  object  demo  program (Home  work)
+a = 10.8
+print(a) #10.8
+print(type(a)) #  Class float 
+print(id(a)) # 70000
+b = 25. #error 
+print(b)
+print(type(b)) # Class  float
+c = .689 
+print(c) # 0.689
+d = 3.4E2 
+print(d) #340 
+print(type(d)) # class Float
+e = 9.62e-2 
+print(e) #0.0962
+print(9.8.2) # it is error because of syntax inavlid
+
+
+# complex object demo program
+a = 3 + 4j
+print(a) # #+4j
+print(type(a)) # class Complex
+print(id(a)) # addresm of object 40000
+print(a . real ) # 3.o
+print(a . imag) # 4.0
+print(type(a . real)) class float  
+print(type(a . imag)) class Float 
+
+
+# Find outputs (Home work)
+a = 6j
+print(a) 6j
+print(type(a)) class Float
+print(a.real) 0.0
+print(a.imag)6.0
+print(5 + j6)   #invalid because of first number then character 6j 
+print(3 + 4i) # invalid  i in not invalid in python
+print(4+j)  # invalid syntax because one should be in imagary number at least
+print(4 + 1j)# Valid 
+print(4 + 0j) #VALID
+
+
+
+# bool object demo program  (Home  work)
+a = True
+print(a) TRUE 
+print(type(a)) CLASS BOOL
+print(id(a)) ADDRES OF TRUE MEAN BE 50000
+b = False
+print(b) FALSE
+print(type(b)) CLASS BOOL
+print(True + True) # 2
+print(True + False) # 1
+print(False + True) # 1
+print(False + False) # 0
+print(True + True + True) #3
+print(25 + 10.8 + True) # 36.8
+print(True > False)  # 1
+print(True)  # TRUE
+print(False) # FALSE
+print(true) #INVLAID BECAUSE SMALL LETTER
+print(false) #INVALID BECAUSE SMALL LETTER
+
+# Find  outputs (Home  work)
+a = 0O6247
+print(a) 
+print(type(a))# 3239
+print(id(a))  # CLASS INT 
+b = 0o6247
+print(id(b)) #3239
+print(b) # CLASS INT 
+c = 3239
+print(c) # 3239
+print(id(c)) # CLASS INT 
+print(0o9248) # INVLAID BECAUS E THE NUMBER WE HAVE 9 , SO THAT INVALID 
+
+# Find outputs (Home  work)
+a = 9248
+print(a) #9248
+print(type(a)) CLASS INT  
