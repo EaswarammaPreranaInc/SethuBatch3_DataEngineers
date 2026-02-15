@@ -83,7 +83,7 @@ print(a * a)  # error as sequence * integer only
 
 # list()  function  demo  program
 a = list('Hyd')
-print(a) # ['Hyd']
+print(a) # ['H','y','d']
 print(type(a)) # <class 'list'>
 print(len(a))  # 3
 b = (10 , 20 , 15 , 18)
@@ -163,3 +163,4 @@ print(a , id(a)) # [10,20,100,200,300,50]
 a =  [25]
 print(a[1]) # error as index is out of range
 print(a[1:]) # empty string
+
