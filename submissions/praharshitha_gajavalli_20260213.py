@@ -164,3 +164,4 @@ a =  [25]
 print(a[1]) # error as index is out of range
 print(a[1:]) # empty string
 
+
