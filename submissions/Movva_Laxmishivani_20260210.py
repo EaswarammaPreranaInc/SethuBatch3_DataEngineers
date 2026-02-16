@@ -93,3 +93,4 @@ print(0xA7G9B) # ERROR because hexa-decimal integer should be from 0-9 and A-F o
 
 # Find outputs (Home work) a = 9248
 print(a) # 9248 print(type(a)) # <class 'int'>
+
