@@ -162,10 +162,11 @@ print(a , id(a)) -------> [10 , 20 , 30 , 40 , 50],<Address of object a>
 a[1 : 4] = [60 , 70]
 print(a , id(a)) -------> [10 , 60 , 70, 50],<Address of modified object a >
 a[2: 4] = [100 , 200 ,  300]
-print(a , id(a)) 	------>[10 , 60 , 100 , 200 ,  300],<Address of modified object a >
+print(a , id(a)) 	------> [10 , 60 , 100 , 200 ,  300],<Address of modified object a >
 
 12)#  Find  outputs  (Home  work)
 ----------------------------------
 a =  [25]
 print(a[1])  ---> 25
+
 print(a[1:]) ----> []
