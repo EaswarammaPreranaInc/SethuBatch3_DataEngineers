@@ -58,5 +58,6 @@ a = (10 , 20 , 30)
 print(a)	# (10, 20, 30)
 print(id(a))	# address of a
 a = a * 2  #  Valid / Invalid
-print(a)   	# error
-print(id(a))	# error
+print(a)   	# (10,20,30,10,20,30)
+print(id(a))	# Adress of a
+
