@@ -79,4 +79,5 @@ print(0xA7G9B) #erorr
 # Find outputs (Home  work)
 a = 9248
 print(a) # 9248
+
 print(type(a)) # int
