@@ -1,6 +1,6 @@
 #  set  object  demo  program  (Home  work)
 a = {25, 10.8, "Hyd", True, 3 + 4j, None, 25, "Hyd"}
-print(a)  # {25 , 10.8 , 'Hyd' , True , 3+4j , None , 25 , 'Hyd'}
+print(a)  # {25 , 10.8 , 'Hyd' , True , 3+4j , None}
 print(type(a))  # <class 'set'>
 print(len(a))  # 6
 print(a[2])  # Error
@@ -85,7 +85,7 @@ print(a[18])  # Sita
 print(a[19])  # Error no key exist
 print(a[0])  # Error no key exist
 print(a["Amar"])  # Error no key exist
-# How  to  moify  value  of   key  15  to  'Krishna'
+# How  to  modify value  of   key  15  to  'Krishna'
 a[15] = "Krishna"
 # How  to  remove  20 :  'Kiran'  from  dict  'a'
 del a[20]
@@ -186,3 +186,4 @@ for _ in range(5):
 # 2 Hello
 # 3 Hello
 # 4 Hello
+
