@@ -93,7 +93,7 @@ print(a[18])
 #How  to  moify  value  of   key  15  to  'Krishna'
 a[15]='Krishna'
 #How  to  remove  20 :  'Kiran'  from  dict  'a'
-a[20]='a'
+del a[20]
 #How  to  append  25 : 'Vamsi'  to  dict  'a'
 a[25]='Vamsi'
 print(a)
@@ -146,10 +146,12 @@ print('Dictionary  with  print  function')
 print(a)
 print('Keys  of  dictionary')
 #How  to  iterate  thru  each  key  of  dict  'a'  with  for  loop
-print(a.keys())
+for i in a.keys():
+	print(i)
 print('Values  of  dictionary')
 #How  to  iterate  thru  each  value  of  dict  'a'  with  for  loop
-print(a.values())
+for i in a.values():
+	print(i)
 print('Tuples  of  dict_items   object')
 #How  to  iterate  thru  each  tuple  of  dict  'a'  with  for  loop
 a=a.items()
@@ -173,4 +175,5 @@ print(a) #10
 print(_) #20
 print(c) #0
 for  _  in  range(5):
+
 	print(_ , 'Hello') #0 Hello <nextline> 1 Hello <Nextline> 2 Hello <Nextline> 3 Hello <nextline> 4 Hello
