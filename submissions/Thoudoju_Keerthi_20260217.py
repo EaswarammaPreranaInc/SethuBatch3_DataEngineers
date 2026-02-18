@@ -1,4 +1,22 @@
-#  set()  function demo  program
+#  set  object  demo  program  (Home  work)
+a = {25 , 10.8 , 'Hyd' , True , 3+4j , None , 25 , 'Hyd'}
+print(a) #{25, 10.8, 'Hyd',True,3+4j,None}
+print(type(a)) # <class 'set'>
+print(len(a)) #6
+print(a[2]) # Error
+print(a[1 : 4]) # error
+a[2] = 'Sec' # error
+print(a * 2) #error
+print(a * a)# error
+
+# Tricky  program
+# Find  outputs (Home  work)
+a = {1 , 'Hyd' , False , True , 0.0 , '' , 1.0 ,  0}
+print(a) #{ 1,'Hyd',False,''}
+print(len(a)) # 4
+print(type(a)) # < class 'set'>
+
+#set()  function demo  program
 --------------------------------
 a = set('Rama rAo')
 print(a) # {'R', 'a', 'm' , '', 'r', 'A', 'o'}
@@ -192,3 +210,4 @@ for  _  in  range(5):
 # 2, Hello
 # 3, Hello
 # 4, Hello
+
