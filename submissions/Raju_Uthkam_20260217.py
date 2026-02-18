@@ -154,8 +154,7 @@ for i in a.values():
 	print(i)
 print('Tuples  of  dict_items   object')
 #How  to  iterate  thru  each  tuple  of  dict  'a'  with  for  loop
-a=a.items()
-for i in a:
+for i in a.items():
     print(i)
 print('Elements  of  each   tuple')
 #How  to  print  elements  of  each  tuple  in  the  list  of  dict_items  object
@@ -177,3 +176,4 @@ print(c) #0
 for  _  in  range(5):
 
 	print(_ , 'Hello') #0 Hello <nextline> 1 Hello <Nextline> 2 Hello <Nextline> 3 Hello <nextline> 4 Hello
+
