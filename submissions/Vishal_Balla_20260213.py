@@ -1,4 +1,4 @@
-
+#Day 4
 
 a = range(10 , 50 , 5)
 print(type(a)) #<class range>
@@ -179,4 +179,5 @@ print(a , id(a))#[10, 60, 100, 200, 300] addresof the list
 
 a =  [25]
 print(a[1]) #Error due to only index becoz index starts from 0
+
 print(a[1:]) #[]
