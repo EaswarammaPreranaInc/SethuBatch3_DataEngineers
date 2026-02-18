@@ -162,7 +162,8 @@ for i,j in a.items():
     print(i,j,sep='..')
 print('Keys  and  values  of  dictionary')
 #How  to  print  each  key  and  corresponding  value  in  dict  'a'
-print(a)
+for i in a.keys():
+	print(i,a[i],sep=':')
 
 
 #  Anonymous  object  demo  program
@@ -176,5 +177,6 @@ print(c) #0
 for  _  in  range(5):
 
 	print(_ , 'Hello') #0 Hello <nextline> 1 Hello <Nextline> 2 Hello <Nextline> 3 Hello <nextline> 4 Hello
+
 
 
