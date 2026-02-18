@@ -1,6 +1,6 @@
 #  set  object  demo  program  (Home  work)
 a = {25 , 10.8 , 'Hyd' , True , 3+4j , None , 25 , 'Hyd'}
-print(a)   #  {25 , 10.8 , 'Hyd' , True , 3+4j , None , 25 , 'Hyd'}
+print(a)   #  {25 , 10.8 , 'Hyd' , True , 3+4j , None}
 print(type(a))  # <class 'set'>
 print(len(a)) # 6
 print(a[2])    # error as there is no indexing in set
@@ -19,8 +19,8 @@ print(type(a)) # <class 'set'>
 
 #  set()  function demo  program
 a = set('Rama rAo')
-print(a) # {'R','a','m','r','A','o'}
-print(len(a)) # 6
+print(a) # {'R','a','m',' ','r','A','o'}
+print(len(a)) # 7
 print(set([10 , 20 , 15 , 20])) # {10,15,20}
 print(set((25 , 10.8 , 'Hyd' , 10.8)))  # {25,10.8,'Hyd'}
 print(set(range(10 , 20 , 3)))  # {10,13,16,19}
@@ -45,13 +45,13 @@ c =   {}
 d =   set()
 print(type(a)) # <class 'list'>
 print(type(b))  # <class 'tuple'>
-print(type(c)) # <class 'set'>
+print(type(c)) # <class 'dict'>
 print(type(d)) # <class 'set'>
 
 print(a) # [ ]
 print(b) # ( )
 print(c) # {}
-print(d) # {}
+print(d) # set()
 
 
 # Tricky  program
@@ -82,13 +82,13 @@ print('set  with  print  function')
 #print(a)
 print('Iterate  thru  set  with  for  loop')
 How  to  iterate  thru  set  with  for  loop
-# for i in a:
-      print(a[i])
+# for x in a:
+      print(x)
 
 # Find  outputs  (Home  work)
 a = {10 : 'Ramesh' , 20 : 'Kiran' , 15 : 'Amar' , 18 : 'Sita'}
 print(a)  # {10 : 'Ramesh' , 20 : 'Kiran' , 15 : 'Amar' , 18 : 'Sita'}
-print(type(a)) # <class 'set'>
+print(type(a)) # <class 'dict'>
 print(How  to  print  value  key  10) # a[10]
 print(How  to  print  value  key  20) # a[20]
 print(How  to  print  value  key  15) # a[15]
@@ -99,16 +99,16 @@ print(a['Amar'])  #error as key is invalid
 
 How  to  modify  value  of   key  15  to  'Krishna' # a[15] = 'krishna'
 How  to  remove  20 :  'Kiran'  from  dict  'a' # del a[20]
-How  to  append  25 : 'Vamsi'  to  dict  'a'  # error
-print(a) # {10:'Ramesh',15: 'krishna',18:'Sita'}
-print(len(a)) # 3
-print(a * 2)  # 3
+How  to  append  25 : 'Vamsi'  to  dict  'a'  # a[25] = 'Vamsi'
+print(a) # {10:'Ramesh',15: 'krishna',18:'Sita',25:'Vamsi'}
+print(len(a)) # 4
+print(a * 2)  # error
 
 
 # Find  outputs  (Home  work)
 a = {10 : 'Hyd' , 10 : 'Sec'}
 print(a) # {10:'Sec'}
-print(len(a))
+print(len(a)) # 1
 b = {'R' : 'Red' , 'G' : 'Green' , 'B' : 'Blue' , 'Y' : 'Yellow' , 'G' : 'Gray' , 'B' : 'Black'}
 print(b) # {'R' : 'Red' ,'Y' : 'Yellow' , 'G' : 'Gray' , 'B' : 'Black'}
 print(len(b))  # 4
@@ -116,8 +116,8 @@ print(len(b))  # 4
 #  Tricky  program
 # Find output  (Home  work)
 a = {True : 'Yes' , 1 : 'No' , 1.0 : 'May  be'}
-print(a) # {True : 'Yes' , 1.0 : 'May  be'}
-print(len(a)) # 2
+print(a) # {True : 'May  be'}
+print(len(a)) # 1
 
  # Find  outputs
 a = { [ ] : 25} # error as keys should be immutable
@@ -151,15 +151,16 @@ How  to  iterate  thru  each  key  of  dict  'a'  with  for  loop
       print(key)
 print('Values  of  dictionary')  # print(a.values())
 How  to  iterate  thru  each  value  of  dict  'a'  with  for  loop
-# for key in a:
-#  for value in a[key]:
-        print(value)
+#  for x in a:
+      print(x,a[x])
 print('Tuples  of  dict_items   object')  #print(a.items())
 How  to  iterate  thru  each  tuple  of  dict  'a'  with  for  loop
-# for i,j in a.items():
-       print(i,j) 
+# for i in a.items():
+       print(i) 
 print('Elements  of  each   tuple')
 How  to  print  elements  of  each  tuple  in  the  list  of  dict_items  object
+# for i,j in a.items():
+       print(i,j)
 print('Keys  and  values  of  dictionary')
 How  to  print  each  key  and  corresponding  value  in  dict  'a'
 # print(a)
@@ -171,7 +172,7 @@ a = {
 		print('Cyb')
 	}
 print(type(a))  # <class 'set'>
-print(a)   # {'Hyd','Sec','Cyb'}
+print(a)   # {None,None,None}
 print(len(a)) # 3
 
 #  Anonymous  object  demo  program
@@ -190,4 +191,5 @@ for  _  in  range(5):
   2 Hello
   3 Hello
   4 Hello
+
 '''
