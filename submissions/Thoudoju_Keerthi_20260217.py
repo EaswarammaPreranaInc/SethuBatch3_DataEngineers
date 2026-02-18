@@ -125,7 +125,7 @@ print(len(b)) # 4
  #  Tricky  program
 # Find output  (Home  work)
 a = {True : 'Yes' , 1 : 'No' , 1.0 : 'May  be'}
-print(a) # { 1.0 : 'May  be'}
+print(a) # { True: 'May  be'}
 print(len(a)) # 1
 
 
@@ -133,7 +133,7 @@ print(len(a)) # 1
 a = { [ ] : 25} # key as non-sequence is not allowed
 b = { ( ) : 25}
 print(b) # { ( ) : 25}
-c = { { } : 25}
+c = { { } : 25} # dictionary is mutable not allowed 
 d = {'Ramesh' : [9948250500, 9848565090, 9440250404]}
 print(d) # {'Ramesh' : [9948250500, 9848565090, 9440250404]}
 print(len(d)) # 1
@@ -160,26 +160,26 @@ How  to  print  dictionary  with  print()  function
 print('Keys  of  dictionary')
 #print(a.keys())
 How  to  iterate  thru  each  key  of  dict  'a'  with  for  loop
-# for k,v in a.items()
-# 	print(k,v)
+# for key in a.keys():
+# 	print(key)
 print('Values  of  dictionary')
 #print(a.values())
 How  to  iterate  thru  each  value  of  dict  'a'  with  for  loop
-#for value of a.values()
+#for value of a.values():
 #	print(value)
 print('Tuples  of  dict_items   object')
 #print(a.items())
 How  to  iterate  thru  each  tuple  of  dict  'a'  with  for  loop
 print('Elements  of  each   tuple')
-# for k,v in a.items()
+# for k,v in a.items():
 # 	print(k,v)
 How  to  print  elements  of  each  tuple  in  the  list  of  dict_items  object
 print('Keys  and  values  of  dictionary')
-# for key,value in a.items()
-# 	print(key":"+v)
+# for key,value in a.items():
+# 	print(key+":"+value)
 How  to  print  each  key  and  corresponding  value  in  dict  'a'
-# for key in a.keys()
-# 	print(key":"+a[key])
+# for key in a.keys():
+# 	print(key+":"+a[key])
 
 
 
@@ -188,10 +188,13 @@ a = {
 		print('Hyd') ,
 		print('Sec') ,
 		print('Cyb')
-	} # Suite is not allowed in blocks
+	}
+	# Hyd
+	# Sec
+	# Cyb
 print(type(a)) #<class 'set'>
-print(a) # {}
-print(len(a)) # 0
+print(a) # {None}
+print(len(a)) # 1
 
 
  #  Anonymous  object  demo  program
@@ -210,5 +213,6 @@ for  _  in  range(5):
 # 2, Hello
 # 3, Hello
 # 4, Hello
+
 
 
