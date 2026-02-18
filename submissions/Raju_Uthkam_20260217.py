@@ -165,6 +165,15 @@ print('Keys  and  values  of  dictionary')
 for i in a.keys():
 	print(i,a[i],sep=':')
 
+#Find outputs 
+a={
+	print('Hyd')
+	print('Sec')
+	print('Raju')
+ }
+print(type(a)) #<class 'set'>
+print(a) #{None}
+print(len(a)) #1
 
 #  Anonymous  object  demo  program
 _ = 25
@@ -177,6 +186,7 @@ print(c) #0
 for  _  in  range(5):
 
 	print(_ , 'Hello') #0 Hello <nextline> 1 Hello <Nextline> 2 Hello <Nextline> 3 Hello <nextline> 4 Hello
+
 
 
 
