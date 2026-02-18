@@ -81,9 +81,9 @@ a . remove(25)
 print(a) # {10.8, 'Hyd', True, None,1}
 a . append(100) # method doesnot valid for set
 a . add(set()) # Error nested set is not possible
-a . add(()) # Error
+a . add(()) # inserted
 a . add([]) # Error
-print(a) # {10.8, 'Hyd', True, None}
+print(a) # {10.8, 'Hyd', True, None,()}
 a . add({})  # Error nested set is not possible
 # How  to  print  set  in  two  differnet ways  (Home  work)
 a = {25 , True , 'Hyd' , 10.8}
@@ -210,4 +210,5 @@ for  _  in  range(5):
 # 2, Hello
 # 3, Hello
 # 4, Hello
+
 
