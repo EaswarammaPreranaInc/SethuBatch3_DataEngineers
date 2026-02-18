@@ -152,4 +152,5 @@ print(oct(0xA7B9))  # 1010 0111 1011 1001
 oct()  function
 -----------------
 1) What  does  oct(x)  do ?  --->  Converts  object  'x'  to  octal  number  where
+
 								                    'x'  can  be  binary / decimal / hexa-decimal  number
