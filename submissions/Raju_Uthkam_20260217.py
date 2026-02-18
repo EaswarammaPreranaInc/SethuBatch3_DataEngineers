@@ -158,8 +158,8 @@ for i in a.items():
     print(i)
 print('Elements  of  each   tuple')
 #How  to  print  elements  of  each  tuple  in  the  list  of  dict_items  object
-for i in a:
-    print(i)
+for i,j in a.items():
+    print(i,j,sep='..')
 print('Keys  and  values  of  dictionary')
 #How  to  print  each  key  and  corresponding  value  in  dict  'a'
 print(a)
@@ -176,4 +176,5 @@ print(c) #0
 for  _  in  range(5):
 
 	print(_ , 'Hello') #0 Hello <nextline> 1 Hello <Nextline> 2 Hello <Nextline> 3 Hello <nextline> 4 Hello
+
 
