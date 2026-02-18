@@ -22,7 +22,7 @@ print(type(a)) #<class 'set'>
 a = set('Rama rAo')
 print(a) #{'R', 'r', ' ', 'a', 'A', 'm', 'o'}
 print(len(a)) #7
-print(set([10 , 20 , 15 , 20])) #{10 , 20 , 15 , 20}
+print(set([10 , 20 , 15 , 20])) #{10 , 20 , 15}
 print(set((25 , 10.8 , 'Hyd' , 10.8))) #{25 , 10.8 , 'Hyd'}
 print(set(range(10 , 20 , 3))) #{10,16,13,19}
 print(set(25)) #Error due to int object cannot be iterate.
@@ -96,17 +96,17 @@ print(a * 2)  # Error dict cannot multipled.
 
 # Find  outputs  (Home  work)
 a = {10 : 'Hyd' , 10 : 'Sec'}
-print(a) #{10 : 'Hyd' , 10 : 'Sec'}
-print(len(a)) #2
+print(a) #{10 : 'Sec'}
+print(len(a)) #1
 b = {'R' : 'Red' , 'G' : 'Green' , 'B' : 'Blue' , 'Y' : 'Yellow' , 'G' : 'Gray' , 'B' : 'Black'}
-print(b) #{'R' : 'Red', 'Y' : 'Yellow' , 'G' : 'Gray' , 'B' : 'Black'}
+print(b) #{'R' : 'Red', 'G' : 'Gray' , 'B' : 'Black', 'Y' : 'Yellow'}
 print(len(b)) #4
 
 
 #  Tricky  program
 # Find output  (Home  work)
 a = {True : 'Yes' , 1 : 'No' , 1.0 : 'May  be'}
-print(a) #{True : 'May  be'} # 1 = True , 1.0 = 1 
+print(a) #{True : 'May  be'} # 1 = True , 1.0 = 1  Here only values changes not keys.
 print(len(a)) #1
 
 # Find  outputs
@@ -114,7 +114,7 @@ a = { [ ] : 25} #Error list is mutable we cannot use it as a key.
 b = { ( ) : 25} #We can use tuple -> It is immutable.
 print(b) # { () : 25}
 c = { { } : 25} #Error dict cannot be used as a key.
-d = {'Ramesh' : [9948250500, 9848565090, 9440250404]}
+d = {'Ramesh' : [9948250500, 9848565090, 9440250404]} # Valid because key is string immutable.
 print(d) #{'Ramesh' : [9948250500, 9848565090, 9440250404]}
 print(len(d)) # 1
 e = {set() : 10.8} #Error set is mutable cannot be used as a key.
@@ -137,33 +137,37 @@ print('Keys  of  dictionary') #print(a.keys())
 
 How  to  iterate  thru  each  key  of  dict  'a'  with  for  loop
 
-#for k in a:
+#for k in a.keys(): #dict_keys([10,20,15,18])
 	print(k)
 
 How  to  iterate  thru  each  value  of  dict  'a'  with  for  loop
 
 print('Values  of  dictionary') 
-# for v in a.values():
+# for v in a.values(): #dict_values(['Ramesh','Kiran','Amar','Sita'])
 	print(v)
 
 print('Tuples  of  dict_items   object') #
 How  to  iterate  thru  each  tuple  of  dict  'a'  with  for  loop
-# for t in a.items():
+# for t in a.items():  #dict_items([(10,'Ramesh'), (20 : 'Kiran') , (15 : 'Amar') , (18 : 'Sita')])
 	print(i)
 
 print('Elements  of  each   tuple')
 How  to  print  elements  of  each  tuple  in  the  list  of  dict_items  object
 
-#for dict_items in a.items():
-	print(dict_items[0],dict_items [1])
+#for x,y in a.items():		#Here only for items x,y variables are permitted.
+		print(x,y,sep='...')
 
 
 print('Keys  and  values  of  dictionary')
 How  to  print  each  key  and  corresponding  value  in  dict  'a'
 
+for x in a.keys():
+		print(x,a[x],sep=';')
+
+'''
 #for k,v in a.items():    # .items() prints tuples.
 	print(k,v)
-
+'''
 
 
 
@@ -199,6 +203,7 @@ for  _  in  range(5):
  3 Hello
  4 Hello
  '''
+
 
 
 
