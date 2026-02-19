@@ -36,7 +36,7 @@ c = range(5) #0 1 2 3 4
 print(id(c)) #Address of range object 
 #c[3] = 10 #range is immutable 
 c = range(5)
-print(id(c)) #Address of range object 
+print(id(c)) #Address of 2nd range object 
 
 
 # Find  outputs  (Home  work)
@@ -102,5 +102,6 @@ print((25, 10.8, 'Hyd', True) * 3) #(25, 10.8, 'Hyd', True,25, 10.8, 'Hyd', True
 #print({10 , 20 , 15} * 2) #Error #can't multiply sequence with non int
 #print({10 : 20 , 30 : 40} * 2) #Error 
 #print([10] * [20]) #Error
+
 
 
