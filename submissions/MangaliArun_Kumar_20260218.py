@@ -86,14 +86,15 @@ print([10 , 20 , 30] + (40 , 50 , 60)) #Error bcz mutable and immutable cannot c
 print(25 * 3) # 75
 print(10.8 * 25.6) # varies 276.48
 print(True * False) # False
-print((3 + 4j) * (5 + 6j)) #error 
-print(3 + 4j * 5 + 6j) #error
+print((3 + 4j) * (5 + 6j)) # -9+36j
+print(3 + 4j * 5 + 6j) # 3+26j
 print('25' * 3) # 252525
 print(3 * '25') #252525
 print('Hyd' * 4) #HydHydHydHyd
-print([10 , 20 , 15] * 2) # [10,20,15][10,20,15]
-print((25, 10.8, 'Hyd', True) *3) # (25, 10.8, 'Hyd', True)(25, 10.8, 'Hyd', True)(25, 10.8, 'Hyd', True)
+print([10 , 20 , 15] * 2) # [10,20,15 ,10,20,15]
+print((25, 10.8, 'Hyd', True) *3) # (25, 10.8, 'Hyd', True ,25, 10.8, 'Hyd', True ,25, 10.8, 'Hyd', True)
 print([10 , 20 , 15] * 3.0) # error
 print({10 , 20 , 15} * 2) #error
 print({10 : 20 , 30 : 40} * 2) #error
 print([10] * [20]) # error
+
