@@ -52,4 +52,5 @@ print(a) # (10, 20, 30)
 print(id(a)) # address of the object tuple with 3 elements 
 a = a * 2  #  Valid / Invalid
 print(a) # (10, 20, 30, 10, 20, 30)
+
 print(id(a)) # address of the new object tuple with 6 elements 
