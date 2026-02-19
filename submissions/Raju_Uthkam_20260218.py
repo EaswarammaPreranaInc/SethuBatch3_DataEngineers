@@ -63,7 +63,7 @@ d =  {10 : 20, 30 : 40}
 print(c  is  d) #False
 e = (10 , 20 , 15 , 18)
 f = (10 , 20 , 15 , 18)
-print(e  is  f) #False
+print(e  is  f) #True
 g = {10 , 20 , 15 , 18}
 h = {10 , 20 , 15 , 18}
 print(g  is  h) #False
@@ -102,6 +102,7 @@ print((25, 10.8, 'Hyd', True) * 3) #(25, 10.8, 'Hyd', True,25, 10.8, 'Hyd', True
 #print({10 , 20 , 15} * 2) #Error #can't multiply sequence with non int
 #print({10 : 20 , 30 : 40} * 2) #Error 
 #print([10] * [20]) #Error
+
 
 
 
