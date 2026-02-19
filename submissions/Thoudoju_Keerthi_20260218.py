@@ -85,21 +85,21 @@ print({10 : 'Hyd'} + {20 : 'Sec'}) # Not supported
 print(range(4) + range(5)) # Range objects does not support concatenation
 print(10 + '20')  # Error not supported
 print([10 , 20 , 30] + 5) # Error can add 5 to list
-print([10 , 20 , 30] + (40 , 50 , 60)) # can combine list and tuple, tuple must be converted to tuple
+print([10 , 20 , 30] + (40 , 50 , 60)) # can combine list and tuple, tuple must be converted to list
 
 
  # Find outputs (Home work)
 print(25 * 3) # 75
 print(10.8 * 25.6) # 276.48
 print(True * False) # 0
-print((3 + 4j) * (5 + 6j)) # -21 + 20j
+print((3 + 4j) * (5 + 6j)) # -9 + 38j
 print(3 + 4j * 5 + 6j) # 3 + 26j
 print('25' * 3) # 252525
 print(3 * '25') # 252525
 print('Hyd' * 4) # HydHydHydHyd
 print([10 , 20 , 15] * 2) # [ 10, 20, 15, 10, 20, 15]
 print((25, 10.8, 'Hyd', True) * 3) # (25, 10.8, 'Hyd', True, 25, 10.8, 'Hyd', True, 25, 10.8, 'Hyd', True)
-print([10 , 20 , 15] * 3.0) # second parameter must be integer
+print([10 , 20 , 15] * 3.0) # second operand must be integer
 print({10 , 20 , 15} * 2) # Error does not allow duplicates
 print({10 : 20 , 30 : 40} * 2) #  Error does not allow duplicates
 print([10] * [20]) # seq * seq is not allowed
