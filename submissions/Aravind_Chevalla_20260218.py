@@ -81,8 +81,8 @@ print('Sankar' + 'Dayal' + 'Sarma')# ‘SankarDayalSarma’
 print('10' + '20') # ‘1020’
 print([10 , 20 , 30] + [1 , 2 , 3])# [ 10, 20 ,30 ,40 ,1, 2 ,3]
 print((25 , 10.8 , 'Hyd') + (3 + 4j , True , None))# (25 , 10.8 , 'Hyd' ,3 + 4j , True , None)
-print({10 , 20} + {30 , 40}) {10,20,30,40}
-print({10 : 'Hyd'} + {20 : 'Sec'}) #{10 : 'Hyd', 20 : 'Sec'}
+print({10 , 20} + {30 , 40}) # error
+print({10 : 'Hyd'} + {20 : 'Sec'}) #error
 print(range(4) + range(5))# error
 print(10 + '20') #error
 print([10 , 20 , 30] + 5) #error
@@ -92,10 +92,10 @@ print([10 , 20 , 30] + (40 , 50 , 60))#error
 print(25 * 3) #75
 print(10.8 * 25.6) 
 print(True * False) #0
-print((3 + 4j) * (5 + 6j)) 
-print(3 + 4j * 5 + 6j)
+print((3 + 4j) * (5 + 6j)) # -9+38j
+print(3 + 4j * 5 + 6j)# 3+20j+6j=3+26j
 print('25' * 3) #‘252525’
-print(3 * '25') #‘252525
+print(3 * '25') #‘252525'
 print('Hyd' * 4) # ‘HydHydHyd’
 print([10 , 20 , 15] * 2) # [10 , 20 , 15 ,10 , 20 ,15]
 print((25, 10.8, 'Hyd', True) * 3) # (25, 10.8, 'Hyd', True, 25, 10.8, 'Hyd', True, 25, 10.8, 'Hyd', True)
