@@ -311,7 +311,7 @@ print('Hyd')  ;   print('Sec')  ;  print('Cyb')
  #pow()  function  demo  program
 import  math
 print(math . pow(2 , 3))  #  2 ^ 3 = 8
-print(math . pow(-2 , -3)) #(-2)^(-3)= 1/(-2^3)= 1/8 = 0.125
+print(math . pow(-2 , -3)) #(-2)^(-3)= 1/(-2^3)= -1/8 =- 0.125
 print(math . pow(10 , -2)) # 0.01
 print(math . pow(4 , math . pow(3 , 2))) #(4^(3^2))= 4 ^ 9
 
@@ -340,14 +340,14 @@ pow()  function
 # sqrt()  function  demo  program
 import  math
 print(math . sqrt(25)) # 5.0
-print(math . sqrt(10))# 3.1
+print(math . sqrt(10))# 3.16
 print(math . sqrt(6.25)) # 2.5
-print(math . sqrt(True))# Error
+print(math . sqrt(True))# 1.0
 print(math . sqrt(3+4j))# Error
-print(math . sqrt(math . sqrt(256)))  # 16.0
+print(math . sqrt(math . sqrt(256)))  # 4.0
 print(math . sqrt(math . pow(3 , 4))) # 9.0
 print(math . sqrt(-16)) # error
-print(sqrt(49)) # 7.0
+print(sqrt(49)) # Error
 
 
 
@@ -373,11 +373,11 @@ sqrt()  function
 
  # fabs()  function  demo   program
 import  math
-print(math . fabs(-10)) # -10
-print(math . fabs(-25.6)) # -25
-print(math . fabs(20)) # 20
-print(math . fabs(35.8)) # 35
-print(fabs(-25)) # -25
+print(math . fabs(-10)) # 10.0
+print(math . fabs(-25.6)) # 25.6
+print(math . fabs(20)) # 20.0
+print(math . fabs(35.8)) # 35.8
+print(fabs(-25)) # error
 
 
 '''
@@ -395,15 +395,15 @@ import  math
 print(math . floor(10.8))  #  10
 print(math . ceil(10.8))  #   11
 print(math . floor(25.0)) # 25
-print(math . ceil(25.0)) # 26.0
-print(math . floor(-3.5)) # -4.0
-print(math . ceil(-3.5)) # -3.0
-print(math . floor(-9.0)) # -10.0
-print(math . ceil(-9.0)) # -9.0
-print(math . floor(25.1)) # 25.0
-print(math . ceil(25.1)) # 26.0
-print(floor(3.5)) # 3.0
-print(ceil(3.5)) # 4.0
+print(math . ceil(25.0)) # 25
+print(math . floor(-3.5)) # -4
+print(math . ceil(-3.5)) # -3
+print(math . floor(-9.0)) # -9
+print(math . ceil(-9.0)) # -9
+print(math . floor(25.1)) # 25
+print(math . ceil(25.1)) # 26
+print(floor(3.5)) # Error
+print(ceil(3.5)) # Error
 '''
 
 floor()  and  ceil()  functions
@@ -414,3 +414,4 @@ floor()  and  ceil()  functions
 
 3) Where  are   floor()  and  ceil()  functions  defined ?  --->  In  math  module
 '''
+
