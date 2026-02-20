@@ -283,9 +283,9 @@ print(sqrt(49))  # Error
 # fabs()  function  demo   program
 import  math
 print(math . fabs(-10))    # 10.0
-print(math . fabs(-25.6))  # 26.0
+print(math . fabs(-25.6))  # 25.6
 print(math . fabs(20))  # 20.0
-print(math . fabs(35.8)) # 36.0
+print(math . fabs(35.8)) # 35.8
 print(fabs(-25))  # Error
 
 
@@ -300,11 +300,12 @@ print(math . ceil(25.0))  # 25
 print(math . floor(-3.5)) # -4
 print(math . ceil(-3.5))  # -3
 print(math . floor(-9.0))  # -10
-print(math . ceil(-9.0))  # -8
+print(math . ceil(-9.0))  # -9
 print(math . floor(25.1)) # 25
 print(math . ceil(25.1)) # 26
 print(floor(3.5)) # Error
 print(ceil(3.5)) # Error
+
 
 
 
