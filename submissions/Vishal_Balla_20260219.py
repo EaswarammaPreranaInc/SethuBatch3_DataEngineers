@@ -14,28 +14,8 @@ print(10 // 3)  #previous integer - 3
 print(10.0 // 3)  #previous integer - 3.0
 print(8.5 // 3)  #previous integer - 2.0
 print(18 // 4)  #previous integer - 4
-print(-18 // 4) #previous integer - (-4)
+print(-18 // 4) #previous integer - (-5)
 print(-(18 // 4))  #previous integer - (-4)
-
-'''
-//  operator
---------------
-1) What  is  the  result  of  integer // integer ?  ---> Integer  quotient
-    What  is  the  result  of  integer // float ?  --->  Float  quotient  with  .0
-    What  is  the  result  of  float // integer ?  --->	Float  quotient  with  .0
-    What  is  the  result  of  float // float ?  ---> Float  quotient  with  .0
-
-2) What  is  the  result  of  integer / integer ?  --->  Float  quotient
-    What  is  the  result  of  integer / float ?  ---> Float  quotient
-    What  is  the  result  of  float / integer ?  ---> Float  quotient
-    What  is  the  result  of  float / float ?  --->  Float  quotient
-
-3) What  does  /  operator  do ?  --->  Performs  division  and  returns  float  quotient
-     What  does  //  operator do ?  --->  Same  as  /  operator  but  the  result  of  previous-integer(Result  of  /)
-
-4) When  is  the  result  of  //  operator  integer ?  --->  When  both  the  operands  are  integers
-    When  is  the  result  of   //  operator  float  with  .0 ?  ---> When  at  least  one  operand  is  float
-'''
 
 
 # Find outputs
@@ -50,18 +30,6 @@ print(10 ** -2) # 0.01
 print(4 ** 3 ** 2) # 262144                      
 print(3 + 4 * 5 - 32 / 2 ** 3)  # 19.0
 
-
-'''
-**  operator
----------------
-1) What  is  **  operator  called ?  --->  Exponential  operator
-
-2) What  is  the  result  of  a ** b ?  ---> a ^ b
-
-3) What  is  the  result  of  a ** b  ** c ?   --->  a ^ b ^ c
-
-4) What  is  the  associativity  of  **  operator ?  ---> Right  to  left
-    What  is  the  associativity  of  remaining  arithmetic  operators ?  --->  Left  to  right
 
 
 #  Relational  operators  demo  program (Home  work)
@@ -92,34 +60,13 @@ print('Hyd'  != 'Sec')  #True
 print('HYD'  <   'hyd') #True
 
 
-'''
-1) Can  strings  be  compared  with  > ,  < , == ,  >= , <=  and  != ?  --->   Yes  only  in  python  but  not  in  other  languages
-
-2) What  are  compared  internally  when  strings  are  compared ? --->  1st  non-matching  characters
-
-3) Are  characters  compared  (or)  their  unicode  values ?  --->  Unicode  values
-
-4) How  many  unicode  values  exist ?  --->  512
-
-5) What  is  the  range  of  unicode  values ?  --->  0  to  511
-
-6) What  are  the  unicode  values  of  'A'  to  'Z'  ?  ---> 65  to  90
-     What  are  the  unicode  values  of  'a'  to   'z'  ?  ---> 97  to  122
-     What  are  the  unicode  values  of   '0'  to  '9' ?  --->  48  to  57
-     What  is  the  unicode  value  of   '$' ?  --->  36
-     What  is  the  unicode  value  of  space ?  ---> 32
-
-7) What  is  another  name  of  unicode ?  --->  Extended  Ascii (American  standard  code  for  information  and  interchange)
-'''
-
-
 # Chaining  relational  opeartors  (Home work)
 print(10 < 20 < 30)  #True
 print(10 >= 20 < 30) #False
 print(10 < 20 > 30)  #False
 print(1 < 2 < 3 < 4) #True
 print(1 < 2 > 3 > 1) #False
-print(4 > 3 >= 3 > 2) #False
+print(4 > 3 >= 3 > 2) #True
 
 
 #  or  operator  demo program
@@ -136,19 +83,6 @@ print(0.0  or  3 + 4j) # 3+4j
 print('Hyd'   or   10.8) # 'Hyd'
 
 
-'''
-or  operator
---------------
-1) When  is  the  result  of  or  operator  True ?  --->  When  at  least  one  operand  is  True
-    When  is  the  result  of  or  operator  False ?  ---> When  both  the  operands  are  False
-
-2) What  is  the  result  of  op1  or  op2  when  op1  is  False ?  ---> op2
-    What  is  the  result  of  op1  or  op2  when  op1  is  True ?  ---> op1
-
-3) and ,  or  operators  are  quite  opposite
-'''
-
-
 # not  operator  demo  program
 print(not  True)  # False
 print(not  False) # True
@@ -159,17 +93,6 @@ print(not  '')  # True
 print(not  -10) # False
 print(not  not  'Hyd') #True
 
-'''
-not  operator
-----------------
-1) What  does  not  operator  do ?  --->  Complement  operation
-
-2) Is  not  a  unary  operator  ?  --->  Yes  due  to  single  operand
-    What  about  and ,  or ? ---> Binary  operators  due  to  two  operands
-
-3) What  is  the  associativity  of  unary  operators ?  ---> Right  to  Left
-    What  is  the  associativity  of  binary  operators ?  ---> Left  to  Right  except  for  **
-'''
 
 
 #  Find   outputs (Home work)
@@ -223,7 +146,7 @@ a %= 3 + 2 * 4
 print(a)  # 9
 
 
-# Find outputs (Home work)
+# Find outputs (Home work)       
 a = 3
 a **= 4 
 print(a)  # 81
@@ -254,8 +177,8 @@ print(a == b)  # True
 print()  
 x = [1 , 2 , 3 , 4]
 y = [1 , 2 , 3 , 4]
-print(x is y)  # True
-print(x  is  not  y)  # False
+print(x is y)  # False
+print(x  is  not  y)  # True
 print(x == y)  # True
 print() 
 m = (1 , 2 , 3 , 4)
@@ -313,7 +236,7 @@ print(++a)  #   +(+a) = +a = +25 = 25
 print(a++)   #  (a+)+  = a+ = 25+   --->  Error
 print(a++1)  #  a + (+1)  =  25 + 1 = 26
 print(--a)  # -25
-print(a--)  # 25
+print(a--)  # 25  error
 print(a--1)  # -26
 print(-a)  # -25
 print(+-a) # -25
@@ -333,63 +256,22 @@ print('Hyd')  ;   print('Sec')  ;  print('Cyb')  # Hyd
 import  math
 print(math . pow(2 , 3))  # 8 
 print(math . pow(-2 , -3))  # -8
-print(math . pow(10 , -2))  # -100
-print(math . pow(4 , math . pow(3 , 2)))  # 36  262144
-
-
-'''
-pow()  function
------------------
-1) What  does  pow(a , b)  do ?  ---> Returns  a ^ b
-
-2) Where  is  pow()  function  defined ?  --->  In  math  module
-
-3) What  are  the  two  ways  to  obtain  a ^ b ? --->  a ** b   and   math . pow(a , b)
-
-4) Can  a  module  be  used  without  import ?  ---> No
-
-5) What  is  the  pre-requisite  to  use  a  module ?  --->  It  needs  to  be  imported
-
-6) What  is  a  nested  call ?  --->  A  function  call  inside  another  function  call
-												      Eg:  math . pow(a , math . pow(b , c))
-
-7) math . pow(a , math . pow(b , c))
-    Which  call  is  executed  first ?  --->  Inner  call  is  executed  before  outer  call
-'''
+print(math . pow(10 , -2))  # 0.01
+print(math . pow(4 , math . pow(3 , 2)))  # 262144
 
 
 
 # sqrt()  function  demo  program
 import  math
-print(math . sqrt(25))  # 5
+print(math . sqrt(25))  # 5.0
 print(math . sqrt(10))  # 3.16
-print(math . sqrt(6.25))  # 2
-print(math . sqrt(True))  # 1
+print(math . sqrt(6.25))  # 2.5
+print(math . sqrt(True))  # 1.0
 print(math . sqrt(3+4j))  # error complex numbers are not possible to convert sqrt
-print(math . sqrt(math . sqrt(256)))  # 4
-print(math . sqrt(math . pow(3 , 4))) # 9
+print(math . sqrt(math . sqrt(256)))  # 4.0
+print(math . sqrt(math . pow(3 , 4))) # 9.0
 print(math . sqrt(-16))  # error
 print(sqrt(49))  # error math is mandatory for math module objects
-
-
-'''
-sqrt()  function
--------------------
-1) What  does  sqrt(x)  do ?  --->  Returns  square  root  of  'x'
-
-2) Where  is  sqrt()  function  defined ?  --->  In  math  module
-
-3) math . sqrt(x)
-    Where  is  sqrt()  function  searched ?  ---> In  math  module
-
-4) sqrt(x)
-    Where  is   sqrt()  function  searched ? ---> In  current  module  (or)  program
-
-5) Can  sqrt(-ve  value)  be  determined ?  ---> No  and  it  leads  to  error
-
-6) math . sqrt(math . pow(x , y));
-    Which  function  is  executed  first ? --->  Inner  function  is  executed  before  outer  function
-'''
 
 
 
@@ -401,16 +283,6 @@ print(math . fabs(20))  # 20.0
 print(math . fabs(35.8))  # 35.8             
 print(fabs(-25)) # error without using math not possible to convert into absolute value
 
-
-'''
-fabs()  function
--------------------
-1) What  does  fabs(-ve  value)  do ?  --->  Returns  +ve   value
-
-2) What  does  fabs(+ve  value)  do ?  --->  Returns  same  value
-
-3) What  is  the  result  of  fabs(integer (or) float)  --->  Always  float  irrespective  of  the  argument
-'''
 
 
 #  floor()  and  ceil()  functions  demo  program
@@ -428,13 +300,3 @@ print(math . ceil(25.1))   # 26
 print(floor(3.5))  # error
 print(ceil(3.5))   # error                            
 
-
-'''
-floor()  and  ceil()  functions
---------------------------------
-1) What  does  floor(x)  do ?  --->  Returns  nearest  previous  integer  of  'x'
-
-2) What  does  ceil(x)  do ?  --->  Returns  nearest  next  integer  of  'x'
-
-3) Where  are   floor()  and  ceil()  functions  defined ?  --->  In  math  module
-'''
