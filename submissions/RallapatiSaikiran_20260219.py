@@ -242,8 +242,8 @@ print(++a)  #   +(+a) = +a = +25 = 25
 print(a++)   #  (a+)+  = a+ = 25+   --->  Error
 print(a++1)  #  a + (+1)  =  25 + 1 = 26
 print(--a)  # -25
-print(a--)  #25-  Error
-print(a--1)  # 24
+print(a--)  #25+  Error
+print(a--1)  # 26
 print(-a)  # -25
 print(+-a)  # -25
 print(-+a) # -25
@@ -254,7 +254,7 @@ print(-+a) # -25
 print('One');  # 'One'
 print('Two');    # 'Two'
 print('Three');   # 'Three'
-print('Hyd')  ;   print('Sec')  ;  print('Cyb')  # Error
+print('Hyd')  ;   print('Sec')  ;  print('Cyb')  # Hyd<next line>Sec<next line>Cyb
 
 
 
@@ -305,6 +305,7 @@ print(math . floor(25.1)) # 25
 print(math . ceil(25.1)) # 26
 print(floor(3.5)) # Error
 print(ceil(3.5)) # Error
+
 
 
 
