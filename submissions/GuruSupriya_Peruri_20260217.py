@@ -12,7 +12,7 @@ print(a * a)   # error because set is not used to multiply
 # Tricky  program
 # Find  outputs (Home  work)
 a = {1 , 'Hyd' , False , True , 0.0 , '' , 1.0 ,  0}
-print(a)  # {1 , 'Hyd' , False , True , 0.0 , '' , 1.0 ,  0}
+print(a)  # {1 , 'Hyd' , False , '' }
 print(len(a))  # 8
 print(type(a))  # < class 'set'>
 
