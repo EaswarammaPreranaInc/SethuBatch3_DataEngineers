@@ -191,22 +191,22 @@ n = (1 , 2 , 3 , 4)
 print(m  is  n)  # True
 print(m  is  not  n)   # False
 print(m == n) # False
-print(x == m)  # Error
+print(x == m)  # False
 
 
  # Find outputs (Home work)
 x = [1 , 2 , 3 , 4]
 y = [1 , 2 , 4 , 3]
-print(x == y)    # True
+print(x == y)    # False
 a = (4 , 1 , 3 , 2)
 b = (4 , 2 , 3 , 1)
-print(a == b)  # Error
+print(a == b)  # False
 p = {1 , 2 , 3 , 4}
 q = {4 , 1 , 3 , 2}
 print(p == q)    # True
 m = range(5)
 n = range(5)
-print(m == n) # False
+print(m == n) # True
 
 
  # Find outputs (Home work)
@@ -305,6 +305,7 @@ print(math . floor(25.1)) # 25
 print(math . ceil(25.1)) # 26
 print(floor(3.5)) # Error
 print(ceil(3.5)) # Error
+
 
 
 
