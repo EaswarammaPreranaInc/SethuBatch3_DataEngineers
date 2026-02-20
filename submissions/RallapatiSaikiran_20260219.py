@@ -1,8 +1,8 @@
 #  Find  outputs
-print({10 , 20}  |  {30 , 20})
-print({10 : 'Hyd' , 20 : 'Sec'} |  {30 : 'Cyb' , 20 : 'Vja'})
-print(range(4) | range(5))
-print([10 , 20]  |  [30 , 20])
+print({10 , 20}  |  {30 , 20}) # {10,20,30}
+print({10 : 'Hyd' , 20 : 'Sec'} |  {30 : 'Cyb' , 20 : 'Vja'}) # # {10: 'Hyd',20: 'Vja', 30: 'Cyb'}
+print(range(4) | range(5))# Error
+print([10 , 20]  |  [30 , 20]) # Error
 
 
 #  //  operator  demo  program
@@ -11,29 +11,29 @@ print(9.0 // 2)  #    prev  integer(4.5)   = 4.0
 print(9 // 2.0)   #   prev  integer(4.5)   = 4.0
 print(9.0 // 2.0)   #   prev  integer(4.5)   = 4.0
 print(10.5 // 2)    #  prev integer(5.25) = 5.0
-print(10 // 3)      # prev integer(3.333) = 3.0
+print(10 // 3)      # prev integer(3.333) = 3
 print(10.0 // 3)  # prev integer(3.33) = 3.0
 print(8.5 // 3)   # prev integer(2.833) = 2.0
 print(18 // 4)     # prev integer(4.5) = 4.0
-print(-18 // 4)  #  Tricky   # Error
-print(-(18 // 4))  #  Tricky  # Error
+print(-18 // 4)  #  Tricky   # -4.0
+print(-(18 // 4))  #  Tricky  # -4.0
 
 
 
 # ** operator demo program
 print(3 ** 4)  #   3 ^ 4 = 81   
 print(10 ** -2) # 0.01 
-print(4 ** 3 ** 2)  # (16 ** 2)--->256
-print(3 + 4 * 5 - 32 / 2 ** 3)  # (3 + 20 -32/8)---->   -9/8
+print(4 ** 3 ** 2)  # (4 ** 9)--->262144
+print(3 + 4 * 5 - 32 / 2 ** 3)  # (3 + 20 -32/8) =23-4.0 = 19.0
 
 
 
 
 
 # Find outputs
-print(7 / 0)   # 0
-print(7 // 0)  # 0.0
-print(7 % 0)   # 0
+print(7 / 0)   # Error
+print(7 // 0)  # Error
+print(7 % 0)   # Error
 
 
 
@@ -305,6 +305,7 @@ print(math . floor(25.1)) # 25
 print(math . ceil(25.1)) # 26
 print(floor(3.5)) # Error
 print(ceil(3.5)) # Error
+
 
 
 
