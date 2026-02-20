@@ -1,7 +1,3 @@
-#NAME: Medipally Varun
-
-
-
 # float  object  demo  program (Home  work)
 a = 10.8
 print(a) # 10.8
@@ -18,6 +14,7 @@ print(type(d)) # class 'float'
 e = 9.62e-2
 print(e) # 9.62 * 10^-2
 print(9.8.2) # 9.8.2
+
 
 
 
@@ -95,23 +92,15 @@ print(0o9248) # Error (the value should be only from 0 to 7, But we have 9 )
 
 # Find  outputs  (Home  work)
 a = 0XA7B9
-print(a) # 10*16^3 + 7*16^2 + 11*16^2 + 9*16^0
-print(type(a)) # class 'int;
+print(a) # 
+print(type(a))
 b = 0xBEEF
-print(b) # 11*16^3 + 14*16^2 + 14*16^1 + 15*16^0
-print(A7B9)  # Error (not an integer)
-print('A7B9') # A7B9
-print(0XBEER) # Error (R is not accepted)
-print(0XHYD) # Error (H and Y are not accepted)
-print(0xA7G9B) # Error (G is not accepeted )
-
-
-
-
-# Find outputs (Home  work)
-a = 9248
-print(a) # 9248 
-print(type(a)) # class 'int'
+print(b) 
+print(A7B9)  
+print('A7B9')
+print(0XBEER)
+print(0XHYD)
+print(0xA7G9B)
 
 
 
