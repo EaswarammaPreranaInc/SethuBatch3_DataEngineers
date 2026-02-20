@@ -14,8 +14,8 @@ print(9.0 // 2.0)   #   prev  integer(4.5)   = 4.0
 print(10.5 // 2)   #prev integer(5.25) =5.0
 print(10 // 3)   #prev integer(3.3) =3
 print(10.0 // 3) #prev integer(3.3) =3.0
-print(8.5 // 3) #prev integer(2.7) =2.0
-print(18 // 4) #prev integer(4.5) = 4.0
+print(8.5 // 3) #prev integer(2.8) =2.0
+print(18 // 4) #prev integer(4.5) = 4
 print(-18 // 4)  #  Tricky  #-5
 print(-(18 // 4))  #  Tricky #-4
 
@@ -226,7 +226,7 @@ a = b = c = 25
 print(id(a))  # address of obj a
 print(id(b))  #same address
 print(id(c))  #same address
-print(a , b , c)   #(25, 25, 25)
+print(a , b , c)   #(25 25 25)
 
 
 
@@ -366,9 +366,9 @@ print('One');   # One
 print('Two');   #Two
 print('Three');   #Three
 print('Hyd')  ;   print('Sec')  ;  print('Cyb') 
-'''
+''' 
 Hyd
-Sec
+Sec 
 Cyb
 '''
 
@@ -412,7 +412,7 @@ print(math . sqrt(3+4j)) #error due to complex obj
 print(math . sqrt(math . sqrt(256)))  # 4.0
 print(math . sqrt(math . pow(3 , 4))) #9.0
 print(math . sqrt(-16)) # error
-print(sqrt(49)) # error math is not defined
+print(sqrt(49)) # error sqrt, is not defined
 
 
 
@@ -482,4 +482,5 @@ floor()  and  ceil()  functions
 2) What  does  ceil(x)  do ?  --->  Returns  nearest  next  integer  of  'x'
 
 3) Where  are   floor()  and  ceil()  functions  defined ?  --->  In  math  module
+
 '''
