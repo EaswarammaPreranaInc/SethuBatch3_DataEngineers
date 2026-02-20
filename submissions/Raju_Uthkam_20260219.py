@@ -179,8 +179,8 @@ print(x == y) #True
 print() #Empty space 
 m = (1 , 2 , 3 , 4)
 n = (1 , 2 , 3 , 4)
-print(m  is  n) #False 
-print(m  is  not  n) #True 
+print(m  is  n) #True
+print(m  is  not  n) #False 
 print(m == n) #True 
 print(x == m) #False 
 
@@ -289,5 +289,6 @@ print(math . floor(25.1)) #25
 print(math . ceil(25.1)) #26
 #print(floor(3.5)) #Error 
 #print(ceil(3.5)) #Error
+
 
 
