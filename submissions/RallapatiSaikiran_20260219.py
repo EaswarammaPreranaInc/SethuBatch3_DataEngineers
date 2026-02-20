@@ -97,10 +97,10 @@ print(not  True)  #   False
 print(not  False) #   True
 print(not  25) #   False
 print(not  0)  #True
-print(not  'Hyd')  # True
-print(not  '')  # False
+print(not  'Hyd')  # False
+print(not  '')  # True
 print(not  -10)  # False
-print(not  not  'Hyd')  # False
+print(not  not  'Hyd')  # true
 
 
 
@@ -305,6 +305,7 @@ print(math . floor(25.1)) # 25
 print(math . ceil(25.1)) # 26
 print(floor(3.5)) # Error
 print(ceil(3.5)) # Error
+
 
 
 
