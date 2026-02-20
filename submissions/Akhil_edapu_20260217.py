@@ -142,3 +142,49 @@ b = dict()
 print(type(b)) #class 'dict'
 print(len(b)) #0
 print(b) {}
+
+# How  to  print  dictionary  in  different  ways
+a  =  {10 : 'Ramesh' ,  20 : 'Kiran' , 15 : 'Amar' , 18 : 'Sita'}
+print('Dictionary  with  print  function') --> #print(a)
+How  to  print  dictionary  with  print()  function --> #print(a)
+print('Keys  of  dictionary')  ---> # print(a.keys)
+How  to  iterate  thru  each  key  of  dict  'a'  with  for  loop   ---> for x in a.keys():
+                                                                              print(x)
+print('Values  of  dictionary')  --->  # print(a.values)
+How  to  iterate  thru  each  value  of  dict  'a'  with  for  loop   --->#  for x in a.values():
+                                                                                      print(x)
+print('Tuples  of  dict_items   object') 
+How  to  iterate  thru  each  tuple  of  dict  'a'  with  for  loop
+print('Elements  of  each   tuple')  
+How  to  print  elements  of  each  tuple  in  the  list  of  dict_items  object
+print('Keys  and  values  of  dictionary')   ----> for x,y in a.items()
+                                                        print('key':x, 'value':y)
+How  to  print  each  key  and  corresponding  value  in  dict  'a' ------>  #print(a)
+
+
+#  Find  outputs (Home  work)
+a = {
+		print('Hyd') ,
+		print('Sec') ,
+		print('Cyb')
+	}
+print(type(a)) #class 'dict'
+print(a) #prints hyd, sec, cyb, and last None on screen
+print(len(a)) #1
+
+
+#  Anonymous  object  demo  program
+_ = 25
+print(_) #25 prints
+print(type(_)) #class 'int'
+a , _ , c = 10 , 20 , 30
+print(a) #10
+print(_) #20
+print(c) #30
+for  _  in  range(5): 
+	print(_ , 'Hello')
+#prints 0, hello
+#prints 1,hello
+#prints 2,hello
+#prints 3,hello
+#prints 4,hello
