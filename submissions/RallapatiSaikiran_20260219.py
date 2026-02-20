@@ -144,8 +144,8 @@ print(z)   #'hyd'
 
 # Find outputs (Home work)
 a , b , c = 3 , 4 , 5
-a *= b + c  # 17 
-print(a) # 17
+a *= b + c  # 27
+print(a) # 27
 
 
 
@@ -305,6 +305,7 @@ print(math . floor(25.1)) # 25
 print(math . ceil(25.1)) # 26
 print(floor(3.5)) # Error
 print(ceil(3.5)) # Error
+
 
 
 
