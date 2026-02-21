@@ -1,23 +1,22 @@
 # Find  outputs
-How  to  import   kw  list # from keyword import kwlist
-How  to  print  kwlist  i.e.  [and , or , not , is , in , None , True , False , .....] #import keyword													       # print(keyword.kwlist)
-How  to  print  number  of  keywords  i.e.  35 # print(len(keyword.kwlist))
-How  to  print  type  of kwlist  i.e.  <class 'list'> # print(type(keyword.kwlist))
-print(keyword . kwlist) #  ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 
-			 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 
- 			'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 
- 			'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 
- 			'try', 'while', 'with', 'yield']
+How  to  import   kw  list      # from keyword import kwlist
+How  to  print  kwlist  i.e.  [and , or , not , is , in , None , True , False , .....]      #import keyword	# print(keyword.kwlist)
+How  to  print  number  of  keywords  i.e.  35       # print(len(keyword.kwlist))
+How  to  print  type  of kwlist  i.e.  <class 'list'>        # print(type(keyword.kwlist))
+print(keyword . kwlist)    #  ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 
+			 	'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 
+ 				'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 
+ 				'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 
+ 				'try', 'while', 'with', 'yield']
 
 
 
  #  Find  outputs  (Home  work)
-How  to  import   keyword  module # import keyword module
-How  to  print  kwlist # print(keyword.kwlist)
-How  to  print  number  of  keywords # print(len(keyword.kwlist))
-How  to  print  type  of kwlist # print(type(keyword.kwlist))
-print(kwlist) # error must be print(keyword.kwlist)
-
+How  to  import   keyword  module 	# import keyword module
+How  to  print  kwlist 	# print(keyword.kwlist)
+How  to  print  number  of  keywords 	# print(len(keyword.kwlist))
+How  to  print  type  of kwlist 	# print(type(keyword.kwlist))
+print(kwlist) 	# error must be print(keyword.kwlist)
 
 
  # How  to  read  complex  input ?
