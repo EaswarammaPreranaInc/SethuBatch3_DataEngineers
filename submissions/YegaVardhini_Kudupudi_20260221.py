@@ -29,7 +29,7 @@ import keyword # How  to  import   kw  list
 print(keyword.kwlist) # How  to  print  kwlist  i.e.  [and , or , not , is , in , None , True , False , .....]
 print(len(keyword.kwlist)) # How  to  print  number  of  keywords  i.e.  35
 print(type(keyword.kwlist)) # How  to  print  type  of kwlist  i.e.  <class 'list'>
-print(keyword . kwlist)
+print(keyword . kwlist) #[and,or,not,is,in,not in, int, None,....]
 
 #  Find  outputs  (Home  work)
 import keyword # How  to  import   keyword  module
