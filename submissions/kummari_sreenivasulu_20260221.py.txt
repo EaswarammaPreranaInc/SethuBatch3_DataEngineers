@@ -19,8 +19,80 @@ print(builtins . min(10 , 20 , 15 , 5 , 12 )) # 5
 ---------------------------------------------------------------------------------------------------------
 # pow()  function  demo  program
 from  builtins  import  pow
-print(pow(10 , -2))
-print(pow(4 , pow(3 , 2)))
-import  builtins
-print(builtins . pow(2 , 3))
-print(builtins . pow(-2 , -3))
+print(pow(10 , -2)) # 0.01
+print(pow(4 , pow(3 , 2))) # 262144
+import  builtins 
+print(builtins . pow(2 , 3)) # 8
+print(builtins . pow(-2 , -3))     # -0.125
+---------------------------------------------------------------------------------------------------------
+# Find  outputs
+How  to  import   kw  list # import keyword
+How  to  print  kwlist  i.e.  [and , or , not , is , in , None , True , False , .....]
+                                                    # import keyword
+			        print(keyword.kwlist)
+How  to  print  number  of  keywords  i.e.  35 # print(len(keyword.kwlist))
+How  to  print  type  of kwlist  i.e.  <class 'list'> # print(type(keyword.kwlist))
+print(keyword . kwlist) # Error
+		# name 'keyword' is not defined
+----------------------------------------------------------------------------------------------------------
+#  Find  outputs  (Home  work)
+How  to  import   keyword  module  # import keyword
+How  to  print  kwlist  # import keyword
+		     print(keyword.kwlist)
+                                ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await',
+ 		'break', 'class', 'continue', 'def', 'del', 'elif', 'else',
+ 		'except', 'finally', 'for', 'from', 'global', 'if', 'import',
+ 		'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass',
+ 		'raise', 'return', 'try', 'while', 'with', 'yield']
+
+How  to  print  number  of  keywords # print(len(keyword.kwlist)) i.e : 35
+How  to  print  type  of kwlist # print(type(keyword.kwlist))
+print(kwlist) #  Error -->  name 'kwlist' is not defined
+---------------------------------------------------------------------------------------------------------
+# How  to  read  complex  input ?
+x = complex(input('Enter  complex  number  :  ')) 
+    			# input() always reads data as a string # '3+4j'
+print(type(x))# <class 'complex'> 
+print(x)   # (3+4j)
+---------------------------------------------------------------------------------------------------------
+#  Tricky  program
+# Find  outputs  (Home  work)
+print(eval("    'hyd'   ")) # 'hyd'
+hyd = 'Sec' 
+print(eval('hyd'))  #Sec
+sec = '25'
+print(eval('sec')) # 25
+print(eval(sec)) # 25
+cyb = 10.8
+print(eval('cyb'))# 10.8
+print(eval(cyb)) #Error # eval() arg 1 must be a string, bytes or code object
+---------------------------------------------------------------------------------------------------------
+#  Most  tricky  program
+#  Find  output  (Home  work)
+print(eval('print("Hyd")')) # Hyd 
+		          None
+---------------------------------------------------------------------------------------------------------
+#  Find  outputs  (Home  work)
+print(bool('False')) # True
+print(eval('False')) # False
+print(bool('')) # False
+print(eval('  ""  ')) # empty string
+print(eval(''))  # Error
+print(eval('  " "   ')) # one blank space is printed
+print(eval(' ')) # Error
+---------------------------------------------------------------------------------------------------------
+# What  is  the  advantage  of  eval(input()) ?
+x = eval(input('Enter  any  input  :  ')) # "25"
+print(type(x)) # <class 'str'>
+print(x) # '25' # Even number becomes string
+---------------------------------------------------------------------------------------------------------
+# What  is  a  better  approach  to  read  string  input ?
+a = input('Enter  any  string  :  ') # "Hyd"
+print(len(a))  # 3
+print(a) # Hyd
+b = eval(input('Enter   any  string  : ')) # Hyd # "Hyd"
+     # name 'Hyd is not defined '
+     # becoz eval() thinks hyd is a variable
+     # user must enter quotes
+print(len(b)) # 3
+print(b) # Hyd
