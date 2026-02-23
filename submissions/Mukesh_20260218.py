@@ -90,4 +90,5 @@ print((25, 10.8, 'Hyd', True) * 3) #(25, 10.8, 'Hyd', True ,25, 10.8, 'Hyd', Tru
 print([10 , 20 , 15] * 3.0) # [10, 20, 15, 10, 20, 15]
 print({10 , 20 , 15} * 2)# NOt support type error because no repeation
 print({10 : 20 , 30 : 40} * 2)# Not Supported Type error
+
 print([10] * [20]) # Type error
