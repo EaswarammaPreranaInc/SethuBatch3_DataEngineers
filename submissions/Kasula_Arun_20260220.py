@@ -34,7 +34,7 @@ print(builtins . pow(-2 , -3))    #-0.125
 
 
  # Find  outputs
-How  to  import   kw  list  #import kwlist
+How  to  import   kw  list #from keyword import kwlist
 How  to  print  kwlist  i.e.  [and , or , not , is , in , None , True , False , .....] 
 ''' 
 import keyword
@@ -56,7 +56,7 @@ import keyword
 print (type(keyword.kwlist))
 
 '''
-print(keyword . kwlist)   # keyword is not imported
+print(kwlist)   # keyword is not imported
 
 
 
@@ -64,10 +64,8 @@ print(keyword . kwlist)   # keyword is not imported
 # How  to  read  complex  input ?
 x = complex(input('Enter  complex  number  :  ')) 
 '''
-if 3+4j is input the will be taken as string
+if 3+4j is input it will be taken as string
 then that string will be converted into complex object.
-
-
 '''
 print(type(x))    #<class 'complex'>
 print(x)          #3=4j
@@ -79,7 +77,7 @@ print(x)          #3=4j
 
  #  Tricky  program
 # Find  outputs  (Home  work)
-print(eval("    'hyd'   "))    #hyd
+print(eval("    'hyd'   "))    #hyd 
 hyd = 'Sec'
 print(eval('hyd'))  # Sec
 sec = '25'
@@ -95,6 +93,7 @@ print(eval(cyb))      #error
  #  Most  tricky  program
 #  Find  output  (Home  work)
 print(eval('print("Hyd")'))  #Hyd
+                            #None
 
 
 
@@ -103,10 +102,10 @@ print(eval('print("Hyd")'))  #Hyd
 print(bool('False'))        #True
 print(eval('False'))        #False
 print(bool(''))             #False
-print(eval('  ""  '))       #<empty>
-print(eval(''))             #<None>
-print(eval('  " "   '))     #<empty>
-print(eval(' '))            #<None>
+print(eval('  ""  '))       # "" <empty>
+print(eval(''))             #error
+print(eval('  " "   '))     #<Space>
+print(eval(' '))            #error
 
 
 
@@ -118,6 +117,7 @@ print(x)
 '''
 instead of using many function calls 
 we can call eval()
+it can read any type of input
 
 '''
 
@@ -135,6 +135,6 @@ print(b)
 
 
 '''
-b is  a  better  approach  to  read  string  input
+a  is  a  better  approach  to  read  string  input
 
 '''
