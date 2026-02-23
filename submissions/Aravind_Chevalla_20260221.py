@@ -24,21 +24,21 @@ print(pow(10 , -2)) # 0.01
 print(pow(4 , pow(3 , 2))) # 262144
 import  builtins
 print(builtins . pow(2 , 3)) # 8
-print(builtins . pow(-2 , -3)) # 0.12
+print(builtins . pow(-2 , -3)) # -0.125
 
 # Find  outputs
-How  to  import   kw  list # import keyword
+How  to  import   kw  list # from keylist import kwlist
 How  to  print  kwlist  i.e.  [and , or , not , is , in , None , True , False , .....] #print( keyword.kwlist)
 How  to  print  number  of  keywords  i.e.  35 # print (len(keyword.kwlist)
 How  to  print  type  of kwlist  i.e.  <class 'list'> # print(type(keyword.kwlist)
-print(keyword . kwlist)
+print(keyword . kwlist) error
 
 #  Find  outputs  (Home  work)
-How  to  import   keyword  module # import keyword
-How  to  print  kwlist #print( keyword.kwlist)
+How  to  import   keyword  module #import keyword
+How  to  print  kwlist #print(keyword.kwlist)
 How  to  print  number  of  keywords# print (len(keyword.kwlist)
 How  to  print  type  of kwlist # print(type(keyword.kwlist)
-print(kwlist) # all key words
+print(kwlist) # error
 
 # How  to  read  complex  input ?
 x = complex(input('Enter  complex  number  :  '))
