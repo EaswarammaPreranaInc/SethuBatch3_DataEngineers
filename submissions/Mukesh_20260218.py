@@ -1,0 +1,94 @@
+a = 25
+print(id(a)) # Addres of object 25
+a = 35
+print(id(a)) # Addres of object 35
+
+a = 25.7
+print(id(a)) #Address of object 25.7
+print(a)    # 25.7
+a = 35.6
+print(id(a)) # Address of object 35.6
+print(a)     #35.6
+b = True
+print(id(b)) #addres of object True
+b = False
+print(id(b))  # Addres of object False
+c = None
+print(id(c)) # Addres of object none
+c = None       
+print(id(c)) # Addrres of object none
+
+a = 'Hyd'
+print(id(a)) #Addrws of object 'hyd'
+a[1] = 'e'   #Error 
+a = 'Sec'  
+print(id(a)) # ADDRES of 'sec'
+b = (10 , 20 , 15 , 18)
+print(id(b)) # Address of object b
+b[2] = 19   
+b = (30 , 40 , 35 , 32) # (30,40,19,32)
+print(id(b)) # New Address
+c = range(5)  (0,1,2,3,4)
+print(id(c)) # Address of Object c
+c[3] = 10  #error   
+c = range(5)  # (0,,1,2,3,4)
+print(id(c))  # Different Address
+
+a = 25
+b = 25
+print(a  is  b) # True
+c = 'Hyd'
+d = 'Hyd'
+print(c  is  d) # True
+e = False
+f = False
+print(e  is  f)# True
+g = range(10)
+h = range(10)
+print(g  is  h) #False
+
+a = [10 , 20 , 15 , 18]
+b = [10 , 20 , 15 , 18]
+print(a  is  b) # False
+c =  {10 : 20, 30 : 40}
+d =  {10 : 20, 30 : 40}
+print(c  is  d) #False
+e = (10 , 20 , 15 , 18)
+f = (10 , 20 , 15 , 18)
+print(e  is  f) # False
+g = {10 , 20 , 15 , 18}
+h = {10 , 20 , 15 , 18}
+print(g  is  h) # False
+
+print(10 + 20)  #30
+print(10.8 + 20.6) #30.14
+print(3 + 4j + 5 + 6j) #8+10j
+print(True + False) #1
+print('Hyder' + 'abad') #Concenation 'Hyderbad'
+print('Sankar' + 'Dayal' + 'Sarma') # Concenation 'sankaraDayalSharam'
+print('10' + '20') '1020'
+print([10 , 20 , 30] + [1 , 2 , 3])#[10,20,30,1,2,3]
+print((25 , 10.8 , 'Hyd') + (3 + 4j , True , None)) #(25,10.8,'hyd',3+4j,True,None)
+print({10 , 20} + {30 , 40}) #{10,,20,30,40}
+print({10 : 'Hyd'} + {20 : 'Sec'}) #{10:'hyd'20:'Sec'}
+
+print(range(4) + range(5))  # Cant be add operation 
+print(10 + '20') #  Error Because we Cant concenation non sequences and sequences
+print([10 , 20 , 30] + 5) # Error
+print([10 , 20 , 30] + (40 , 50 , 60)) #Type Error
+
+print(25 * 3) #75
+print(10.8 * 25.6) #276.48
+print(True * False) #1
+print((3 + 4j) * (5 + 6j))
+print(3 + 4j * 5 + 6j)
+print('25' * 3) #'252525'
+print(3 * '25') #'252525'
+print('Hyd' * 4) #'HydHydHyd'
+print([10 , 20 , 15] * 2) #[10, 20, 15, 10, 20, 15]
+print((25, 10.8, 'Hyd', True) * 3) #(25, 10.8, 'Hyd', True ,25, 10.8, 'Hyd', True ,25, 10.8, 'Hyd', True )
+print([10 , 20 , 15] * 3.0) # [10, 20, 15, 10, 20, 15]
+print({10 , 20 , 15} * 2)# NOt support type error because no repeation
+print({10 : 20 , 30 : 40} * 2)# Not Supported Type error
+
+print([10] * [20]) # Type error
