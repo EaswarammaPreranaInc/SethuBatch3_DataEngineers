@@ -59,13 +59,13 @@ print(type(n)) #class 'str'
 #6
 # Find  Outputs  (Home  work)
 a = 10.9274
-print('%8.2f' %a)
-print('%9.1f' %a)
-print('%10.3f' %a)
-print('%.2f' %a)
-print('%.6f' %a)
-print('%f' %a)
-print('%g' %a)
+print('%8.2f' %a) #<3 spaces>10.93
+print('%9.1f' %a) #<5 spaces>10.9
+print('%10.3f' %a) #<4 spaces>10.927
+print('%.2f' %a) #10.93 i.e. no spaces before
+print('%.6f' %a) #10.927400 i.e. no spaces before
+print('%f' %a) #10.927400 i.e. no spaces before
+print('%g' %a) #10.9274 i.e. no spaces before
 
 
 
