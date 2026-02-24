@@ -86,8 +86,8 @@ Write  a  program  to  determine  largest  of  two  inputs  without  using  max(
 '''
 '''
 
-a=int(input("Enter 1st integer number :"))
-b=int(input("Enter 2nd integer number :"))
+a=eval(input("Enter 1st integer number :"))
+b=eval(input("Enter 2nd integer number :"))
 print(F'Largest Input : {a}') if a>b else print(F'Largest Input : {b}')
 
 
@@ -109,9 +109,9 @@ Write  a  program  to  determine  largest  of  three  inputs  without  using  ma
 '''
 '''
 
-a=input("Enter 1st input :")
-b=input("Enter 2nd input :")
-c=input("Enter 3rd input :")
+a=eval(input("Enter 1st input :"))
+b=eval(input("Enter 2nd input :"))
+c=eval(input("Enter 3rd input :"))
 print(F'Largest Input : {a}') if a>b and a>c else print(F'Largest Input : {b}') if b>c else print(F'Largest Input : {c}')
 
 
@@ -130,8 +130,8 @@ Write  a  program  to  print   '>'  if  1st  input  >  2nd  input,
 5) Use  nested  ternary  operator
 '''
 '''
-a=input("Enter 1st input :")
-b=input("Enter 2nd input :")
+a=eval(input("Enter 1st input :"))
+b=eval(input("Enter 2nd input :"))
 print("Result : =") if a == b  else print("Result : >") if a>b else print("Result : <")
 
 
