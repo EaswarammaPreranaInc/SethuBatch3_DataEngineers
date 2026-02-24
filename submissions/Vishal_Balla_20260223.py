@@ -1,13 +1,15 @@
 # sep  argument  demo  program  (Home  work)
 a , b , c = 25 , 10.8 , 'Hyd'
 print(a , b , c , sep = ',')  #25,10.8,Hyd
-print(a , b , c , sep = '\t')  #25  10.8  Hyd
+print(a , b , c , sep = '\t')  #25   10.8   Hyd
 print(a , b , c , sep = '---')  #25---10.8---Hyd
 print(a , b , c , sep = '\n')  #25
-                                10.8
-                                Hyd
+                                #10.8
+                                #Hyd
+                                
 print(a , b , c)  #25 10.8 Hyd
-print(a , b , c , separator = ':')  #error becoz argument is wrong it is 'sep'
+#print(a , b , c , separator = ':')  #error becoz argument is wrong it is 'sep'
+
 
 
 # Find  outputs  (Home  work)
@@ -54,13 +56,13 @@ print(type(n))  #<class 'str'>
 
 # Find  Outputs  (Home  work)
 a = 10.9274
-print('%8.2f'  %a)  #  10.93
-print('%9.1f'  %a)  #  10.9
-print('%10.3f'  %a)  #   10.927
-print('%.2f'  %a)  #10.93
-print('%.6f'  %a)  #10.927400
-print('%f'  %a)  #10.927400
-print('%g'  %a)  #10.9274
+print('%8.2f'  %a)  #        10.93 , 8 spaces and 2 numbers after point
+print('%9.1f'  %a)  #         10.9 , 9 spaces and 1 number after point
+print('%10.3f'  %a)  #          10.927 , 10 spaces and 3 numbers after point
+print('%.2f'  %a)  #10.93 , just 2 numbers after point
+print('%.6f'  %a)  #10.927400 , 6 numbers after point
+print('%f'  %a)  #10.927400 , %f give 6 numbers after point if there is no number dirctly gives 0's
+print('%g'  %a)  #10.9274 , %g give same number
 
 
 
@@ -83,7 +85,7 @@ print('%s'  %a)  #[10 , 20 , 30 , 40]
 print('%s' , a)  #%s [10 , 20 , 30 , 40] 
 #print('%s'  a)   #error
 #print('%s' , %a)  #error comma  ',' is not required for this
-#print('%l'  %a)  #error %s is used
+#print('%l'  %a)  #error we use %s,%f,%g,%i not %l 
 print(a)  #[10 , 20 , 30 , 40]
 
 
@@ -124,10 +126,10 @@ a ,  b , c = 25 , 10.8 , 'Hyd'
 print(F'{a}  \t   {b}   \t  {c}')  #25   10.8   Hyd
 print(F'a = {a}  \t  b  =  {b}  \t  c  =  {c}')  #a = 25   b = 10.8   c = Hyd
 print(F'{a=}  \t   {b=}   \t  {c=}')  #a=25   b=10.8   c=Hyd
-print(F'{a:}  \t   {b:}   \t  {c:}')  #25   10.8   Hyd
+print(F'{a:}  \t   {b:}   \t  {c:}')  #25   10.8   Hyd , in this '=' sign is come other signs are not
 print('a  =  {a}  \t  b  =  {b}  \t  c  =   {c}')  #a = {a}   b = {b}   c = {c}
 print(F'a  =  a  \t  b  =  b  \t  c  =  c')  #a = a   b = b   c = c
-#print(F'{x =}  \t   {y =}   \t  {z =}')  #error
+#print(F'{x =}  \t   {y =}   \t  {z =}')  #error there is no x,y,z objects
 
 
 
@@ -151,4 +153,6 @@ print(F'{{{{{{{{x}}}}}}}}')  #{{{{x}}}}
 
 3) How  many  braces  are  printed  in  the  output ?  --->  Number  of  braces  //  2
 '''
+
+
 
