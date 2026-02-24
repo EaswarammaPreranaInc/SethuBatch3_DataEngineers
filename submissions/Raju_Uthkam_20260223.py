@@ -10,17 +10,17 @@ print(a , b , c) #25 10.8 Hyd
 
 # Find  outputs  (Home  work)
 a , b , c = 25 , 10.8 , 'Hyd'
-print(a , b , c , end = '---') #25 10.8 'Hyd'---<nextline>
-print(a , b , c , sep = ',,,') #25,,,10.8,,,'Hyd'
-print(a , b , c , sep = ':::' , end = '\t\t\t') #25:::10.8:::Hyd<tab><tab><tab><nextline continue>
-print(a , b , c) #25 10.8 Hyd
+print(a , b , c , end = '---') #25 10.8 'Hyd'---<sameline>
+print(a , b , c , sep = ',,,') #25,,,10.8,,,'Hyd'<nextline>
+print(a , b , c , sep = ':::' , end = '\t\t\t') #25:::10.8:::Hyd<tab><tab><tab><same line continue>
+print(a , b , c) #25 10.8 Hyd <next line>
 
 
 # Find outputs  (Home  work)
 print('Hyd') #Hyd
-print() #Nothing
+print() #Nothing empty space
 print('Sec') #Sec 
-print() #Nothing
+print() #Nothing empty space 
 print('Cyb') #Cyb
 
 
@@ -48,20 +48,20 @@ print(type(n)) #<class 'str'>
 
 # Find  Outputs  (Home  work)
 a = 10.9274
-print('%8.2f'  %a) 
-print('%9.1f'  %a)
-print('%10.3f'  %a)
-print('%.2f'  %a)
-print('%.6f'  %a)
+print('%8.2f'  %a) #<3 spaces>10.93
+print('%9.1f'  %a) #<5 spaces>10.9
+print('%10.3f'  %a) #<4 spaces>10.927
+print('%.2f'  %a) #10.93
+print('%.6f'  %a) #10.927400
 print('%f'  %a) #'10.927400'
-print('%g'  %a) #'10.92'
+print('%g'  %a) #'10.9274'
 
 
 # Find  outputs (Home  work)
 a = 'Hyd'
-print('%7s'  %a)
-print('%-7s'  %a)
-print('%2s'  %a)
+print('%7s'  %a) #<4 spaces> Hyd # leading spaces 
+print('%-7s'  %a) #Hyd <4 spaces> #trailing spaces 
+print('%2s'  %a) #Hyd
 print('%s'  %a) #"Hyd"
 print('%s' , a) #'%s' Hyd
 #print('%s'  a) #Error
@@ -114,7 +114,7 @@ a ,  b , c = 25 , 10.8 , 'Hyd'
 print(F'{a}  \t   {b}   \t  {c}') #'25'    '10.8'    'Hyd'
 print(F'a = {a}  \t  b  =  {b}  \t  c  =  {c}') #a = '25'    b='10.8'    c='Hyd'
 print(F'{a=}  \t   {b=}   \t  {c=}') #a = '25'    b='10.8'    c='Hyd'
-print(F'{a:}  \t   {b:}   \t  {c:}') #Error Except (=) no other delimiter is allowed in format string 
+print(F'{a:}  \t   {b:}   \t  {c:}') #25<tab>10.8<tab>Hyd #Except (=) no other delimiter is allowed in format string 
 print('a  =  {a}  \t  b  =  {b}  \t  c  =   {c}') #'a  =  {a}    b  =  {b}    c  =   {c}'
 print(F'a  =  a  \t  b  =  b  \t  c  =  c') # a =a   b=b   c=c
 #print(F'{x =}  \t   {y =}   \t  {z =}') #Error because there no object name x,y,z
@@ -130,4 +130,6 @@ print(F'{{{{{x}}}}}') #{{25}}
 print(F'{{{{{{x}}}}}}') #{{{x}}}
 print(F'{{{{{{{x}}}}}}}') #{{{25}}}
 print(F'{{{{{{{{x}}}}}}}}')#{{{{x}}}}
+
+
 
