@@ -75,52 +75,52 @@ print(a) # Hyd
 
 # Find  outputs  (Home  work)
 a = [10 , 20 , 30 , 40]
-print('%s'  %a)
-print('%s' , a)
-print('%s'  a)
-print('%s' , %a)
-print('%l'  %a)
-print(a)
+print('%s'  %a)  #[10 , 20 , 30 , 40]
+print('%s' , a)  #%s [10, 20, 30, 40]
+print('%s'  a)     # Error
+print('%s' , %a)   # Error
+print('%l'  %a)    # Error
+print(a)  #[10, 20, 30, 40]
 
 
 #Find outputs  (Home  work)
 a = 25
 b = 10.9274
 c = 'Hyd'
-print('%d    %f    %s'  %(a , b , c))
-print('%i    %g    %s'    %(a , b , c))
-print('%s    %s    %s'  %(a , b , c))
-print('%d    %g    %s'  , a , b , c)
-print('%d    %g      %s'   a , b , c)
-print('%d    %g    %s'  ,  %(a , b , c))
-print('%d    %g    %s'    %a%b%c)
-print('%d'    %a  ,  '%f'     %b  ,  '%s'   %c)
+print('%d    %f    %s'  %(a , b , c))  # 25  10.927400  'Hyd'
+print('%i    %g    %s'    %(a , b , c))  # 25  10.9274   'Hyd'
+print('%s    %s    %s'  %(a , b , c))    # 25  10.9274   'Hyd'
+print('%d    %g    %s'  , a , b , c)     # %d  %g  %s  25 10.9274  Hyd
+print('%d    %g      %s'   a , b , c)    # Error
+print('%d    %g    %s'  ,  %(a , b , c)) # Error
+print('%d    %g    %s'    %a%b%c)        # Error
+print('%d'    %a  ,  '%f'     %b  ,  '%s'   %c) # 25 10.927400 Hyd
 
 
 #  Find  outputs  (Home  work)
 x = 25
 y = F'{x}'
-print(y)
-print(type(y))
+print(y)  # 25
+print(type(y))  # <class string>
 x = 10.8
 y = F'{x}'
-print(y)
-print(type(y))
+print(y)  # 10.8
+print(type(y))  # <class string>
 x = [10,20,30,40]
 y = F'{x}'
-print(y)
-print(type(y))
+print(y)  #  [10,20,30,40]
+print(type(y))  # <class string >
 
 
 #Find  outputs  (Home  work)
 a ,  b , c = 25 , 10.8 , 'Hyd'
-print(F'{a}  \t   {b}   \t  {c}')
-print(F'a = {a}  \t  b  =  {b}  \t  c  =  {c}')
-print(F'{a=}  \t   {b=}   \t  {c=}')
-print(F'{a:}  \t   {b:}   \t  {c:}')
-print('a  =  {a}  \t  b  =  {b}  \t  c  =   {c}')
-print(F'a  =  a  \t  b  =  b  \t  c  =  c')
-print(F'{x =}  \t   {y =}   \t  {z =}')
+print(F'{a}  \t   {b}   \t  {c}')  # 25   10.8   'Hyd'
+print(F'a = {a}  \t  b  =  {b}  \t  c  =  {c}')  #  a=25  b=10.8  c='Hyd'
+print(F'{a=}  \t   {b=}   \t  {c=}')  # 25  10.8  'Hyd'
+print(F'{a:}  \t   {b:}   \t  {c:}')  # 25  10.8  Hyd
+print('a  =  {a}  \t  b  =  {b}  \t  c  =   {c}')  # a={a}   b={b}  c={c}
+print(F'a  =  a  \t  b  =  b  \t  c  =  c')    #   a=a   b=b   c=c
+print(F'{x =}  \t   {y =}   \t  {z =}')      # Error
 
 
 #  Find  outputs  (Home  work)
@@ -128,8 +128,9 @@ x = 25
 print(F'{x}')  #   '25'
 print(F'{{x}}')  #   {x}
 print(F'{{{x}}}')  #  {25}
-print(F'{{{{x}}}}')
-print(F'{{{{{x}}}}}')
-print(F'{{{{{{x}}}}}}')
-print(F'{{{{{{{x}}}}}}}')
-print(F'{{{{{{{{x}}}}}}}}')
+print(F'{{{{x}}}}') # {{x}}
+print(F'{{{{{x}}}}}')  # {{25}}
+print(F'{{{{{{x}}}}}}')  # {{{x}}}
+print(F'{{{{{{{x}}}}}}}') # {{{25}}}
+
+print(F'{{{{{{{{x}}}}}}}}')  # {{{{x}}}}
