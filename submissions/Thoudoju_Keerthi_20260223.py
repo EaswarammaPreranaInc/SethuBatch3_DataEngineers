@@ -62,7 +62,7 @@ print(l , t , s)
  #  Find  outputs (Home  work)
 a = 25
 b = '%f'  %a  
-print(b) # '25'
+print(b) # 25.000000
 print(type(b)) # <class 'str'>
 x = 10.8 
 y = '%i'  %x 
@@ -80,7 +80,7 @@ a = 10.9274
 print('%8.2f'  %a) #___10.93(3 spaces on left)
 print('%9.1f'  %a) #_____10.9(5 spaces on left)
 print('%10.3f'  %a) # ____10.927(4 spaces on left)
-print('%.2f'  %a) # 10.92
+print('%.2f'  %a) # 10.93
 print('%.6f'  %a) # 10.927400
 print('%f'  %a) # 10.927400
 print('%g'  %a) # 10.9274
@@ -93,7 +93,7 @@ print('%g'  %a) # 10.9274
  # Find  outputs (Home  work)
 a = 'Hyd'
 print('%7s'  %a) #____Hyd(4 spaces on left)
-print('%-7s'  %a) #Hyd____(4 spaces on left)
+print('%-7s'  %a) #Hyd____(4 spaces on right)
 print('%2s'  %a)# Hyd
 print('%s'  %a) # Hyd
 print('%s' , a) # %s Hyd
@@ -123,8 +123,8 @@ print(a)# [10 , 20 , 30 , 40]
 a = 25
 b = 10.9274
 c = 'Hyd'
-print('%d    %f    %s'  %(a , b , c)) # 25 10.927400 Hyd
-print('%i    %g    %s'    %(a , b , c))# 25 10.9274 Hyd
+print('%d    %f    %s'  %(a , b , c)) # 25     10.927400     Hyd
+print('%i    %g    %s'    %(a , b , c))# 25     10.9274      Hyd
 print('%s    %s    %s'  %(a , b , c))# 25 10.9274 Hyd
 print('%d    %g    %s'  , a , b , c)# %d    %g    %s 25 10.9274 Hyd
 print('%d    %g      %s'   a , b , c)#Error
@@ -160,11 +160,11 @@ print(type(y))# <class 'str'>
  #Find  outputs  (Home  work)
 a ,  b , c = 25 , 10.8 , 'Hyd'
 print(F'{a}  \t   {b}   \t  {c}') # 25	10.8	Hyd
-print(F'a = {a}  \t  b  =  {b}  \t  c  =  {c}') # a = 25	b = 10.8	c = Hyd
-print(F'{a=}  \t   {b=}   \t  {c=}') # a = 25	b = 10.8	c = Hyd 
+print(F'a = {a}  \t  b  =  {b}  \t  c  =  {c}') # a = 25	   b = 10.8	     c = Hyd
+***print(F'{a=}  \t   {b=}   \t  {c=}') # a = 25    b = 10.8 	  c = 'Hyd' 
 print(F'{a:}  \t   {b:}   \t  {c:}')# 25	10.8	Hyd
-print('a  =  {a}  \t  b  =  {b}  \t  c  =   {c}')# a  =  {a}	 b  =  {b}	c  =   {c}
-print(F'a  =  a  \t  b  =  b  \t  c  =  c')#a = a	b = b	c = c	
+print('a  =  {a}  \t  b  =  {b}  \t  c  =   {c}')# a  =  {a}	    b  =  {b}	    c  =   {c}
+print(F'a  =  a  \t  b  =  b  \t  c  =  c')#a = a	      b = b	      c = c	
 print(F'{x =}  \t   {y =}   \t  {z =}')  # Error x,y,z is not defined 
 
 
@@ -187,4 +187,5 @@ print(F'{{{{{{{{x}}}}}}}}') # {{{{x}}}}
 2) What  is  printed  when  'x'  is  in  odd  number  of  braces ?  --->  Value   of  'x'  in  the  form  of  string
 
 3) How  many  braces  are  printed  in  the  output ?  --->  Number  of  braces  //  2
+
 '''
