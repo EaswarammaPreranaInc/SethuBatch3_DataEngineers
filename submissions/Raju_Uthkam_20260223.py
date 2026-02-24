@@ -114,7 +114,7 @@ a ,  b , c = 25 , 10.8 , 'Hyd'
 print(F'{a}  \t   {b}   \t  {c}') #'25'    '10.8'    'Hyd'
 print(F'a = {a}  \t  b  =  {b}  \t  c  =  {c}') #a = '25'    b='10.8'    c='Hyd'
 print(F'{a=}  \t   {b=}   \t  {c=}') #a = '25'    b='10.8'    c='Hyd'
-print(F'{a:}  \t   {b:}   \t  {c:}') #Error Except (=) no other delimiter is allowed in format string 
+print(F'{a:}  \t   {b:}   \t  {c:}') #25<tab>10.8<tab>Hyd #Except (=) no other delimiter is allowed in format string 
 print('a  =  {a}  \t  b  =  {b}  \t  c  =   {c}') #'a  =  {a}    b  =  {b}    c  =   {c}'
 print(F'a  =  a  \t  b  =  b  \t  c  =  c') # a =a   b=b   c=c
 #print(F'{x =}  \t   {y =}   \t  {z =}') #Error because there no object name x,y,z
@@ -130,5 +130,6 @@ print(F'{{{{{x}}}}}') #{{25}}
 print(F'{{{{{{x}}}}}}') #{{{x}}}
 print(F'{{{{{{{x}}}}}}}') #{{{25}}}
 print(F'{{{{{{{{x}}}}}}}}')#{{{{x}}}}
+
 
 
