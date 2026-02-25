@@ -6,7 +6,7 @@ print(a)  # Hyd is green city
 b = 'Hyd  is  "green"  city'
 print(b) # Hyd is  a "green" city
 c = 'Hyd  is  '/green/'  city'
-print(c) # error
+print(c) #  Hyd is 'green' city
 print('Hyd  is  ' green  '  city')
 
 
@@ -104,6 +104,7 @@ else num < 0:
 print('-1')
 else:
 print 0
+
 
 
 
