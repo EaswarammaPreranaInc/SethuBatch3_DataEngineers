@@ -52,4 +52,5 @@ print(a) # 10 20 30
 print(id(a)) #adress of a
 a = a * 2  #  Valid / Invalid #valid
 print(a) #(10 20 30 10 20 30)
+
 print(id(a)) #different address of a
