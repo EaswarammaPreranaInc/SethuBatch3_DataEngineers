@@ -295,14 +295,13 @@ Write  a  program  to  test  year  is  leap  year  or  not
 
 5) Hint:  3  conditions
 '''
-
-
-
-
-
-
-
-
+year = int(input("Enter a year to fine leap year or not: "))
+if year % 4 == 0 and year % 100 != 0:
+    print("Leap year")
+elif year % 400 == 0 :
+    print("Leap year.")
+else  :
+    print("Not a leap year")
 
 '''
 Write  a  program  to  determine  largest  of  three  numbers  with  if  and  else
@@ -428,6 +427,7 @@ middle = (a + b+c)-(max + min)
 print("Largest input: ",max)
 print("Smallest input :",min)
 print("Middle input: ", middle)
+
 
 
 
