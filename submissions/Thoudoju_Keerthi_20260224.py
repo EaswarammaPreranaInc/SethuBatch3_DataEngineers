@@ -147,7 +147,7 @@ Write  a  program  to  print  1  if  input  is  +ve  ,  -1    if  input  is  -ve
 '''
 '''
 
-a=int(input("Enter any number :"))
+a=float(input("Enter any number :"))
 print('Result = 1') if a>0 else print('Result = -1') if a<0 else print('Result = 0')
 
 Write  a  program  to  test  input  is  even  number  or  odd  number
@@ -160,6 +160,7 @@ Write  a  program  to  test  input  is  even  number  or  odd  number
 '''
 
 
-a=int(input("Enter any +ve integer :"))
+a=float(input("Enter any +ve integer :"))
 print(F"{a} is Even number") if a%2==0 else print(F"{a} is Odd number") 
+
 
