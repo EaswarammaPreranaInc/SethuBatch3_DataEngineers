@@ -90,7 +90,7 @@ print("After swapping values : ",a,b)
 
 
 
-'''
+
 (Home  work)
 Write  a  program  to  swap  values  of  two  objects  without  using  3rd  object
 
@@ -98,7 +98,6 @@ Hint: One  addition  and  two  subtractions
 
 x = 25
 y =  10
-'''
 
 
 a = input("Enter 1st input : ")
@@ -110,7 +109,7 @@ a = a-b
 print(a,b)
 
 
-'''
+
 (Home  work)
 Write  a  program  to  swap  values  of  two  objects  without  using  3rd  object
 
@@ -118,7 +117,7 @@ Hint: One  multiplication  and  two  divisions
 
 x =  25
 y =  10
-'''
+
 
 
 
@@ -193,7 +192,7 @@ else:
 	print('Sec')
 	print('Cyb')
 print('Bye')
-
+'''
 
 # Write  a  program  to  determine  a  number  is  even  or  odd  with   if  statement
 
@@ -204,7 +203,7 @@ if(a % 2 == 0):
 else:
     print(f'it\'s is an Odd : {a}')
     
-'''
+
 
 
 # Find outputs  (Home  work)
@@ -465,6 +464,7 @@ if(b>max):
     
     
     
+
 
 
 
