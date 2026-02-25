@@ -5,7 +5,7 @@ b = 'Hyd  is  "green"  city'
 print(b) # Hyd  is  "green"  city NEXTLINE>
 c = 'Hyd  is  \'green\'  city'
 print(c) # Hyd  is  'green'  city NEXTLINE>
-print('Hyd  is  ' green  '  city') # Hyd  is  ' green  '  city' NEXTLINE>
+print('Hyd  is  ' green  '  city') # Error
 '''
 Write  a  program  to  determine  sum , difference , product , quotient , largest  and  smallest  of  two  numbers.
 Also  find  remainder,  sqrt  of  first  input , power, gcd  and  factorial  of  first  input
@@ -162,3 +162,4 @@ Write  a  program  to  test  input  is  even  number  or  odd  number
 
 a=int(input("Enter any +ve integer :"))
 print(F"{a} is Even number") if a%2==0 else print(F"{a} is Odd number") 
+
