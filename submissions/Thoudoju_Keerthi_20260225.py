@@ -480,17 +480,13 @@ mid =   (10 + 20 + 7) - (20 + 7) = 10
 
 def threeNumbers(x,y,z)->(float,float,float):
 	max,min,mid=a,a,a
-	if(a>b and a>c):
-	    max=a
-	elif( b>c):
-		max =b
-	else:
-	    max =c
-	if(a<b and a<c):
-	    min=a
-	elif( b<c):
-	    min =b
-	else:
+	if(b>max):
+	    max=b
+	else( max<c):
+		max =c
+	if(min>b):
+	    min=b
+	else( min>c):
 	    min =c
 	return (max,min, (a+b+c -(max+min)))    
         
@@ -502,5 +498,6 @@ c=float(input("Enter 3rd input :"))
 x,y,z=threeNumbers(a,b,c)
 print(F'Largest input : {x:.1f} \nSmallest input : {y:.1f} \nMiddle input : {z:.1f}')
         
+
 
 
