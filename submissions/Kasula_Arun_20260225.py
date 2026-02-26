@@ -11,16 +11,13 @@ What  is  the  division ?  --->  (3 + 4j) / (5 + 6j) = (3 + 4j) * (5 - 6j) / (5 
 	=  39 / 61 + 2j / 61										   
 '''
 
-a = complex(input("Enter first complex number : "))
-b  = complex(input("Enter second complex number: "))
+a = complex(input('Enter first complex number : '))
+b  = complex(input('Enter second complex number: '))
 
-print(f"Sum :  {a + b}")
-print(f"Difference :  {a - b}")
-print(f"Product:  {c1 * c2}")
-print(f"Division :  {c1 / c2}")
-
-input("Press any key to continue . . .")
-
+print(f'Sum :  {a + b}')
+print(f'Difference :  {a - b}')
+print(f'Product:  {c1 * c2}')
+print(f'Division :  {c1 / c2}')
 
 
 
@@ -482,4 +479,5 @@ mid_val = (a + b + c) - (max_val + min_val)
 
 print(f'Largest input  : {max_val}')
 print(f'Smallest input : {min_val}')
+
 print(f'Middle input   : {mid_val}')    
