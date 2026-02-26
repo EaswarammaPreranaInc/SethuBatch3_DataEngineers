@@ -314,7 +314,40 @@ else:
 ....
 9 - Nine
 10 - Invalid
+# Program
+n = int(input("Enter a digit (0-9): "))
 
+if n == 0:
+    print("Zero")
+else:
+    if n == 1:
+        print("One")
+    else:
+        if n == 2:
+            print("Two")
+        else:
+            if n == 3:
+                print("Three")
+            else:
+                if n == 4:
+                    print("Four")
+                else:
+                    if n == 5:
+                        print("Five")
+                    else:
+                        if n == 6:
+                            print("Six")
+                        else:
+                            if n == 7:
+                                print("Seven")
+                            else:
+                                if n == 8:
+                                    print("Eight")
+                                else:
+                                    if n == 9:
+                                        print("Nine")
+                                    else:
+                                        print("Invalid")
 
 
 
@@ -332,14 +365,34 @@ Write  a  program  to  test  year  is  leap  year  or  not
 
 5) Hint:  3  conditions
 
+Program:
+year = int(input("Enter a year: "))
 
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a Leap Year")
+else:
+    print(f"{year} is Not a Leap Year")
 
 
 
 #Write  a  program  to  determine  largest  of  three  numbers  with  if  and  else
 
 Hint:  Write  multiple  conditions
+Program:
+a = int(input("Enter first number  : "))
+b = int(input("Enter second number : "))
+c = int(input("Enter third number  : "))
 
+if a >= b:
+    if a >= c:
+        print(f"Largest number is {a}")
+    else:
+        print(f"Largest number is {c}")
+else:
+    if b >= c:
+        print(f"Largest number is {b}")
+    else:
+        print(f"Largest number is {c}")
 
 
 Write  a  program  to  convert  celsius  temperature  to  farenheit  and  vice-versa
@@ -348,8 +401,18 @@ Write  a  program  to  convert  celsius  temperature  to  farenheit  and  vice-v
 
 2) What  is  the  formula  to  convert  farenheit  to  celsius ?  --->  (temp - 32) / 1.8
 
+Program:
 
+ch = input("Enter C for Celsius to Fahrenheit or F for Fahrenheit to Celsius: ")
 
+temp = float(input("Enter temperature: "))
+
+if ch == 'C':
+    f = 1.8 * temp + 32
+    print("Temperature in Fahrenheit =", f)
+else:
+    c = (temp - 32) / 1.8
+    print("Temperature in Celsius =", c)
 
 
 #Write  a  program  to  test  a  point  (x , y)  lies  in  1st  quadrant , 2nd  quadrant , 3rd  quadrant ,
@@ -372,7 +435,27 @@ Write  a  program  to  convert  celsius  temperature  to  farenheit  and  vice-v
 8) Hint:  Use  if  ..   elif
 
 
+Program :
+x = float(input("Enter x coordinate: "))
+y = float(input("Enter y coordinate: "))
 
+if x > 0 and y > 0:
+    print("Point lies in 1st Quadrant")
+elif x < 0 and y > 0:
+    print("Point lies in 2nd Quadrant")
+elif x < 0 and y < 0:
+    print("Point lies in 3rd Quadrant")
+elif x > 0 and y < 0:
+    print("Point lies in 4th Quadrant")
+elif x != 0 and y == 0:
+    print("Point lies on X-axis")
+elif x == 0 and y != 0:
+    print("Point lies on Y-axis")
+elif x == 0 and y == 0:
+    print("Point is Origin")
+else:
+    print("Invalid input")
+	
 
 Write  a  program  to  determine  largest , smallest  and  middle  of  three  numbers
 
@@ -395,3 +478,22 @@ mid =   (10 + 20 + 7) - (20 + 7) = 10
 
 6) Hint : Do  not  use  else  in  the  program
 
+Program:
+
+a = int(input("Enter a: "))
+b = int(input("Enter b: "))
+c = int(input("Enter c: "))
+max_val = a
+min_val = a
+if b > max_val:
+    max_val = b
+if c > max_val:
+    max_val = c
+if b < min_val:
+    min_val = b
+if c < min_val:
+    min_val = c
+mid_val = (a + b + c) - (max_val + min_val)
+print("Max =", max_val)
+print("Min =", min_val)
+print("Mid =", mid_val)
