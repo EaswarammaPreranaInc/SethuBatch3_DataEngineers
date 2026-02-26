@@ -1,26 +1,19 @@
 import math
 
-# Input three sides
 a = float(input("Enter side a: "))
 b = float(input("Enter side b: "))
 c = float(input("Enter side c: "))
-
-# Check triangle qualification
 if (a + b > c) and (a + c > b) and (b + c > a):
     print("The given sides form a triangle.")
-    
-    # Check type of triangle
     if a == b == c:
         print("It is an Equilateral Triangle.")
         area = (math.sqrt(3) / 4) * (a ** 2)
         print("Area:", area)
-    
     else:
         if a == b or b == c or a == c:
             print("It is an Isosceles Triangle.")
             perimeter = a + b + c
             print("Perimeter:", perimeter)
-        
         else:
             print("It is a Scalene Triangle.")
             perimeter = a + b + c
@@ -28,71 +21,49 @@ if (a + b > c) and (a + c > b) and (b + c > a):
             area = math.sqrt(s * (s - a) * (s - b) * (s - c))
             print("Perimeter:", perimeter)
             print("Area:", area)
-
 else:
     print("The given sides do NOT form a triangle.")
 
 
-
-
 import math
 
-# Input coefficients
 a = float(input("Enter value of a: "))
 b = float(input("Enter value of b: "))
 c = float(input("Enter value of c: "))
-
-# Condition: a should not be 0
 if a != 0:
-    
-    # Calculate discriminant
     disc = b**2 - 4*a*c
     print("Discriminant:", disc)
-    
     if disc > 0:
         print("Roots are Real and Distinct")
         root1 = (-b + math.sqrt(disc)) / (2*a)
         root2 = (-b - math.sqrt(disc)) / (2*a)
         print("Root 1:", root1)
         print("Root 2:", root2)
-    
     else:
         if disc == 0:
             print("Roots are Real and Same")
             root = -b / (2*a)
             print("Root 1:", root)
             print("Root 2:", root)
-        
         else:
             print("Roots are Complex (Imaginary)")
             real_part = -b / (2*a)
             imag_part = math.sqrt(-disc) / (2*a)
-            
             root1 = complex(real_part, imag_part)
             root2 = complex(real_part, -imag_part)
-            
             print("Root 1:", root1)
             print("Root 2:", root2)
-
 else:
     print("Coefficient 'a' should not be 0 for a quadratic equation.")
 
 
-
-
-
 import math
 
-# Input values
 x = float(input("Enter x coordinate: "))
 y = float(input("Enter y coordinate: "))
 r = float(input("Enter radius: "))
-
-# Distance from origin
 distance = math.sqrt(x**2 + y**2)
-
 print("Distance from origin:", distance)
-
 if r > 0:
     if distance > r:
         print("Point is Outside the Circle.")
@@ -103,8 +74,7 @@ if r > 0:
             print("Point is On the Circle.")
 else:
     print("Radius must be positive.")
-
-
+	
 
 m = 4
 match  m:
@@ -117,7 +87,6 @@ match  m:
 print('Bye')   # Bye
 
 
-
 m = 2
 match  m:
 	case  1:
@@ -127,8 +96,6 @@ match  m:
 	case  _:  
 		print('Bye')
 print('End')   # End
-
-
 
 ch = 'B'
 match  ch:
@@ -143,10 +110,7 @@ match  ch:
 print('Bye')   # Bye
 
 
-
-
 units = int(input('Enter  units :   '))  
-
 match units:
 	case u if u <= 100:
 		cost = u * 3.00
@@ -162,13 +126,12 @@ match units:
 print('Bill  amount  :  ' , cost)	#Bill amount :  5300.0
 
 
-
 while  True:
 	print('Hello')
 print('Bye')
 
 
-
 while  False:
 	print('Hello')
+
 print('Bye')		#Bye
