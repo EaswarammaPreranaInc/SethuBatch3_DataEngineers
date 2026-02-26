@@ -15,10 +15,10 @@ def complexOperations(x,y):
 	print(F'Sum : ({x+y})')
 	print(F'Difference : ({(x-y)})')
 	print(F'Product : ({x*y})')
-	print(F'Division : ({(x*(rl-img))/(y*(rl-img))})')
+	print(F'Division : ({(x*(rl-img))/(y*(rl-img))})'). # simply x/y
 
-a=eval(input('enter 1st complex number'))
-b=eval(input('enter 2nd complex number'))
+a=complex(input('enter 1st complex number'))
+b=complex(input('enter 2nd complex number'))
 complexOperations(a,b)
 
 (Home  work)
@@ -185,7 +185,7 @@ if  ():
 	print('Two')
 	print('Three')
 else:
-if  []: 	# Indentation error here 
+if  []: 	# Indentation error 
 	print('Four')
 	print('Five')
 	print('Six')
@@ -296,8 +296,8 @@ def monthName(n):
 	elif n==12:
 		print('December')
 	else:
-		print('Enter number from 1 to 12')
-n=int(input('enter number in range of 1 t0 12'))
+		print('Enter number from 1 to 12 only')
+n=int(input('enter number in range of 1 t0 13'))
 monthName(n)
 
 
@@ -409,8 +409,8 @@ def CelOrFahren(n):
 	else:
 		print("Invalid input")
 
-n=int(input('Enter 1 to convert celsius to fahrenheit and 2 to convert fahrenheit to celsius :'))
-CelOrFahren(n)
+n=int(to be input('Enter 1 to convert celsius to fahrenheit and 2 to convert fahrenheit to celsius :'))
+C.elOrFahren(n)
         
 
 '''
@@ -496,3 +496,4 @@ c=float(input("Enter 3rd input :"))
 x,y,z=threeNumbers(a,b,c)
 print(F'Largest input : {x:.1f} \nSmallest input : {y:.1f} \nMiddle input : {z:.1f}')
         
+
