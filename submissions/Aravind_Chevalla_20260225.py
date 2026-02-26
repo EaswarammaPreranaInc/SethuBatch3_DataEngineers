@@ -399,11 +399,13 @@ elif x<0 and y<0:
     print("3rd qudrant")
 elif x>0 and y<0:
     print("4th qudrant")
-elif x>0 or x<0 and y==0:
+elif x!=0 and y==0:
     print("on x-axis")
-elif y>0 or y<0 and x==0:
+elif y!=0 and x==0:
     print("on y-axis")
-
+else :
+	print("origin")
+	
 '''
 Write  a  program  to  determine  largest , smallest  and  middle  of  three  numbers
 
@@ -432,17 +434,18 @@ x=int(input("Enter 1st number:"))
 y=int(input("Enter 2nd number:"))
 z=int(input("Enter 3rd number:"))
 max=x
-if y>max and y>z:
+if y>max:
      max=y
-elif z>max:
+if z>max:
       max=z
 print(f'{max=}')
 min=x
-if y<min and y<z:
-     min=y
-elif z<min:
-      min=z
+if y<min:
+    min=y
+if z<min:
+  min=z
 print(f'{min=}')
 mid=(x+y+z)-(max+min)
 print(f'{mid=}')
+
 
