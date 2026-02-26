@@ -482,11 +482,11 @@ def threeNumbers(x,y,z)->(float,float,float):
 	max,min,mid=a,a,a
 	if(b>max):
 	    max=b
-	else( max<c):
+	if( max<c):
 		max =c
 	if(min>b):
 	    min=b
-	else( min>c):
+	if( min>c):
 	    min =c
 	return (max,min, (a+b+c -(max+min)))    
         
@@ -498,6 +498,7 @@ c=float(input("Enter 3rd input :"))
 x,y,z=threeNumbers(a,b,c)
 print(F'Largest input : {x:.1f} \nSmallest input : {y:.1f} \nMiddle input : {z:.1f}')
         
+
 
 
 
