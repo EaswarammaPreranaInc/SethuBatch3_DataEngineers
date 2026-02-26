@@ -16,8 +16,8 @@ b  = complex(input('Enter second complex number: '))
 
 print(f'Sum :  {a + b}')
 print(f'Difference :  {a - b}')
-print(f'Product:  {c1 * c2}')
-print(f'Division :  {c1 / c2}')
+print(f'Product:  {a * b}')
+print(f'Division :  {a / b}')
 
 
 
@@ -481,3 +481,4 @@ print(f'Largest input  : {max_val}')
 print(f'Smallest input : {min_val}')
 
 print(f'Middle input   : {mid_val}')    
+
