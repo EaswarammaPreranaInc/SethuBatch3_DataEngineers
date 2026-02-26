@@ -435,7 +435,13 @@ Write  a  program  to  test  a  point  (x , y)  lies  in  1st  quadrant , 2nd  q
 '''
 
 def Quad(x,y):
-	if( x > 0 and y >0):
+    if( x== 0 and y==0)
+	    print( 'Origin')
+	elif ( x== 0)
+	     print('X- axis')
+	elif( y== 0)
+	     print('Y-axis')
+	elif( x > 0 and y >0):
 	    print('1st Quadrant')
 	elif( x>0 and y<0):
 	    print('2nd Quadrant')
@@ -496,4 +502,5 @@ c=float(input("Enter 3rd input :"))
 x,y,z=threeNumbers(a,b,c)
 print(F'Largest input : {x:.1f} \nSmallest input : {y:.1f} \nMiddle input : {z:.1f}')
         
+
 
