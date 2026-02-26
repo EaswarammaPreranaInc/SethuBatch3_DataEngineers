@@ -327,10 +327,9 @@ Write  a  program  to  test  year  is  leap  year  or  not
 5) Hint:  3  conditions
 '''
 x=int(input("Enter the Number:"))
-if (x%4==0):
- if(x%400==0 or x%100!=0):
+if x%4==0 and x%100!=0 or x%400==0:
   print("leap year")
- else:
+else:
     print('Not a leap year')
 
  '''
@@ -446,3 +445,4 @@ elif z<min:
 print(f'{min=}')
 mid=(x+y+z)-(max+min)
 print(f'{mid=}')
+
