@@ -1,4 +1,4 @@
-'''
+``'''
 Write  a  program  to  add ,  subtract , multiply  and  divide  two  complex  numbers
 
 First  complex  number   --->  3 + 4j
@@ -11,16 +11,13 @@ What  is  the  division ?  --->  (3 + 4j) / (5 + 6j) = (3 + 4j) * (5 - 6j) / (5 
 	=  39 / 61 + 2j / 61										   
 '''
 
-a = complex(input("Enter first complex number : "))
-b  = complex(input("Enter second complex number: "))
+a = complex(input('Enter first complex number : '))
+b  = complex(input('Enter second complex number: '))
 
-print(f"Sum :  {a + b}")
-print(f"Difference :  {a - b}")
-print(f"Product:  {c1 * c2}")
-print(f"Division :  {c1 / c2}")
-
-input("Press any key to continue . . .")
-
+print(f'Sum :  {a + b}')
+print(f'Difference :  {a - b}')
+print(f'Product:  {a * b}')
+print(f'Division :  {a / b}')
 
 
 
@@ -185,7 +182,7 @@ else                          #':' is missing after else statement
 
 
 # Identify  error
-if  (10,20,15):
+if  (10,20,15):            #ERROR
 print('Hyd')
 else:
 print('Sec')             #indentation is missing here
@@ -193,7 +190,7 @@ print('Sec')             #indentation is missing here
 
 
 # Identify  error
-if  ():                               #condition is empty
+if  ():                              
 			print('Hyd')
 	else:                             #not indented with if
 					print('Sec')
@@ -214,7 +211,7 @@ else:
 	print('Four')
 	print('Five')
 	print('Six')
-}                                    #{} are not permitted in python
+}                                    #{} are not permitted in suite
 print('Bye')
 
 
@@ -227,19 +224,19 @@ if  ():
 	print('Two')
 	print('Three')
 else:
-if  []:
+if  []:                           #error due to indentation
 	print('Four')
 	print('Five')
 	print('Six')
 else:
-if  {}:
+if  {}:                             #error due to indentation
 	print('Seven')
 	print('Eight')
 	print('Nine')
-else:
+else: 
 	print('Hyd')
 	print('Sec')
-	print('Cyb')       #there are no conditions in if and else statements
+	print('Cyb')     
 print('Bye')
  
  ''' 
@@ -268,7 +265,7 @@ else:
         print('Three')
 print('Bye')
 '''
- One
+One
 Two
 Three
 Bye
@@ -287,6 +284,7 @@ Cyb
 Bye
 
 '''
+
 
 
 # Find outputs  (Home  work)
@@ -358,7 +356,6 @@ Write  a  program  to  test  year  is  leap  year  or  not
 
 5) Hint:  3  conditions
 '''
-
 a=int (input ('Enter a 4-digit year : '))
 if (a%4 == 0 and a%100 != 0 ) or (a % 400 == 0):
     print ('Leap year')
@@ -372,21 +369,30 @@ Write  a  program  to  determine  largest  of  three  numbers  with  if  and  el
 
 Hint:  Write  multiple  conditions
 '''
+try:
+	a = int(input('Enter first number  : '))
+	b = int(input('Enter second number : '))
+	c = int(input('Enter third number  : '))
+	
+	if a > b:
+	    if a > c:
+	        print('Largest is:', a)
+	    else:
+	        print('Largest is:', c)
+	else:
+	    if b > c:
+	        print('Largest is:', b)
+	    else:
+	        print('Largest is:', c)
 
-a = int(input('Enter first number  : '))
-b = int(input('Enter second number : '))
-c = int(input('Enter third number  : '))
+except NameError :
+	print ('Input string should be quotes')
 
-if a > b:
-    if a > c:
-        print('Largest is:', a)
-    else:
-        print('Largest is:', c)
-else:
-    if b > c:
-        print('Largest is:', b)
-    else:
-        print('Largest is:', c)
+except TypeError:
+	print ('Input can not be a complex number')
+	
+	
+	
 
 
 '''
@@ -397,10 +403,7 @@ Write  a  program  to  convert  celsius  temperature  to  farenheit  and  vice-v
 2) What  is  the  formula  to  convert  farenheit  to  celsius ?  --->  (temp - 32) / 1.8
 '''
 
-
-
-print('Enter 1 to convert celsius to farenheit and 2 to convert fahrenheit to celsius : ', end = "")
-x = int(input())
+x = int(input('Enter 1 to convert celsius to farenheit and 2 to convert fahrenheit to celsius : '))
 
 if x == 1:
     temp= float(input('Enter celsius temperature : '))
@@ -458,13 +461,29 @@ elif x > 0 and y < 0:
     print('4th quadrant')
 
 
+'''
+Write  a  program  to  determine  largest , smallest  and  middle  of  three  numbers
 
+a = 10
+b = 20
+c = 7
+max = 20
+min = 7
+mid =   (10 + 20 + 7) - (20 + 7) = 10
 
+1) What  is  the  initial  value  of  max  ?  --->  a
 
+2) Whichever  input >  max,  assign  that  input  to  max
 
+3) What  is  the  initial  value  of  min  ?  --->  'a'
 
+4) Whichever  input  <  min,  assign  that  input  to  min
 
-# Taking three inputs from the user
+5) How  to  obtain  middle  number ?  ---> Eliminate  max  and  min  from  a , b , c
+
+6) Hint : Do  not  use  else  in  the  program
+'''
+
 a = float(input('Enter first input  : '))
 b = float(input('Enter second input : '))
 c = float(input('Enter third input  : '))
@@ -482,4 +501,7 @@ mid_val = (a + b + c) - (max_val + min_val)
 
 print(f'Largest input  : {max_val}')
 print(f'Smallest input : {min_val}')
+
 print(f'Middle input   : {mid_val}')    
+
+
