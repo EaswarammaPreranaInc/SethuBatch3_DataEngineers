@@ -284,20 +284,20 @@ print('Bill  amount  :  ' , cost)
 
 '''
 units = int(input('Enter  units in 100"s only :   '))  
-match  units:
-	case  100:
+match  units//100:
+	case  1:
 				cost = units*3.0
-	case  200:
+	case  2:
 				cost = 100*3.0+units*3.50 
-	case  300:
+	case  3:
 				cost = 100*3.0+100*3.50+units*4.50
-	case  400:
+	case  4:
 				cost = 100*3.0+100*3.50+units*4.50
-	case  500:
+	case  5:
 				cost = 100*3.0+100*3.50+units*4.50
-	case  600:
+	case  6:
 				cost = 100*3.0+100*3.50+units*4.50
-	case  700:
+	case  7:
 				cost = 100*3.0+100*3.50+units*4.50
 	case  _ :
 				cost = 100*3.0+100*3.50+200**4.50+units*5.00
@@ -321,3 +321,4 @@ while  False:
 print('Bye')
 
 #Bye
+
