@@ -1,3 +1,4 @@
+'''
 Write  a  program  to  determine  three  sides  form  a  triangle  or  not
 
 1) Find  area  if  it  is  an  equilateral  triangle
@@ -36,7 +37,7 @@ else:
 
 
 
-
+'''
 Write  a  program  to  determine  roots  of  a  quadtratic  equation  a * x ^ 2 + b * x + c = 0  where  a  ! = 0
 
 1) What  is  the  value  of  discriminant ?  ---> b ^ 2 - 4ac
@@ -52,7 +53,7 @@ Write  a  program  to  determine  roots  of  a  quadtratic  equation  a * x ^ 2 
      What  is  the  formula  for  real  part ?  --->  -b / 2a
 	 What  is  the  formula  for  imag  part ?  --->  sqrt(-disc) / 2a
 	 What  is  r
-…
+	 '''
 
 
 import math
@@ -272,6 +273,7 @@ match  ???:
 				cost = 
 	case  ???:				
 				cost = 
+
 print('Bill  amount  :  ' , cost)
 
 u = int(input('Enter units : '))
@@ -299,4 +301,5 @@ print('Bye') #Hello .......
  #  Find  outputs
 while  False:
 	print('Hello')
+
 print('Bye') #Bye
