@@ -1,0 +1,380 @@
+1)Write  a  program  to  print  fibonacci  series  upto   x
+
+Let  input  be   10
+What  are  the  outputs  ?  --->  0 ,  1 ,   1 ,  2 ,  3 ,  5 , 8 , 13
+
+	1) What  is  10th  term ?  --->  9th  term + 8th  term
+    What  is  3rd  term ?  ---> 2nd  term + 1st  term
+    What  is  ith  term ?  ---> (i - 1)th  term +  (i - 2)  term
+
+	2) What  are  the  first  two  terms ?  --->  0  and  1
+
+	3) Hint:  Use  while  loop
+#Program
+x=int(input('Enter Value of x:'))
+print('Fibonacci Series')
+a=0
+b=1
+count = 1
+while count <= x:
+    print(a,'\n')
+    c = a + b
+    a = b
+    b = c
+    count += 1
+
+
+
+2) outputs  
+How  to  print  each  element  of  list  [10 , 20 , 15 , 18]  with  for  loop
+#list = [10, 20, 15, 18]
+
+for x in list:
+    print(x)
+How  to  print  each  character  of   string  'Hyd'  with  for  loop
+#str = ('Hyd')
+
+for x in str:
+	print(x)
+How  to  print  each  element  of   range(5)  with  for  loop
+#x = range(5)
+ 
+for x in x:
+	print(x) 
+
+3) outputs  
+for  x  in  {10 : 20 , 30 : 40 , 50 : 60} . keys():
+	print(x)#10
+                 30
+                 50
+print()
+for  x  in  {10 : 20 , 30 : 40 , 50 : 60} . values():
+	print(x)#20
+                 40
+                 60
+print()
+for  x  in  {10 : 20 , 30 : 40 , 50 : 60} . items():
+	print(x)#(10,20)
+                 (30,40)
+                 (50,60)
+print()
+for  x  in  {10 : 20 , 30 : 40 , 50 : 60}:
+	print(x)#10
+                 30
+                 50
+
+4) outputs  
+a = {10 : 20 , 30 : 40 , 50 : 60}
+for  x , y  in   a . items():
+	print(x , y , sep = '...')#10...20
+                                   30...40
+                                   50...60   
+for  x ,  y  in   a:
+	print(x , y#Error
+for  x , y  in  {10 : 20 , 30 : 40 , 50 : 60}:
+	print(x , y , sep = '...')#Error
+
+5) Identify  error  
+for  x  in   123:
+        print(x)#Error because 123 is non-sequence
+
+6)  outputs  
+for  x   in   ():
+        print(x)#Empty
+for  x   in  []:
+        print(x)#Empty
+for  x   in   {}:
+        print(x)#Error because it is not valid
+for  x   in   set():
+        print(x)#Error because it is not valid
+for  x   in   '':
+        print(x)#Error
+for  x  in  range(10 , 10):
+	print(x)#Error because it is not valid
+for  x  in   range():
+	print(x)#Error
+for  x  in   (25):
+	print(x)#Error because non-seq
+
+7) Nested  Loop  demo  program
+for  i  in  range(1 , 4):
+	for  j  in  range(1 , 5):
+			print(i ,  j)  #
+	print('Hello')
+print('Bye')
+#1 1
+1 2
+1 3
+1 4
+Hello
+2 1
+2 2
+2 3
+2 4
+Hello
+3 1
+3 2
+3 3
+3 4
+Hello
+Bye
+8) How  to  print  each  element  and  the  corresponding  index
+a = [25 , 10.8 , 'Hyd' , True]#for i in range(len(a)):
+					print(i,a[i])
+print('Indexed  based  for loop')
+How  to  print  each  element  and  the  corresponding  index  with  index  based  for  loop
+print('For each loop')#for x in variable:
+				print(x)
+How  to  print  each  element  and  the  corresponding  index  with  for  ...  each  loop (Do  not  use  2nd  variable)
+
+9) How  to  print  list  elements  in  reverse  order   without  slice
+a = [25 , 10.8 , 'Hyd' , True]
+print('Indexed for loop')#for i in range(len(a)-1,-1,-1);
+				print(a[i])
+How   to  print  each  element  of  list  in  reverse  order  with  indexed  based  for  loop # for x in a:
+			print(a[,,-1] 
+How   to  print  each  element  of  list  in  reverse  order  with  for  each  loop  (Do  not  use  2nd  variable  and  slice)
+
+10) Write  a  program  to  add  two  lists  and  store  results  in  3rd  list
+
+1st  list  --->  [10 , 20 , 15 , 18]
+
+2nd  list  --->  [30 , 40 , 35 , 12 , 100 , 200 , 300]
+
+3rd  list ?  --->  [10 + 30 , 20 + 40 , 15 + 35 , 18 + 12]  =  [40 , 60 , 50 , 30]
+
+Hint:  Use  append()  method
+'''
+#a = eval(input('Enter  1st  list  :  '))
+b = eval(input('Enter  2nd  list  :  '))
+c = []
+x = min(len(a),len(b))
+for i in range(x):
+	c.append(a[i]+b[i])
+print(c)
+
+
+11)  How  to  print  list  elements  from  indexes  2  to  4  without  slice
+a = [25 , 10.8 , 'Hyd' , True , 3 + 4j , None , 'Sec']
+print('Indexed for loop')
+How  to  print  elements  from  indexes  2  to  4  of  list  'a'  with  indexed  based  for  loop
+How  to  print  elements  from  indexes  2  to  4  of  list  'a'  with  for  each  loop   without  using  2nd  variable  and  slice
+
+12)  Tricky  program outputs  
+a = [10 , 20 , 15 , 18]
+for  i  in  range(len(a)):
+	a[i] +=  1
+print('a :  ' , a)#a :   [11, 21, 16, 19]
+
+b = [10 , 20 , 15 , 18]
+for  x  in   b:
+	x += 1
+print('b :  ' ,  b)#b :   [10, 20, 15, 18]
+
+13) Write  a  program  to  print  full  pyramid
+<4  spaces>*
+<3  spaces>*
+<2 spaces>***
+<1  space>***
+<0  spaces>***
+
+Input  is  number  of  lines
+'''
+#Program
+n = int(input("Enter number of lines: "))
+
+for i in range(1, n + 1):
+    spaces = n - i
+    stars = 2 * i - 1
+    
+    print(" " * spaces + "*" * stars)
+
+14) Write  a  program  to  print  first  20  even  numbers 
+
+1) What  are  the  first  20  even  numbers ?  --->  2 , 4 , 6 , 8 , ....   40
+
+2) What  is  printed  in  general ?  --->  2 * i  where  i  varies  from  1  to  20
+
+3) Hint:  Do  not  use  range  object
+
+4) Use  while  loop
+#Program
+i = 1
+print("First 20 Even numbers")
+while i <= 20:
+    print(2 * i)
+    i += 1
+print("Bye")
+
+
+15) Write  a  program  to  print  first  20  odd  numbers
+
+1) What  are  the  first  20  odd  numbers  ?  --->  1 , 3 , 5 , ....  39
+
+2) What  is  printed  in  general ?  --->  2 * i  - 1  where  i  varies  from  1  to  20
+
+3) Hint:  Do  not  use  range  object
+
+4) Use  while  loop
+'''
+#Program
+i = 1
+print("First 20 odd numbers")
+while i <= 20:
+    print(2 * i-1)
+    i += 1
+
+16) Write  a  program  to  print  natural  numbers  1 , 2 , 3 .... n  and   ask  user  to  input  value  of  'n'
+
+What  is  printed  in  general ?  --->  'i'  where  'i'  varies  from  1  to  n
+
+1) Hint:  Do  not  use  range  object
+
+2) Use  while  loop
+'''
+#Program
+n = int(input("Enter value of n: "))
+
+i = 1
+while i <= n:
+    print(i)
+    i += 1
+
+17) Write  a  program  to  print  10  ,  9  ,   8  ,  ..... 1
+
+What  is  printed  in  general ?  --->  'i'  where  'i'  varies  from  10  downto  1  in  steps  of  -1
+
+1) Hint:  Do  not  use  range  object
+
+2) Use  while  loop
+'''
+#Program
+i = 10
+print("Numbers from 10 downto 1 in steps of -1")
+while i >= 1:
+    print(i)
+    i -= 1
+
+18) Write  a  program  to  determine  1.1 + 2.2 + 3.3 + .... n terms
+
+1) sum =  0  + 1.1 * 1 + 1.1 * 2 + 1.1 * 3 + .......
+
+2) What  is  added  to  sum  in  general ?  --->  1.1 * i   where  'i'  varies  from  1  to  n
+
+3) Use  for  loop
+'''
+#Program
+n = int(input("How many terms would like to add: "))
+
+sum = 0
+
+for i in range(1, n + 1):
+    sum += 1.1 * i
+
+print("Sum:", sum)
+
+19) Write  a  program  to  determine  sum  of  first  20  even  numbers
+
+1) sum =  0 + 2 * 1 + 2 * 2 + 2 * 3 + .... + 2 * 20
+
+2) What  is  added  to  sum  in  general ? --->  2 * i   where 'i'  varies  from   1  to  20
+
+3) Use  for  loop
+'''
+#Program
+even = [2 * i for i in range(1, 21)]
+sum = 0
+for num in even:
+    sum += num
+
+print("Sum of first 20 even numbers is:", sum)
+
+20) Write  a  program  to  determine  sum  of  first  20  odd  numbers
+
+1) sum =  0 + (2 * 1 - 1) +  (2 * 2 - 1) + (2 * 3 - 1) + ...  (2 * 20 - 1)
+
+2) What  is  added  to  sum  in  general ? --->  2 * i - 1   where 'i'  varies  from   1  to  20
+
+3) Use  for  loop
+'''
+#Program
+odd = [2 * i-1 for i in range(1, 21)]
+sum = 0
+for num in odd:
+    sum += num
+
+print("Sum of first 20 odd numbers is:", sum)
+
+21) Write  a  program  to  determine  1 + 2 + 3 + .... + n  without  using  formula  n * (n + 1) / 2
+
+What  is  added  to  sum  in  general ? --->  'i'  where  'i'  varies  from  1  to   n
+
+Hint:  Use  for  loop
+'''
+#Program
+n = int(input("How many terms would like to add: "))
+numbers = [i for i in range(1, n + 1)]
+sum = 0
+for num in numbers:
+    sum += num
+
+print("Sum:",sum)
+
+22) outputs  
+for  i   in   range(1 , 8):
+	print(i)
+	if  i % 3  == 0:
+			continue
+	else:
+			print('Sec')
+	print('Hello')
+# End of loop
+print('Outside loop')
+#1
+Sec
+Hello
+2
+Sec
+Hello
+3
+4
+Sec
+Hello
+5
+Sec
+Hello
+6
+7
+Sec
+Hello
+Outside loop
+23) Identify Error  
+if ():
+	print('Hyd')
+	continue #Error because it is not valid
+	print('Sec')
+
+24) outputs 
+for  i   in   range(1 , 8):
+	print(i)
+	if   i % 3 == 0:
+		break
+	else:
+		print('Sec')
+	print('Hello')
+# End  of  the  loop
+print('Outside loop')
+#1
+Sec
+Hello
+2
+Sec
+Hello
+3
+Outside loop
+
+25) Identify Error  
+if(10 , 20 , 30):
+	print('Hyd')
+	break
+	print('Sec')#Error because it is not valid
