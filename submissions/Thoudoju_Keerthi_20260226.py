@@ -63,7 +63,7 @@ def roots():
     a=float(input('Enter value of a :'))
     if(a==0):
         print('Value of a can not be 0')
-        return;
+        return; # or exit()
     b=float(input('Enter value of b :'))
     c=float(input('Enter value of c :'))
     d=(b**2)-(4*a*c)
@@ -319,4 +319,5 @@ stack out of memory error
 while  False:
 	print('Hello')
 print('Bye')
+
 #Bye
