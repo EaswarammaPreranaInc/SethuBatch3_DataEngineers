@@ -29,6 +29,7 @@ if a + b > c and b + c > a and c + a > b:
 
     s = (a + b + c) / 2   #
 
+	
     if a == b == c:
         print("Equilateral Triangle")
         area = (math.sqrt(3) / 4) * (a ** 2)
@@ -112,7 +113,21 @@ Center  is  origin  and  radius  is  'r'
 
 4) Where  is  the  point  if  distance  and  raidus   are  same ?  ---> On  the  circle
 
+Program:
+import math
 
+x = float(input("Enter x coordinate: "))
+y = float(input("Enter y coordinate: "))
+r = float(input("Enter radius: "))
+
+distance = math.sqrt(x**2 + y**2)
+
+if distance > r:
+    print("Point lies Outside the circle")
+elif distance < r:
+    print("Point lies Inside the circle")
+else:
+    print("Point lies On the circle")
 
 
 
@@ -128,7 +143,7 @@ match  m:
 	case  3:
 		print('Three')
 print('Bye')
-
+# Bye
 
 
 
@@ -138,7 +153,7 @@ i = 2
 match  i:
 	case  1:
 		print('One')
-	case  _: 
+	case  _: # Error
 		print('None of   the  above')
 	case  2:
 		print('Two')
@@ -152,7 +167,7 @@ m = 2
 match  m:
 	case  1:
 		print('One')
-	case  _:  
+	case  _:  # Error
 		print('Hello')
 	case  _:  
 		print('Bye')
@@ -164,14 +179,15 @@ print('End')
 #  Find  outputs  (Home  work)
 m = 1
 match  m:
-	case  1:
+	case  1:  
 		print('Hyd')
 	case  1:
 		print('Sec')
 	case  1:
 		print('Cyb')
 print('Bye')
-
+# Hyd
+ Bye
 
 
 
@@ -189,16 +205,20 @@ match  ch:
 		print('None of  the  above')
 print('Bye')
 
+# Book
+  Bye
 
 
 
-
-1) What  are  the  outputs  if  input  is  -6 ? --->
-2) What  are  the  outputs  if  input  is  15  ?  --->
-3) What  are  the  outputs  if  input  is  10.8  ?  --->
-4) What  are  the  outputs  if  input  is  0  ?  --->
-5) What  are  the  outputs  if  input  is  -10  ?  --->
-6) What  are  the  outputs  if  input  is  7  ?  --->
+1) What  are  the  outputs  if  input  is  -6 ? ---> # Hyd
+		                                               Sec
+		                                               Cyb
+														Bye
+2) What  are  the  outputs  if  input  is  15  ?  ---> One, Two, Three, Bye
+3) What  are  the  outputs  if  input  is  10.8  ?  ---> India,China, USA , Bye
+4) What  are  the  outputs  if  input  is  0  ?  ---> Hyd, Sec, Cyb , bYe
+5) What  are  the  outputs  if  input  is  -10  ?  --->One, Two, Three, Bye
+6) What  are  the  outputs  if  input  is  7  ?  ---> Hyd, Sec, Cyb, bye
 '''
 x = eval(input('Enter any  number :  '))
 match  x:
@@ -221,17 +241,17 @@ print('Bye')
 
 
 
-1) What  is  the  output  when  input  is  (-10 , -20) ?  --->
-2) What  is  the  output  when  input  is  (10 , 0) ?  --->
-3) What  is  the  output  when  input  is  (0 , -20) ?  --->
-4) What  is  the  output  when  input  is  (0 , 0) ?  --->
-5) What  is  the  output  when  input  is  (10 , 20 , 30) ?  --->
-6) What  is  the  output  when  input  is  [10 , 20]  ?  --->
-7) What  is  the  output  when  input  is  [0 , -25]  ?  --->
-8) What  is  the  output  when  input  is  ()  ?  --->
-9) What  is  the  output  when  input  is  {10 , 20} ?  --->
-10) What  is  the  output  when  input  is  (25,) ?  --->
-11) What  is  the  output  when  input  is  {10 : 20} ?  --->
+1) What  is  the  output  when  input  is  (-10 , -20) ?  ---> # Quadrant
+2) What  is  the  output  when  input  is  (10 , 0) ?  --->   # x-axis
+3) What  is  the  output  when  input  is  (0 , -20) ?  --->  #y-axis
+4) What  is  the  output  when  input  is  (0 , 0) ?  ---> # origin
+5) What  is  the  output  when  input  is  (10 , 20 , 30) ?  ---> # not a point
+6) What  is  the  output  when  input  is  [10 , 20]  ?  --->  #Quadrant
+7) What  is  the  output  when  input  is  [0 , -25]  ?  ---> # Y-axis
+8) What  is  the  output  when  input  is  ()  ?  ---> # not a point
+9) What  is  the  output  when  input  is  {10 , 20} ?  ---> # not a point
+10) What  is  the  output  when  input  is  (25,) ?  --->  # not a point
+11) What  is  the  output  when  input  is  {10 : 20} ?  ---> # not a point
 '''
 tpl = eval(input('Enter  any  point  in  the  form  of  (x , y) :  '))
 match  tpl:
@@ -269,11 +289,11 @@ What  is  the  bill  amount ? --->  100 * 3.00 + 100 * 3.50 + 200 * 4.00 +  300 
 Hint:  Use  match  ...  case   but  not  if ... else
 '''
 units = int(input('Enter  units :   '))  
-match  ???:
-	case  ??:
-				cost = 
-	case  ???:
-				cost =  
+match  units/100:
+	case  0:
+				cost = units*3.00
+	case  1:
+				cost = 100*3.00(unit-100)*3.50
 	case  ???:
 				cost = 
 	case  ???:
@@ -289,11 +309,13 @@ print('Bill  amount  :  ' , cost)
 while  True:
 	print('Hello')
 print('Bye')
-
+# hello (infinite)
 
 
 
 #  Find  outputs
 while  False:
 	print('Hello')
+
 print('Bye')
+#Bye
