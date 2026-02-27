@@ -220,8 +220,8 @@ print('Bye')
 3) What  is  the  output  when  input  is  (0 , -20) ?  ---> y-axis
 4) What  is  the  output  when  input  is  (0 , 0) ?  --->origin
 5) What  is  the  output  when  input  is  (10 , 20 , 30) ?  --->Not a point
-6) What  is  the  output  when  input  is  [10 , 20]  ?  --->Not a point
-7) What  is  the  output  when  input  is  [0 , -25]  ?  --->Not a point
+6) What  is  the  output  when  input  is  [10 , 20]  ?  --->Qudrant
+7) What  is  the  output  when  input  is  [0 , -25]  ?  --->y-axis
 8) What  is  the  output  when  input  is  ()  ?  --->Not a point
 9) What  is  the  output  when  input  is  {10 , 20} ?  --->Not a point
 10) What  is  the  output  when  input  is  (25,) ?  --->Not a point
@@ -278,17 +278,17 @@ print('Bill  amount  :  ' , cost)
 
 u = int(input('Enter units : '))
 
-match u:
+match u//100:
     
-    case u if u<= 100:
+    case 0:
       cost = u * 3.00
-    case u if u <= 200:
+    case 1:
        cost = (100 * 3.00) + (u - 100) * 3.50
-    case u if u <= 400:
+    case 2:
       cost = (100 * 3.00) + (100 * 3.50) + (u - 200) * 4.00
-    case u if u <= 700:
+    case 3 :
         cost = (100 * 3.00) +(100 * 3.50) +(200 * 4.00) +(u - 400) * 4.50
-    case u:
+    case 4:
         cost = (100 * 3.00) + (100 * 3.50) +(200 * 4.00) +(300 * 4.50) +(u - 700) * 5.00
 print('Bill amount :', cost)
 
@@ -303,3 +303,4 @@ while  False:
 	print('Hello')
 
 print('Bye') #Bye
+
