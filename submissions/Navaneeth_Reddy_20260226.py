@@ -349,39 +349,7 @@ Output :
 10. Not a point
 11. Not a point
 '''
-'''
-Write  a  program  to  determine  bill  amount  and  input  is  units
 
-Units                                                      Cost
-------------------------------------------------------------
-First  100  units					Rs. 3.00 / unit
-
-Next  100  units				Rs. 3.50 / unit
-
-Next  200  units		    	Rs. 4.00 / unit
-
-Next  300  units				Rs. 4.50 / unit
-
-Above  700  units				Rs. 5.00 / unit
----------------------------------------------------------------
-Let  units  be  1200
-What  is  the  bill  amount ? --->  100 * 3.00 + 100 * 3.50 + 200 * 4.00 +  300 * 4.50 + 500 * 5.00
-
-Hint:  Use  match  ...  case   but  not  if ... else
-'''
-units = int(input('Enter  units :   '))  
-match  units:
-	case u if u <= 100 :
-				cost = u*3.00
-	case  u if u <= 200:
-				cost =  (100*300) + (u - 100)*3.50
-	case  u if u <= 400:
-				cost = (100*300) + (100*3.50) + (u -200)*4.00 
-	case  u if u <= 700:
-				cost = (100*300) + (100*3.50) + (200*4.00) + (u - 400)*4.50
-	case  u :				
-				cost = (100*300) + (100*3.50) + (200*4.00) + (300*4.50) + (u - 700)*5.00
-print('Bill  amount  :  ' , cost)
 
 #  Find  outputs
 while  True:
@@ -391,4 +359,5 @@ print('Bye') # It prints infinite times, because this while runs infinite times 
 #  Find  outputs
 while  False:
 	print('Hello')
+
 print('Bye') # Bye, because as while condition is false, it will not print statement inside while loop and it moves outside of loop and prints outer statement 
