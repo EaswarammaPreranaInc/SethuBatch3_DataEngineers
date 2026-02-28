@@ -344,7 +344,7 @@ Write  a  program  to  test  year  is  leap  year  or  not
 
 
 x=int(input("Enter 4-digit Year:"))
-if x%4==0 or (year % 4 == 0 and year % 100 != 0):
+if x%4==0 or x % 4 == 0 and x % 100 != 0):
 	print("leap year")
 else:
 	print("not leap year") 
@@ -475,5 +475,6 @@ middle = a + b + c - largest - smallest
 print(f"Largest input  : {largest}")
 print(f"Smallest input : {smallest}")
 print(f"Middle input   : {middle}")
+
 
 
