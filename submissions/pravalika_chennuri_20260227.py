@@ -27,7 +27,7 @@ match  units // 100:
 				cost =  100 * 3.00 + (units - 100) * 3.50
 	case  2 | 3:    # units b/w 200 and 399
 				cost = 100 * 3.00 + 100 * 3.50 + (units - 200) * 4.00
-	case  3 | 4 | 5 :    # units b/w 400 and 699
+	case  4 | 5 | 6 :    # units b/w 400 and 699
 				cost = 100 * 3.00 + 100 * 3.50 + 200 * 4.00 + (units - 400) * 4.50
 	case  _:	# units b/w > = 700			
 				cost = 100 * 3.00 + 100 * 3.50 + 200 * 4.00 + 300 * 4.50 + (units - 700) * 5.00
@@ -73,26 +73,26 @@ for x in range(5):
     print(x)
 
 # Find  outputs  (Home  work)
-for  x  in  {10 : 20 , 30 : 40 , 50 : 60} . keys():
+for  x  in  {10 : 20 , 30 : 40 , 50 : 60} . keys(): # dict_keys([10,30,50])
 	print(x) # 10 <nextline> 30 <nextline> 50
 print() #Nothing
-for  x  in  {10 : 20 , 30 : 40 , 50 : 60} . values():
+for  x  in  {10 : 20 , 30 : 40 , 50 : 60} . values(): # dict_values([20,40,60])
 	print(x) # 20 <nextline> 40 <nextline> 60
 print() # nothing
 for  x  in  {10 : 20 , 30 : 40 , 50 : 60} . items():
-	print(x) # 10 <nextline> 30 <nextline> 50
+	print(x) # (10,20) <nextline> (30,40) <nextline> (50,60)
 print() # nothing
 for  x  in  {10 : 20 , 30 : 40 , 50 : 60}:
-	print(x) # 10 <nextline> 30 <nextline> 60
+	print(x) # 10 <nextline> 30 <nextline> 50
 	
  # Find outputs  (Home  work)
 a = {10 : 20 , 30 : 40 , 50 : 60}
 for  x , y  in   a . items():
-	print(x , y , sep = '...') # 10,20...30,40...50,60
+	print(x , y , sep = '...') # 10...20,30...40,50...60
 for  x ,  y  in   a:
-	print(x , y) # 10,20 <nextline> 30,40 <nextline> 50,60
+	print(x , y) # error
 for  x , y  in  {10 : 20 , 30 : 40 , 50 : 60}:
-	print(x , y , sep = '...') # 10,20...30,40...,50,60
+	print(x , y , sep = '...') # error
 	
  # Identify  error  (Home  work)
 for  x  in   123:
@@ -112,31 +112,23 @@ for  x   in   '':
 for  x  in  range(10 , 10):
 	print(x) # nothing
 for  x  in   range():
-	print(x) # nothing
+	print(x) # error
 for  x  in   (25):
-	print(x) # 0 <nextline> 1 <nextline> 2 <nextline> 3............24
+	print(x) # error
 	
 #  Nested  Loop  demo  program
 for  i  in  range(1 , 4):
 	for  j  in  range(1 , 5):
 			print(i ,  j) 
 	print('Hello')
-print('Bye') #1,1 <nextline> 1,2 <nextline> 1,3 <nextline> 1,4 <nextline> Hello <nextline> 2,1 <nextline> 2,2 .....3,4 <nextline> Bye
+print('Bye') #1 1 <nextline> 1 2 <nextline> 1 3 <nextline> 1 4 <nextline> Hello <nextline> 2 1 <nextline> 2 2 .....3 4 <nextline> Bye
 
  # How  to  print  each  element  and  the  corresponding  index
 a = [25 , 10.8 , 'Hyd' , True]
 print('Indexed  based  for loop')
 for i in range(len(a)):
-	print(i,a[i])
+	print(i,a[i])   #How  to  print  each  element  and  the  corresponding  index  with  index  based  for  loop
 	
-#How  to  print  each  element  and  the  corresponding  index  with  index  based  for  loop
-print('For each loop')
-for each in a:
-	print(each) 
-	
-#How  to  print  each  element  and  the  corresponding  index  with  for  ...  each  loop (Do  not  use  2nd  variable)
-for i in a:
-	print(i)
 
 #  How  to  print  list  elements  in  reverse  order   without  slice
 a = [25 , 10.8 , 'Hyd' , True]
@@ -147,14 +139,8 @@ for i in range(len(a),-1,-1):
 #How   to  print  each  element  of  list  in  reverse  order  with  indexed  based  for  loop
 a = [25 , 10.8 , 'Hyd' , True]
 print('Indexed for loop')
-for i in range(len(a),-1,-1):
-	print(i)
-	
-#How   to  print  each  element  of  list  in  reverse  order  with  for  each  loop  (Do  not  use  2nd  variable  and  slice)
-a = [25 , 10.8 , 'Hyd' , True]
-print('Indexed for loop')
-for i in range(len(a),-1,-1):
-	print(i)
+for i in range(1,len(a)+1):
+	print(a[-i])
 	
 '''
 Write  a  program  to  add  two  lists  and  store  results  in  3rd  list
@@ -170,29 +156,23 @@ Hint:  Use  append()  method
 a = eval(input('Enter  1st  list  :  '))
 b = eval(input('Enter  2nd  list  :  '))
 c = []
+small = min(len(a),len(b))
 #How  to  add  lists  'a'  and  'b'  and  store  results  in  list  'c'  with  indexed  based   for  loop
-for i in range(len(a)):
+for i in range(small):
 	sum = a[i] + b[i]
 	c.append(sum)
 print('3rd  list : ' , c)
 
-#How  to  add  lists  'a'  and  'b'  and  store  results  in  list  'c'  with  for  each  loop (Do  not  use  2nd  variable)
-for x,y in a,b:
-	sum = x + y
-	c.append(sum)
-print('3rd  list : ' , c)
+
+#How  to  add  lists  'a'  and  'b'  and  store  results  in  list  'c'  with  for  each  loop (Do  not  use  2nd  variable  : not possible
 
 #  How  to  print  list  elements  from  indexes  2  to  4  without  slice
 a = [25 , 10.8 , 'Hyd' , True , 3 + 4j , None , 'Sec']
-for i in range(2,4):
+for i in range(2,5):
 	print(a[i])
-print('Indexed for loop')
-
-#How  to  print  elements  from  indexes  2  to  4  of  list  'a'  with  indexed  based  for  loop
-for i in range(2,4):
-	print(a[i])
+print('Indexed for loop')	#How  to  print  elements  from  indexes  2  to  4  of  list  'a'  with  indexed  based  for  loop
 	
-#How  to  print  elements  from  indexes  2  to  4  of  list  'a'  with  for  each  loop   without  using  2nd  variable  and  slice
+#How  to  print  elements  from  indexes  2  to  4  of  list  'a'  with  for  each  loop   without  using  2nd  variable  and  slice : not possible
 
 #  Tricky  program
 #  Find  outputs  (Home  work)
@@ -204,7 +184,7 @@ print('a :  ' , a) # 11 21 16 19
 b = [10 , 20 , 15 , 18]
 for  x  in   b:
 	x += 1
-print('b :  ' ,  b) # 11 21 16 19
+print('b :  ' ,  b) # 10 20 15 18
 
 '''
 Write  a  program  to  print  full  pyramid
@@ -217,10 +197,12 @@ Write  a  program  to  print  full  pyramid
 Input  is  number  of  lines
 '''
 n = int(input("enter a number : "))
+s=n-1
 for i in range(1, n + 1):
-    spaces = n - i
-    stars = 2 * i - 1
-    print(" " * spaces + "*" * stars)
+	print(' ' * s, end = "")
+	print("*" * (2*i-1))
+	s-=1
+
 	
 '''
 (Home  work)
@@ -376,3 +358,4 @@ if(10 , 20 , 30):
 	print('Hyd')
 	break # error due no loops 
 	print('Sec')
+
