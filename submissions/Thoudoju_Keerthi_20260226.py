@@ -289,18 +289,12 @@ match  units//100:
 				cost = units*3.0
 	case  1:
 				cost = 100*3.0+(units-100)*3.50 
-	case  2:
+	case  2 | 3:
 				cost = 100*3.0+100*3.50+(units-200)*4.50
-	case  3:
-				cost = 100*3.0+100*3.50+(units-300)*4.50
-	case  4:
-				cost = 100*3.0+100*3.50+(units-400)*4.50
-	case  5:
-				cost = 100*3.0+100*3.50+(units-500)*4.50
-	case  6:
-				cost = 100*3.0+100*3.50+(units-600)*4.50
+	case  4 | 5 | 6:
+				cost = 100*3.0+100*3.50+ 200 * 4.50 + (units-400)*4.50
 	case  _ :
-				cost = 100*3.0+100*3.50+200**4.50+(units-700)*5.00
+				cost = 100*3.0+100*3.50+200*4.50+ 400*4.50+ (units-700)*5.00
 	
 print('Bill  amount  :  ' , cost)
 
@@ -321,5 +315,6 @@ while  False:
 print('Bye')
 
 #Bye
+
 
 
