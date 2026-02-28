@@ -58,7 +58,6 @@ for  x  in  {10 : 20 , 30 : 40 , 50 : 60}:
 
 
 
-
 # Find outputs  (Home  work)
 a = {10 : 20 , 30 : 40 , 50 : 60}
 for  x , y  in   a . items():
@@ -90,7 +89,8 @@ for  x   in   ():
 for  x   in  []:
         print(x)  # [] Nothing
 for  x   in   {}:
-        print(x)  # Error
+        print(x)  # Nothing
+		
 for  x   in   set():
         print(x) # Noting
 for  x   in   '':
@@ -98,7 +98,7 @@ for  x   in   '':
 for  x  in  range(10 , 10):
 	print(x) # Nothing
 for  x  in   range():
-	print(x) # nothing
+	print(x) # Error
 for  x  in   (25):
 	print(x) # Error
 
@@ -140,8 +140,14 @@ How  to  print  each  element  and  the  corresponding  index  with  index  base
 print('For each loop')
 How  to  print  each  element  and  the  corresponding  index  with  for  ...  each  loop (Do  not  use  2nd  variable)
 
+# a = [25 , 10.8 , 'Hyd' , True]
+  for i in range(4):
+    print(i,a[i])
+  print(i)
 
-
+# a = [25 , 10.8 , 'Hyd' , True]
+   Not possible -- it connot track indexes
+  
 
 #  How  to  print  list  elements  in  reverse  order   without  slice
 a = [25 , 10.8 , 'Hyd' , True]
@@ -149,7 +155,11 @@ print('Indexed for loop')
 How   to  print  each  element  of  list  in  reverse  order  with  indexed  based  for  loop
 How   to  print  each  element  of  list  in  reverse  order  with  for  each  loop  (Do  not  use  2nd  variable  and  slice)
 
-
+#a = [25 , 10.8 , 'Hyd' , True]
+ for i in range(1,5) 
+     print(a[-i])
+#a = [25 , 10.8 , 'Hyd' , True]
+ Not possible
 
 
 Write  a  program  to  add  two  lists  and  store  results  in  3rd  list
@@ -169,7 +179,14 @@ How  to  add  lists  'a'  and  'b'  and  store  results  in  list  'c'  with  in
 print('3rd  list : ' , c)
 How  to  add  lists  'a'  and  'b'  and  store  results  in  list  'c'  with  for  each  loop (Do  not  use  2nd  variable)
 
-
+Program:
+a=[10 , 20 , 15 , 18]
+b=[30 , 40 , 35 , 12 , 100 , 200 , 300]
+c=[]
+small=min(len(a),len(b))
+for in range(small):
+    c.append(a[i]=b[i])
+print(c)
 
 
 
@@ -177,22 +194,26 @@ How  to  add  lists  'a'  and  'b'  and  store  results  in  list  'c'  with  fo
 a = [25 , 10.8 , 'Hyd' , True , 3 + 4j , None , 'Sec']
 print('Indexed for loop')
 How  to  print  elements  from  indexes  2  to  4  of  list  'a'  with  indexed  based  for  loop
-How  to  print  elements  from  indexes  2  to  4  of  list  'a'  with  for  each  loop   without  using  2nd  variable  and  slice
+How  to  print  elements  from  indexes  2  to  4  of  list  'a'  with  for  each  loop   without  using  2nd  variable  and  slice 
+
+Program:
+a = [25 , 10.8 , 'Hyd' , True , 3 + 4j , None , 'Sec']
+for i in range(2,5):
+  print(a[i])
 
 
-
-
+# Not Possible
 
 #  Tricky  program
 #  Find  outputs  (Home  work)
 a = [10 , 20 , 15 , 18]
 for  i  in  range(len(a)):
 	a[i] +=  1
-print('a :  ' , a)
+print('a :  ' , a) #[11,21,16,19]
 b = [10 , 20 , 15 , 18]
 for  x  in   b:
 	x += 1
-print('b :  ' ,  b)
+print('b :  ' ,  b)  #[10 , 20 , 15 , 18]
 
 
 
@@ -208,7 +229,13 @@ Write  a  program  to  print  full  pyramid
 
 Input  is  number  of  lines
 
-
+Program:
+n=int(input('How many line :'))
+s=-1
+for i in range(1,n+1):
+ print(' '*s, end='')
+ print('*'*(2*i-1))
+ s-=1
 
 
 (Home  work)
@@ -222,7 +249,13 @@ Write  a  program  to  print  first  20  even  numbers
 
 4) Use  while  loop
 
-
+Program:
+print('First 20 even Numbers')
+i=1
+while i<=20:
+ print(2*i)
+ i+=1
+print('Bye')
 
 
 Write  a  program  to  print  first  20  odd  numbers
@@ -232,8 +265,16 @@ Write  a  program  to  print  first  20  odd  numbers
 2) What  is  printed  in  general ?  --->  2 * i  - 1  where  i  varies  from  1  to  20
 
 3) Hint:  Do  not  use  range  object
-
 4) Use  while  loop
+
+Program:
+
+int('First 20 odd Numbers')
+i=1
+while i<=20:
+ print(2*i-1)
+ i+=1
+print('Bye')
 
 
 
@@ -269,6 +310,8 @@ Write  a  program  to  determine  1.1 + 2.2 + 3.3 + .... n terms
 
 3) Use  for  loop
 
+Program:
+n=int(input('enter num :'))
 
 
 
@@ -315,15 +358,31 @@ for  i   in   range(1 , 8):
 # End of loop
 print('Outside loop')
 
-
-
+# 1
+  Sec
+  Hello
+  2
+  Sec
+  Hello
+  3
+  4
+  Sec
+  Hello
+  5
+  Sec
+  Hello
+  6
+  7
+  Sec
+  Hello
+ Outside loop
 
 
 # Identify Error  (Home  work)
 if ():
 	print('Hyd')
 	continue
-	print('Sec')
+	print('Sec') # Error not using loop
 
 
 
@@ -340,11 +399,20 @@ for  i   in   range(1 , 8):
 # End  of  the  loop
 print('Outside loop')
 
-
+# 1
+  Sec
+  Hello
+  2
+  Sec
+  Hello
+  3
+  Outside loop
+  
 
 
 # Identify Error  (Home  work)
 if(10 , 20 , 30):
 	print('Hyd')
-	break
+	break  # Error not using loop
+
 	print('Sec')
