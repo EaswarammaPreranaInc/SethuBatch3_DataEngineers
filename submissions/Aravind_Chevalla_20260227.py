@@ -113,11 +113,12 @@ for x in a:
     i+=1
 
 #  How  to  print  list  elements  in  reverse  order   without  slice
-a = [25 , 10.8 , 'Hyd' , True]
-print('Indexed for loop')
 a=[25,10.8,'Hyd',True]
-for i in range(-1,-len(a)-1,-1):
-    print (a[i])
+i=len(a)-1
+for x in a:
+    c=(a[i])
+    i-=1
+    print(c)
 
 How   to  print  each  element  of  list  in  reverse  order  with  indexed  based  for  loop
 a=[25,10.8,'Hyd',True]
@@ -126,7 +127,7 @@ for i in range(-1,-len(a)-1,-1):
 -
 How   to  print  each  element  of  list  in  reverse  order  with  for  each  loop  (Do  not  use  2nd  variable  and  slice)
 a=[25,10.8,'Hyd',True]
-for x in a:
+for x in reversed(a):
     print (x)
 
  '''
@@ -412,3 +413,4 @@ if(10 , 20 , 30):
 	print('Hyd')
 	break #error
 	print('Sec')
+
