@@ -124,20 +124,20 @@ for  i  in  range(1 , 4):
 	print('Hello')
 print('Bye')
 
-#(1,1)
-#(1,2)
-#(1,3)
-#(1,4)
+#1 1
+#1 2
+#1 3
+#1 4
 #Hello
-#(2,1)
-#(2,2)
-#(2,3)
-#(2,4)
+#2 1
+#2 2
+#2 3
+#2 4
 #Hello
-#(3,1)
-#(3,2)
-#(3,3)
-#(3,4)
+#3 1
+#3 2
+#3 3
+#3 4
 #Hello
 Bye
 
@@ -441,3 +441,4 @@ if(10 , 20 , 30):
 	break       # condition for break not mentioned
 
 	print('Sec')
+
