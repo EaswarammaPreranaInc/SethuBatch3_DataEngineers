@@ -13,8 +13,6 @@ What  are  the  outputs  ?  --->  0 ,  1 ,   1 ,  2 ,  3 ,  5 , 8 , 13 , 21 , 34
 3) Hint:  Use  while  loop
 '''
 # Output:
-x = int(input('enter value of x: '))
-# First two terms
 x=int(input('Enter value of x:'))
 a = 0
 b = 1
@@ -445,3 +443,4 @@ if(10 , 20 , 30):
 	print('Sec')
 
   #Error 
+
