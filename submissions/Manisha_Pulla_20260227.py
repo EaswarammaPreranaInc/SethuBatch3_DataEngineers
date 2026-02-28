@@ -15,15 +15,13 @@ What  are  the  outputs  ?  --->  0 ,  1 ,   1 ,  2 ,  3 ,  5 , 8 , 13 , 21 , 34
 # Output:
 x = int(input('enter value of x: '))
 # First two terms
+x=int(input('Enter value of x:'))
 a = 0
 b = 1
-count = 0
-while count < x:
-    print(a, end=" , ")
-    c = a + b
-    a = b
-    b = c
-    count += 1
+c = a+b
+while a<x:
+    print(a)
+    a,b=b,a+b
 
 # Find  outputs  (Home  work)
 How  to  print  each  element  of  list  [10 , 20 , 15 , 18]  with  for  loop 
@@ -445,4 +443,5 @@ if(10 , 20 , 30):
 	print('Hyd')
 	break
 	print('Sec')
+
   #Error 
