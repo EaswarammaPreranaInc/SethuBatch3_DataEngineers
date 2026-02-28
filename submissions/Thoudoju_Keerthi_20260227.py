@@ -194,6 +194,7 @@ c = []
 l1=len(a)
 l2=len(b)
 min = l1 if l1<l2 else l2
+# sm= min(l1,l2)
 for i in range(min):
 	c.append(a[i]+b[i])
 	
@@ -237,16 +238,16 @@ b = [10 , 20 , 15 , 18]
 for  x  in   b:
 	x += 1
 print('b :  ' ,  b)
-#b = [11 , 21 , 16 , 19]
+#b = [10 , 20 , 15 , 18] # x is incremented but elements of list unchanged
 
 
  '''
 Write  a  program  to  print  full  pyramid
 <4  spaces>*
-<3  spaces>*
-<2 spaces>***
-<1  space>****
-<0  spaces>*****
+<3  spaces>***
+<2 spaces>*****
+<1  space>*******
+<0  spaces>*********
 
 Input  is  number  of  lines
 '''
@@ -441,4 +442,5 @@ if(10 , 20 , 30):
 	break       # condition for break not mentioned
 
 	print('Sec')
+
 
