@@ -95,4 +95,5 @@ b = eval(input('Enter   any  string  : ')) # Hyd # "Hyd"
      # becoz eval() thinks hyd is a variable
      # user must enter quotes
 print(len(b)) # 3
+
 print(b) # Hyd
