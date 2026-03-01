@@ -1,4 +1,4 @@
-# # Find  outputs
+# Find  outputs
 a = 25
 print(id(a))  # Address of the object 25
 a = 35
@@ -99,5 +99,6 @@ print((25, 10.8, 'Hyd', True) * 3)  # (25, 10.8, 'Hyd', True, 25, 10.8, 'Hyd', T
 #print({10 , 20 , 15} * 2)  # Error due to no duplicates in set
 #print({10 : 20 , 30 : 40} * 2)  # Error due to no duplicates in dictionary
 #print([10] * [20])  # Error due to List * List can't do
+
 
 
