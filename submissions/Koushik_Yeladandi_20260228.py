@@ -64,8 +64,16 @@ Input  is  number  of  lines
 4) ch = 'A'
     How  to  increment  variable  ch  by  1 ?  --->  ch = chr(ord(ch) + 1)
 
-
-
+#Program:
+n=int(input('How many lines :')
+print('Pyramid')
+s=10
+for i in range(n):
+   print(' '*s,end=' ')
+   s-=1
+   for ch in range(65,65+i+1)
+      print(chr(ch),end='')
+print()
 
 
 # Find  outputs  (Home  work)
@@ -93,4 +101,5 @@ for  i   in   range(1 , 8):
 		print('Sec')
 	print('Hello')
 # End  of  the  loop
+
 print('Outside loop')
