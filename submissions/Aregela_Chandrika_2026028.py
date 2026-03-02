@@ -1,36 +1,4 @@
 '''
-Write  a  program  to  print  fibonacci  series  upto   x
-
-Let  input  be   10
-What  are  the  outputs  ?  --->  0 ,  1 ,   1 ,  2 ,  3 ,  5 , 8 
-
-1) What  is  10th  term ?  --->  9th  term + 8th  term
-    What  is  3rd  term ?  ---> 2nd  term + 1st  term
-    What  is  ith  term ?  ---> (i - 1)th  term +  (i - 2)  term
-
-2) What  are  the  first  two  terms ?  --->  0  and  1
-
-3) Hint:  Use  while  loop
-'''
-x = int(input('Enter  value  of  x  :  '))  #  
-if  x < 0:
-	print('Invalid  input')
-elif  x == 0:
-	print('Fibonacci  series')
-	print(0)
-else:
-	a = 0
-	b = 1
-	print('Fibonacci  Series')
-	print(a)
-	print(b)
-	c = a + b  
-	while  c <= x:  #  3 <= 10
-		print(c)
-		a = b
-		b = c
-		c = a + b
-[12:43 pm, 28/2/2026] +91 99482 50500: '''
 Write  a  program  to  print
 	   A
       A B
@@ -59,18 +27,53 @@ Input  is  number  of  lines
 4) ch = 'A'
     How  to  increment  variable  ch  by  1 ?  --->  ch = chr(ord(ch) + 1)
 '''
-[1:09 pm, 28/2/2026] +91 99482 50500: # Find  outputs  (Home  work)
+n = int(input("Enter number of lines: "))
+for i in range(1, n + 1):
+    for s in range(n - i):
+        print(" ", end="")
+    ch = 'A'
+    for j in range(i):
+        print(ch, end=" ")
+        ch = chr(ord(ch) + 1)
+    print()   
+
+-----------------------------------------------------------------------------------
+# Find  outputs  (Home  work)
 for  i   in   range(1 , 8):
-	print(i)
+	print(i) #1 2 3 4 5 6 7
 	if   i % 3 == 0:
 		pass
 		print('Hyd')
 	else:
-		print('Sec')
+		print('Sec') 
 	print('Hello')
 # End  of  the  loop
 print('Outside loop')
-[1:11 pm, 28/2/2026] +91 99482 50500: # Find  outputs  (Home  work)
+
+'''
+when i=1
+Sec
+Hello
+when i=2
+Sec
+Hello
+when i=3
+Hyd
+when i=4
+Sec
+Hello
+when i=5
+Sec
+Hello
+when i=6
+Hyd
+when i=7
+Sec
+Hello
+Outside loop'''
+
+
+# Find  outputs  (Home  work)
 for  i   in   range(1 , 8):
 	print(i)
 	if   i % 3 == 0:
@@ -80,3 +83,12 @@ for  i   in   range(1 , 8):
 	print('Hello')
 # End  of  the  loop
 print('Outside loop')
+'''
+when i=1
+Sec
+Hello
+when i=2
+Sec
+Hello
+when i=3 exits
+'''
