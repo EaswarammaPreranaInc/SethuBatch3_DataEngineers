@@ -28,4 +28,5 @@ for  i   in   range(1 , 8):
 		print('Sec')
 	print('Hello') Hello 
 # End  of  the  loop
+
 print('Outside loop')
