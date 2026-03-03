@@ -296,7 +296,8 @@ print(a[0]) #Error
 a = (10 , 20 , 15 , 18)
 print(a)  # (10 , 20 , 15 , 18)
 print(a[0]) #10
-del  a[2] 
+del  a[2] # tuple is immutable
 del  a 
 print(a)  #Error
+
 print(a[0]) #Error
