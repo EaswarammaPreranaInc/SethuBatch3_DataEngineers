@@ -114,8 +114,20 @@ hello
 Sec
 Hello
 3
+Sec
 Hello
-Outside Loop
+4
+Sec
+Hello
+5
+Sec
+Hello
+6
+Sec
+Hello
+7
+Sec
+Hello
 
 
 
@@ -284,6 +296,21 @@ ctr = 0 + 1 + 1 + 1
 
 3) How  is   end  of  inputs  denoted  in  unix ?  --->  ctrl + d
 '''
+
+
+sum = ctr = 0
+try:
+	while True:
+		   a = eval(input("Enter values: ")
+		   sum += a
+		   ctr += 1
+except EOFError:
+   try:
+     print("Average :", sum/ctr)
+   except:
+     print("Enter atleast one input.")
+except  (NameError , TypeError):
+	print('Input  can  not  be  string')
 
 
 
