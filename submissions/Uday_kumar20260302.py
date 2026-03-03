@@ -367,3 +367,4 @@ del a 
 print(a) #error
 print(a[0]) #error
 
+
