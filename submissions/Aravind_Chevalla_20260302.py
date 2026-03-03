@@ -26,8 +26,12 @@ What  is  the  output ?  --->  First  6  terms  i.e.  0 , 1  , 1 ,  2 , 3 , 5
 
 x=int(input("Enter values to be searched:"))
 a=0
+print(a)
+if x==1:
+	exit()
 b=1
-for i in range(x):
+print(b)
+for i in range(x-2):
     c=a+b
     a=b
     b=c
@@ -298,4 +302,5 @@ print(a[0])  #10
 del  a[2] 
 del  a 
 print(a)  #error
+
 print(a[0])#error
