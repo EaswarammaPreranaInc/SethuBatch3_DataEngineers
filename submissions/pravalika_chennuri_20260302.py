@@ -84,7 +84,7 @@ for  i  in  range(1 , 8):
 else:
 	print('else  suite')
 # End  of  the  loop
-print('Outside loop') # 1 \n Sec \n Hello \n 2 \n Sec \n Hello \n 3 \n outside loop
+print('Outside loop') # 1 \n Sec \n Hello \n 2 \n Sec \n Hello \n 3 \n.............else suite \n outside loop
 
 
 '''
@@ -240,3 +240,4 @@ del  a[2]
 del  a 
 print(a)  # error
 print(a[0]) # error
+
