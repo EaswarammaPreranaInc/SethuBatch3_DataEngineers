@@ -24,18 +24,18 @@ Write  a  program  to  print  first  'n'  terms  of  fibonacci  series
 Let  input  be  6
 What  is  the  output ?  --->  First  6  terms  i.e.  0 , 1  , 1 ,  2 , 3 , 5
 '''
-x = int(input("Enter  value  to  be  searched :  "))
-
-a = 0
-b = 1
-
-while a <= x:
-    if a == x:
-        print("Found")
-        break
-    a, b = b, a + b
-else:
-    print("Not  Found")
+x = int(input("Enter number of trms :  "))
+a=0
+print (a)
+if x==1:
+	exit()
+b=1
+print(b)
+for i in range(x-2):
+	c=a+b
+	print (c)
+	a=b
+	b=c
 
 
 
@@ -164,13 +164,13 @@ What  are  the  outputs ?  --->   15 is  found  at  index  2
 '''
 y = [10, 20, 15, 12, 18, 15, 19, 14, 15, 14]
 
-x = int(input("Enter element to search: "))
+x = int(input('Enter element to be searched: '))
 
 count = 0
 
 for i in range(len(y)):
     if y[i] == x:
-        print(x, "is  found  at  index", i)
+        print(x, 'is  found  at  index', i)
         count += 1
 
 if count > 0:
@@ -225,9 +225,14 @@ ctr = 0 + 1 + 1 + 1
 3) How  is   end  of  inputs  denoted  in  unix ?  --->  ctrl + d
 '''
 
-
-
-
+try:
+	sum=ctr=0
+	while True:
+		x=eval (input('Enter input ctrl+z to stop :')
+		sum+=1
+		ctr+=1
+except EOFError:
+	print(f'Average :{sum/ctr:2f}')
 
 
 
@@ -236,7 +241,7 @@ ctr = 0 + 1 + 1 + 1
 a = 25
 print(a)     # 25
 del   a 
-print(a)   #nothing is printed
+print(a)   #a is not defined
 
 
 
@@ -265,6 +270,17 @@ print(c)                       #not defined
 
 
 
+# Find outputs  (Home  work)
+a = [10 , 20 , 15 , 18]
+print(a)       #[10 , 20 , 15 , 18]
+del  a[2]        
+print(a)      #[10 , 20 , 18]
+del  a
+print(a)        #not defined
+print(a[0])          #not defined
+
+
+
 
 # Find outputs  (Home work)
 a = (10 , 20 , 15 , 18)
@@ -274,6 +290,7 @@ del  a[2]              # no modification
 del  a 
 print(a)              #not defined
 print(a[0])           #not defined
+
 
 
 
