@@ -20,8 +20,20 @@ Let  input  be  6
 What  is  the  output ?  --->  First  6  terms  i.e.  0 , 1  , 1 ,  2 , 3 , 5
 '''
 n = int(input('Enter a number: '))
-
-
+print('Fibonacci series')
+if n == 0:
+	exit()
+a = 0
+print(a)
+if n == 1:
+	exit()
+b = 1
+print(b)
+for i in range(n -2):
+	c = a + b
+	print(c)
+	a = b
+	b = c
 
 '''
 Write  a  program  to  search  for  'x'  in  fibonacci  series
@@ -42,10 +54,10 @@ for  i  in  range(1 , 8):
 	if   i % 3 == 0:
 		continue
 	else:
+	print('else  suite')
 		print('Sec')
 	print('Hello')
 else:
-	print('else  suite')
 # End  of  the  loop
 print('Outside  loop')
 
@@ -159,17 +171,17 @@ print((a = 6) + 7)  # Error
 # Find  outputs  (Home  work)
 a = 0
 if  a == 0:
-	print('Hyd')
+	print('Hyd')   # Hyd
 else:
-	print('Sec')
+	print('Sec')  # Not executed 
 if  b := 0:
-	print('Hyd')
+	print('Hyd')  # Not executed 
 else:
-	print('Sec : ' , b)
+	print('Sec : ' , b)  # Sec : 0
 if  c = 0:
-	print('Hyd')
+	print('Hyd')  # Error 
 else:
-	print('Sec')
+	print('Sec')   # Error
 
 
 '''
@@ -195,7 +207,6 @@ a = 25
 print(a)  # 25
 del   a 
 print(a)   # Error due to deleted value
-
 
  
 # Find  outputs  (Home  work)
@@ -238,4 +249,3 @@ del  a[2]  # Can't be done as tuple is immutable
 del  a 
 print(a)   # Error 
 print(a[0])  # Error
-
