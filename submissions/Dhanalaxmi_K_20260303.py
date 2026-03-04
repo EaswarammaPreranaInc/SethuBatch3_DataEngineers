@@ -108,3 +108,4 @@ except (ValueError, NameError):
 
 except IndexError:
     print('Pls send inputs') 
+
