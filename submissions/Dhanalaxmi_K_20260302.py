@@ -272,4 +272,5 @@ print(a[0])  # 10
 del  a[2] 
 del  a 
 print(a) # a is not defined error  
+
 print(a[0]) # a is not defined error  
