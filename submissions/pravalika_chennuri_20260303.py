@@ -6,8 +6,7 @@ Hint:  Combine  lines  8   and   9  to a  single  line  with   walrus  operator
 
 try:
 	sum =  ctr = 0
-	while  True:
-		x = eval(input('Enter input  (ctrl + z  to  stop)  :  '))
+	while  x := eval(input('Enter input  (ctrl + z  to  stop)  :  ')):
 		sum+=x
 		ctr +=1
 except  EOFError:
@@ -39,12 +38,12 @@ Write  a  program  to  determine  command  line  input  is  even  number  or  od
 
 from sys import argv
 try:
-    a = int(argv[1:])
+    a = int(argv[1])
     if a%2==0:
         print("Even number")
     else:
         print("Odd number")
-except(NameError,TypeError):
+except:
     print("please send an integer input")
 
 '''
@@ -64,13 +63,12 @@ Write  a  program  to  determine  average  of  command  line  inputs
 '''
 from sys import argv
 try :
-    a = argv[1:]
-    sum=0
-    for i in a:
-        sum += float(i)
-    avg = sum/len(a)
+    a = []
+    for i in argv[1:]:
+        a.append(eval(i))
+    avg = sum(a)/len(a)
     print(avg)
-except(NameError,ZeroDivisionError,ValueError):
+except(TypeError,ZeroDivisionError,NameError):
     print("please send number inputs")
 
 '''
@@ -94,8 +92,11 @@ Write  a  program  to  sort  command  line  inputs  in  ascending  order  and  d
 '''
 from sys import argv
 try:
-    a = argv[1:]
-    b = sorted(a)
-    print(b)
-except(TypeError,ValueError,NameError):
+    a = []
+	for i in argv[1:]:
+		a.append(eval(i))
+    print('Acsending order : ', sorted(a))
+    print('Decsending order : ',sorted(b, reverse=True))
+except(TypeError,NameError):
+
     print("Do  not  send  number  and  string")
