@@ -8,60 +8,50 @@ chr(97) =  'a'
 chr(122) =  'z'
 '''
 for i in range(65,91):
-	print(chr(i), end = ' ')
+    print(chr(i), end = " ")
 print()
-for i in range(97,123):
-	print(chr(i), end = ' ')	
-
+for j in range(97, 123):
+    print(chr(j), end =" ")
+'''
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+a b c d e f g h i j k l m n o p q r s t u v w x y z 
+'''
 '''
 Write  a  program  to  print  first  'n'  terms  of  fibonacci  series
 
 Let  input  be  6
 What  is  the  output ?  --->  First  6  terms  i.e.  0 , 1  , 1 ,  2 , 3 , 5
 '''
-n = int(input('Enter a number: '))
-print('Fibonacci series')
-if n == 0:
-	exit()
-a = 0
+n = int(input('Enter value : ')) 
+a = 0 
+b = 1 
 print(a)
-if n == 1:
-	exit()
-b = 1
 print(b)
-for i in range(n -2):
-	c = a + b
-	print(c)
-	a = b
-	b = c
-
+for i in range(n-2):
+    a, b = b, a+b
+    print(b)
 '''
-Write  a  program  to  search  for  'x'  in  fibonacci  series
-
-1) Let  input  be   10
-    What  is  the  output ? --->	Not  found
-
-2) Let  input  be   21
-    What  is  the  output ? --->  Found
-
-3) Do  not  generate  fibonacci  series
+Enter value : 6
+0
+1
+1
+2
+3
+5
 '''
-
-
 # Find  outputs  (Home  work)
 for  i  in  range(1 , 8):
 	print(i)
 	if   i % 3 == 0:
 		continue
 	else:
-	print('else  suite')
 		print('Sec')
 	print('Hello')
 else:
+	print('else  suite')
 # End  of  the  loop
 print('Outside  loop')
-
-"""
+'''
 1
 Sec
 Hello
@@ -76,12 +66,13 @@ Hello
 Sec
 Hello
 6
-7 
+7
 Sec
 Hello
-else suite
-Outside loop
-"""
+else  suite
+Outside  loop
+'''
+
 # Find  outputs  (Home  work)
 for  i  in  range(1 , 8):
 	print(i)
@@ -94,8 +85,7 @@ else:
 	print('else  suite')
 # End  of  the  loop
 print('Outside loop')
-
-"""
+'''
 1
 Sec
 Hello
@@ -114,12 +104,12 @@ Hello
 6
 Sec
 Hello
-7 
+7
 Sec
 Hello
-else suite
+else  suite
 Outside loop
-"""
+'''
 
 '''
 Write  a  program  to  search  for  an  element  in  the  list  without  using  in  operator  and
@@ -141,6 +131,19 @@ Let  list  be   [10 , 20 , 15 , 12 , 18]
 6) Hint: Use  for  loop
 '''
 
+a = eval(input('Enter Value : '))
+b = eval(input('Enter the element to be searched : '))
+for i in range(len(a)):
+    if (b == a[i]):
+        print('Found at index ', i)
+        break
+else:
+    print('not Found')
+'''
+Enter Value : [10, 12,13,14]
+Enter the element to be searched : 10
+Found at  0
+'''
 
 '''
 Write  a  program  to  search  for  an  element  in  the  list  and  print  index  of  each  element
@@ -151,38 +154,48 @@ List :   [10 , 20 , 15 , 12 , 18 , 15 , 19 , 14 , 15 , 14]
 Search  for  15
 
 What  are  the  outputs ?  --->   15 is  found  at  index  2
-												   15 is  found  at  index  5
-												   15 is  found  at  index  8
-												   15 is  found   3  times
+  15 is  found  at  index  5
+  15 is  found  at  index  8												   
+  15 is  found   3  times												   												   
+'''
+a = eval(input('List : '))
+b = eval(input('Search for : '))
+count = 0
+for i in range(len(a)):
+    if (b == a[i]):
+        print(f'{b} is Found at index ', i)
+        count += 1
+if (count == 0):
+    print('Not Found Element')
+else : 
+    print(f'{b} found {count} times')
 '''
 
-
+'''
 #  Walrus   operator (:=)  demo  program
-print(a := 25)  # 25
-print(a = 25)  # Error
-print(a)  # 25
-print(a := 6 + 7)  # 13
-print(a)  # 13
-print((a := 6) + 7) # 13
-print(a)  # 6
-print((a = 6) + 7)  # Error
-
+print(a := 25) # 25 
+print(a = 25) # Error
+print(a) # 25
+print(a := 6 + 7) # 13
+print(a) # 13
+print((a := 6) + 7)# 13
+print(a)#6
+print((a = 6) + 7) # Error
 
 # Find  outputs  (Home  work)
 a = 0
 if  a == 0:
-	print('Hyd')   # Hyd
+	print('Hyd') # Hyd 
 else:
-	print('Sec')  # Not executed 
+	print('Sec')
 if  b := 0:
-	print('Hyd')  # Not executed 
+	print('Hyd') # Sec : 0
 else:
-	print('Sec : ' , b)  # Sec : 0
+	print('Sec : ' , b)
 if  c = 0:
-	print('Hyd')  # Error 
+	print('Hyd') # Error 
 else:
-	print('Sec')   # Error
-
+	print('Sec')
 
 '''
 (Home  work)
@@ -200,52 +213,64 @@ ctr = 0 + 1 + 1 + 1
 
 3) How  is   end  of  inputs  denoted  in  unix ?  --->  ctrl + d
 '''
-
+'''
+total = 0
+count = 0
+while True:
+    try:
+        a = eval(input())
+        total += a
+        count += 1
+    except :
+        break
+if count > 0:
+    print("avg =", total / count)
+else:
+    print("no elements")
+'''
 
 #  del  operator  demo program  (Home  work)
 a = 25
-print(a)  # 25
+print(a)  # 25 
 del   a 
-print(a)   # Error due to deleted value
+print(a) # a is not defined error 
 
- 
 # Find  outputs  (Home  work)
 a = b = c = 25
-print(a , b , c)  # 25 25 25
+print(a , b , c) # 25 25 25 
 del   a
-print(b , c)  # 25 25
-print(a)  # Error due to deleted value
+print(b , c) # 25 25 
+print(a)  # a is not defined error 
 del   b
-print(c)   # 25
-print(b)   # Error due to deleted value
+print(c) # 25
+print(b)# b is not defined error 
 del   c
-print(c)   # Error due to deleted value
-
+print(c) # c is not defined error 
 
 #  Can  multiple  objects  be  deleted  with  same  del  operator ?
 a , b , c = 25 , 10.8 , 'Hyd'
-print(a , b , c)   # 25 10.8 'Hyd'
+print(a , b , c) 25, 10.8, Hyd 
 del   a , b , c
-print(a)  # Error due to the deleted value
-print(b)  # Error due to the deleted value
-print(c)  # Error due to the deleted value
-
+print(a) # a is not defined error 
+print(b) # b is not defined error 
+print(c) # c is not defined error 
 
 # Find outputs  (Home  work)
 a = [10 , 20 , 15 , 18]
-print(a)   # [10, 20, 15, 18]
+print(a)  # 10, 20 15, 18 
 del  a[2]  
-print(a)   # [10, 20, 18]
+print(a) # 10, 20, 18 
 del  a
-print(a)   # Error 
-print(a[0])  # Error
+print(a) # a is not defined error  
+print(a[0]) # a is not defined error 
 
 
 # Find outputs  (Home work)
 a = (10 , 20 , 15 , 18)
-print(a)   # (10, 20, 15, 18)
+print(a) # 10, 20, 15, 18 
 print(a[0])  # 10
-del  a[2]  # Can't be done as tuple is immutable
+del  a[2] 
 del  a 
-print(a)   # Error 
-print(a[0])  # Error
+print(a) # a is not defined error  
+
+print(a[0]) # a is not defined error  
