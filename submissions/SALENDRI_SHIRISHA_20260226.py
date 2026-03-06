@@ -19,8 +19,31 @@ Write  a  program  to  determine  three  sides  form  a  triangle  or  not
 
 5) Hint: Use  nested  if
 '''
-
-
+import math
+try :
+	a = float(input('Enter 1st side: '))
+	b = float(input('Enter 2nd side: '))
+	c = float(input('Enter 3rd side: '))
+	if a + b > c and a + c > b and b + c > a:
+		if a == b == c:
+			print('Equilateral Triangle')
+			area = math.sqrt(3)/4*a*a 
+			print(F'Area : {area: .2f}')
+		elif a == b or b == c or c == a:
+			print('Isoceles Trinagle')
+			p = a + b + c
+			print(F'Perimeter: {p}')
+		else :
+			print('Scalence Triangle')
+			s = (a + b + c)/2
+			area = math.sqrt(s*(s-a)*(s-b)*(s-c))
+			print(F'Area: {area.2f}')
+			print(F'Perimeter: {2*s}')
+	else :
+		print('Not a Triangle')
+except :
+	print('Input should be a number')
+	
 '''
 Write  a  program  to  determine  roots  of  a  quadtratic  equation  a * x ^ 2 + b * x + c = 0  where  a  ! = 0
 
@@ -39,6 +62,7 @@ Write  a  program  to  determine  roots  of  a  quadtratic  equation  a * x ^ 2 
 	 What  is  root1  if  real  part  is  3  and  imag  part  is  4 ?  ---> 3 + 4j
 	 What  is  root2  if  real  part  is  3  and  imag  part  is  4 ?  ---> 3 - 4j
 '''
+a = float()
 
 
 '''
@@ -234,4 +258,5 @@ print('Bye')
 #  Find  outputs
 while  False:
 	print('Hello')
+
 print('Bye')  #  Bye
