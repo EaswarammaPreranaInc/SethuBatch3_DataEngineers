@@ -165,4 +165,5 @@ FROM product_orders;
 
 SELECT *,
        (quantity * price) AS total_amount
+
 FROM product_orders;
