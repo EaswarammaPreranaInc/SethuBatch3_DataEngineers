@@ -171,7 +171,7 @@ Note:
 
 2) What  are  isupper()  and  islower()  called ?  --->  Conditional  methods  becoz  they  return  True  (or)  False
 '''
-[1:01 pm, 07/03/2026] +91 99482 50500: # Find  outputs  (Home  work)
+# Find  outputs  (Home  work)
 a , b , c = 25 , 10.8 , 'Hyd'
 print('a  :  {}  \t  b  :  {}  \t  c  :  {}  '  .  format(a , b , c))  #a  :  25  	  b  :  10.8  	  c  :  Hyd  
 print('a  :  {0}  \t  b  :  {1}  \t  c  :  {2}  ' . format(a , b , c)) #a  :  25  	  b  :  10.8  	  c  :  Hyd  
@@ -301,5 +301,6 @@ c = b.split(" ")
 
 for x in c:
     print(x[-1::-1],end=" ")
+
 
 
