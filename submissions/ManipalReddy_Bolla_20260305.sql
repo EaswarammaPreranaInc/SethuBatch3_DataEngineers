@@ -192,4 +192,5 @@ having avgage>28;
 50)select  department, count(*) as employeelessthanthree
 from employees_demo
 group by department
+
 having employeelessthanthree<3;
