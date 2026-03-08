@@ -75,4 +75,5 @@ having min(salary)<35000;
 
 SELECT department,count(*) FROM employee_demo
 GROUP BY department
+
 having count(*) < 3;
