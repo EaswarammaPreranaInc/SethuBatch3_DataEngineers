@@ -1,0 +1,81 @@
+show databases;
+USE student_db;
+CREATE DATABASE DemoDB;
+USE DemoDB;
+SELECT DATABASE();
+select now();
+select current_date();
+select current_time();
+select user();
+CREATE TABLE student_details(
+sno int, name varchar(20));
+SHOW tables;
+DESC student_details;
+INSERT INTO student_details values(10,'Ram');
+INSERT INTO student_details(name) values('Sai');
+SELECT * FROM student_details;
+INSERT INTO student_details values(11,'abc'),(12,'hyd');
+CREATE Table student (
+id INT PRIMARY KEY, name VARCHAR(50),age INT, city VARCHAR(50));
+DESC student;
+SHOW CREATE TABLE student;
+INSERT INTO student(id,name) values(100,'ram');
+CREATE Table employee (
+emp_id INT AUTO_INCREMENT PRIMARY KEY, emp_name VARCHAR(50),age INT, salary DECIMAL(10,2));
+DESC employee;
+
+CREATE DATABASE StudentDB;
+USE StudentDB;
+SELECT DATABASE();
+SELECT CURDATE();
+SELECT CURTIME();
+SELECT USER();
+CREATE TABLE student_info (id INT, name varchar(20));
+DESC student_info;
+INSERT into student_info values(1,'Ravi');
+INSERT into student_info values(2,'Priya');
+INSERT into student_info (name) VALUES ('kIRAN');
+INSERT INTO student_info values(3,'Anil'),(4,'Neha');
+SELECT * FROM student_info;
+
+CREATE Table employees (
+emp_id INT AUTO_INCREMENT PRIMARY KEY, emp_name VARCHAR(100),salary DECIMAL(10,2));
+INSERT into employees (emp_name,salary) VALUES ('Abc',50000),('Def',45000),('Ghi',92000);
+INSERT into employees (emp_id) VALUES (100);
+SELECT * FROM employees;
+CREATE Table employee_auto (
+emp_id INT AUTO_INCREMENT PRIMARY KEY, emp_name VARCHAR(50)) AUTO_INCREMENT = 500;
+INSERT into employee_auto (emp_name) VALUES ('Anil'),('Raj');
+SELECT * FROM employee_auto;
+CREATE TABLE employee_default_test (emp_id INT PRIMARY KEY, emp_name VARCHAR(50), city VARCHAR(50) DEFAULT 'Hyderabad');
+INSERT INTO employee_default_test VALUES (1, 'Mani', 'Bengaluru');
+INSERT INTO employee_default_test (emp_id, emp_name) VALUES (2, 'Charan');
+SELECT * FROM employee_default_test;
+CREATE TABLE users_test (user_id INT PRIMARY KEY, email VARCHAR(100) UNIQUE, password VARCHAR(50));
+INSERT INTO users_test VALUES(1, 'mani@gmail.com', 'mani123'), (2, 'anil@gmail.com', 'ghj456');
+INSERT INTO users_test VALUES(3, 'mani@gmail.com', 'newpass789');
+SHOW ERRORS;
+CREATE TABLE student_age_test (id INT PRIMARY KEY,name VARCHAR(50),age INT CHECK (age >= 18));
+INSERT INTO student_age_test VALUES (1, 'Manikanta', 20);
+INSERT INTO student_age_test VALUES (2, 'Anil', 16);
+SHOW ERRORS;
+CREATE TABLE company_employees (emp_id INT AUTO_INCREMENT PRIMARY KEY,emp_code VARCHAR(20) NOT NULL UNIQUE,first_name VARCHAR(50) NOT NULL,last_name VARCHAR(50),email VARCHAR(100) UNIQUE,age INT CHECK (age BETWEEN 18 AND 60),salary DECIMAL(10,2) DEFAULT 30000 CHECK (salary >= 0),department VARCHAR(50) NOT NULL,joining_date DATE DEFAULT (CURRENT_DATE()),is_active BOOLEAN DEFAULT TRUE);
+INSERT INTO company_employees VALUES(1,'EMP101','Manikanta','Reddy','mani@gmail.com',25,45000,'IT','2026-03-08',TRUE),(2,'EMP102','Anil','Kumar','anil@gmail.com',30,50000,'HR','2026-03-08',TRUE),(3,'EMP103','Ravi','Sharma','ravi@gmail.com',28,35000,'Finance','2026-03-08',FALSE);
+SELECT * FROM student_info;
+SELECT first_name, salary FROM company_employees;
+SELECT * FROM company_employees WHERE salary > 30000;
+SELECT * FROM company_employees WHERE is_active = 1;
+SELECT CURDATE();
+SELECT CURTIME();
+SELECT USER();
+SELECT DATABASE();
+CREATE TABLE employee_constraints (emp_id INT PRIMARY KEY,email VARCHAR(100) UNIQUE,name VARCHAR(50) NOT NULL,age INT CHECK (age >= 18),salary INT DEFAULT 25000);
+INSERT INTO employee_constraints VALUES (1,'mani@gmail.com','Manikanta',25,40000),(2,'anil@gmail.com','Anil',30,35000),(3,'ravi@gmail.com','Ravi',28,45000),(4,'kiran@gmail.com','Kiran',22,30000),(5,'sai@gmail.com','Sai',26,25000);
+DESCRIBE employee_constraints;
+SELECT * FROM employee_constraints;
+CREATE TABLE product_orders (order_id INT AUTO_INCREMENT PRIMARY KEY,customer_name VARCHAR(100) NOT NULL,product_name VARCHAR(100) NOT NULL,quantity INT NOT NULL,price DECIMAL(10,2) NOT NULL,order_date DATE DEFAULT (CURRENT_DATE()),is_delivered BOOLEAN DEFAULT FALSE);
+INSERT INTO product_orders (order_id, customer_name, product_name, quantity, price, order_date, is_delivered) VALUES (1,'Manikanta','Laptop',1,65000,'2026-03-08',FALSE),(2,'Anil','Mobile',2,20000,'2026-03-08',TRUE),(3,'Ravi','Headphones',3,1500,'2026-03-08',FALSE),(4,'Kiran','Keyboard',1,1200,'2026-03-08',TRUE),(5,'Sai','Monitor',2,8000,'2026-03-08',FALSE);
+INSERT INTO product_orders (customer_name, product_name, quantity, price) VALUES ('Rahul','Tablet',1,25000);
+SELECT * FROM product_orders;
+SELECT customer_name, product_name, price FROM product_orders;
+SELECT *, quantity * price AS total_amount FROM product_orders;

@@ -71,9 +71,9 @@ Write  a  program  to  determine  command  line  input  is  even  number  or  od
 5) py  prog3.py  Ten
     What  is  the  output  ?  ---> Pls  send   an  integer  input
 '''
-
+from sys import argv
 try:
-    x= int(input('Enter a number: '))
+    x= int(argv[1])
     if x%2==0:
         print('Even')
     else:
@@ -99,7 +99,18 @@ Write  a  program  to  determine  average  of  command  line  inputs
 '''
 
 
+from sys import argv
+try: 
+    a=[]
+    for x in argv[1:]:
+        a.append(eval(x))
+        print(f'Average: {sum(a)/len(a):2f}')
+except ZeroDivisionError:
+     print('send atleast one input')    
+except (TypeError,NameError):
+     print ('donot enter number and string')
 
+          
 
 
 
@@ -122,4 +133,15 @@ Write  a  program  to  sort  command  line  inputs  in  ascending  order  and  d
     What  are  the  outputs ?  --->   ['Cyb' , 'Hyd' , 'Sec']
 													   ['Sec' , 'Hyd' , 'Cyb']
 '''
-    
+from sys import argv
+try:
+    a=[]
+    for x in argv[1:]:
+        a.append(eval(x))
+    print('Ascending order :', sorted(a))
+    print('Descending order: ', sorted(a, reversed= True))
+except TypeError:
+    print('donot send number and string')
+except NameError:
+    print('input string should be in singlr or triple quotes')
+     

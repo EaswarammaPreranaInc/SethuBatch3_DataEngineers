@@ -90,7 +90,10 @@ price DECIMAL(10,2) NOT NULL,
 order_date DATE DEFAULT (CURRENT_DATE),
 is_delivered BOOL DEFAULT FALSE);
 
-insert into product_orders(customer_name,product_name,quantity,price) values('Rahul','Laptop',2,150000);
+insert into product_orders (customer_name, product_name, quantity, price, order_date, is_delivered)
+values('Ravi', 'Laptop', 1, 55000.00, '2025-03-01', TRUE),('Priya', 'Mobile', 2, 20000.00, '2025-03-02', FALSE),
+('Kiran', 'Headphones', 3, 1500.00, '2025-03-02', TRUE),('Anil', 'Keyboard', 2, 1200.00, '2025-03-03', FALSE),
+('Neha', 'Monitor', 1, 18000.00, '2025-03-03', TRUE);
 select * from product_orders;
 select customer_name,product_name,price from product_orders;
 select order_id,customer_name,product_name,quantity,price,order_date,is_delivered,(quantity*price) as total_amount from product_orders;
