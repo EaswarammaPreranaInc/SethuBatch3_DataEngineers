@@ -353,6 +353,15 @@ while i < len(a):
 
 print(out)
 
+try:
+	a = input()
+	b = ""
+	for i in range(0,len(a),2):
+		b +=a[i] + chr(ord(a[i]) + int(a[i+1]))
+	print('Result : ',b)
+except:
+	print('pls enter string with alternative chr and dogit')
+
 
 '''
 Modify  following  program  with  walrus  operator
@@ -446,4 +455,5 @@ count()
 a = 'Hyd is\tgreen\ncity.Hyd is\thitec\ncity.Hyd is\this\ncity'
 print(a . count(' ')) #3
 print(a . count('\t')) #3
+
 print(a . count('\n')) #3
