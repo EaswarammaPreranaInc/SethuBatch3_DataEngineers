@@ -16,3 +16,4 @@ for i in a:
     if i in v and i not in b:
         b+=i
 print(b)
+
