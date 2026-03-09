@@ -36,10 +36,10 @@ print(a) # ['15', ‘36’, ‘48’]
 
  # Find  outputs  (Home  work)
 a = 'Hyd\nis green\tcity'
-print(a . split(' ')) #[’Hyd’, ‘is’, ‘green’, ‘city’]
+print(a . split(' ')) #[’Hyd\nis’, ‘green\tcity’]
 print(a . split())##[’Hyd’, ‘is’, ‘green’, ‘city’]
 print(a . split('green'))#[’Hyd\nis’ ‘\tcity’]
-print(a . split(''))#[’Hyd’, ‘is’, ‘green’, ‘city’]
+print(a . split(''))#Error
 
  # Find  outputs  (Home  work)
 a = 'Hyd	is	green	city' #  There  is  tab  between  the  words
@@ -403,4 +403,5 @@ try:
 	res3=sorted(rem)
 	print(''.join(res1)+''.join(res2)+''.join(res3))
 except:
+
 	print('error')
