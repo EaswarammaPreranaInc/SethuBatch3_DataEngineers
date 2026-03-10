@@ -1,0 +1,672 @@
+#  Find  outputs (Home  work)
+a = [10, 20, 15, 18]
+b = a
+print(a  is  b)  # True
+print(a  ==  b)  # True
+b[2] = 12
+print(a) #[10, 20, 12, 18]
+
+
+#  Find  outputs  (Home  work)
+a = [10 , 20 , 15 , 18]
+b = [100 , 200 , 150]
+print(a + b)  # [10, 20, 15, 18, 100, 200, 150]
+print(a + 5) # Error
+print(a + '5') # Error
+print([10 , 20] + (30 , 40)) # Error
+
+
+
+# Tricky  program
+#  Find  outputs
+a = [1 , 2 , 3]
+b = [4 , 5 , 6]
+print(a , id(a)) # [1 , 2 , 3] , Address of the object a
+a += b # [1 , 2 , 3, 4 , 5 , 6]
+print(a , id(a)) # [1 , 2 , 3, 4 , 5 , 6] , not same as before
+
+
+
+# Tricky  program
+#  Find  outputs
+a = [1 , 2 , 3]
+b = [4 , 5 , 6]
+print(a , id(a)) # [1 , 2 , 3] , Address of the list
+a  = a + b
+print(a , id(a) # [1 , 2 , 3, 4 , 5 , 6] , Diff Address
+
+
+
+
+# Find  outputs
+list = [25 , 10.8 , 'Hyd' ,  True]
+a , *b , c = list
+print('a : ' , a)
+print('b : ' , b)
+print('c : ' , c)
+print(type(b))
+x , *y = list
+print('x : ' , x)
+print('y : ' , y)
+*p , q = list
+print('p : ' , p)   
+print('q : ' , q)
+
+
+# Find  outputs  (Home  work)
+list = [25 , 10.8 , 'Hyd' , True]
+a , b , c , d , e = list
+a , b , *c , d , e = list
+print('a : ' , a)
+print('b : ' , b)
+print('c : ' , c)
+print('d : ' , d)
+print('e : ' , e)
+a , b , *c , d , e , f = list
+
+
+
+# Find  outputs  (Home  work)
+list = [25 , 10.8 , 'Hyd' , True]
+a , b , _  , d = list
+print('a : ' , a)
+print('b : ' , b)
+print('_ :  ' , _)
+print('d : ' , d)
+
+
+
+# Find  outputs (Home  work)
+list = [25 , 10.8 , 'Hyd' , True , 3 + 4j]
+a , b , a , d , a = list
+print('a : ' , a)
+print('b : ' , b)
+print('d : ' , d)
+
+
+
+
+#  Tricky  program
+# Find  outputs (Home  work)
+list = [25 , 10.8 , 'Hyd' , True , 3 + 4j]
+a , b ,  _ , d , _  = list
+print('a : ' , a)
+print('b : ' , b)
+print('_ : ' , _)
+print('d : ' , d)
+print('_: ' , _)
+
+
+
+# Identify  error (Home  work)
+list = [25 , 10.8 , 'Hyd' , True , 3 + 4j]
+a , *b , c , *d , e  = list
+
+
+
+# Find  outputs  (Home  work)
+list = [[25 , 10.8] , 'Hyd' , True]
+a , b , c = list
+print('a :  ' , a)
+print('b :  ' , b)
+print('c :  ' , c)
+
+
+
+# Find  outputs  (Home  work)
+list = [[25 , 10.8] , 'Hyd' , True]
+[a , b] , c , d = list
+print('a : ' , a)
+print('b : ' , b)
+print('c : ' , c)
+print('d : ' , d)
+a , b , c , d = list
+
+
+
+# Comparing  Lists
+a = [10 , 20 , 15 , 18]
+b = [10 , 20 , 15 , 18]
+c = [10 , 20 , 25 , 9]
+d = [10 , 20 , 7 , 22]
+print(a == b)
+print(a  is   b)
+print(a < c)
+print(a > d)
+print(a >= c)
+print(a <= d)
+print(a != c)
+print(a != b)
+print(a == c)
+
+
+
+
+# Comparing  Lists  (Home  work)
+a = [10 , 20 , 15 , 18]
+b = [20 , 18 , 15 , 10]
+print(a == b)
+print(a  is   b)
+
+
+
+
+#  len()  function demo   program  (Home  work)
+a = [ 25, 10.8, 'Hyd', True]
+print(len(a))
+b = []
+print(len(b))
+c = [[10 , 20] , 30 , 40]
+print(len(c))
+
+
+'''
+What  does  len(list)  do ?  --->  Returns  number  of  elements  in  the  list
+'''
+
+
+
+
+
+# sum()  function  demo  program  (Home  work)
+a = [25 , 10.8 , True]
+print(sum(a))
+b= [3 + 4j , 5 + 6j]
+print(sum(b))
+c = [25 , 10.8 , True , 3 + 4j , False]
+print(sum(c))
+d = [10 , 20 , 15 , 18]
+print(sum(d))
+e = [25 , 10.8 , 'Hyd' , True]
+print(sum(e))
+
+
+'''
+What  does  sum(list)  do ?  ---> Returns  sum  of  list  elements
+'''
+
+
+
+
+
+
+#  Find  outputs
+a = [[10 , 20 , 15 , 18]]
+print(sum(a))
+print(How  to  determine  sum  of  inner  list  elements)
+print(How  to  determine  sum  of  inner  list  elements  in  another  way)
+
+
+
+
+
+# max()  and  min()  functions  demo  program  (Home  work)
+a = [10 , 20 , 15 , 18 , 30, 5 , 12]
+print(max(a))
+print(min(a))
+b = ['Rama' , 'Sita' , 'Rajesh' , 'Kiran' , 'Amar' , 'Vamsi' , 'Manohar']
+print(max(b))
+print(min(b))
+c = [25 , 10.8 ,  3 + 4j , True]
+print(max(c))
+d = [25 , '35']
+print(max(d))
+print(max([]))
+print(min([]))
+
+
+'''
+1) What  does  max(list)  do ?  --->  Returns  largest  element  of  the  list
+
+2) What  does  min(list)  do ?  --->  Returns  smallest  element  of  the  list
+'''
+
+
+
+
+# list()  function  demo  program
+a = (10 , 20 , 15, 18)
+b = list(a)
+print(b)
+print(type(b))
+print(a  is  b)
+print(a == b)
+
+
+
+
+
+#  Find  outputs (Home  work)
+a = range(4 , 10 , 2)
+b = list(a)
+print(b)
+print(type(b))
+a = list('Vamsi')
+print(a)
+a = list()
+print(a)
+print(list(25))
+print(list(10.8))
+print(list(True))
+print(list(None))
+
+
+
+'''
+list()  function
+-----------------
+1) What  does  list(sequence)  do ?  --->  Converts  sequence  to  list  and  returns  list
+
+2) What  does  list(no-args)  do ?  --->  Returns  an  empty  list
+
+3) What  does  list(non-sequence)  do ?  --->  Throws  error
+
+
+
+
+
+
+# Find  outputs (Home  work)
+a = ((10 , 20) , (30 , 40 , 50) , (60 , 70 , 80 , 90))
+print(list(a))
+b = { (10 , 20) , (30 , 40 , 50) , (60 , 70 , 80 , 90)}
+print(list(b))
+c = ([10 , 20] , (30 , 40) , {50 , 60})
+print(list(c))
+
+
+
+
+
+# sorted()  function   demo  program
+a = [10 , 20 , 15 , 5 , 12]
+b = sorted(a)
+print(b)
+print(type(b))
+c = sorted(a , reverse = True)
+print(c)
+print(a)
+
+
+
+'''
+sorted()  function
+---------------------
+1) What  does  sorted(list)  do  ?  --->  Sorts  elements  of  the  list  in  ascending  order
+
+2) Where  are  the  results  stored  ?  --->  In  another  list
+
+3) Is  argument  list  modified ?  --->  No  and  it  remains  unchanged
+
+4) How  to  sort  list  in  descending  order ?  --->  sorted(list , reverse = True)
+
+5) What  are  the  two  arguments  of  sorted()  function ?  ---> List  to  be  sorted
+																												and
+																					                 reverse = True  which  is  an  optional  argument
+'''
+
+
+
+
+
+## Find  outputs  (Home  work)
+a = ['Rama',  'Rajesh',  'Amar',  'Sita',  'Vamsi'  ,  'Kiran'  , 'Rama  Rao']
+b = sorted(a)
+print(b)
+c = sorted(a , reverse = True)
+print(c)
+print(a)
+
+
+
+
+
+# all()  function demo  program 
+a = [12 > 10 , 5 < 20 , 30 == 30]
+print(all(a))
+b = [9 >= 6 , 12 <= 9 , 6 == 6]
+print(all(b))
+c = [25 , 10.8 , '' , True , 3+4j , 'Hyd']
+print(all(c))
+d = [10 , 0 , 20]
+print(all(d))
+e = []
+print(all(e))
+
+
+'''
+all()  function
+-----------------
+1) What  does  all(list)  do ?  --->  Returns  True  when  every  element of  the  list  is  True  and  False  otherwise
+
+2) When  does  it  return  False ?  --->  When  at  least  one  element  of  the  list  is  False
+
+3) if  cond1  and  cond2  and  cond3  and  cond4:
+    How  to  reduce  the  four  conditions  to  a  single  condition ?  --->  if  all([cond1 , cond2 , cond3 , cond4]):
+'''
+
+
+
+
+# any()  function demo program  (Home  work)
+a  = [12 > 18 , 5 < 20 , 35 == 30]
+print(any(a))
+b = [12 > 18 , 25 < 20 , 35 == 30]
+print(any(b))
+c = [0 , 0.0 , '' , 25 , 0 + 0j , False]
+print(any(c))
+d = [0 , 0.0 , '' , 0 + 0j , False]
+print(any(d))
+e = []
+print(any(e))
+
+
+'''
+any()   function
+-------------------
+1) What  does  any(list)  do ?  --->  Returns  True  when  at  least  one  element  of  the  list  is  True  and  False  otherwise
+
+2) When  does  it  return  False ?  --->  When  every  element  of  the  list  is  false
+
+3) if  cond1  or  cond2  or  cond3  or  cond4:
+     How  to  reduce  the  four  conditions  to  a  single  condition ?  ---> if  any([cond1 , cond2 , cond3 , cond4]):
+
+4) all()  and  any()  functions  are  used  as  an  alternative  when  there  are  too  many  conditions  in  if  and  while
+
+
+
+
+
+# del  operator  demo  program (Home  work)
+a = [10 , 20 , 15 , 18]
+print(a)
+del    a[2]
+print(a)
+del  a[3]
+del  a
+print(a)
+
+
+
+
+
+#  append()  method  demo  program (Home  work)
+list = [10 , 20 , 15 , 18]
+print(list)
+list . append(19)
+print(list)
+
+
+
+#  Find  outputs (Home  work)
+list = []
+print(list)
+list . append(25)
+list . append(10.8)
+list . append('Hyd')
+list . append(True)
+print(list)
+
+
+# Find  outputs  (Home  work)
+list = []
+for  x  in   range(0 , 50 , 10):
+	list . append(x)
+print(list) 
+
+
+#  Find  outputs  (Home  work)
+a = [10 , 20 , 30]
+a . append('Hyd')
+print(a)
+print(len(a))
+print(How  to  print  4th  element  of  list  'a')
+print(How  to  print  'H')
+print(How  to  print  'y')
+print(How  to  print  'd')
+
+
+
+#  Find  outputs (Home  work)
+a = [10 , 20 , 30 , 40]
+b = [50 , 60 , 70]
+a . insert(2 , b)
+print(a)
+print(len(a))
+print(How  to  print  inner  list)
+print(How  to  print  50)
+print(How  to  print  60)
+print(How  to  print  70)
+
+
+
+
+# remove()  method  demo  program  (Home  work)
+try:
+	list = [10 , 20 , 15 , 18 , 15 , 12 , 15 , 19]
+	list . remove(15)
+	print(list)
+	list . remove(25)
+except:
+	print('25  is   not  in  the  list')
+
+
+
+'''
+remove()   method
+---------------------
+1) What  does  remove(x)  do ?  ---> Removes   first  occurance  of  'x'  from  the  list
+
+2) What  does  remove()  method  do  if  'x'  is  not   in  the  list ?  --->  Raises  ValueError
+
+3) How  to  remove  all  ocurances  of  'x'  from  the  list ?  --->  Call  remove()  method  in  a  loop
+'''
+
+
+
+
+
+'''
+Write  a  program  to  delete  'all'  occurences  of  'x'  from  the  list
+
+Let  1st  input  be   [10 , 20 , 15 , 18 , 19 , 15 , 17 , 20 , 15 , 14]  and
+2nd  input  be  15
+What  is  the  output ?  ---> [10 , 20 ,  18 , 19 , 17 , 20 , 14]
+
+
+
+
+
+
+#  pop()  method  demo  program
+a = [10 , 20 , 15 , 18 , 12]
+print(a . pop(2))
+print(a)
+print(a . pop(len(a)))
+print(a . pop(-3))
+print(a)
+print(a . pop(-4))
+print(a . pop())
+print(a)
+b = []
+b . pop()
+
+
+
+'''
+pop()   method
+------------------
+1) What  does  pop(index)  do ?  --->  Removes  element  at  the  specified  index  and  returns  the  deleted   element
+
+2) What  does  pop(invalid-index)  do  ?  --->  Raises  IndexError
+
+3) What  does  pop(No-args)  do ?  --->  Removes  last  element  of  the  list  and  returns  the  deleted  element
+
+4) How  many  arguments  can  pop()  method  take ?  --->  1  (or)  0
+
+5) What  does  pop(No-args)  do  when  list  is  empty ?  --->  Raises  error
+
+6) del  list[index]
+    list . pop(index)
+    What  is  the  difference  between  the  two  statements ?  --->
+											del  operator  removes  element  but  does  not  return  the  deleted  element
+											whereas  pop()  method  not  only  deletes  element  but  also  returns  the  deleted  element
+'''
+
+
+
+
+
+
+
+# clear() method  demo program  (Home  work)
+list = [10 , 20 , 15 , 18]
+print(list)
+list . clear()
+print(list)
+
+
+'''
+clear()  method
+------------------
+1) What  does  clear()  method  do ?  ---> Removes  all  the  elements  of  the  list  and  list  becomes  empty
+
+2) What  about  remove()  and  pop()  methods  ?  --->  They  remove  single  element  of  the
+
+
+
+
+
+
+
+# reverse()  method  demo  program (Home  work)
+a = [10 , 20 , 15 , 18]
+print(a)
+a . reverse()
+print(a)
+
+
+'''
+reverse()  method
+---------------------
+1) What  does  reverse()  method  do ?  --->  Reverses  all  the  elements  of  list
+
+2) Where  are  the  results  stored ?  ---> In  the  same  list  replacing  existing  elements (List  is  mutable)
+'''
+
+
+
+
+#  sort()  method  demo  program (Home  work)
+list = [10 , 20 , 15 , 18 , 5]
+print(list)
+list . sort()
+print(list)
+list . sort(reverse = True)
+print(list)
+
+
+
+
+# Find  outputs (Home  work)
+a = ['Rama' , 'Rajesh' , 'Amar' ,  'Sita' ,  'Vamsi' , 'Kiran' , 'Rama  Rao']
+print(a)
+a . sort()
+print(a)
+a . sort(reverse = True)
+print(a)
+
+
+
+
+
+# Identify  error (Home  work)
+a = [25 , 10.8 ,  'Hyd' ,  True]
+a . sort()
+
+
+
+
+#  count()  method  demo    program (Home  work)
+a = [10 , 20 , 15 , 18 , 15 , 12 , 14 , 15 , 19]
+print(a . count(15))
+print(a . count(25))
+print(len(a))
+
+
+'''
+What  does  list . count(x)  do ?  --->  Returns  number  of  times  'x'  is  in  the  list
+'''
+
+
+
+
+
+
+
+
+'''
+Tricky  program
+Write  a  program  to  remove  all  duplicate  elements  of  the  list  (Not  even  single  occurance)
+Let  input  be  [10 , 20 , 15 , 10 , 14 , 10 , 18 , 20 , 19]
+What  is  the  output ?  --->  [15 , 14 , 18 , 19]
+
+Element         count               Action
+---------------------------------------------
+  10                  3                       Ignore
+  
+  20                  2                       Ignore
+  
+  15                  1                       [15]
+  
+  14                  1                       [15 , 14]
+  
+  18                  1                       [15 , 14 , 18]
+  
+  19                  1                       [15 , 14 , 18 , 19]
+
+
+
+# Program
+a=eval(input('Enter list :'))
+b=[]
+for i in a:
+    if a.count(i)==1:
+        b.append(i)
+print(b)
+
+
+
+
+'''
+Write  a  program  to  determine  all  the  list  elements  are  identical  or  not
+
+1) Let  input  be  [25 , 25 , 25 , 25]
+    What  is  the  output ?  --->  All  the  elements  are  identical
+    How  many  elements  are  in  the  list ?  ---> 4
+    How  many  times  is  first  element  repeated ?  ---> 4
+
+2) Let  input  be  [10 , 10 , 20 ,  10]
+    What  is  the  output ?  --->  All  the  elements  are  not  identical
+    How  many  elements  are  in  the  list ?  ---> 4
+    How  many  times  is  first  element  repeated ? ---> 3
+'''
+
+
+#Program
+
+a=eval(input('Enter list :'))
+if a.count(a[0])==len(a):
+    print('They are identicals')
+else:
+    print('They are not Identical')
+
+
+
+
+
+
+
+
+
+
