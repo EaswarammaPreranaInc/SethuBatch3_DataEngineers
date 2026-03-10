@@ -1,0 +1,13 @@
+use employeedb;
+create table employees_demo(emp_id int primary key auto_increment,emp_name varchar(100),dept_id int) auto_increment=100;
+insert into employees_demo(emp_name,dept_id) values('ravi',10),('sita',20),('ram',10);
+create table departments_demo(dept_id int ,dept_name varchar(100));
+insert into departments_demo(dept_id,dept_name) values(10,'hr'),(20,'it'),(30,'sales');
+create table employees_selfjoin(emp_id int primary key auto_increment,emp_name varchar(100),manager_id int);
+insert into employees_selfjoin(emp_name,manager_id) values('asha',null),('balu',1),('chitra',1),('david',2);
+select e.emp_name, d.dept_name from employees_demo e join departments_demo d on e.dept_id = d.dept_id;
+select e.emp_name, d.dept_name from employees_demo e left join departments_demo d on e.dept_id = d.dept_id;
+select e.emp_name, d.dept_name from employees_demo e right join departments_demo d on e.dept_id = d.dept_id;
+select e.emp_id, e.emp_name,d.dept_id, d.dept_name from employees_demo e left join departments_demo d on e.dept_id = d.dept_id union select e.emp_id, e.emp_name,d.dept_id, d.dept_name from employees_demo e right join departments_demo d on e.dept_id = d.dept_id;
+select e.emp_id, e.emp_name, d.dept_name from employees_demo e join departments_demo d on e.dept_id = d.dept_id order by e.emp_name;
+select e.emp_name, d.dept_name from employees_demo e join departments_demo d on e.dept_id = d.dept_id where d.dept_name='it';
