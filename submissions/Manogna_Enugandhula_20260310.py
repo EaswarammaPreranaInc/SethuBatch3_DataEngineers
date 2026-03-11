@@ -481,4 +481,5 @@ for i in range(len(a)):
 		print('All the list elements are not identical')
 		break
 else:
+
 	print('All the list elements are identical')
