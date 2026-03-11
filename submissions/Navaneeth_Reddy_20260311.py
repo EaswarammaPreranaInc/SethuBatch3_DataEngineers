@@ -46,7 +46,7 @@ try:
     for x in a:
         i = b.index(x, i + 1)
     print(True)
-except ValueError:
+except:
     print(False)
     
 '''
@@ -73,5 +73,6 @@ d = a
 print(d) # [10 , 20 , 15 , 18]
 print(a  is  d) # True, because a and d are pointing towards same list objecy
 print(a  ==  d) # True, because elements of a and d list's are same
+
 
 
