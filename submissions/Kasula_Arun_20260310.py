@@ -64,11 +64,11 @@ print('q : ' , q)     # q : True
 list = [25 , 10.8 , 'Hyd' , True]
 a , b , c , d , e = list #error
 a , b , *c , d , e = list #error
-print('a : ' , a)  
-print('b : ' , b)
-print('c : ' , c)
-print('d : ' , d)
-print('e : ' , e)
+print('a : ' , a)  # a : 25
+print('b : ' , b)   #b : 10.8
+print('c : ' , c)   # c :[]
+print('d : ' , d)   #d : 'Hyd'
+print('e : ' , e)     # e : True
 a , b , *c , d , e , f = list  #error
 
 
@@ -114,7 +114,7 @@ print('_: ' , _)    # _ : 3+4j
 
 # Identify  error (Home  work)
 list = [25 , 10.8 , 'Hyd' , True , 3 + 4j]
-a , *b , c , *d , e  = list                  # there cannot be two *'s
+a , *b , c , *d , e  = list                  # there cannot be two *'s  should be only 1 or 0ep
 
 
 
@@ -496,7 +496,7 @@ print(a)
 # pop()  method  demo  program
 a = [10 , 20 , 15 , 18 , 12]
 print(a . pop(2))
-print(a)
+print(a)    
 print(a . pop(len(a)))
 print(a . pop(-3))
 print(a)
@@ -524,12 +524,15 @@ pop()   method
 6) del  list[index]
     list . pop(index)
     What  is  the  differen…
-[1:02 PM, 3/10/2026] +91 99482 50500: # clear() method  demo program  (Home  work)
-list = [10 , 20 , 15 , 18]
-print(list)
-list . clear()
-print(list)
 
+ '''
+ 
+ clear() method  demo program  (Home  work)
+list = [10 , 20 , 15 , 18]
+print(list)       #[10 , 20 , 15 , 18]
+list . clear()
+print(list)         #[]
+ 
 
 '''
 clear()  method
@@ -538,51 +541,53 @@ clear()  method
 
 2) What  about  remove()  and  pop()  methods  ?  --->  They  remove  single  element  of  the  list
 '''
-[1:03 PM, 3/10/2026] +91 99482 50500: # reverse()  method  demo  program (Home  work)
+
+
+# reverse()  method  demo  program (Home  work)
 a = [10 , 20 , 15 , 18]
-print(a)
+print(a)    # [10 , 20 , 15 , 18]
 a . reverse()
-print(a)
+print(a)      #[18, 15, 20, 10]
 
 
-'''
-'''
+
+
 reverse()  method
 ---------------------
 1) What  does  reverse()  method  do ?  --->  Reverses  all  the  elements  of  list
 
 2) Where  are  the  results  stored ?  ---> In  the  same  list  replacing  existing  elements (List  is  mutable)
-'''
+
 #  sort()  method  demo  program (Home  work)
 list = [10 , 20 , 15 , 18 , 5]
 print(list)
-list . sort()
-print(list)
+list . sort()  
+print(list)     #[5, 10, 15, 18, 20]
 list . sort(reverse = True)
-print(list)
+print(list)    #[10 , 20 , 15 , 18 , 5]
 
 
 # Find  outputs (Home  work)
 a = ['Rama' , 'Rajesh' , 'Amar' ,  'Sita' ,  'Vamsi' , 'Kiran' , 'Rama  Rao']
-print(a)
-a . sort()
-print(a)
+print(a)   #['Rama' , 'Rajesh' , 'Amar' ,  'Sita' ,  'Vamsi' , 'Kiran' , 'Rama  Rao']
+a . sort() 
+print(a)  #[amar, kiran ,rajesh , rama ,rama ra0, sita, vamsi]
 a . sort(reverse = True)
-print(a)
+print(a)  #[vamsi, sita, rama rao, rama, rajesh, kiran, amar]
 
 
 
 # Identify  error (Home  work)
 a = [25 , 10.8 ,  'Hyd' ,  True]
 a . sort()
-
+# numbers and strings cannot be sorted
 
 
 #  count()  method  demo    program (Home  work)
 a = [10 , 20 , 15 , 18 , 15 , 12 , 14 , 15 , 19]
-print(a . count(15))
-print(a . count(25))
-print(len(a))
+print(a . count(15))   #3
+print(a . count(25))   #0
+print(len(a))             #9
 
 
 '''
@@ -610,6 +615,11 @@ Element         count               Action
 
 
 
+  a= input( "Enter a list: ")
+  
+
+
+
 
 
 Write  a  program  to  determine  all  the  list  elements  are  identical  or  not
@@ -623,4 +633,23 @@ Write  a  program  to  determine  all  the  list  elements  are  identical  or  
     What  is  the  output ?  --->  All  the  elements  are  not  identical
     How  many  elements  are  in  the  list ?  ---> 4
     How  many  times  is  first  element  repeated ? ---> 3
+
 '''
+try:
+	a= eval(input(
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
