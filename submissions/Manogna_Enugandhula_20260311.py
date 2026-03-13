@@ -90,4 +90,5 @@ copy()  method
 ------------------
 1) What  does  copy()  method  do ? --->  Copies  elements of  list  to  a  new  list  and  returns  the  new  list
 2) b = a . copy()  What  is  another  way  to  copy  list  elements  to  another list ?  --->  	b = a[:]
+
 '''
