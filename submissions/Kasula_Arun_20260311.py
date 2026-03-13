@@ -68,35 +68,34 @@ Print  True  if  it  is  a  sublist  and  False  otherwise
 5) Hint:  Use  index()  method
 
 '''
-a = eval(input("Enter the first list : "))
-b = eval(input("Enter the second list : "))
-
-pos = -1
-n = True
-
-for x in a:
-    try:
-        pos = b.index(x, pos + 1)
-    except:
+try:
+	a = eval(input("Enter the first list : "))
+	b = eval(input("Enter the second list : "))
+	
+	i = -1
+	n = True
+	
+	for x in a:
+		i = b.index(x, i + 1)
+except:
         n = False
         break
-
-print(n)
+	 print(n)
 
 # copy()  method  demo program  (Home  work)
 a = [10 , 20 , 15 , 18]
 b = a . copy()
 print(b)#[10 , 20 , 15 , 18]
-print(a  is  b) #false
-print(a  ==  b) #true
+print(a  is  b) #False
+print(a  ==  b) #True
 c = a[:]
 print(c)  # [10 , 20 , 15 , 18]
-print(a  is  c)#false
-print(a  ==  c)#true
+print(a  is  c)#False
+print(a  ==  c)#True
 d = a
 print(d)   #[10 , 20 , 15 , 18]
-print(a  is  d)  #true
-print(a  ==  d)  #true
+print(a  is  d)  #True
+print(a  ==  d)  #True
 
 
 '''
@@ -106,4 +105,5 @@ copy()  method
 
 2) b = a . copy()
     What  is  another  way  to  copy  list  elements  to  another list ?  --->  	b = a[:]
+
 '''
