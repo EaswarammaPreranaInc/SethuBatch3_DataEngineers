@@ -297,4 +297,5 @@ b = list(a) #
 print(b) #[10 , 20 , 15, 18]
 print(type(b)) # class 
 print(a  is  b) # False
+
 print(a == b) # Fasle
