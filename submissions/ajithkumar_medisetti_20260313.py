@@ -18,17 +18,13 @@ Write  a  program  to  determine  mode
 #Program:
 
 a = list(map(int, input("Enter list : ").split()))
-
 mode = None
 ctr = 0
-
-for i in set(a):        # unique elements
-    count = a.count(i)  # count occurrences
-    
+for i in set(a):        
+    count = a.count(i)  
     if count > ctr:
         ctr = count
         mode = i
-
 print("mode =", mode)
 
 #Output:
@@ -145,10 +141,8 @@ What  is  the  output ?  ---> ['H' , 'P' , 'C' , 'V']
 
 a = ['hyd', 'pune', 'chennai', 'vijayawada']
 b = []
-
 for x in a:
     b.append(x[0].upper())
-
 print(b)
 
 #Outputs:
@@ -163,9 +157,7 @@ Output :  ['H' , 'P' , 'C' , 'V']
 '''
 #Program:
 a = ['hyd', 'pune', 'chennai', 'vijayawada']
-
 b = [x[0].upper() for x in a]
-
 print(b)
 
 #Output:
@@ -179,13 +171,10 @@ What  is  the  output ?  --->  [['HYD' , 3] , ['IS' , 2] , ['GREEN' , 5] , ['CIT
 '''
 #Program:
 s = input("Enter a sentence: ")
-
 words = s.split()
 result = []
-
 for w in words:
     result.append([w.upper(), len(w)])
-
 print(result)
 
 # Output:
@@ -202,9 +191,7 @@ Output :  [['HYD' , 3] , ['IS' , 2] , ['GREEN' , 5] , ['CITY' , 4]]
 '''
 #Program:
 s = input("Enter a sentence: ")
-
 a = [[w.upper(), len(w)] for w in s.split()]
-
 print(a)
 
 #Output:
@@ -221,14 +208,10 @@ What  is   the  result ?  ---> [10 + 100 , 20 + 200 , 30 + 300 , 40 + 400]
 
 a = list(map(int, input("Enter first list elements: ").split()))
 b = list(map(int, input("Enter second list elements: ").split()))
-
 c = []
-
 n = min(len(a), len(b))   # minimum length
-
 for i in range(n):
     c.append(a[i] + b[i])
-
 print("Result =", c)
 
 #Output:
@@ -248,9 +231,7 @@ Output :  [110 , 220 , 330 , 440]
 
 a = list(map(int, input("Enter first list elements: ").split()))
 b = list(map(int, input("Enter second list elements: ").split()))
-
 c = [a[i] + b[i] for i in range(min(len(a), len(b)))]
-
 print("Result =", c)
 #Output:
 Enter first list elements: 10 20 30 40 50 60 70
@@ -268,12 +249,9 @@ Hint:  Use  repetition  operator  *
 #Program:
 rows = int(input("Enter number of rows: "))
 cols = int(input("Enter number of columns: "))
-
 a = []
-
 for i in range(rows):
     a.append([0] * cols)
-
 print(a)
 # Output:
 Enter number of rows: 3
@@ -291,10 +269,9 @@ Output :  [[0 , 0 , 0 , 0] , [0 , 0 , 0 , 0] , [0 , 0 , 0 , 0]]
 # Program:
 rows = int(input("Enter number of rows: "))
 cols = int(input("Enter number of columns: "))
-
 a = [[0] * cols for i in range(rows)]
-
 print(a)
+
 #Output:
 Enter number of rows: 3
 Enter number of columns: 4
@@ -309,13 +286,10 @@ What  is  the  output ?  --->  [20 , 18 ,  32]
 # Program:
 a = list(map(int, input("Enter 1st list elements: ").split()))
 b = list(map(int, input("Enter 2nd list elements: ").split()))
-
 c = []
-
 for x in a:
     if x not in b:
         c.append(x)
-
 print("Output =", c)
 
 # Output:
@@ -336,9 +310,7 @@ Output :  [20 , 18 , 32]
 
 a = list(map(int, input("Enter 1st list elements: ").split()))
 b = list(map(int, input("Enter 2nd list elements: ").split()))
-
 c = [x for x in a if x not in b]
-
 print("Output =", c)
 
 #Output:
@@ -350,7 +322,6 @@ Output = [20, 18, 32]
 
 #Program:
 a = [x for x in range(1, 21) if x % 2 == 0]
-
 print(a)
 
 #Output:
@@ -362,7 +333,6 @@ Output: [Even  numbers  between  1  and  20]
 '''
 # Program:
 a = [x for x in range(2, 21, 2)]
-
 print(a)
 
 #Output:
@@ -375,16 +345,16 @@ What  is  the  output ?  ---> [4 , 16 , 36 , ... ,  400]
 '''
 #Program:
 a = [x**2 for x in range(1, 21) if (x**2) % 2 == 0]
-
 print(a)
 
 #Output:
 [4, 16, 36, 64, 100, 144, 196, 256, 324, 400]
+
 #  Repeat  previous  program  with  comprehension  and  without  using  if
 # Program:
 a = [x**2 for x in range(2, 21, 2)]
-
 print(a)
+
 #Output:
 [4, 16, 36, 64, 100, 144, 196, 256, 324, 400]
 '''
@@ -399,9 +369,7 @@ Hint : Nested  for  loops
 #Program:
 a = list(map(int, input("Enter 1st list elements: ").split()))
 b = list(map(int, input("Enter 2nd list elements: ").split()))
-
 c = []
-
 for x in a:
     for y in b:
         c.append(x + y)
@@ -422,9 +390,7 @@ Output :  [10 + 30 , 10 + 40 , 10 + 35 , 10 + 32 , 20 + 30 , 20 + 40 , 20 + 35 ,
 #Program:
 a = list(map(int, input("Enter 1st list elements: ").split()))
 b = list(map(int, input("Enter 2nd list elements: ").split()))
-
 c = [x + y for x in a for y in b]
-
 print("Result =", c)
 #output:
 Enter 1st list elements: 10 20 15
@@ -442,9 +408,7 @@ Hint: Same  as  previous  program
 #Program:
 s1 = input("Enter first string: ")
 s2 = input("Enter second string: ")
-
 result = [x + y for x in s1 for y in s2]
-
 print("Result =", result)
 #Output:
 Enter first string: HYD
@@ -458,13 +422,10 @@ What  is  the  output ?  --->  [10 , 20 , 30 , 40 , 50 , 60 , 70 , 80 , 90]
 '''
 #Program:
 a = eval(input("Enter a nested list: "))
-
 b = []
-
 for x in a:
     for y in x:
         b.append(y)
-
 print("Output =", b)
 
 #Output:
@@ -480,10 +441,9 @@ What  is  the  output ?  --->  [10 , 20 , 30 , 40 , 50 , 60 , 70 , 80 , 90]
 #Program:
 
 a = eval(input("Enter a nested list: "))
-
 b = [y for x in a for y in x]
-
 print("Output =", b)
+
 #Output:
 Enter a nested list: [[10,20],[30,40,50],[60,70,80,90]]
 Output = [10, 20, 30, 40, 50, 60, 70, 80, 90]
