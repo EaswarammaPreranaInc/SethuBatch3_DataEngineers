@@ -34,8 +34,8 @@ print(How  to  print  1st  inner  list)#print(a[0])
 print(How  to  print  2nd  inner  list)#print(a[1])
 print(How  to  print  3rd  inner  list)#print(a[2])
 print(How  to  print  30)#print(a[0][2])
-print(How  to  print  80)#print(a[0][7])
-print(How  to  print  100)#print(a[0][9])
+print(How  to  print  80)#print(a[1][3])
+print(How  to  print  100)#print(a[2][1])
 
 
 #  Find  outputs  (Home  work)
