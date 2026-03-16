@@ -43,9 +43,9 @@ a=[ [10 , 20] , [30 , 40 , 50] , [60 , 70 , 80 , 90]]
 print(How  to  print  1st   inner  list)#print(a[0])
 print(How  to  print  2nd   inner  list)#print(a[1])
 print(How  to  print  3rd   inner  list)#print(a[2])
-print(How  to  print  number  of  elements  in  1st  inner  list)#print(*a[0])
-print(How  to  print  number  of  elements  in  2nd  inner  list)#print(*a[1])
-print(How  to  print  number  of  elements  in  3rd  inner  list)#print(*a[2])
+print(How  to  print  number  of  elements  in  1st  inner  list)#print(len(a[0]))
+print(How  to  print  number  of  elements  in  2nd  inner  list)#print(len(a[1]))
+print(How  to  print  number  of  elements  in  3rd  inner  list)#print(len(a[2]))
 #  How  to  print  nested  list  in  differnent  ways
 a = [[10 , 20] , [30 , 40 ,  50] , [60 , 70 , 80 , 90]]
 print('Nested list  with  print function')
