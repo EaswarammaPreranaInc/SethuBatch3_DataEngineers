@@ -18,9 +18,10 @@ Write  a  program  to  determine  mode
 list1 = list(input('Enter a list'))
  m =0
 ele=list1[0]
-for i in list1:
+for i in set(list1):
 	if list1.count(i)>m:
-	ele =i
+		ele =i
+		m=list1.count(i)
 print(ele)
 
 
