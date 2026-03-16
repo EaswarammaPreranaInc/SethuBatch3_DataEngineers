@@ -34,8 +34,8 @@ print(How  to  print  1st  inner  list)#print(a[0])
 print(How  to  print  2nd  inner  list)#print(a[1])
 print(How  to  print  3rd  inner  list)#print(a[2])
 print(How  to  print  30)#print(a[0][2])
-print(How  to  print  80)#print(a[0][7])
-print(How  to  print  100)#print(a[0][9])
+print(How  to  print  80)#print(a[1][3])
+print(How  to  print  100)#print(a[2][2])
 
 
 #  Find  outputs  (Home  work)
@@ -43,9 +43,9 @@ a=[ [10 , 20] , [30 , 40 , 50] , [60 , 70 , 80 , 90]]
 print(How  to  print  1st   inner  list)#print(a[0])
 print(How  to  print  2nd   inner  list)#print(a[1])
 print(How  to  print  3rd   inner  list)#print(a[2])
-print(How  to  print  number  of  elements  in  1st  inner  list)#print(*a[0])
-print(How  to  print  number  of  elements  in  2nd  inner  list)#print(*a[1])
-print(How  to  print  number  of  elements  in  3rd  inner  list)#print(*a[2])
+print(How  to  print  number  of  elements  in  1st  inner  list)#print(len(a[0]))
+print(How  to  print  number  of  elements  in  2nd  inner  list)#print(len(a[1]))
+print(How  to  print  number  of  elements  in  3rd  inner  list)#print(len(a[2]))
 #  How  to  print  nested  list  in  differnent  ways
 a = [[10 , 20] , [30 , 40 ,  50] , [60 , 70 , 80 , 90]]
 print('Nested list  with  print function')
@@ -135,7 +135,7 @@ print(a)
 #[[10 , 'Rama' , 1000.0] , [20 , 'Sita' , 2000.0] , [15 , 'Rajesh' , 3500.0] , [18 , 'Kiran' , 2800.0] , [5 , 'Amar'  ,5000.0] ]
 # Write  a  program  to  create  a  list  with  cubes  of  2 , 4 , 6 , 8 , 10  with  list  comprehension (Home  work)
 l=[x*x*x for x in range(2,11,2)]
-print(x)
+print(l)
 '''
 (Home  work)
 Write  a  program  to  extract  1st  character  of  each  string  in  capital  letters  in  a  list  of  srings  without  comprehension
@@ -172,7 +172,7 @@ s=input()
 s=s.split(" ")
 l=[]
 for i in s:
-	l.append([i, len(i)])
+	l.append([i.upper(), len(i)])
 print(l)
 
 '''
@@ -185,7 +185,7 @@ Output :  [['HYD' , 3] , ['IS' , 2] , ['GREEN' , 5] , ['CITY' , 4]]
 '''
 s=input()
 s=s.split(" ")
-l=[[i,len(i) for i in s]
+l=[[i.upper(),len(i)] for i in s]
 print(l)
 
 
@@ -207,8 +207,8 @@ Repeat   previous  program  with  comprehension
 
 Input1 : [10 , 20 , 30 , 40 , 50 , 60 , 70]
 Input2 :  [100 , 200 , 300 , 400]
-Output :  [110 , 220 , 330 , 440]
-'''
+Output :  [110 , 220 , 330 , 440]1
+'''							
 l1=list(input())
 l2=list(input())
 l=[l1[i]+l2[i] for i in range(min(len(l1), len(l2))]
@@ -241,7 +241,7 @@ print(l)
 
 '''
 Write  a  program  to  extract  those  elements  of  1st  list  which  are  not  in  2nd  list   without  comprehension
-
+ 
 Let  1st  list  be  [10 , 20 , 15 , 18 , 25 , 32]  and  2nd  list  be  [30 , 40 , 10 , 25 , 15]
 What  is  the  output ?  --->  [20 , 18 ,  32]
 '''
@@ -263,18 +263,20 @@ Output :  [20 , 18 , 32]
 '''
 l1=[10 , 20 , 15 , 18 , 25 , 32]  
 l2=[30 , 40 , 10 , 25 , 15]
-l=[i if i not in l2 for i in l1]
+l=[i for i in l1 if i not in l2]
 print(l)
 
  #  Write   a  program  to  print  even  numbers  between  1  and  20  with  comprehension
-print([i if i%2==0 for i in range(2,20)]
+print([i for i in range(2,20) if i%2==0 ]
 
  '''
 Repeat  previous  program  with  comprehension  and  without  using  if
 
 Output: [Even  numbers  between  1  and  20]
 '''
-print([i for i in range(2,20,2)]
+print([i for i in range(2,21,2)]
+or
+print([i for i in range(1,20) if i%2 == 0]
 
 
 '''
@@ -282,7 +284,7 @@ Write  a  program  to  print  those  squares  of  1 , 2 , 3 , 4 , ... 20  which 
 
 What  is  the  output ?  ---> [4 , 16 , 36 , ... ,  400]
 '''
-print([i*i if i*i%2==0 for i in range(1,21)]
+print([i*i  for i in range(1,21) if i*i%2==0]
 
  #  Repeat  previous  program  with  comprehension  and  without  using  if
 print([i*i  for i in range(1,21,2)]
