@@ -54,14 +54,19 @@ print('Each  inner  list   of   outer  list  without  indexes')
 How  to  print  each  inner  list  of  list  'a'  without  using  indexes  (with  for  loop)
 print('Elements  in  the  form   of  matrix   without  using  indexes')
 for i in a:
-print(i)
+	print(i)
 How  to   print  elements  of  each  inner  list  without  using  indexes  in  matrix style  (with  nested  loop)
 print('Elements  in  the  form   of  matrix  using  indexes')
-How  to   print  elements  of  each  inner  list  using  indexes  in  matrix style (with  nested  loop)
-
 for i in a:
 	for j in i:
 		print(j,end=" ")
+	print()
+
+How  to   print  elements  of  each  inner  list  using  indexes  in  matrix style (with  nested  loop)
+
+for i in range(len(a)):
+	for j in range(len(a[i])):
+		print(a[i][j],end="\t")
 	print()
 
 '''
@@ -118,6 +123,10 @@ for  x , y  in  a:
 #10...20
 #error
 
+for  x , *y , z in  a:
+	print(x , y , z	sep = '...')
+	
+
 #  Find  outputs  (Home  work)
 a = [[]]
 print(How  to  print  inner  list)#print(a[0])
@@ -133,9 +142,13 @@ print(sorted(a , reverse = True))
 #[[20 , 'Sita' , 2000.0],[18 , 'Kiran' , 2800.0],[15 , 'Rajesh' , 3500.0] ,,[10 , 'Rama' , 1000.0] ,[5 , 'Amar'  ,5000.0] ]
 print(a)
 #[[10 , 'Rama' , 1000.0] , [20 , 'Sita' , 2000.0] , [15 , 'Rajesh' , 3500.0] , [18 , 'Kiran' , 2800.0] , [5 , 'Amar'  ,5000.0] ]
+
+print(sorted(a, key=lambda x: x[1])) # lambda function
+
+
 # Write  a  program  to  create  a  list  with  cubes  of  2 , 4 , 6 , 8 , 10  with  list  comprehension (Home  work)
 l=[x*x*x for x in range(2,11,2)]
-print(x)
+print(l)
 '''
 (Home  work)
 Write  a  program  to  extract  1st  character  of  each  string  in  capital  letters  in  a  list  of  srings  without  comprehension
@@ -172,7 +185,7 @@ s=input()
 s=s.split(" ")
 l=[]
 for i in s:
-	l.append([i, len(i)])
+	l.append([i.upper(), len(i)])
 print(l)
 
 '''
@@ -185,7 +198,7 @@ Output :  [['HYD' , 3] , ['IS' , 2] , ['GREEN' , 5] , ['CITY' , 4]]
 '''
 s=input()
 s=s.split(" ")
-l=[[i,len(i) for i in s]
+l=[[i.upper(),len(i)] for i in s]
 print(l)
 
 
@@ -263,7 +276,7 @@ Output :  [20 , 18 , 32]
 '''
 l1=[10 , 20 , 15 , 18 , 25 , 32]  
 l2=[30 , 40 , 10 , 25 , 15]
-l=[i if i not in l2 for i in l1]
+l=[i for i in l1 if i not in l2]
 print(l)
 
  #  Write   a  program  to  print  even  numbers  between  1  and  20  with  comprehension
