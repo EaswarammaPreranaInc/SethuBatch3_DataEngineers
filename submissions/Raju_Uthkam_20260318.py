@@ -149,3 +149,40 @@ for i in range(a):
     salary = int(input('Enter salary'))
     d[empname] = salary
 print(d)
+
+
+
+''' (Home  work)
+Write  a  program  to  convert  a  string  to  dictionary
+
+Let  input  be   "Emp no = 25 , Emp name = Rama  Rao , sal = 10000.0 , gender = m"
+
+What  is  the  output ?  --->  {Emp no : 25 , Emp name  :  Rama Rao , sal : 10000.0 , gender : m}
+
+Hint :  Use  split()  method  twice
+
+input  --->  "Emp no = 25 , Emp name = Rama  Rao , sal = 10000.0 , gender = m"
+
+input . split(',') --->  ['Emp no = 25'  , 'Emp name = Rama  Rao' , 'sal = 10000.0' , 'gender = m']
+
+a = {} 
+
+Iteration  1    --->  ['Emp no' ,  '25']   --->  a['Empno'] = '25'
+
+Iteration  2    --->  ['Emp name' , 'Rama  Rao']   --->  a['Emp  name'] = 'Rama   Rao'
+
+Iteration  3    --->  ['sal' , '10000.0']   --->  a['sal'] =  '10000.0'
+
+Iteration  4    --->  ['gender' , 'm']   --->  a['gender'] =  'm'
+'''
+
+
+
+a = eval(input('Enter input : ')).split(',')
+b = {}
+c=[]
+for x in a:
+    c.append(x.split('='))
+for y in c :
+    b[y[0]] = y[1]
+print(b)
