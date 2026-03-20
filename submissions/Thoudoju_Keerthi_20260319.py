@@ -18,6 +18,13 @@ try:
 except:
 	print('Error')
 
+(or)
+s=input("enter a string : ")
+s=s.upper()
+set_s = set(s)
+res = set_s.intersection('AEIOU")
+print(''.join(res))
+
  #  How  to  access  values  of  dictionary (Home  work)
 a  =  {'Empno'  :  25 ,  'Ename'  :  'Rama  Rao'  ,  'Sal'  :  1000.65  }
 print(How  to  print  value  25  in  dict  'a')#a['Empno']
@@ -162,7 +169,15 @@ try:
 	d={}
 	for i in lista:
 		sublist = i.split("=")
-		d[sublist[0]] = sublist[1]
+		s=sublist[1]
+		try:
+			if '.' in s:
+				s=float(s)
+			else:
+				s=int(s)
+		except:
+			pass
+		d[sublist[0]] = s
 	print(d)
 except:
 	print('Error')
