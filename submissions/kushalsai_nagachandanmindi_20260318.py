@@ -80,7 +80,6 @@ e = {**a , **b , **c}
 print(e) # {10: 'Rama', 20: 'Manohar', 15: 'Radha', 18: 'Kiran', 14: 'Srinivas', 25: 'Ramesh', 19: 'Krishna'}
 print(type(e)) # <class 'dict'>
 
-
 #  Find  outputs  (Home  work)
 a = {10 : 20 , 30 : 40}
 b = {30 : 50 , 10 : 60}
@@ -90,22 +89,13 @@ print(c) # { 10 : 60, 30 : 50 }
 d = a | b
 print(d) # {10 : 60 ,30 : 50}
 
-
-a ={}
-n = int(input("how many employees: "))
-for i in range(n):
-    name = input(F'Enter the name of employee{i+1}: ')
-    salary=float(input(F'Enter the salary of employee{name}: '))
-    a[name]=salary
-print("Employee dictionary: ")
-print(a)
-
-s = input("Enter the String: ")
-items=s.split(',')
-a={}
-for item in items:
-    key, value = item.split('=',1)
-    a[key]=value
-    
-print(a)
-
+# Write  a  program  to  convert  a  string  to  dictionary
+a = input("Enter input: ")
+result = {}
+parts = a.split(',')
+for i in parts:
+    key_value = i.split('=')
+    key = key_value[0].strip()
+    value = key_value[1].strip()
+    result[key] = value
+print(result)
