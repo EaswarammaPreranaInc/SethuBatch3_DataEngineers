@@ -1,0 +1,38 @@
+1. Remove column from an existing table.
+alter table table_name
+drop column column_name;
+
+2. write a query to display the deptno which does not contains the employees.
+select deptno
+from employees
+
+3. write a query to display the given employee details irrespective of case sensitive.
+	
+( I may give the value either in upper case or lower case but record should fetch the query)
+#suppose we searched for records of vishal
+select * 
+from emp
+where lower(ename)=lower.('vishal')
+or
+select * 
+from emp
+where upper(ename)=upper.('vishal')
+
+
+
+4. Write a query to display employees information who are all working as MANAGER in department 20
+select *
+from employees 
+where designation='MANAGER'
+ and dept=20;
+
+5. Modify the employee names from lower case to upper case from the emp table.
+update employee
+set ename =upper(ename);
+
+
+6. delete the employees whose name starts with J.
+delete from employees
+where ename like 'j%';
+
+ 
