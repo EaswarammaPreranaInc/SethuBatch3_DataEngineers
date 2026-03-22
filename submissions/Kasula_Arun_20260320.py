@@ -61,8 +61,9 @@ dict()  function
 ------------------
 1) What  is  the  argument  of  dict()  function ?  --->
 											Nested  sequence  such  as  list  of  tuples , list  of  lists , tup…
-[11:50 AM, 3/20/2026] +91 99482 50500: # sorted()  function  (Home  work)
 '''
+# sorted()  function  (Home  work)
+
 
 a = {10 : 'Red' , 20 : 'Green' , 15 : 'Blue' , 18 : 'Yellow' , 5 : 'White'}
 b = sorted(a . keys())
