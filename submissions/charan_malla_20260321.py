@@ -16,7 +16,6 @@ for x in c:
     if x in "AEIOU":
         count = c.count(x)
         d[x] = count
-        
 print(d) 
 
 # Find outputs  (Home  work)
