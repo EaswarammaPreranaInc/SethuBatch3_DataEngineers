@@ -29,7 +29,7 @@ What  is  the  result  of  power ?  --->  10000000
 What  is  the  gcd  of  2  numbers ?  --->  1
 What  is  the  factorial   of  1st  input ?  --->  10!
 '''
-"""
+
 import math
 
 A=eval(input("Enter input :"))
@@ -61,7 +61,6 @@ elif C =="gcd":
 elif C =="!":
     print(math.factorial(A))
 
-"""
 
 
 
@@ -76,11 +75,9 @@ What  are  'x'  and  'y'  after  swap ?  --->  Hyd  and  25
 
 Hint:  Swap  references  but  not  objects
 '''
-""" 
 x,y = 25,"Hyd"
 x,y = y,x 
 print(x,y) # "Hyd", 25
-"""
 
 
 
@@ -99,14 +96,13 @@ Write  a  program  to  determine  largest  of  two  inputs  without  using  max(
 
 6) Use   ternary  operator
 '''
-"""
+
 A=eval(input("Enter input :"))
 B=eval(input("Enter input :"))
 if A > B :
     print(A)
 else:
     print(B)
-"""
 
 
 
@@ -125,7 +121,6 @@ Write  a  program  to  determine  largest  of  three  inputs  without  using  ma
 
 6) Use  nested  ternary  operator
 '''
-"""
 A=input("Enter input :")
 B=input("Enter input :")
 C=input("Enter input :")
@@ -136,7 +131,6 @@ elif B > A and B > C:
     print(B)
 else:
     print(C)
-"""
 
 
 
@@ -157,7 +151,7 @@ Write  a  program  to  print   '>'  if  1st  input  >  2nd  input,
 
 5) Use  nested  ternary  operator
 '''
-"""
+
 A=eval(input("Enter input :"))
 B=eval(input("Enter input :"))
 if A > B :
@@ -166,7 +160,7 @@ elif A == B:
     print("=")
 else:
     print("<")
-"""
+
 
 
 
@@ -183,7 +177,7 @@ Write  a  program  to  print  1  if  input  is  +ve  ,  -1    if  input  is  -ve
 
 4) Use  nested  ternary  operator
 '''
-"""
+
 A=eval(input("Enter input :"))
 if A > 0 :
     print("1")
@@ -191,7 +185,7 @@ elif A < 0:
     print("-1")
 elif A == 0:
     print("0")
-"""
+
 
 
 
@@ -206,10 +200,9 @@ Write  a  program  to  test  input  is  even  number  or  odd  number
 
 3) Use  ternary  operator
 '''
-"""
+
 A=int(input("Enter number :"))
 if A%2 == 0:
     print("even")
 else:
     print("odd")
-"""
