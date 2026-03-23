@@ -12,9 +12,7 @@ print(type(x))
 print('End')
 '''
 Begin
-Hyd
-Sec
-Cyb
+None
 <class 'function'>
 End
 '''
@@ -73,8 +71,8 @@ End
 f1()                                  #error
 def   f1():
         print('Hello')
-print(f1())                          #Hello
-print(f1)                            #None and address
+print(f1())                          #Hello and None
+print(f1)                            #Type and address     (dunder str, __str__()) 
 
 
 
@@ -85,8 +83,8 @@ def  f1():
         print('f1  function')
 #End  of   function
 print('Hi')                                  #Hi
-print(f1())                                  #f1 function
-print(f1)                                    #None and address
+print(f1())                                  #f1 function and returning None
+print(f1)                                    #type and address
 print('Bye')                                 #Bye
 
 
