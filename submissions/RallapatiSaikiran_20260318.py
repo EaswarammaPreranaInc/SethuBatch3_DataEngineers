@@ -103,7 +103,7 @@ d = {*a , *b , *c}
 print(d)    # {10,20,15,18,14,25,19,}
 print(type(d))   # <class 'set'>
 e = {**a , **b , **c}
-print(e)    {10:'Rama',20:'Sita',15:'Rajesh',18:'Kiran',14:'Amar',25:'Ramesh',19:'Krishna',}
+print(e)          {10:'Rama',20:'Sita',15:'Rajesh',18:'Kiran',14:'Amar',25:'Ramesh',19:'Krishna',}
 print(type(e))    # <class 'dict'>
 
 
