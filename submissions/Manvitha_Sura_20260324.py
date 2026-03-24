@@ -30,8 +30,8 @@ print  number  of  prime  numbers
 
 c=[]
 def prime_numbers(n):
-    for j in range(2,n):
-        if prime(j) and j not in c:
+    for j in range(2,n+1):
+        if prime(j):
             c.append(j)
     return c
 def prime(n):
