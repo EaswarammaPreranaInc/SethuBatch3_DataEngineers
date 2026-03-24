@@ -283,7 +283,7 @@ print(f1(**{'c' : 2 , 'a' : 4 , 'x' : 6}))#eeror fa has x argument
  # Identify  Error (Home  work)
 a = [10 , 20 , 15 , 5 , 12]
 print(sorted(reverse = True , a)) #Error 
-print(sorted(a , rev = True)) #[20, 15, 12, 10, 5]
+print(sorted(a , rev = True)) #error, there is no rev
 print(25 , 10.8 , 'Hyd' , separator = '\t') # error, there is no separator
 print(25 , 10.8 , 'Hyd' , endofline = '\t')#Error, there is no endofline 
 print(25 ,  sep = '\t' , 10.8 , end = '\t' , 'Hyd') # error keyword args must be after positional arguments
