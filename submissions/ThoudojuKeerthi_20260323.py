@@ -21,7 +21,6 @@ print(add([25 , 10.8 , 'Hyd'] , [True , None , 3+4j , 'Sec'])) #[25 , 10.8 , 'Hy
 #print(add(10 , '20')) #error
 
 
-
 '''
 1) What  are  the  three  events  in  execution  of  add(10 , 20) ?  --->
 	a) Executes  add()  function  and  passes  10  and  20  to  the  function
@@ -108,7 +107,6 @@ def   prime(n):
 	return 'Prime  number'
 
 print(prime(19))
-
 
 	
 
@@ -279,7 +277,7 @@ print(f1([6 , 7 , 8])) #Error
 print(f1(*{1 : 2 , 3 : 4 , 5 : 6})) #16
 print(f1(**{'c' : 2 , 'b' :  4 , 'a' : 6})) #14
 print(f1({'c' : 2 , 'b' :  4 , 'a' : 6})) #error
-print({**{'c' : 2 , 'b' :  4 , 'a' : 6}}) #Error
+print({**{'c' : 2 , 'b' :  4 , 'a' : 6}}) #{'c' : 2 , 'b' :  4 , 'a' : 6}
 print(f1(**{'c' : 2 , 'a' : 4 , 'x' : 6}))#eeror fa has x argument
 
  # Identify  Error (Home  work)
