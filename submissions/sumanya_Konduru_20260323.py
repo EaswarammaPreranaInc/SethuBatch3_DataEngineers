@@ -165,6 +165,30 @@ else:
         How  to  obtain  last  two  digits  of  the  number  and  call  words()  function
 		printf("\n");
   ''' 
+s = ''
+a = ["" , "One" , "Two" , "Three" , "Four" , "Five" , "Six" , "Seven" , "Eight" , "Nine" , "Ten" , "Eleven" , "Twelve" , 
+	        "Thirteen" , "Fourteen" , "Fifteen" , "Sixteen" , "Seventeen" , "Eightteen" , "Nineteen"]
+b = [""  , "" , "Twenty" , "Thirty" , "Forty" , "Fifty" , "Sixty" , "Seventy" , "Eighty" , "Ninety"]
+
+def words(n , units):
+    global s 
+    if n >= 20:
+        s += b[n//10] + ' ' + a[n%10] + ' '
+    else:
+        s += a[n] + ' '
+    if n> 0 :
+        s += units + ' '
+
+n = int(input('Enter any number : '))
+if n == 0 :
+    print('Zero')
+else:
+    words(n//10000000, 'Crores')
+    words(n//100000%100, 'Lakhs')
+    words(n//1000%100, 'Thousand')
+    words(n//100%10, 'Hundred')
+    words(n%100, '')
+print(s)
 
 '''
 # Find  outputs  (Home  work)
