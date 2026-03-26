@@ -174,10 +174,10 @@ def    f1(x = 25):
 def   f2(x):
         return  x
 # End  of  the  function
-print(f1(10))
-print(f1())
-print(f2(20))
-print(f2())
+print(f1(10))#10
+print(f1())#25
+print(f2(20))#20
+print(f2())#error
 
 # Find  outputs (Home  work)
 def   disp(ch = '*' , n = 4):
@@ -191,7 +191,7 @@ disp(5)#20
 disp(n = 7 , ch = '%')#%%%%%%%
 disp(7 , '@')#@@@@@@@
 disp(7 , n = 6)#42
-disp(ch = '!' ,  5)#!!!!!
+disp(ch = '!' ,  5)#Error
 
 # Find  outputs (Home  work)
 def  power(a , b  =  2):
@@ -199,13 +199,13 @@ def  power(a , b  =  2):
 # End  of the function
 print(power(2 , 6))#64
 print(power(5))#25
-print(power(b = 3 , a = 4.5))#4.5*4.4*4.5
+print(power(b = 3 , a = 4.5))#4.5*4.5*4.5
 print(power(3 + 4j))#(3+4j)*(3+4j)
 print(power(True))#1
 
 def   power(b = 2 , a):
  	 pass
-
+#non-defualt arg are not permiteed after default arg
 
  # Find outputs  (Home  work)
 def   add(a , b):
@@ -254,7 +254,7 @@ print(add(a = 30 , b = 40)) #70
 print(add())#30
 print(add(a = 50))#70
 print(add(b = 60 , a = 70))#130
-print(add(80 , 90))#170
+print(add(80 , 90))#Error
 
 
  # Find  outputs(Home  work)
@@ -271,6 +271,7 @@ print(add(c = 25 , a = 43))#error
 print(add(1 , 2 , 3))#error
 def   add(a , b = 10 ,  c ,  * , d  , e = 20 , f):
 		pass
+# c is culprit non-default not permiteed after default before *
 
  # Find  outputs(Home  work)
 def     f1(x , a = []):
@@ -278,17 +279,17 @@ def     f1(x , a = []):
 		a . append(i * i)
 	return  a
 # End  of  the  function
-print('_defaults  :  ' , f1._defaults_)#[]
+print('_defaults  :  ' , f1._defaults_)#([],)
 print(f1(3))#[0,1,4]
-print('_defaults  :  ' , f1._defaults_)#[0,1,4]
-print(f1(4 , [10 , 20 , 15 , 18]))#[10,20,15,18,0,1,2,3]
-print('_defaults  :  ' , f1._defaults_)#[0,1,4]
+print('_defaults  :  ' , f1._defaults_)#([0,1,4],)
+print(f1(4 , [10 , 20 , 15 , 18]))#([10,20,15,18,0,1,2,3],)
+print('_defaults  :  ' , f1._defaults_)#([0,1,4],)
 print(f1(5))#[0,1,4,0,1,2,3,4]
-print('_defaults  :  ' , f1._defaults_)#[0,1,4,0,1,2,3,4]
-print(f1(a = [100 , 200 , 300],   x = 6 ))#[100 , 200 , 300,,0,1,2,3,4,5]
-print('_defaults  :  ' , f1._defaults_)#[0,1,4,0,1,2,3,4]
-print(f1(6))##[0,1,4,0,1,2,3,4,0,1,2,3,4,5]
-print('_defaults  :  ' , f1._defaults_)#[0,1,4,0,1,2,3,4,0,1,2,3,4,5]
+print('_defaults  :  ' , f1._defaults_)#([0,1,4,0,1,2,3,4],)
+print(f1(a = [100 , 200 , 300],   x = 6 ))#([100 , 200 , 300,,0,1,2,3,4,5],)
+print('_defaults  :  ' , f1._defaults_)#([0,1,4,0,1,2,3,4],)
+print(f1(6))##([0,1,4,0,1,2,3,4,0,1,2,3,4,5],)
+print('_defaults  :  ' , f1._defaults_)#([0,1,4,0,1,2,3,4,0,1,2,3,4,5],)
 
 
  # Find  outputs
