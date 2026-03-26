@@ -299,15 +299,18 @@ def   f1(a = 'Hyd' , b = []):
 	print('a :  ' , a)
 	print('b :  ' , b)
 # End of the function
-print('Default Values  :  ' , f1 . _defaults_)#[]
+print('Default Values  :  ' , f1 . _defaults_)#('Hyd',[])
 f1()
 #HydSec
 #[1 , 2 , 3]
-print('Default Values  :  ' , f1 . _defaults_)#[1 , 2 , 3]
+print('Default Values  :  ' , f1 . _defaults_)#('Hyd',[1 , 2 , 3])
 f1()
 #HydSec
 #[1 , 2 , 3,1,2,3]
-print('Default Values  :  ' , f1 . _defaults_)#[1 , 2 , 3,1,2,3]
+print('Default Values  :  ' , f1 . _defaults_)#('Hyd',[1 , 2 , 3,1,2,3])
+f1()
+#HydSec 
+#[1 , 2 , 3,1,2,3]
 
  #  Variable  number  of  arguments  demo  program
 def   f1(*t):
@@ -327,14 +330,20 @@ f1()
 #0
 
 f1([10 , 20] , (30 , 40 , 50) , {60 , 70 , 80 , 90})
-#eeror
+#([10 , 20] , (30 , 40 , 50) , {60 , 70 , 80 , 90})
+#<class 'tuple'>
+#3
+
 f1('Hyd')
 #('Hyd')
 #<class 'tuple'>
 #1
 
 tpl = (100 , 200 , 150)
-f1(tpl)#Error
+f1(tpl)
+#((100 , 200 , 150))
+#<class 'tuple'>
+#1
 f1(t = (10 , 20 , 30)) #   Error
 
  #  Write  a  function  to  determine  average  of  arguments  passed  to  the  function (Home  work)
