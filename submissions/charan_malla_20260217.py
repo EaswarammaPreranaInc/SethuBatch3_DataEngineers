@@ -67,9 +67,8 @@ print('set  with  print  function')
 print(a) # It will print whole set   {25 , True , 'Hyd' , 10.8}
 print('Iterate  thru  set  with  for  loop')
 #How  to  iterate  thru  set  with  for  loop
-''' for x in a:
+ for x in a:
 	print(x)
-"'
 
 
 # Find  outputs  (Home  work)

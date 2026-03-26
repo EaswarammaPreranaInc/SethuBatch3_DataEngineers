@@ -235,6 +235,7 @@ Write  a program  to  determine  frequency  of  each  alphabet  in  the  string 
 
 Let  input  be   RamA raO
 What  is  the  output ?  --->  {'A' : 3 , 'M' : 1 , 'O' : 1 , 'R' : 2}  in  alphabetical  order
+'''
 
 
 n = input("enter a string :")
