@@ -22,7 +22,7 @@ print  results
 def  prime_divisors(n):
 	l=[]
 	for i in range(2, n+1):
-		if isPrime(i):
+		if n%i ==0 and isPrime(i):
 			l.append(i)
 	return l
 n=int(input('Enter n value : '))
@@ -95,7 +95,7 @@ def  f1(a , b , / , c , d , * , e  , f):
 f1(10 , 20 , 30 , d = 40 , e = 50 , f = 60)#a  :  10 b  :  20  c  :  30  d  :  40 e  :  50  f  : 60
 f1(1 , b = 2 , c = 3 , d = 4 , e = 5 , f = 6)#Error
 f1(1 , 2 , 3 , 4 , 5 , f = 6)#Error
-f1(10 , 20 , c = 30 , 40 , e = 50 , f = 60)#a  :  10 b  :  20  c  :  30  d  :  40 e  :  50  f  : 60
+f1(10 , 20 , c = 30 , 40 , e = 50 , f = 60)#Error
 f1(10 , 20 , 30 , 40 , e = 50 , f = 60)#a  :  10 b  :  20  c  :  30  d  :  40 e  :  50  f  : 60
 
  # Identify error (Home  work)
@@ -110,7 +110,7 @@ def   f2(a , b , c , *):
  # Identify  error  (Home  work)
 def  f4(* , a , b , c , /):
 	        pass
-#Error  a , b , c nor can be default or notdefault
+#Error  a , b , c - confused 
 
  # Find  outputs  (Home  work)
 def  f1(x):
@@ -119,7 +119,7 @@ def  f1(y):
 	print('2nd  function : ' , y)
 def  f1(z):
 	print('3rd  function : ' , z)
-f1(z = 10)#3rd  function : ' , z
+f1(z = 10)#3rd  function : ' , 10
 f1(y = 20)#Error
 f1(x = 30)#Error
 
@@ -134,7 +134,7 @@ print(add(100 , c = 200))#320
 print(add(c = 100 , b = 200 , a = 300))#600
 print(add(c = 100 , a = 200))#320
 print(add())#error
-print(add(a = 100 , 200))#330
+print(add(a = 100 , 200))#Error cannot send positional after kA
 print(add(100 ,  , 300))#Error
 print(add(100 ,  b , 300))#Error
 
@@ -162,10 +162,10 @@ print(add(100 , 200))#330
 print(add(100 , 200 , 300))#620
 print(add(100 , 200 , 300 , 400))#1000
 print(add(b = 100 , a = 200))#330
-print(add(100 , 200 , d = 300))#330
-print(add(d = 100 , a = 200 , b = 300))#530
-print(add(c = 100 , d = 200 , 300 , 400))#820
-print(add(100 , 200 , c = 300 , x = 400))#620
+print(add(100 , 200 , d = 300))#610
+print(add(d = 100 , a = 200 , b = 300))#610
+print(add(c = 100 , d = 200 , 300 , 400))#Error
+print(add(100 , 200 , c = 300 , x = 400))#Error
 print(add())#eeror
 
  #  Find  outputs (Home  work)
