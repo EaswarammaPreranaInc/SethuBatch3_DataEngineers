@@ -414,12 +414,12 @@ def   f1(a , *b , c):
         print(F'a  :  {a}  \t  b  :  {b}  \t  c  :  {c}')
 # End  of  the  function
 f1(10 , 20 , 30 , 40 , c = 50)#a  :  10   b  :  (20,30,40)    c  : 50
-f1(60 , 70 , c = 80)#a  :  60   b  :  70    c  : 80
+f1(60 , 70 , c = 80)#a  :  60   b  :  (70)   c  : 80
 f1(90 , c = 100)#a  :  90   b  :  ()    c  : 100
-f1(a = 1 , 2 , c = 3)#a  :  1   b  :  (2)    c  : 3
+f1(a = 1 , 2 , c = 3)#Error no pa after KA
 f1(1 , 2 , 3)#Error
-f1(a = 1 , b = 2 , c = 3)#a  :  1  b  :  (2)    c  : 3
-f1(a = 25 , 100 , 200 , 300 , c = 35)#a  :  25   b  :  (100,200,300)    c  : 35
+f1(a = 1 , b = 2 , c = 3)#Error
+f1(a = 25 , 100 , 200 , 300 , c = 35)#Error no PA after KA
 
 # Which  of  the  following  are  valid  ?  (Home  work)
 def   f1(*a , *b):
@@ -446,7 +446,7 @@ def   f6( * , a , *b , c):
 
 def   f7(a , *b , c ,  /):
        pass
-#valid
+#Invalid
 
  # Find  outputs  (Home  work)
 def   f1(*a):
