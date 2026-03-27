@@ -1,5 +1,4 @@
-Name-Dhruva Gupta
-Roll Number-D238
+
 
 # # Keyword  only   arguments  demo  program
 # def   f1(* , a , b):
