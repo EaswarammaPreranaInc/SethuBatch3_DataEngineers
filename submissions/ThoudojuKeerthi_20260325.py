@@ -375,7 +375,7 @@ print(concat('Hyd', 'Is', 'Green', 'City'))# Hyd Is Green City
 print(concat('Python', 'Is', 'A', 'Great', 'Language'))#Python Is A Great Language
 print(concat())#Empty string
 print(concat('Python'))#Python
-print(concat(1, 2, 3))#1 2 3
+print(concat(1, 2, 3))#Error joins only strings
 
  #Find  outputs (Home  work)
 def   f1(a = 25  , *b):
@@ -385,13 +385,13 @@ f1(10 , 20 , 30 , 40)# a : 10 b : (20, 30, 40)
 f1(50 , 60)#a : 50 b:(60)
 f1(70) #a : 25 b:(70)
 f1(a = 80)#Eeror
-f1(b = (10 , 20 , 30) , a = 40) #eeror
-f1()#eeror
+f1(b = (10 , 20 , 30) , a = 40) #eeror b should be positional argument
+f1()#a : 25     b  :  ()
 f1(a = 10 , (20 , 30 , 40))#eeror
 f1(25 , b = (10 , 20 , 30))#eeror
-f1(25 , a = (10 , 20 , 30))#a : (10 , 20 , 30) b : (25)
+f1(25 , a = (10 , 20 , 30))#Invalid sending value to a twice
 f1((10 , 20 , 30) , 10 , 20 , 30)#a : (10 , 20 , 30) b : (10 , 20 , 30)
-f1(a = (10 , 20 , 30) , 10 , 20 , 30)#a : (10 , 20 , 30) b : (10 , 20 , 30)
+f1(a = (10 , 20 , 30) , 10 , 20 , 30)#Error
 
  # Find  outputs (Home  work)
 def    f1(*a , b):
