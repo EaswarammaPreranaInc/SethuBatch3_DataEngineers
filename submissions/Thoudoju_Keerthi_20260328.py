@@ -34,9 +34,9 @@ def  f1(b):
 	b[2] = 25
 # End  of  the  function
 a = (10 , 20 , 15 , 18)
-print(a) #TypeError: 'tuple' object does not support item assignment
-f1(a)
-print(a)
+print(a) #(10 , 20 , 15 , 18)
+f1(a)#Error
+print(a) #(10 , 20 , 15 , 18)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  # Find  outputs (Home  work)
 square = lambda  x = 10  :    x * x
@@ -53,6 +53,7 @@ print(square(5)) #25
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  # Find  output (Home  work)
 How  to  define  lambda  function   to  return  sum   of  two  arguments
+add = lambda a, b: a +b
 print(type(add))#<class 'function'>
 print(add(10 , 20)) #30
 print(add(10.6 , 20.8)) #31.4
@@ -61,8 +62,8 @@ print(add(True , False)) #1
 print(add(25 , 10.8)) #35,8
 print(add(3 + 4j , 5 + 6j)) #(8+10j)
 print(add(10 , '20')) #TypeError
-print(add()) #TyperError
-print(add) #<function <lambda> at Memory address>
+print(add()) #Error
+print(add) #<function and address>
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #  Find  outputs (Home  work)
 add = lambda  a = 1 , b = 2 :  a + b
@@ -260,7 +261,7 @@ def  fib(i): #   'i'  is  term  number
 		return  ??? #0
 	if  ??? #i==2
 		return  ??? #1 
-	return  ??? #fib(i)-1 + fib(i)-2
+	return  ??? #fib(i-1)+ fib(i-2)
 '''
 fib(5) =  5th  term  i.e.  3
 '''
@@ -319,11 +320,11 @@ rev(678) = 678 % 10 * 10 ^ 2 + rev(678 // 10)
 '''
 from math import *
 def  rev(n):
-	if  ??? # n == 0:
-		return  ??? #0
+	if   n == 0:
+		return  0
 	else:
-		return  ?? #  digits = len(str(n)) - 1
-        return (n % 10) * (10 ** digits) + rev(n // 10)
+	     
+	    return (n % 10) * (10 ** (len(str(n))-1)) + rev(n // 10)
 '''
 rev(946)  = 649
 '''
