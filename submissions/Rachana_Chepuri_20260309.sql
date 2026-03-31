@@ -1,113 +1,143 @@
-show databases;
-create database employees_lab;
-use employees_lab;
-create table employees_lab(
-	emp_id INT PRIMARY KEY AUTO_INCREMENT,
-	emp_name VARCHAR(50) NOT NULL,
-	department VARCHAR(50), 
-	salary DECIMAL(10,2),
-	age INT,
-	joining_date DATE 
-    );
-insert into employees_lab(emp_name,department,salary,age,joining_date)
-values('Ravi','IT',50000,25,2022-01-10);
-insert into employees_lab(emp_name,department,salary,age,joining_date)
-values
-('Ravi','IT',50000,25,'2022-01-10'),
-('Sita','HR',42000,28,'2021-03-15'),
-('Arjun','Finance',60000,30,'2020-07-21'),
-('Kiran','Sales',48000,27,'2022-02-18'),
-('Neha','Marketing',45000,26,'2021-11-05'),
-('Rahul','IT',58000,29,'2020-09-12'),
-('Priya','HR',40000,24,'2023-01-25'),
-('Vikas','Finance',62000,31,'2019-06-14'),
-('Anjali','Sales',47000,26,'2022-05-20'),
-('Ramesh','Marketing',49000,28,'2021-08-10'),
-('Sneha','IT',53000,27,'2022-03-17'),
-('Deepak','HR',41000,30,'2019-12-01'),
-('Pooja','Finance',61000,32,'2023-02-11'),
-('Manoj','Sales',46000,29,'2020-04-08'),
-('Divya','Marketing',44000,26,'2022-07-19'),
-('Suresh','IT',57000,33,'2018-10-23'),
-('Kavya','HR',43000,27,'2021-06-30'),
-('Rohit','Finance',65000,34,'2020-01-16'),
-('Nisha','Sales',45000,25,'2023-03-05'),
-('Amit','Marketing',47000,31,'2018-05-09');
-select * from employees_lab;
-insert into employees_lab(emp_name,department)
-values('soni','IT');
-insert into employees_lab(emp_name,department,salary,age,joining_date)
-values(upper('amith'),'Marketing',round(47000.789),31,current_date());
-select * from employees_lab;
-select emp_name,salary
-from employees_lab;
-select salary>60000
-from employees_lab;
-select * from employees_lab
-where salary>60000;
-select * from employees_lab
-where age<=30;
-select * from employees_lab
-where department='IT';
-select * from employees_lab
-where department='IT' or department='HR';
-select * from employees_lab
-where salary>60000 and department='IT';
-select distinct department from employees_lab;
-select department,count(*)
-from employees_lab
-group by department;
-select department, count(*) as number_of_employees
-from employees_lab
-group by department
-having count(*) > 2;
-select * 
-from employees_lab
-order by salary desc;
-select * 
-from employees_lab
-limit 5;
-select *
-from employees_lab
-limit 5 offset 5;
-select emp_id 
-from employees_lab
-where emp_name='Amit';
-update employees_lab
-set salary=70000
-where emp_name='Amit';
-update employees_lab
-set salary =salary+1000;
-delete from employees_lab
-where emp_name = 'Lokesh';
-delete from employees_lab;
-replace into employees_lab (emp_id, emp_name, department, salary, age, joining_date)
-values (1, 'Ravi', 'IT', 60000, 28, '2022-01-10');
-insert into employees_lab (emp_id, emp_name, department, salary, age, joining_date)
-values (2, 'Sita', 'HR', 50000, 25, '2022-02-15')
-on duplicate key update salary = 55000;
-insert into employees_lab (emp_id, emp_name, department, salary, age, joining_date)
-values (10, 'Neha', 'Marketing', 45000, 24, '2023-01-05')
-on duplicate key update salary = VALUES(salary);
-insert into employees_lab (emp_id, emp_name, department, salary, age, joining_date)
-values (3, 'Raj', 'IT', 75000, 27, '2022-03-10')
-on duplicate key update salary = 80000;
-insert into employees_lab (emp_id, emp_name, department, salary, age, joining_date)
-values (4, 'Kiran', 'Sales', 48000, 26, '2022-04-15')
-on duplicate key update salary = VALUES(salary);
-select * 
-from employees_lab
-where salary between 50000 and 70000;
-select *
-from employees_lab
-where emp_name like 'R%';
-select *
-from employees_lab
-where department != 'Finance';
+-- PART A – TABLE CREATION --
 
+-- Q1. Create a table named employees_lab
+CREATE TABLE employees_lab (
+    emp_id INT PRIMARY KEY AUTO_INCREMENT,
+    emp_name VARCHAR(50) NOT NULL,
+    department VARCHAR(50),
+    salary DECIMAL(10,2),
+    age INT,
+    joining_date DATE
+);
 
+-- PART B – INSERT OPERATIONS --
 
+-- Q2. Insert a single record into the table
+INSERT INTO employees_lab (emp_name, department, salary, age, joining_date)
+VALUES ('Ravi', 'IT', 50000, 25, '2022-01-10');
 
+-- Q3. Insert at least 20 employee records using a single INSERT statement
+INSERT INTO employees_lab (emp_name, department, salary, age, joining_date) VALUES
+('Amit', 'IT', 65000, 28, '2021-03-15'),
+('Priya', 'HR', 45000, 32, '2020-05-20'),
+('Raj', 'Finance', 70000, 35, '2019-11-10'),
+('Suman', 'Sales', 55000, 29, '2022-08-01'),
+('Vikram', 'Marketing', 48000, 26, '2023-01-12'),
+('Anjali', 'IT', 72000, 30, '2021-06-18'),
+('Lokesh', 'HR', 42000, 24, '2023-04-05'),
+('Kiran', 'Finance', 85000, 40, '2018-02-25'),
+('Megha', 'Sales', 51000, 27, '2022-12-01'),
+('Rohan', 'Marketing', 60000, 31, '2020-10-10'),
+('Sneha', 'IT', 62000, 29, '2021-09-22'),
+('Arjun', 'HR', 47000, 33, '2019-07-14'),
+('Nitin', 'Finance', 68000, 34, '2020-01-30'),
+('Pooja', 'Sales', 53000, 28, '2022-03-11'),
+('Varun', 'Marketing', 59000, 32, '2021-11-05'),
+('Deepa', 'IT', 75000, 36, '2017-05-15'),
+('Suresh', 'HR', 44000, 25, '2023-06-20'),
+('Kavita', 'Finance', 90000, 42, '2016-12-01'),
+('Rahul', 'Sales', 56000, 30, '2021-08-19'),
+('Neha', 'Marketing', 61000, 29, '2020-04-25');
 
+-- Q4. Insert a record by specifying only selected columns
+INSERT INTO employees_lab (emp_name, department)
+VALUES ('Vijay', 'IT');
 
+-- Q5. Insert a record using built-in functions (UPPER, ROUND, CURDATE)
+INSERT INTO employees_lab (emp_name, department, salary, age, joining_date)
+VALUES (UPPER('Siddharth'), 'Finance', ROUND(65432.78, 0), 28, CURDATE());
 
+-- PART C – SELECT QUERIES --
+
+-- Q6. Display all records from the table
+SELECT * FROM employees_lab;
+
+-- Q7. Display only employee names and salaries
+SELECT emp_name, salary FROM employees_lab;
+
+-- Q8. Display employees whose salary is greater than 60000
+SELECT * FROM employees_lab WHERE salary > 60000;
+
+-- Q9. Display employees whose age is less than or equal to 30
+SELECT * FROM employees_lab WHERE age <= 30;
+
+-- Q10. Display employees working in the IT department
+SELECT * FROM employees_lab WHERE department = 'IT';
+
+-- Q11. Display employees who belong to IT or HR department
+SELECT * FROM employees_lab WHERE department IN ('IT', 'HR');
+
+-- Q12. Display employees whose salary is greater than 60000 AND department is IT
+SELECT * FROM employees_lab WHERE salary > 60000 AND department = 'IT';
+
+-- Q13. Display distinct departments available in the table
+SELECT DISTINCT department FROM employees_lab;
+
+-- Q14. Display the number of employees in each department using GROUP BY
+SELECT department, COUNT(*) as employee_count FROM employees_lab GROUP BY department;
+
+-- Q15. Display departments having more than 2 employees using HAVING
+SELECT department, COUNT(*) FROM employees_lab GROUP BY department HAVING COUNT(*) > 2;
+
+-- Q16. Display employees sorted by salary in descending order
+SELECT * FROM employees_lab ORDER BY salary DESC;
+
+-- Q17. Display the first 5 employees using LIMIT
+SELECT * FROM employees_lab LIMIT 5;
+
+-- Q18. Display the next 5 employees using LIMIT and OFFSET
+SELECT * FROM employees_lab LIMIT 5 OFFSET 5;
+
+-- PART D – UPDATE OPERATIONS --
+
+-- Q19. Update the salary of employee 'Raj' to 75000
+UPDATE employees_lab SET salary = 75000 WHERE emp_name = 'Raj';
+
+-- Q20. Increase salary of all employees by 1000
+UPDATE employees_lab SET salary = salary + 1000;
+
+-- PART E – DELETE OPERATIONS --
+
+-- Q21. Delete the employee whose name is 'Lokesh'
+DELETE FROM employees_lab WHERE emp_name = 'Lokesh';
+
+-- Q22. Delete all records from the table
+DELETE FROM employees_lab;
+
+-- PART F – MYSQL SPECIAL COMMANDS --
+-- (Note: Ensure records exist before running these if you just ran Q22)
+
+-- Q23. Use REPLACE command to update the record with emp_id = 1
+REPLACE INTO employees_lab (emp_id, emp_name, department, salary, age, joining_date)
+VALUES (1, 'Ravi Kumar', 'IT', 55000, 26, '2022-01-10');
+
+-- Q24. Perform UPSERT using INSERT ... ON DUPLICATE KEY UPDATE
+INSERT INTO employees_lab (emp_id, emp_name, department, salary) 
+VALUES (2, 'Amit', 'IT', 66000)
+ON DUPLICATE KEY UPDATE salary = 66000;
+
+-- Q25. Insert a new employee using UPSERT
+INSERT INTO employees_lab (emp_id, emp_name, department, salary) 
+VALUES (100, 'New User', 'HR', 40000)
+ON DUPLICATE KEY UPDATE salary = 40000;
+
+-- Q26. Try inserting a record with an existing emp_id and update the salary
+INSERT INTO employees_lab (emp_id, emp_name, department, salary) 
+VALUES (3, 'Priya', 'HR', 48000)
+ON DUPLICATE KEY UPDATE salary = 48000;
+
+-- Q27. Perform UPSERT using the VALUES() function
+INSERT INTO employees_lab (emp_id, emp_name, salary) 
+VALUES (4, 'Raj', 80000)
+ON DUPLICATE KEY UPDATE salary = VALUES(salary);
+
+-- PART G – ADDITIONAL SEARCH QUERIES --
+
+-- Q28. Display employees whose salary is between 50000 and 70000
+SELECT * FROM employees_lab WHERE salary BETWEEN 50000 AND 70000;
+
+-- Q29. Display employees whose name starts with 'R'
+SELECT * FROM employees_lab WHERE emp_name LIKE 'R%';
+
+-- Q30. Display employees whose department is not 'Finance'
+SELECT * FROM employees_lab WHERE department != 'Finance';
