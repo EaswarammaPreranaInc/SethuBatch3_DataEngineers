@@ -4,9 +4,9 @@ adder1 = lambda  y , x = x  : x + y
 x = 10
 adder2 = lambda  y , x = x : x + y
 x = 20
-print(adder1(100))
-print(adder2(200))
-print(adder1(300 , 400))
+print(adder1(100))  # 120
+print(adder2(200))  # 220
+print(adder1(300 , 400))  # 700
 
 
 # Nested  lambda  function  (Home  work)
@@ -19,22 +19,22 @@ print(add(30)(40))
 # Find  outputs
 a= ((10 , 'Rama' , 1000.0) , (20 , 'Sita' , 2000.0) , (15 ,'Rajesh' , 500.0) ,  (18 , 'Kiran' , 2800.0) , (5 , 'Amar' , 1300.0))
 b = sorted(a)
-print(b) #  [()  , () , () , () , ()]
+print(b) #  [(5 , 'Amar' , 1300.0)  , (10 , 'Rama' , 1000.0) , (15 ,'Rajesh' , 500.0) , (18 , 'Kiran' , 2800.0) , (20 , 'Sita' , 2000.0)]
 print()
 c = sorted(a , reverse = True)
-print(c)  #  [() , () , () , () , ()]
+print(c)  #  [(20 , 'Sita' , 2000.0) , (18 , 'Kiran' , 2800.0) , (15 ,'Rajesh' , 500.0) , (10 , 'Rama' , 1000.0) , (5 , 'Amar' , 1300.0)]
 print()
 d = sorted(a ,  key =  lambda   x  :  x[1])
-print(d)  #  [() , () , () , () , ()]
+print(d)  #  [(Amar) , (Kiran) , (Rajesh) , (Rama) , (Sita)]
 print()
 e = sorted(a , key =  lambda   x  :  x[2])
-print(e)
+print(e)  #  [(500) , (1000) , (1300) , (2000) , (2800)]
 print()
 f = sorted(a , key = lambda   x  :  x[0])
-print(f)
+print(f)  #  [(5) , (10) , (15) , (18) , (20)]
 print()
 g = sorted(a , key = lambda  x : x[1] , reverse = True)
-print(g)
+print(g)  #  [(Sita) , (Rama) , (Rajesh) , (Kiran) , (Amar)]
 print(sorted(a , key = x[1]))
 
 
@@ -49,9 +49,9 @@ print(sorted(a))
 
 # Find outputs  (Home  work)
 a = ((10 , 'Rama' , 1000.0) , (20 , 'Sita' , 2800.0) , (15 , 'Vamsi' , 2000.0) , (25 , 'Kiran' , 1500.0) ,  (5 , 'Amar' , 1300.0))  
-print(max(a , key = lambda  x  :  x[0] ))
-print(max(a , key = lambda  x  :  x[1] ))
-print(max(a , key = lambda  x  :  x[2] ))
+print(max(a , key = lambda  x  :  x[0] ))  # 25
+print(max(a , key = lambda  x  :  x[1] ))  # Vamsi
+print(max(a , key = lambda  x  :  x[2] ))  # 2800
 print(max(a))
 
 
