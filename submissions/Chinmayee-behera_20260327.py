@@ -237,20 +237,22 @@ def   f1():
 	a = 20
 	print(a) #20
 def  f2():
-	print(a) #10
-	a += 1 #11
+	print(a) #error
+	a += 1 #error
+
+pass
 # End of the function
 a = 10
 print(a) #10
 f1() #20
-a += 1 #21
+a += 1 #11
 f2()
-print(a) #10
+print(a) #11
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  # Find outputs (Home  work)
 def  f1():
 	a = 20
-	global   a #20
+	global   a #error
 	print(a) #20
 	print(globals()['a']) #20
 	a = 30
