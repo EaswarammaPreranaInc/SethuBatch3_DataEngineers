@@ -1,0 +1,135 @@
+   -- 1. Create student table and insert 20 records with joining dates from Jan 1st to today
+
+   CREATE TABLE student (
+
+      slno INT PRIMARY KEY,
+
+      name VARCHAR(100),
+
+      joining_date DATE
+
+   );
+
+
+
+   INSERT INTO student VALUES
+
+   (1, 'Raj Kumar', '2024-01-01'),
+
+   (2, 'Priya Singh', '2024-01-05'),
+
+   (3, 'Amit Patel', '2024-01-10'),
+
+   (4, 'Neha Sharma', '2024-01-15'),
+
+   (5, 'Vikram Gupta', '2024-01-20'),
+
+   (6, 'Anjali Verma', '2024-02-01'),
+
+   (7, 'Rohan Das', '2024-02-10'),
+
+   (8, 'Pooja Nair', '2024-03-05'),
+
+   (9, 'Arjun Reddy', '2024-03-15'),
+
+   (10, 'Divya Singh', '2024-04-01'),
+
+   (11, 'Nikhil Kumar', '2024-05-10'),
+
+   (12, 'Shreya Rao', '2024-06-01'),
+
+   (13, 'Aditya Joshi', '2024-07-15'),
+
+   (14, 'Sneha Malik', '2024-08-20'),
+
+   (15, 'Varun Pillai', '2024-09-10'),
+
+   (16, 'Isha Kapoor', '2024-10-05'),
+
+   (17, 'Karan Bhat', '2024-11-01'),
+
+   (18, 'Megha Desai', '2024-11-15'),
+
+   (19, 'Sanjay Roy', '2024-12-01'),
+
+   (20, 'Tanya Iyer', '2024-12-10');
+
+
+
+   -- 2. Query to display students who joined in last 30 days
+
+   SELECT * FROM student WHERE joining_date >= DATEADD(DAY, -30, CAST(GETDATE() AS DATE));
+
+
+
+   -- 3 & 4. Create and insert into student table
+
+   CREATE TABLE student (
+
+      slno INT PRIMARY KEY,
+
+      name VARCHAR(100),
+
+      mm INT,
+
+      pm INT,
+
+      cm INT
+
+   );
+
+
+
+   INSERT INTO student (slno, name, mm, pm, cm) VALUES
+
+   (1, 'Raj Kumar', 85, 90, 88),
+
+   (2, 'Priya Singh', 92, 88, 90),
+
+   (3, 'Amit Patel', 78, 82, 80),
+
+   (4, 'Neha Sharma', 95, 92, 94),
+
+   (5, 'Vikram Gupta', 65, 70, 68);
+
+
+
+   -- 5. Query to display student info with total marks, average marks, and result/class
+
+   SELECT 
+
+      slno,
+
+      name,
+
+      mm,
+
+      pm,
+
+      cm,
+
+      (mm + pm + cm) AS tm,
+
+      ROUND((mm + pm + cm) / 3.0, 2) AS avgmarks,
+
+      CASE 
+
+         WHEN (mm + pm + cm) / 3.0 >= 40 THEN 
+
+            CASE 
+
+               WHEN (mm + pm + cm) / 3.0 >= 75 THEN 'Pass - Distinction'
+
+               WHEN (mm + pm + cm) / 3.0 >= 60 THEN 'Pass - First Class'
+
+               WHEN (mm + pm + cm) / 3.0 >= 50 THEN 'Pass - Second Class'
+
+               ELSE 'Pass - Third Class'
+
+            END
+
+         ELSE 'Failed'
+
+      END AS result
+
+   FROM student;
