@@ -1,0 +1,27 @@
+-- 1. Remove column from an existing table.
+ALTER TABLE emp 
+DROP hiredate;
+-- 2. write a query to display the deptno which does not contains the employees.
+SELECT d.deptno
+FROM dept d LEFT OUTER JOIN emp e
+ON d.deptno = e.deptno 
+WHERE e.empno IS NULL;
+-- 3. write a query to display the given employee details irrespective of case sensitive.
+-- 	
+-- ( I may give the value either in upper case or lower case but record should fetch the query)
+SELECT *
+FROM emp
+WHERE UPPER(ename) = UPPER('King');
+
+-- 4. Write a query to display employees information who are all working as MANAGER in department 20
+SELECT * 
+FROM emp
+WHERE job = 'MANAGER' AND deptno = 20;
+
+-- 5. Modify the employee names from lower case to upper case from the emp table.
+UPDATE emp
+SET ename = UPPER(ename);
+
+-- 6. delete the employees whose name starts with J.
+DELETE FROM emp
+WHERE ename LIKE 'J%';
