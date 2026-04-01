@@ -17,6 +17,7 @@ print(id(c))# address of the id of the value None
 
 
 
+
 #  Find  outputs
 a = 25
 print(id(a))  # address of the id 
