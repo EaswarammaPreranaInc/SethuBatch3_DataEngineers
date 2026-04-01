@@ -15,23 +15,9 @@ f1()
 print('End')
 
 
-#3
-#2
-#1
-#Hello
-#Hi
-#0
-#Bye
-#Hello
-#Hi
-#1
-#Bye
-#Hello
-#Hi
-#2
-#End
-
-
-
--> stack : 1000 1000 1000
-	    |	  |    |	 
+3
+3
+3
+3
+...
+recursion error
