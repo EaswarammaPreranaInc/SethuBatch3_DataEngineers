@@ -12,8 +12,8 @@ print(adder1(300 , 400))  # 700
 # Nested  lambda  function  (Home  work)
 add  =  lambda    x = 10   :    lambda   y  :  x  +  y
 a = add()
-print(a(20))
-print(add(30)(40))
+print(a(20)) # 30
+print(add(30)(40)) # 70
 
 
 # Find  outputs
@@ -106,6 +106,12 @@ def  f2():
 	f1()
 	print('End  of  f2  function')
 f1()
+'''
+f1 function 
+f2 function
+End of f2 function 
+End of f1 function 
+'''
 
 
 #  Find  outputs  (Home  work)
@@ -126,18 +132,18 @@ f2()
 
 
 # Find  outputs (Home  work)
-How  to  assign  ref  'p'  to  print()  function
-How  to  call  print()  function  thru  ref  'p'  and   print  'Hyderabad'
+p = print()  #How  to  assign  ref  'p'  to  print()  function
+p('Hyderabad') #How  to  call  print()  function  thru  ref  'p'  and   print  'Hyderabad'
 print = None
 print('Hello')
 How  to  call  print()  function  thru  ref  'p'  and   print  'Hello'
 
 
 # Find   outputs (Home  work)
-How  to  assign  ref  'x'  to  id()  function
-How  to  call  id()  function  thru  ref  'x'  and   print  id  of  object 25
-How  to  assign  ref  'p'  to  len()  function
-How  to  call  len()  function  thru  ref  'p'  and   print  length  of  'Hyd
+x = id() #How  to  assign  ref  'x'  to  id()  function
+x(25) #How  to  call  id()  function  thru  ref  'x'  and   print  id  of  object 25
+p = len() #How  to  assign  ref  'p'  to  len()  function
+p('Hyd') #How  to  call  len()  function  thru  ref  'p'  and   print  length  of  'Hyd'
 
 
 # Find  outputs (Home  work)
@@ -150,7 +156,7 @@ def  outer():
 	inner()
 	print('Back  to  outer  function')
 def  other():
-	inner()
+	inner() # Error 
 	print('Other  function')
 # End  of  the  function
 print('Begin')
@@ -159,6 +165,11 @@ print('Hi')
 inner()
 other()
 print('Bye')
+'''
+Begin
+Inner function 
+Hello
+'''
 
 
 # Find  output(Home  work)
@@ -326,6 +337,9 @@ print(x)
 #  Identify  Error
 def   f1():
         nonlocal   x
+'''
+# In f1(), there should not have to be nonlocal x.
+'''
 
 
 # Find  outputs (Home  work)
@@ -343,6 +357,8 @@ def  outer():
 	print(a , b)
 #end of outer function
 outer()
+'''
+'''
 
 
 # Find  outputs (Home  work)
@@ -390,3 +406,6 @@ def   f1():
 		f3()
 	f2()
 f1()
+'''
+10
+'''
