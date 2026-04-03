@@ -13,7 +13,7 @@ def   f2(fun):
 print('Begin')                 # Begin  
 f2(f1)                         # f2 function → f1 function → Back to f2 function  
 print('End')                   # End
-#-------------------------------------------------------------------------------
+
 
 #  Find  outputs  (Home  work)
 
@@ -30,7 +30,7 @@ def   f2 (fun):
 print('Begin')                     # Begin
 f2(f1())                          # f1 function → then ERROR
 print('End')                      # error(Not executed)
-#--------------------------------
+
 # Find  outputs (Home  work)
 
 def   outer():
@@ -47,7 +47,7 @@ fun()                              # Inner function
 print('Bye')                       # Bye
 inner()                            # ERROR (inner not defined)
 
-#----------------------------------------------
+
 # Find  outputs (Home  work)
 
 def  outer(x):
@@ -67,7 +67,7 @@ f1 = outer(10)                    # Outer Function
 f2 = outer(20)                    # Outer Function
 f1()                              # 1st inner function
 f2()                              # 2nd inner function
-#---------------------------------------------
+
 # Find  outputs  (Home  work)
 
 def   outer(msg):
@@ -81,7 +81,7 @@ hi_fun = outer('Hi')
 hello_fun = outer('Hello')
 hi_fun()                          # Hi
 hello_fun()                       # Hello
-#-----------------------------------------------------------------------
+
 #  How  to  call  f1()  function  when  @decor  tag  is  missing  ?
 
 def   decor(fun):
@@ -100,7 +100,7 @@ print(f1())        # calling inner()
 
 #Out put
 #12
-#--------------------------------------------------------------------
+
 # Find  outputs(Home  work)
 
 def   decor(fun):
@@ -120,7 +120,7 @@ def    wish(name):
 
 wish('Python')                    # Hello Python
 wish('Java')                      # Hi Java
-#----------------------------------------------------------
+
 # Find  outputs(Home  work)
 
 def   decor(fun):
@@ -140,7 +140,7 @@ def  div(a , b):
 print(div(10 , 3))        # 3.3333333333333335
 print(div(10 , 0))        # Division by 0 is not permitted
 print(inner(10 , 3))      # ERROR
-#----------------------------------------------------------------------------
+
 #  Find  outputs (Home  work)
 
 def   decor(fun):
@@ -164,7 +164,7 @@ Decorating f1 function
 Hello
 Decoration is finished
 Bye
-#--------------------------------------------------------------------------------------
+
 # Most tricky program
 
 def   decor(fun):
@@ -215,7 +215,7 @@ End  of  decoration
 ()
 f4 function
 End  of  decoration
-#---------------------------------------------------------------------------------------
+
 # Find  outputs  (Home  work)
 
 def  square(fun):
@@ -238,4 +238,3 @@ def  num():
 #end of the function
 
 print(num())                       # 200
-#--------------------------------------------------------------------------
