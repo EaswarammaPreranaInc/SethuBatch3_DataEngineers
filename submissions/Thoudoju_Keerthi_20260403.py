@@ -8,9 +8,8 @@ def   f1():
 while  True:
 	print(next(f1()))
 #25
-#10.8
-#Hyd
-#StopIterationError
+#25
+.........infinite times
 
 # Find  outputs (Home  work)
 def   f1():
