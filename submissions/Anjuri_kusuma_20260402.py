@@ -1,0 +1,186 @@
+#  Find  outputs  (Home  work)                  #Begin
+def  f1():                                      #f2 function
+	print('f1  function')                   #f1 function
+def   f2(fun):                                  #Back to f2 function
+	print('f2  function')                   #End
+	fun()
+	print('Back  to  f2  function')
+# end of the function
+print('Begin')
+f2(f1)
+print('End')
+--------------------------------------------------------------------
+ #  Find  outputs  (Home  work)
+def  f1():                                       #Begin
+	print('f1  function')                    #error because none cannot be called
+def   f2 (fun):
+	print('f2  function')
+	fun()
+	print('Back  to  f2  function')
+# end of the function
+print('Begin')
+f2(f1())
+print('End')
+---------------------------------------------------------------------
+ # Find  outputs (Home  work)                   #Outer Function
+def   outer():                                  #Inner function
+	print('Outer  Function')                #Hello
+	def  inner():                           #Outer Function
+		print('Inner function')         #error
+	return   inner
+# End  of  the  function
+fun = outer()
+print('Hello')
+fun()
+print('Bye')
+inner()
+--------------------------------------------------------------------
+# Find  outputs (Home  work)                    #Outer Function
+def  outer(x):                                  #Outer Function
+	print('Outer  Function')                #1st inner function
+	def  inner1():                          #2nd inner function
+		print('1st  inner  function')   
+	# End  of  inner1  function
+	def  inner2():
+		print("2nd  inner  function")
+	# End  of  inner2  function
+	if   x == 10:
+		return  inner1--->f1
+	else:
+		return  inner2--->f2
+# End  of  the  outer  function
+f1 = outer(10)
+f2 = outer(20)
+f1()
+f2()
+-------------------------------------------------------------------
+ # Find  outputs  (Home  work)
+def   outer(msg):                 #Hi
+	def  inner():             #Hello
+		print(msg)
+	return  inner
+# End  of  the  function
+hi_fun = outer('Hi')--->
+hello_fun = outer('Hello')
+hi_fun()
+hello_fun()
+--------------------------------------------------------------------
+ #  How  to  call  f1()  function  when  @decor  tag  is  missing  ?                 #
+def   decor(fun):
+	def   inner():
+		x = fun()
+		return   x + 2
+	return  inner
+def  f1():
+        return  10
+# End  of  the  function
+f1 = decor(f1)
+print(f1())
+--------------------------------------------------------------------
+ # Find  outputs(Home  work)
+def   decor(fun):
+	print(fun . _name_)
+	def    inner(name):              #error
+		if   name  == 'Python':      #Hello python
+			print('Hello' , name) #Hi java
+		else:
+			fun(name)
+	return  inner
+@decor
+def    wish(name):
+        print('Hi' , name)
+# End  of  the  function
+wish('Python')
+wish('Java')
+-------------------------------------------------------------------
+ # Find  outputs(Home  work)
+def   decor(fun):--->fun=div,div=inner
+	def  inner(x , y):
+		try:
+			return  fun(x , y)
+		except:
+			return   'Division   by  0  is  not  permitted'
+	return  inner
+@decor--->div=decor(div):
+def  div(a , b):
+        return  a / b
+# End  of  the  function
+print(div(10 , 3))       #3.33
+print(div(10 , 0))       #Division   by  0  is  not  permitted'
+print(inner(10 , 3))     #error
+--------------------------------------------------------------------
+ # Modify  following  div  function  such  that  both  div(9 , 2)  and  div(2 , 9)  should  return  4.5  only
+def  decor(fun):
+      def inner(a,b):
+           if a<b:
+               a,b=b,a
+           return fun(a,b)
+       return inner
+	How  to  decorate  the  function  such  that  4.5  is  returned
+@decor
+def  div(a , b):
+    return   a /b
+print(div(9 , 2))  #  4.5
+print(div(2 , 9))  # 4.5
+----------------------------------------------------
+ #  Find  outputs (Home  work)
+def   decor(fun):fun=f1
+	def   inner():
+		print(F'Decorating  {fun . _name_}  function')
+		fun()
+		print('Decoration  is  finished')
+	return  inner
+@decor f1=decor(f1)            #Decorating f1 function
+def   f1():                    #Hello
+	print('Hello')         #Decoration is finished
+# End  of  the  function       #Bye
+f1()
+print('Bye')
+---------------------------------------------------------------------
+# Most  tricky   program
+# Same  decorator  to  multiple  functions  with  different  signatures
+def   decor(fun):
+	print(fun . _name_)
+	def   inner(*x):  #  *  is  var-arg  parameter
+		print(x)
+		fun(*x)  #  Unpacks  object  'x'
+		print('End  of  decoration')
+	return  inner
+@decor
+def   f1(x):
+	print('f1  function  :  ' , x)
+@decor
+def   f2(x , y):
+	print('f2  function  :  ' , x , y )
+@decor
+def  f3(x , y , z):
+	print('f3 function : ' , x , y , z)
+@decor
+def   f4():                          #(10,)
+	print('f4 function')         #f1 function : 10
+# end of function                    #End of decoration
+f1(10)                               #(25,10.8)
+f2(25 , 10.8)                        #f2 function : 25 10.8
+f3('Hyd' ,  True  , 3 + 4j)          #End of decoration
+f4()                                 #('Hyd',True,3 + 4j)
+                                     #()
+                                     #f4 function
+                                     #End of decoration
+--------------------------------------------------------------------------
+ # Find  outputs  (Home  work)      #200
+def  square(fun):
+	def  inner1():
+		x = fun()
+		return  x * x
+	return  inner1
+def   double(fun):
+	def  inner2():
+		y = fun()
+		return  2 * y
+	return   inner2
+@double
+@square
+def  num():
+	return  10
+#end of the function
+print(num())
