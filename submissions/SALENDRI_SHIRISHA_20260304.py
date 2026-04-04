@@ -47,6 +47,7 @@ for  x  in   f1():
 print(next(gen))
 
 
+
 # Find  outputs (Home  work)
 import  time
 g = (x * x   for  x  in  range(5))
