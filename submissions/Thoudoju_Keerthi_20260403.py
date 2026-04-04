@@ -27,15 +27,7 @@ for  x  in  g:
 #25
 #10.8
 #Hyd
-
-#25
-#10.8
-#Hyd
-#25
-#10.8
-#Hyd
-
-
+Nothing prints for 2 two loops
 
 # Most  tricky  program
 # Find  outputs(Home  work)
