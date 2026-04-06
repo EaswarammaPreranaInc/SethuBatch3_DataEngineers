@@ -1,0 +1,132 @@
+# Daily Submission Report - 2026-04-06 (IST)
+
+**Deadline:** 2026-04-06 23:59:59 IST
+
+## Summary
+- Total students: **108**
+- Submitted (students): **59**
+- Total files submitted: **59**
+- Not submitted (students): **49**
+- Late submissions (files): **4**
+- Naming / warnings: **0**
+
+## Submitted Files
+- Ajay-075 (SOUGANI AJAY) — `Ajay_Sougani_20260406.py` — 2026-04-06T21:15:29+05:30
+- Anjurikusuma (Anjuri kusuma) — `Anjuri_kusuma_20260406.py` — 2026-04-06T23:24:20+05:30
+- Badrivishal43 (Palaram Badri Vishal) — `Badrivishal_Palaram_20260406.py` — 2026-04-06T21:38:24+05:30
+- Bindhusri2003 (Kommula Bindhusri) — `Bindhusri_Kommula_20260406.py` — 2026-04-06T22:35:28+05:30
+- Ch-Aravind (Chevalla Aravind) — `Aravind_Chevalla_20260406.py` — 2026-04-06T19:31:41+05:30
+- Chinmayee-behera (Chinmayee Behera) — `Chinmayee-behera_20260406.py` — 2026-04-07T00:20:04+05:30
+- Devanaboina-Prabhavathi (Devanaboina Prabhavathi) — `Devanaboina_Prabhavathi_20260406.py` — 2026-04-06T22:24:40+05:30
+- Dhanakanimeraka18 (KANIMERAKA DHANALAKSHMI) — `Dhanalakshmi_K_20260406.py` — 2026-04-06T23:33:25+05:30
+- Dhanya120805 (Kokku Dhanya sri) — `DhanyaSri_Kokku_20260406.py` — 2026-04-06T21:59:41+05:30
+- Ganga56706 (Kummara Gangadri) — `Gangadri_20260406.py` — 2026-04-06T22:14:36+05:30
+- Gantlajyothi (Gantla T M Jyothi) — `Jyothi_gantla_20260406.py` — 2026-04-06T22:31:05+05:30
+- Gopi-01 (Gopikrishna) — `Gopikrishna_Mende_20260406.py` — 2026-04-06T23:09:23+05:30
+- KarthikeyaIrukula (Karthikeya Irukula) — `Karthikeya_Irukula_20260406.py` — 2026-04-06T21:55:49+05:30
+- Kedhar66 (Durgam Kedharnath) — `Durgam_Kedharnath_20260406.py` — 2026-04-06T22:43:52+05:30
+- KeerthiThoudoju10 (Thoudoju Keerthi) — `Thoudoju_Keerthi_20260406.py` — 2026-04-06T22:00:21+05:30
+- Lakshmi1210 (Gubbala Naga Venkata Lakshmi) — `Naga_Venkata_Lakshmi_20260406.py` — 2026-04-06T22:39:10+05:30
+- M-Amrit (Mattaparty Amrit) — `Amrit_Mattaparty_20260406.py` — 2026-04-06T17:55:45+05:30
+- MANISHA2529 (Pulla Manisha) — `Manisha_Pulla_20260406.py` — 2026-04-06T22:23:51+05:30
+- Manikanta-anantha (Anantha Manikanta) — `Anantha_Manikanta_20260406.py` — 2026-04-06T21:08:47+05:30
+- Manipal-0831 (Bolla Manipal Reddy) — `ManipalReddy_Bolla_20260406.py` — 2026-04-06T23:19:52+05:30
+- Manvitha-sura (Sura Manvitha) — `Manvitha_Sura_20260406.py` — 2026-04-06T20:12:16+05:30
+- MouryaKaran (Akula Mourya Karan) — `AkulaMouryaKaran_20260406.py` — 2026-04-07T00:08:55+05:30
+- Movvalaxmishivani (Movva Laxmi Shivani) — `Movva_Laxmishivani_20260406.py` — 2026-04-06T21:12:26+05:30
+- Navaneeth-vit (Puttapally Navaneeth Reddy) — `Navaneeth_Reddy_20260406.py` — 2026-04-06T21:58:12+05:30
+- PavanBoyini (Boyini Pavan) — `Pavan_Boyini_20260406.py` — 2026-04-06T20:16:30+05:30
+- Pavansreeram-9999 (Puppala Pavan Sree Ram) — `Puppala_PavanSreeRam_20260406.py` — 2026-04-06T23:48:02+05:30
+- Pranaythummala (Pranay Thummala) — `Pranay_thummala_20260406.py` — 2026-04-06T22:46:41+05:30
+- Punnasarika (Punna Sarika) — `Sarika_Punna_20260406.py` — 2026-04-06T22:23:25+05:30
+- Rohih9515 (M Rohith Goud) — `Rohith_M_20260406.py` — 2026-04-06T22:14:10+05:30
+- Sainath6300 (Megavath Sainath naik) — `sainath naik_20260406.py` — 2026-04-06T21:52:22+05:30
+- Shilpa2001-k (Kambhampati Shilpa) — `Shilpa_kambhampati_20260406.py` — 2026-04-06T22:25:42+05:30
+- ShirishaBr89 (Salendri Shirisha) — `SALENDRI_SHIRISHA_20260406.py` — 2026-04-06T22:42:23+05:30
+- Shivacharan-Nune (Nune shiva charan) — `Shivacharan_Nune_20260406.py` — 2026-04-06T20:08:02+05:30
+- SunkariRakesh (Rakesh Sunkari) — `Sunkari_Rakesh_20260406.py` — 2026-04-06T23:39:46+05:30
+- Yeetheendra (Govardhanam Yeetheendra) — `Yeetheendra_Govardhanam_20260406.py` — 2026-04-06T22:41:24+05:30
+- adepuk174 (Adepu Keerthana) — `Keerthana_Adepu_20260406.py` — 2026-04-06T23:05:10+05:30
+- ajayratnala910-art (Ratnala Ajay Kumar Chowdary) — `ajayratnala_20260406.py` — 2026-04-06T22:14:27+05:30
+- arunkasula (Kasula Arun) — `Kasula_Arun_20260406.py` — 2026-04-06T21:53:49+05:30
+- badimelasunil (Badimela Sunil) — `Sunil_Badimela_20260406.py` — 2026-04-06T19:37:43+05:30
+- gsp3112 (Gajavalli Sai Praharshitha) — `praharshitha_gajavalli_20260406.py` — 2026-04-07T00:12:21+05:30
+- gurusupriya (PERURI GURU SUPRIYA) — `GuruSupriya_Peruri_20260406.py` — 2026-04-06T22:09:59+05:30
+- jayavardhanatagal (ATAGAL JAYAVARDHAN PEDDIRAJU) — `Atagal_jayavardhanpeddiRaju_20260406.py` — 2026-04-06T20:37:17+05:30
+- jeevanreddykothakapa (K Jeevan Kumar Reddy) — `kothakapa_jeevan_20260406.py` — 2026-04-06T22:54:02+05:30
+- kalyani-yerrolla (Yerrolla kalyani) — `yerrolla_kalyani_20260406.py` — 2026-04-06T21:53:43+05:30
+- kudupudivardhini (Kudupudi Yega Vardhini) — `Yegavardhini_Kudupudi_20260406.py` — 2026-04-06T22:31:34+05:30
+- kumaraswamy324 (Bingi Kumara Swamy) — `KumaraSwamy_Bingi_20260406.py` — 2026-04-06T23:24:29+05:30
+- madharammanisha (Manisha Madharam) — `madharam_manisha_20260406.py` — 2026-04-06T19:44:33+05:30
+- mahii444 (Erram Mahendar) — `Erram_Mahendar_20260406.py` — 2026-04-07T00:06:01+05:30
+- nsspankaj123 (Namavarapu Subrahmanya Sai Pankaj) — `Namavarapu_Subrahmanya_Sai_Pankaj_20260406.py` — 2026-04-06T22:34:20+05:30
+- pyarasani05 (Srilakshmi Pyarasani) — `srilakshmi_pyarasani_20260406.py` — 2026-04-06T19:47:11+05:30
+- rishithadachepally16 (Dachepally Rishitha) — `Rishitha_Dachepally_20260406.py` — 2026-04-06T21:45:44+05:30
+- sai1357-oss (RALLAPATI SAI KIRAN) — `RallapatiSaikiran_20260406.py` — 2026-04-06T22:17:35+05:30
+- sanjana0511 (M Sanjana) — `Sanjana_Mullangi_20260406.py` — 2026-04-06T23:35:15+05:30
+- shankar31-code (Shankar Pullur) — `shankar_pullur_20260406.py` — 2026-04-06T20:05:41+05:30
+- sreenu9165 (Kummari Sreenivasulu) — `kummari_sreenivasulu_20260406.py` — 2026-04-06T20:39:18+05:30
+- umadevimerugu (Umadevi merugu) — `umadevimerugu_20260406.py` — 2026-04-06T18:23:12+05:30
+- vamshikrishnapashikanti-hash (Pashikanti Vamshikrishna) — `vamshikrishna_pashikanti_20260406.py` — 2026-04-06T23:34:50+05:30
+- vishal-mavilla (Vishal Mavilla) — `vishalmavilla_20260406.py` — 2026-04-06T21:17:13+05:30
+- vishalnagatej (Balla Teja Naga Surya Vinay Vishal) — `vishalnagatej_20260406.py` — 2026-04-06T20:59:10+05:30
+
+## Not Submitted (Students)
+- Akhil-11001 (Edapu Akhil)
+- AmudalaKarthik (AMUDALA KARTHIK)
+- Bhanutejazinka (Zinka Bhanu teja)
+- Bhavishya94 (Bhavishya Arukonda)
+- ChandrikaAregela (Aregela nagachadrika)
+- ChukkaLathasree (chukka lathasree)
+- DhruvaGupta (Dhruva Gupta)
+- EKeerthi18 (Emmidi Keerthi)
+- KUSHLU45 (Nagavelly Srichethan kumar)
+- KethanCH (Cherukumalli Kethan Kumar)
+- KomatiRockey (Komati Rakesh)
+- MamidalaHarshavardhan (Mamidala Harsha Vardhan)
+- Manavpate166 (Patel Manav)
+- Manogna17 (Manogna Enugandhula)
+- Nithya12345678 (Muriki Nithya Harika)
+- Pradeep-Dasi (Pradeep Dasi)
+- Priyatarak1720 (Vanitha Priyadarshini Balla)
+- RajuUthkam (Raju)
+- Rathanpalke (Rathanpalke Akhil Kumar)
+- SrilekhaThundla (Srilekha Thundla)
+- arunkumarsn1729 (Mangali Arun Kumar)
+- chkamallakshman (Ch VSD Kamal Lakshman)
+- choudari-soni (Choudari Soni)
+- csaitharun15 (Chakali Sai Tharun)
+- harshapatnaik789-eng (Patnaik Sai Harsha Vardhan)
+- kadiyalajyothish (KADIYALA SAI JYOTHISH CHAND)
+- karthik01-img (KORUKONDA V S N KARTHIK)
+- koushik-17 (Yeladandi Koushik)
+- kushalsai218 (Mindi Kushal Sai Naga Chandan)
+- mallacharan572-ctrl (Malla venkat charan)
+- medipallyvarun (Medipally Varun)
+- medisetti-ajith-kumar (MEDISETTI AJITH KUMAR)
+- meghanaleet15-tech (Meghana Gangalapudi)
+- poojaakkapally (AKKAPALLY POOJA)
+- pravalikachennuri (Pravalika Chennuri)
+- rachanachepuri28 (Rachana Chepuri)
+- rajeshveerisatti (RAJESH VEERISATTI)
+- saiteja2727 (sampangi Saiteja)
+- sakethreddy06 (Dhoma saketh Reddy)
+- sampathch221 (Sampath chowdavarapu)
+- shashankreddy756 (NAREDLA SHASHANK REDDY)
+- sherilikhithareddy18-arch (Sheri likhitha)
+- srinivasguddeti29 (Guddeti Srinivas)
+- sumanyakonduru (Sumanya)
+- suresivasai (Sure Siva Sai)
+- thammadavenianusha-AT (Thammadaveni Anusha)
+- udaykumar2103 (Perala Udaykumar)
+- upendra-hub (Upendra gorle)
+- venneladevireddy10-pixel (DEVIREDDY VENNELA)
+
+## Late Submissions (Files)
+- Chinmayee-behera (Chinmayee Behera) — `Chinmayee-behera_20260406.py` — 2026-04-07T00:20:04+05:30
+- MouryaKaran (Akula Mourya Karan) — `AkulaMouryaKaran_20260406.py` — 2026-04-07T00:08:55+05:30
+- gsp3112 (Gajavalli Sai Praharshitha) — `praharshitha_gajavalli_20260406.py` — 2026-04-07T00:12:21+05:30
+- mahii444 (Erram Mahendar) — `Erram_Mahendar_20260406.py` — 2026-04-07T00:06:01+05:30
+
+## Naming / Duplicate / Warnings
+- None
