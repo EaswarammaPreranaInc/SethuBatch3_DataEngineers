@@ -101,7 +101,7 @@ class   c2:
         pass
 class   c3:
         pass
-#every class must contain atleast one method or pass or static variable 
+#every class must contain atleast one method or pass 
 
 
 
@@ -113,7 +113,7 @@ class   c1:
 # End  of  the  class
 a = c1()
 print(id(a))#adress of the object
-print(type(a))#<class '__main__.class'>
+print(type(a))#<class '__main__.c1'>
 print(a .__dict__)#{}
 print(a)#type and adress
 del  a 
