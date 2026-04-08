@@ -209,6 +209,7 @@ How  to  print  object  with  _str_()  method
 #s =Student()
 s.get()
 a.disp()
+print(a)
 print(a._str_())
 
 
