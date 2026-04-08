@@ -169,22 +169,24 @@ class   Student:
 		self. name = input('Enter name')
 		print(Enter marks in 3 subjects')
 		self.marks=[]
-		self.marks[0] = int(input('Enter m1 marks'))
-		self.marks[1] = int(input('Enter m2 marks'))
-		self.marks[2] = int(input('Enter m3 marks'))
+		marks1 = int(input('Enter m1 marks'))
+		self.marks.append(marks1)
+		marks2 = int(input('Enter m2 marks'))
+		self.marks.append(marks2)
+		marks3 = int(input('Enter m3 marks'))
+		self.marks.append(marks3)
 		self.gender = input('Enter gendeer')  
 	
 		def   compute(self):
-		self.total =self.sum(marks)
+		self.total =sum(self.marks)
 		self.avg = self.total/3
 		if any(mark in marks if mark<40) :
 				self.grade = 'Fail'
 		elif  self.avg  >= 70:
 				self.grade = 'Distinction'
-		elif self.avg  >= 60%:
+		elif self.avg  >= 60:
 				self.grade ='First  class'
-		elif  self.avg  >= 50%:
-		elif  average  is  above  >= 50%:
+		elif  self.avg  >= 50:
 				self.grade ='Second  class'
 		else:
 				self.grade ='Third  class'
