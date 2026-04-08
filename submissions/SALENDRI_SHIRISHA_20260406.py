@@ -34,7 +34,7 @@ print('End') # End
 
 
 #  Find  outputs  (Home  work)
-g = (x * x  for  x  in  range(500000000000000000))
+g = (x * x  for  x  in  range(500000000000000000))  # Creates an Empty 
 print(*g) # First it stores
 
 
