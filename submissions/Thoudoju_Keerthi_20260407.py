@@ -40,10 +40,10 @@ class  triangle:
 			pass
 		 else:
 				print('Not  a  triangle')
-				exit
+				exit()
 	def  area(self):
 			 s = (self.x + self.y + self.z)/2
-			return   sqrt(s * (s - self.x) * (s - self.y) * (s - self.z))
+			return   math.sqrt(s * (s - self.x) * (s - self.y) * (s - self.z))
 	def  peri(self):
 			return  self.x + self.y + self.z
 
@@ -71,8 +71,8 @@ class   c1:
 a = c1()
 a . m1()
 a . m2()
-print(a . x)
-print(self . x)
+print(a.x)
+print(self.x)
 print(x)
 
 #10
@@ -168,6 +168,7 @@ class   Student:
 		self.rno = int(input('Enter roll no'))
 		self. name = input('Enter name')
 		print(Enter marks in 3 subjects')
+		self.marks=[]
 		self.marks[0] = int(input('Enter m1 marks'))
 		self.marks[1] = int(input('Enter m2 marks'))
 		self.marks[2] = int(input('Enter m3 marks'))
@@ -244,7 +245,7 @@ print(d . _str_(50))
 #Error
 #Hyd
 #Error
-#TYpe and address
+#Type and address
 #35
 #Hyd
 #None
