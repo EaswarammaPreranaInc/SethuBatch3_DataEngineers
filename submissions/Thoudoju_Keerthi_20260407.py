@@ -180,7 +180,7 @@ class   Student:
 		def   compute(self):
 		self.total =sum(self.marks)
 		self.avg = self.total/3
-		if any(mark in marks if mark<40) :
+		if any(mark < 40 for mark in self.marks) :
 				self.grade = 'Fail'
 		elif  self.avg  >= 70:
 				self.grade = 'Distinction'
