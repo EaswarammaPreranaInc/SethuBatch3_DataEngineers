@@ -47,13 +47,13 @@ class  triangle:
 	def  peri(self):
 			return  self.x + self.y + self.z
 
-
 #t =  triangle()
 #t.get()
 #t.test()
 #print(t.area())
 #print(t.peri())
 
+# input as float is recomended
  #  Find  outputs  (Home  work)
 class   c1:
 	def  m1(self):
