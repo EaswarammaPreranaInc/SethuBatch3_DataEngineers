@@ -201,6 +201,80 @@ Object  'e'  --->
 Object  'f'  --->  
 '''
 
+import  math
+class  Rat:
+	def  get(self):
+		self.n = int(input('Enter numerator')) 
+		self.d = int(input('Enter denominator')) 
+		self.test()
+	def  test(self):
+		while self.d == 0:
+			print('Please non -zero denominator')
+			self.d =  float(input('Enter denominator'))
+	def    _str_(self):
+			 return  f'({self.n / self.d})
+	def   add(self , a , b):
+		 
+ 
+	def add(self, a, b):
+        	self.n = a.n * b.d + b.n * a.d
+        	self.d = a.d * b.d
+        	self.simplify()
+
+    	def sub(self, a, b):
+        	self.n = a.n * b.d - b.n * a.d
+        	self.d = a.d * b.d
+        	self.simplify()
+
+    	def mul(self, a, b):
+        	self.n = a.n * b.n
+        	self.d = a.d * b.d
+        	self.simplify()
+
+    	def div(self, a, b):
+        	if b.n == 0:
+            		return False
+        	self.n = a.n * b.d
+        	self.d = a.d * b.n
+        	self.simplify()
+        	return True
+
+	def simplify(self):
+        	if self.n == 0:
+            		self.d = 1
+            		return
+        	gcd = math.gcd(int(self.n), int(self.d))
+        	self.n = int(self.n // gcd)
+        	self.d = int(self.d // gcd)
+
+a = Rat()
+b = Rat()
+c = Rat()
+d = Rat()
+e = Rat()
+f = Rat()
+
+print("Enter rational number a:")
+a.get()
+
+print("Enter rational number b:")
+b.get()
+
+c.add(a, b)     
+d.sub(a, b)     
+e.mul(a, b)     
+valid = f.div(a, b)   
+# Print results
+print("Addition:", c)
+print("Subtraction:", d)
+print("Multiplication:", e)
+
+if valid:
+    print("Division:", f)
+else:
+    print("Division is not permitted")
+
+
  #  dir()  function  demo  program  (Home  work)
 from  prog10a   import  Rat
 a = Rat()
