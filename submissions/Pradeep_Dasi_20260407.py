@@ -1,3 +1,34 @@
+'''  (Home  work)
+Write  a  program  to  determine  area  and  perimeter  of  triangle  and  represent  triangle  by  an  object
+
+1) What  is  the  area  of  triangle ?  --->  sqrt(s * (s - a) * (s - b) * (s - c))
+
+2) What  is  the  formula  for  's' ?  --->  (a + b + c) / 2
+
+3) What  is  the  perimeter  of  triangle ?  ---> a + b + c
+'''
+import  math
+class  triangle:
+	def  get(self):
+		How  to  read  three  sides  into  object  
+	def  test(self):
+		if  sum  of  every  2  sides  >=  3rd  side:
+				Do  nothing
+		 else:
+				print('Not  a  triangle')
+				How  to  stop  execution
+	def  area(self):
+			return   area  of  triangle
+	def  peri(self):
+			return  perimeter  of  triangle
+# End of the class
+How  to  create  triangle  class  object
+How  to  read  inputs  into  object
+How  to  test  whether  inputs  are  valid
+print('Area : ',   ???)
+print('Perimeter : ',  ???)
+
+
 #  Find  outputs  (Home  work)
 class   c1:
 	def  m1(self):
@@ -15,9 +46,10 @@ class   c1:
 a = c1()
 a . m1()
 a . m2()
-print(a . x)
-print(self . x)
-print(x)
+print(a . x)#20
+print(self . x)#33
+print(x)#error
+
 '''  (Home  work)
 Write  a  program  to  add  two  objects  where  each  object  contains  three  values  and
 store  results  in   third  object
@@ -44,6 +76,7 @@ How  to  read  inputs  into  object  'b'
 How  to  add  objects  a  and  b  and  store  results in  object  'c'
 print('Addition  results')
 How  to  print  object  'c'
+
 #  Find  outputs (Home  work)
 class  Date:
 	pass
@@ -52,36 +85,36 @@ a =  Date()
 a . dd = 15
 a . mm = 8
 a . yy = 1947
-print(a)
+print(a)# address date
 
 
-
-#  Object  'a'  --->
 #  Find  outputs (Home  work)
 class   c1:
-	def  _str_(self):
+	def  __str__(self):
 			return  '25'
 class   c2:
-	def  _str_(self):
+	def  __str__(self):
 			return   35
 class   c3:
-	def  _str_(self):
+	def  __str__(self):
 			print('Hyd')
 class   c4:
-	def  _str_(self , x):
+	def  __str__(self , x):
 			return   F'{x}'
 #end of the class
 a = c1()
 b = c2()
 c = c3()
 d = c4()
-print(a)
-print(b)
-print(c)
-print(d)
-print(b . _str_())
-print(c . _str_())
-print(d . _str_(50))
+print(a)#'25'
+print(b)#
+print(c)#'hyd'
+print(d)#error
+print(b . __str__())#35
+print(c . __str__())#hyd,none
+print(d . __str__(50))#50
+
+
 '''
 Write  a  program  to  determine  total , average  and  grade  of  a  student
 Inputs  are  Roll Number , Stud  Name , Marks  of  3  subjects  and  Gender
@@ -112,11 +145,15 @@ class   Student:
 		print('Total  Marks  :  ' , ???)
 		print('Average  :  ' , ???)
 		print('Grade  :  ' , ???)
-	def   _str_(self):
+	def   __str__(self):
 		return  All  the   values  of  object  in  the  form  of  string
 #End  of  the  class
 How  to  create  Student  class  object
 How  to  read  inputs  into  object
 How  to  store  results  in  object
 How  to  print  object  with  disp()  method
-How  to  print  object  with  _str_()  method
+How  to  print  object  with  __str__()  method
+
+
+
+#  Object  's'  --->
