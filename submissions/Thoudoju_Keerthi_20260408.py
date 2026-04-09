@@ -20,7 +20,14 @@ m.triangle.test(obj)
 print(m.triangle.area(obj))
 print(m.triangle.peri(obj))
 
+or
 
+from  Thoudoju_Keerthi_20260407 import triangle
+obj = triangle()
+triangle.get(obj)
+triangle.test(obj)
+print(triangle.area(obj))
+print(triangle.peri(obj))
 
  # What  are  the  outputs  if  inputs  are  25 , Rama  Rao ,  male , 52 , 48 , 55   (Home  work)
 from  prog9a  import  student
