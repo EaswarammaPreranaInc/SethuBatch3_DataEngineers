@@ -11,7 +11,7 @@ How  to  call  test()  method  in  another  way
 print('Area : ',  How  to  call  area()  method  in  another  way)
 print('Perimeter: ',  How  to  call  peri()  method  in  another  way)
 
-import Thoudoju_Keerthi_20260407 m
+import  m
 
 obj = m.triangle()
 
