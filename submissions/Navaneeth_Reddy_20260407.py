@@ -89,28 +89,34 @@ store  results  in   third  object
 3rd object  ---> x = 10 + 40 = 50 , y = 20 + 50 = 70 , z = 30 + 60 = 90
 '''
 
-class  Test:
-	def   get(self):
-		return a+b#How  to  read  inputs  into  variables  x , y  and  z  
-	def   add(self , m , n):
-		self.x=m.x+n.x
-		self.y=m.y+n.y
-		self.z=m.z+n.z
-	def  disp(self):
-		return self
-# End  of  the  class
-a=Test()
-b=Test()
-c=Test()#How  to  create  three  Test  class  objects  a , b  and  c
-print('First  Object')
-a.get() #How  to  read  inputs  into  object  'a'
-print('Second  Object')
-b.get()#How  to  read  inputs  into  object  'b'
-c.x=c.add(a.x,b.x)
-c.y=c.add(a.y,b.y)
-c.z=c.add(a.z,b.z)
-#How  to  add  objects  a  and  b  and  store  results in  object  'c'
-print('Addition  results')
+class Test:
+    def get(self):
+        self.x = int(input('Enter x: '))
+        self.y = int(input('Enter y: '))
+        self.z = int(input('Enter z: '))
+        
+    def add(self, m, n):
+        # Adding attributes of objects m and n and storing in current object (self)
+        self.x = m.x + n.x
+        self.y = m.y + n.y
+        self.z = m.z + n.z
+        
+    def disp(self):
+        print(f"x={self.x}, y={self.y}, z={self.z}")
+
+# End of the class
+a = Test()
+b = Test()
+c = Test()
+
+print('First Object')
+a.get()
+print('Second Object')
+b.get()
+
+c.add(a, b)
+print('Addition results')
+c.disp()
 
 
 #  Find  outputs (Home  work)
