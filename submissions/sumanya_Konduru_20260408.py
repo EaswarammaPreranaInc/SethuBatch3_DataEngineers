@@ -1,290 +1,245 @@
-'''
-Repeat  prog5a  such  that  methods  are  called  in  a  different  way
+# mod1 . py
+print('Hyd')
+print('Sec')
+print('Cyb')
+x = 25
+def  f1():
+	print('Function')
+class   c1:
+	def   m1(self):
+			print('Method')
 
-1) What  are  the  two  ways  to  call  a  method ?  ---> object . method()  and  classname . method(object)
-
-2) Reuse  triangle  class  defined  in  prog5a  but  do  not  define  triangle  class  again
-'''
-from triangles import triangle
-t = triangle()
-triangle.get(t)
-triangle.test(t)#How  to  call  test()  method  in  another  way
-print('Area : ',  triangle.area(t))#How  to  call  area()  method  in  another  way)
-print('Perimeter: ',  triangle.peri(t))#How  to  call  peri()  method  in  another  way)
-
-
-# What  are  the  outputs  if  inputs  are  25 , Rama  Rao ,  male , 52 , 48 , 55   (Home  work)
-from  students  import  student
-s = student()
-print(s . __dict__) 
-s . get()
-print(s . __dict__)  
-s . compute()
-print(s . __dict__) 
-'''
-Roll Number : 25
-Student Name : Rama Rao
-Gender : m
-Total Marks : 155.0
-Average : 51.67
-Grade : Second class
-25, Rama Rao, m, 155.0, 51.67, Second class
-'''
-
-
-'''
-Repeat  student  program  for  'n'  students
-
-1) import  student  class  defined in  prog9a  but  do  not  rewrite
-
-2) Use  list  of  objects
-'''
-from  students  import  student
-n = int(input("Enter number of students: "))
-a = [student() for _ in range(n)] 
-for i in range(n):
-    a[i].get()
-    a[i].compute()
-for obj in a:
-    print(obj.__dict__)
-
-
-
-
-'''
-Write  a  program  to  add , subtract , multiply  and  divide  two  rational  numbers
-
-1) 1st  rational  number  --->  2 / 3
-    2nd  rational  number  --->   5 / 9
-    What  is  the  sum  ?  ---> 2 / 3 + 5 / 9 =  (18 + 15) / 27 = 33 / 27 =  11 / 9
-    What  is  the  difference  ?  --->  2 / 3 - 5 / 9 =  (18 - 15) / 27 = 3 / 27 = 1 / 9
-    What  is  the  product  ?  --->  2 / 3 * 5 / 9 =  10 / 27 = 10 / 27
-    What  is   the  division  ?  --->  2 / 3 /  5 / 9 = 2 / 3 * 9 / 5 =  18 / 15 =  6 / 5  --->  Succesful  division
-
-2) 1st  rational  number  --->  2 / 3
-    2nd  rational  number  --->   0 / 9
-    What  is  the  sum  ?  --->  2 / 3 + 0 / 9 =  (18 + 0) / 27 =  18 / 27 =  2 / 3
-    What  is  the  difference  ?  ---> 2 / 3 - 0 / 9 =  (18 - 0) / 27 =  18 / 27 =  2 / 3
-    What  is  the  product  ?  --->  2 / 3 * 0 / 9 =  0 / 27  =  0 / 27  --->  Simplification  is  not  required  becoz  numerator  is  0
-    What  is   the  division  ?  --->  2 / 3 /  0 / 9 =  2 / 3 * 9 / 0 =  18 / 0  ---> Division  is  not   permitted
-
-3) When  is  simplification  needed ?  --->  When  numerator  is  non-zero
-'''
-import math
-
-class Rat:
-    def __init__(self):
-        self.num = 0
-        self.den = 1
-
-    def get(self):
-        self.num = int(input("Enter the numerator: "))
-        self.den = int(input("Enter the denominator: "))
-        self.test()
-
-    def test(self):
-        # Ask user to re-enter denom when denom is zero
-        while self.den == 0:
-            print("Denominator cannot be zero.")
-            self.den = int(input("Please re-enter a non-zero denominator: "))
-
-    def __str__(self):
-        # Return values of object in the form of '2 / 3'
-        return f"{self.num} / {self.den}"
-
-    def add(self, a, b):
-        # Formula: (n1*d2 + n2*d1) / (d1*d2)
-        self.num = (a.num * b.den) + (b.num * a.den)
-        self.den = a.den * b.den
-        self.simplify()
-
-    def sub(self, a, b):
-        # Formula: (n1*d2 - n2*d1) / (d1*d2)
-        self.num = (a.num * b.den) - (b.num * a.den)
-        self.den = a.den * b.den
-        self.simplify()
-
-    def mul(self, a, b):
-        # Formula: (n1*n2) / (d1*d2)
-        self.num = a.num * b.num
-        self.den = a.den * b.den
-        self.simplify()
-
-    def div(self, a, b):
-        # Formula: (n1/d1) / (n2/d2) = (n1*d2) / (d1*n2)
-        if b.num != 0:
-            self.num = a.num * b.den
-            self.den = a.den * b.num
-            self.simplify()
-            return True
-        else:
-            return False
-
-    def simplify(self):
-        # Only simplify if numerator is non-zero
-        if self.num != 0:
-            common = math.gcd(self.num, self.den)
-            self.num //= common
-            self.den //= common
-
-# --- Main Execution ---
-
-# Create 6 objects
-a = Rat()
-b = Rat()
-c = Rat()
-d = Rat()
-e = Rat()
-f = Rat()
-
-# Read rational numbers
-print("Rational Number 1:")
-a.get()
-print("\nRational Number 2:")
-b.get()
-
-# Perform Operations
-c.add(a, b)
-d.sub(a, b)
-e.mul(a, b)
-
-# Display Results
-print("\n--- Results ---")
-print(f"Sum: {c}")
-print(f"Difference: {d}")
-print(f"Product: {e}")
-
-# Division Check
-if f.div(a, b):
-    print(f"Division: {f}")
-else:
-    print("Division: Not permitted (divisor numerator is zero)")
-
-
-'''
-Object  'a'  --->  
-
-Object  'b'  --->  
-
-Object  'c'  --->  
-
-Object  'd'  --->  
-
-Object  'e'  --->  
-
-Object  'f'  --->  
-'''
-
-
-
-#  dir()  function  demo  program  (Home  work)
-from  prog10a   import  Rat
-a = Rat()
-a . nr = 22
-a . dr = 7
-print(dir(Rat))
-print()
-print()
-print(dir(a))
-'''
-# ['_init_', 'reduce', etc.]
-# ['dr', 'nr', '_init_', etc.]
-'''
-
+#  How  to  reuse  mod1  ?  (Home  work)
+print('Hello')
+How  to  import  mod1
+print(mod1.x) #How  to  print   variable  'x'   of  mod1)
+mod1.f1() #How  to  call  function  f1()  of  mod1
+obj = mod1.c1() # How  to  call  method  m1()  of  class  c1  in  mod1
+obj.m1()
+print('Bye')
+import  mod4
+print(x)
+f1()
 
 #  Find  outputs  (Home  work)
-class      Rat:
-	def    m1():
-		pass
-# End  of  the  class
-a = Rat()
-a . nr = 22
-print(hasattr(a , 'nr'))
-print(hasattr(a , 'dr'))
-print(hasattr(a , 'm1'))
-print(hasattr(a , 'm2'))
-print(hasattr(Rat , 'm1'))
-print(hasattr(Rat , 'm2'))
-print(hasattr(Rat , 'nr'))
-'''
-True
-False
-True
-False
-True
-False
-False'''
+print('Before')
+import mod1
+import runpy # How  to  run  mod1
+print(mod1 . x)
+mod1 . f1()
+a = mod1 . c1()
+print('After')
+run_module('mod1')
+runpy.run_module('mod1')
+runpy . run_module(mod1) #Error
+
+# cal . py
+x = 100
+y = 200
+def  add(a , b):
+	return  a + b
+def	 sub(a , b):
+	return  a - b
+def	 mul(a , b):
+	return  a * b
+def	 div(a , b):
+	return  a / b
+class   c1:
+	def  m1(self):
+		print('m1  method')
+
+# How  to  use  members  of  cal  module  with  from  statement ?  (Home  work)
+print('Begin')
+from cal import * # How  to  import  all  the  members  of  cal  module
+print(x) # How  to  print  variable  'x'  of  cal   module)
+print(y) # How  to  print  variable  'y'  of  cal   module)
+print(cal . x) # Error because cal is not imported
+print(add(10, 7))#How  to  call  add()  function  of  cal  module  with  10  and  7)
+print(sub(10, 7))#How  to  call  sub()  function  of  cal  module  with  10  and  7)
+print(mul(10, 7)) #How  to  call  mul()  function  of  cal  module  with  10  and  7)
+print(div(10, 7)) #How  to  call  div()  function  of  cal  module  with  10  and  7)
+print(cal . add(x , y)) # Error because cal is not imported
+b = c1()
+b.m1() #How  to  call  m1()  method  of  class  c1  in  cal  module
+b = cal . c1() # Error because cal is not imported
+
+# How  to  import  only  variable  'x' ,  functions  add()   and  mul()  and  class  c1  of  cal  module ?  (Home  work)
+print('Begin')
+from cal import x, add, mul, c1  #How  to  import  members   x , add , mul  and  class  c1  of  cal  moudle
+print(x) #How  to  print  variable  'x'  of  cal   module)
+print(y) # Error y is not imported
+print(cal . x) # Error because cal is not imported
+print(add(10, 7)) # How  to  call  add()  function  of  cal  module  with  10  and  7)
+print(sub(10 , 7)) # Error sub not imported
+print(mul(10, 7)) # How  to  call  mul()  function  of  cal  module  with  10  and  7)
+print(div(10 , 7)) # Error div not imported
+b = c1()
+b.m1() # How  to  call  m1()  method  of  class  c1  in  cal  module
 
 
+# Module  alias
+print('Begin')
+import cal as c # How  to  import  cal  module  with   another  name  using  import  statement
+print(c.x) # How  to  print  variable  'x'  of  cal   module)
+print(c.y) # How  to  print  variable  'y'  of  cal   module)
+print(c.add(10, 7)) # How  to  call  add()  function  of  cal  module  with  10  and  7)
+print(c.sub(10, 7)) # How  to  call  sub()  function  of  cal  module  with  10  and  7)
+print(c.mul(10, 7)) # How  to  call  mul()  function  of  cal  module  with  10  and  7)
+print(c.div(10, 7)) # How  to  call  div()  function  of  cal  module  with  10  and  7)
+b = c.c1()
+b.m1() # How  to  call  m1()  method  of  c1  class  in  cal  module
+print(cal . x) # Error because module imported with alias 'c'
+from  math  as   m  import  * # Error first import then execute
 
-# Object  'a'  --->
+# Member  alias
+from cal import x as a, add as ad, mul as mu, c1 as C # How  to  import  members   x , add , mul  and  class  c1  of  cal  moudle   with  another  name   using   from  statement
+print(a) # How  to  print  variable  'x'  of  cal   module
+print(x) # Error x is imported as a so x is not valid to use
+print(ad(10, 7)) # How  to  call  add()  function  of  cal  module  with  10  and  7)
+print(mu(10, 7)) # How  to  call  mul()  function  of  cal  module  with  10  and  7)
+b = C()
+b.m1() # How  to  call  m1()  method  of  class  c1  in  cal  module
+print(add(10 , 7)) # Error add is imported as ad so add is not valid to use
+b = c1() # Error c1 is renamed to 'C'
 
+# mod1.py
+x = 10
+def  disp():
+	print('disp  function  of  mod1')
+class   c1:
+	def   m1(self):
+		print('m1  method  of  class  c1  in  mod1')
+
+# mod2.py
+x = 20
+def   disp():
+	print('disp  function  of  mod2')
+class   c1:
+	def   m1(self):
+		print('m1  method of  class  c1  in  mod2')
 
 # Find  outputs  (Home  work)
-class  Cat:
-	def  talk(self):
-		print('Meow Meow Meow ....')
-class  Dog:
-	def  bark(self):
-		print('Bhow Bhow Bhow ....')
-class  Goat:
-	def  talk(self):
-		print('Mehar  Mehar  Mehar  ....')
-#end of the class
-a = [Cat() , Dog() , Goat()]
-for  x  in   a:
-	if   hasattr(x , 'talk'):
-		x . talk()
-	else:
-		x . bark()
-'''
-Meow Meow Meow ....
-Bhow Bhow Bhow ....
-Mehar  Mehar  Mehar  ....
-'''
-
-
-
-#  Find  outputs  (Home  work)
-class    c1:
-        pass
-# End of the class
+x = 30
+def   disp():
+		print('disp  function  of  same  module ')
+class   c1:
+	def   m1(self):
+		print('m1  method of  class  c1  in  same  module')
+from  mod2  import   *
+from  mod1  import   *
+print(x) # 10 
+disp() # disp  function  of  mod1
 a = c1()
-a . x = 10
-varname = input('Enter  variable  name  to  be  added  to  object  :  ')   #  Assume  that  input  is  'y'
-value = eval(input('Enter  value  of  the  variable  :  '))   #  Assume  that  input  is   20
-setattr(a , varname , value)
-print(a . __dict__)
-print(a . x) # 10
-while  True:
-	try:
-		varname = input('Enter  variable  name  whose  value  is  to  be  retrieved  :  ')
-									#  Assume  that  input  is  x  in  1st   iteration  ,  y  in   2nd   iteration  and  z  in  3rd  iteration
-		print(getattr(a , varname))
-	except:
-		print(F'Invalid  variable   name   :  {varname}')
-		break
+a . m1() # m1  method  of  class  c1  in  mod1
+
+# Find outputs  (Home  work)
+from  mod1  import  *
+from  mod2  import  *
+x = 30
+def   disp():
+	print('disp  function  of  same  module ')
+class   c1:
+	def   m1(self):
+		print('m1  method of  class  c1  in  same  module')
+print(x) # 30
+disp() # disp  function  of  same  module
+a = c1()
+a . m1() # m1  method of  class  c1  in  same  module
+
+# How  to  use  members  of  all  the  3  modules(mod1 , mod2  and  current  module)  with  import  statement ?
+import mod1, mod2 # How  to  import  mod1  and  mod2
+x = 30
+def   disp():
+		print('disp  function  of  same  module')
+class   c1:
+	def   m1(self):
+		print('m1  method of  class  c1  in  same  module')
+print(mod1.x) # How  to  print  variable  'x'  of  mod1
+mod1.disp() # How  to  call  disp()  function  of  mod1
+a = mod1.c1()
+a.m1() 3 How  to  call  method  m1()  of  class   c1  in  mod1
+print()
+print(mod2.x) # How  to  print  variable  'x'  of  mod2
+mod2.disp() # How  to  call  disp()  function  of  mod2
+b = mod2.c1()
+b.m1() # How  to  call  method  m1()  of  class   c1  in  mod2
+print()
+print(x) # How  to  print  variable  'x'  of  current  module)
+disp() # How  to  call  disp()  function  of current  module
+c = c1()
+c.m1() # How  to  call  method  m1()  of  class   c1  in  current  module
+
+# How  to  use  members  of  all  the  three  modules  with  from  statement ?
+from mod1 import x as x1, disp as d1, c1 as C1 # How  to  import  members  of  mod1
+from mod2 import x as x2, disp as d2, c1 as C2 #How  to  import  members  of  mod2
+x = 30
+def   disp():
+        print('disp  function  of  same  module')
+class  c1:
+	def   m1(self):
+		print('m1   method  of  class  c1  in  same  module')
+print(x1) # How  to  print  variable  'x'  of  mod1)
+d1() # How  to  call  disp()  function  of  mod1
+a = C1()
+a.m1() # How  to  call  method  m1()  of  class   c1  in  mod1
+print()
+print()
+print(x2) # How  to  print  variable  'x'  of  mod2)
+d2() # How  to  call  disp()  function  of  mod2
+b = C2()
+b.m1() # How  to  call  method  m1()  of  class   c1  in  mod2
+print()
+print()
+print(x) # How  to  print  variable  'x'  of  current  module)
+disp() # How  to  call  disp()  function  of current  module
+c = c1()
+c.m1() # How  to  call  method  m1()  of  class   c1  in  current  module
+
+# mod1.py  (Home  work)
+# How  to  prevent  execution  the  middle  3  statements  when  mod1  is  imported  elsewhere
+print('One')
+print('Two')
+print('Three')
+if __name__ == "__main__":
+    print('Four')
+    print('Five')
+    print('Six')
+print('Seven')
+print('Eight')
+print('Nine')
+
+# Find  outputs (Home  work)
+print('Begining  of  mod2')
+import   mod1
+print('End  of  mod2')
 '''
-{'x':10,'y':20}
-10
-infinite loop
+Begining  of  mod2
+One
+Two
+Three
+Seven
+Eight
+Nine
+End  of  mod2
 '''
 
+#  Find  outputs
+import  cal
+print(cal . x) # 100
+print(cal . y) # 200
+print(cal . add(10 , 7)) # 17
+print(cal . sub(10 , 7)) # 3
+print(cal . mul(10 , 7))  # 70
+print(cal . div(10 , 7)) # 1.42
+a = cal . c1()
+a . m1() # m1 method
 
-'''
-(Home  work)
-Write  a  program  to  convert  a  dictionary  {'Empno' : 25 , 'Ename' : 'Rama  Rao' , 'Sal' : 10000.0}  to  Emp  class  object
-i.e.  object  should  contain  empno = 25 , ename = 'Rama  Rao' , Sal = 10000.0
-
-Hint:  Use  setattr()  and  getattr()  functions
-'''
-class  Emp:
-        pass
-#End  of  the  class
-dict = {'Empno' : 25 , 'Ename' : 'Rama  Rao' , 'Sal' : 10000.0}
-e=Emp()
-for key ,value in dict.items():
-        setattr(e,key.lower(),value)
-        #How  to  convert  dictionary  to  object  'e'  with  for  loop
-for x in dict:
-        print(f"{x}: {getattr(e, x.lower())}")#How  to  print  object  'e'  with  for  loop
+#  Find  outputs
+from  cal  import   y , sub , mul
+print(x) # Error because x is not imported
+print(y) # 200
+print(add(10 , 7)) # Error because add is not imported
+print(sub(10 , 7)) # 3
+print(mul(10 , 7)) # 70
+print(div(10 , 7)) # Error because div is not imported
+a = c1() # Error because c1 is not imported
