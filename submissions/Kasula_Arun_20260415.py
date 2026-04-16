@@ -17,14 +17,14 @@ class  complex:
 		self.imag = float(input('Enter the imaginary part : '))
 		
 
-	def    _str_(self):
+	def    __str__(self):
 		if self.image >= 0:
 			return f'{self.real} + {self.imag}i'
 		else :
 			return f'{self.real} - {abs(self.imag)}i'
 		
 
-	def  _add_(a ,  b):
+	def  __add__(a ,  b):
 		res = complex()
 		res.real = a.real + b.real
 		res.imag = a.imag + b.imag
@@ -32,20 +32,20 @@ class  complex:
 	
 
 
-	def  _sub_(a ,  b):
+	def  __sub__(a ,  b):
 		res = complex()
 		res.real = a.real - b.real
 		res.imag = a.imag - b.imag
 		return res
 	
 
-	def  _mul_(a ,  b):
+	def  __mul__(a ,  b):
 		res= complex()
 		res.real = a.real*b.real - a.imag*b.imag
 		res.imag = a.real*b.imag + a.imag*b.real
 		return res
 
-	def  _truediv_(a ,  b):
+	def  __truediv__(a ,  b):
 		res= complex()
 		dr = b.real**2 + b.imag**2
 		res.real = (a.real*b.real + a.imag*b.imag)/dr
@@ -173,10 +173,10 @@ c = c2()
 
  # Find  outputs  (Home  work)
 class   c2:
-	def  _init_(self):
+	def  __init__(self):
 		print('outer  class  constructor')
 	class   c2:
-		def _init_(self):
+		def __init__(self):
 			print('inner  class  constructor')
 #end of the class
 a = c2()
