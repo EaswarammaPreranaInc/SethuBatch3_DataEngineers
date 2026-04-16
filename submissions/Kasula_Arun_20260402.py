@@ -196,7 +196,12 @@ Division   by  0  is  not  permitted
 
 # Modify  following  div  function  such  that  both  div(9 , 2)  and  div(2 , 9)  should  return  4.5  only
 def  decor(fun):
-	How  to  decorate  the  function  such  that  4.5  is  returned
+	def inner (x, y):
+		if x>y:
+			return fun(x, y)
+		else:
+			return fun (y, x)
+	return inner
 @decor
 def  div(a , b):
     return   a /b
