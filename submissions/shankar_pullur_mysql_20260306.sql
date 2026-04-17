@@ -1,0 +1,79 @@
+use practise;
+create table employee_demo(emp_id INT  PRIMARY KEY,emp_name varchar(50),department varchar(50)
+,salary DECIMAL(10,2),age INT, joining_date date);
+ 
+ ALTER TABLE employee_demo MODIFY emp_id INT auto_increment;
+
+INSERT INTO employee_demo (emp_name, department, salary, age, joining_date) VALUES
+('Rahul', 'HR', 30000, 25, '2022-01-10'),
+('Sneha', 'HR', 35000, 28, '2021-03-15'),
+('Amit', 'IT', 60000, 30, '2020-07-20'),
+('Priya', 'IT', 75000, 32, '2019-05-18'),
+('Kiran', 'Finance', 50000, 29, '2021-11-25'),
+('Anjali', 'Finance', 45000, 27, '2022-02-14'),
+('Vikram', 'IT', 80000, 35, '2018-09-10'),
+('Meena', 'HR', 32000, 26, '2023-01-05');
+
+SELECT * FROM employee_demo 
+order by salary asc;
+
+
+SELECT * from employee_demo 
+order by age asc
+limit 2;
+
+SELECT * from employee_demo 
+LIMIT 3 offset 3;
+SELECT emp_name,salary FROM employee_demo
+where salary=(SELECT max(salary) from employee_demo);
+
+SELECT count(*) from employee_demo
+WHERE department='HR';
+SELECT max(salary) from employee_demo;
+SELECT count(*) from employee_demo
+Where joining_date >'2021-12-31';
+
+SELECT SUM(salary) FROM employee_demo
+where department='it';
+
+
+
+SELECT department,count(*) FROM employee_demo
+GROUP BY department;
+
+
+SELECT department,avg(salary) 
+FROM employee_demo
+GROUP BY department;
+
+
+SELECT department,max(salary) FROM employee_demo
+GROUP BY department;
+
+SELECT department,min(salary) FROM employee_demo
+GROUP BY department;
+
+
+SELECT department,count(*) FROM employee_demo
+GROUP BY department
+having count(*)>2;
+
+
+SELECT department,count(*) FROM employee_demo
+GROUP BY department
+having count(*)>2;
+
+SELECT department,avg(salary)
+FROM employee_demo
+group by department
+having avg(salary)>40000;
+
+SELECT department,min(salary)
+from employee_demo
+group by department
+having min(salary)<35000;
+
+SELECT department,count(*) FROM employee_demo
+GROUP BY department
+
+having count(*) < 3;

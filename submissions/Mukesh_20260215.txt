@@ -1,0 +1,173 @@
+#  set  object  demo  program  (Home  work)
+a = {25 , 10.8 , 'Hyd' , True , 3+4j , None , 25 , 'Hyd'}
+print(a)
+print(type(a))
+print(len(a))
+print(a[2])
+print(a[1 : 4])
+a[2] = 'Sec'
+print(a * 2)
+print(a * a)
+
+#  set()  function demo  program
+a = set('Rama rAo')
+print(a)
+print(len(a))
+print(set([10 , 20 , 15 , 20]))
+print(set((25 , 10.8 , 'Hyd' , 10.8)))
+print(set(range(10 , 20 , 3)))
+print(set(25))
+print(set([25 , 10.8 , [] , 'Hyd']))
+
+
+'''
+set()  function
+-----------------
+1) What  does  set(sequence)  do ?  --->  Converts  sequence  to  set
+
+2) Is  set(non-sequence)  valid ?  ---> No  becoz  argument  should  be  sequence  only
+
+3) What  does  set(No-args)  do ?  --->  Returns  an  empty  set
+'''
+
+# Tricky  program
+# Find  outputs (Home  work)
+a = {1 , 'Hyd' , False , True , 0.0 , '' , 1.0 ,  0}
+print(a)
+print(len(a))
+print(type(a))
+
+# Find  outputs  (Home  work)
+a =   [ ]
+b =   ( )
+c =   {}
+d =   set()
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(a)
+print(b)
+print(c)
+print(d)
+
+# Tricky  program
+# add()  and  remove()  methods  (Home  work)
+a = set()
+a . add(25)
+a . add(10.8)
+a . add('Hyd')
+a . add(True)
+a . add(None)
+a . add('Hyd')
+a . add(1)
+print(a)
+print(len(a))
+a . remove(25)
+print(a)
+a . append(100)
+a . add(set())
+a . add(())
+a . add([])
+print(a)
+a . add({})
+
+# How  to  print  set  in  two  differnet ways  (Home  work)
+a = {25 , True , 'Hyd' , 10.8}
+print('set  with  print  function')
+print(???)
+print('Iterate  thru  set  with  for  loop')
+How  to  iterate  thru  set  with  for  loop
+
+# Find  outputs  (Home  work)
+a = {10 : 'Ramesh' , 20 : 'Kiran' , 15 : 'Amar' , 18 : 'Sita'}
+print(a)
+print(type(a))
+print(How  to  print  value  key  10)
+print(How  to  print  value  key  20)
+print(How  to  print  value  key  15)
+print(How  to  print  value  key  18)
+print(a[19])
+print(a[0])
+print(a['Amar'])
+How  to  moify  value  of   key  15  to  'Krishna'
+How  to  remove  20 :  'Kiran'  from  dict  'a'
+How  to  append  25 : 'Vamsi'  to  dict  'a'
+print(a)
+print(len(a))
+print(a * 2)
+
+# Find  outputs  (Home  work)
+a = {10 : 'Hyd' , 10 : 'Sec'}
+print(a)
+print(len(a))
+b = {'R' : 'Red' , 'G' : 'Green' , 'B' : 'Blue' , 'Y' : 'Yellow' , 'G' : 'Gray' , 'B' : 'Black'}
+print(b)
+print(len(b))
+
+
+#  Tricky  program
+# Find output  (Home  work)
+a = {True : 'Yes' , 1 : 'No' , 1.0 : 'May  be'}
+print(a)
+print(len(a))
+
+
+# Find  outputs
+a = { [ ] : 25}
+b = { ( ) : 25}
+print(b)
+c = { { } : 25}
+d = {'Ramesh' : [9948250500, 9848565090, 9440250404]}
+print(d)
+print(len(d))
+e = {set() : 10.8}
+
+
+# Find  outputs
+a = {}
+print(type(a))
+print(len(a))
+print(a)
+b = dict()
+print(type(b))
+print(len(b))
+print(b)
+
+
+# How  to  print  dictionary  in  different  ways
+a  =  {10 : 'Ramesh' ,  20 : 'Kiran' , 15 : 'Amar' , 18 : 'Sita'}
+print('Dictionary  with  print  function')
+How  to  print  dictionary  with  print()  function
+print('Keys  of  dictionary')
+How  to  iterate  thru  each  key  of  dict  'a'  with  for  loop
+print('Values  of  dictionary')
+How  to  iterate  thru  each  value  of  dict  'a'  with  for  loop
+print('Tuples  of  dict_items   object')
+How  to  iterate  thru  each  tuple  of  dict  'a'  with  for  loop
+print('Elements  of  each   tuple')
+How  to  print  elements  of  each  tuple  in  the  list  of  dict_items  object
+print('Keys  and  values  of  dictionary')
+How  to  print  each  key  and  corresponding  value  in  dict  'a'
+
+#  Find  outputs (Home  work)
+a = {
+		print('Hyd') ,
+		print('Sec') ,
+		print('Cyb')
+	}
+print(type(a))
+print(a)
+print(len(a))
+
+#  Anonymous  object  demo  program
+_ = 25
+print(_)
+print(type(_))
+a , _ , c = 10 , 20 , 30
+print(a)
+print(_)
+print(c)
+for  _  in  range(5):
+	print(_ , 'Hello')
+

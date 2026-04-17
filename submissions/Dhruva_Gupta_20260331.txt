@@ -1,0 +1,28 @@
+Name-Dhruva Gupta
+Roll Number-D238
+
+1)
+CREATE VIEW emp_dept_view AS
+SELECT e.emp_id, e.name, d.dept_name
+FROM employees e
+JOIN departments d
+ON e.dept_id = d.dept_id;
+
+2)
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50)
+);
+
+3)
+CREATE VIEW v1 AS
+SELECT name FROM students;
+
+4)
+SELECT * FROM v1;
+
+5)
+ALTER TABLE students AUTO_INCREMENT = 1000;
+
+6)
+DROP VIEW IF EXISTS emp_dept_view;

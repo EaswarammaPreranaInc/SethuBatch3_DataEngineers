@@ -1,0 +1,60 @@
+#  Find  outputs   (Home  work)
+a = (25 , 10.8 , 'Hyd' , True , 3+4j , None , 'Hyd' , 25)
+print(a)#(25 , 10.8 , 'Hyd' , True , 3+4j , None , 'Hyd' , 25)
+print(*a)#25  10.8  'Hyd'  True  3+4j  None  'Hyd'  25
+print(type(a))#<class 'Tuple'>
+print(len(a))#8
+print(a[2 : 5])#[2:6:1]==>'Hyd' , True , 3+4j , None , 'Hyd'
+print(*a[2 : 5])#[2:6:1]==>'Hyd'  True  3+4j  None 'Hyd'
+a[2] = 'Sec'
+a . append('Sec')#error due to tuple Will not accept append 
+a . remove('Hyd')#error due to tuple Will not accept remove 
+b =  10 , 20 , 30
+print(b)#10 , 20 , 30
+print(b * 2)#error due to tuple is not change due it is Inmutable
+c = 40 , 50 , 60,
+print(c)#40 , 50 , 60,
+print(type(c))#<class 'tuple'>
+
+
+# Find  outputs  (Home  work)
+a = (25)
+b = 25,
+c = 25
+d = (25,)
+print(type(a))#<class 'tuple'>
+print(type(b))#<class 'tuple'>
+print(type(c))#<class 'int'>
+print(type(d))#<class 'tuple'>
+print(a * 4)#error tuple cannot be changed
+print(b * 4)#error tuple cannot be changed
+print(c * 4)#100
+print(d * 4)#error tuple cannot be changed
+
+# tuple()  function  demo  program  (Home  work)
+a = tuple('Hyd')
+print(a)#tuple('Hyd')
+print(type(a))<class 'typle>
+print(len(a))#3
+b = [10 , 20 , 15 , 18]
+print(tuple(b))#error tuple in() but in case it in []
+print(tuple(range(5)))#error tuple in() but in case it in []
+print(tuple(25))#tuple 25
+
+# Find  outputs (Home  work)
+a = ()
+print(type(a))#<class 'tuple'>
+print(a)#()
+print(len(a))#0
+b = tuple()
+print(b)#tuple()
+print(len(b))#5
+
+# Tricky program
+# Find  outputs (Home  work)
+a = (10 , 20 , 30)
+print(a)#(10 , 20 , 30)
+print(id(a))#address of object a
+a = a * 2  #  Valid / Invalid # invalid tuple can be changed
+print(a)#(10 , 20 , 30)
+print(id(a))#address of object a

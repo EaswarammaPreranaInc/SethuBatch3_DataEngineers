@@ -1,0 +1,90 @@
+#  Find outputs  (Home  work)
+a = 'Hyd  is  green  city'
+print(a)----> # Hyd  is \n green \t city
+b = 'Hyd  is  "green"  city'
+print(b)---> # Hyd  is  \n "green" \t city
+c = 'Hyd  is  \'green\'  city'
+print(c)----># Hyd  is  \\'green\\'  city
+print('Hyd  is  ' green  '  city')---># Hyd  is  \n\n 'green\n\n'  city
+
+'''
+Write  a  program  to  determine  sum , difference , product , quotient , largest  and  smallest  of  two  numbers.
+Also  find  remainder,  sqrt  of  first  input , power, gcd  and  factorial  of  first  input
+
+Hint:  Use  F  string  to  print  results
+
+Let  inputs  be  10  and  7,
+What  is  the  sum ?  --->  17 
+What  is  the  difference ?  --->  3
+What  is  the  product ?  --->  70
+What  is  the  quotient ?  --->  1.42
+What  is  the  remainder ?  ---> 3
+What  is  the  largest  number ?  --->  10
+What  is  the  smallest  number ?  --->  7
+What  is  the  sqrt  of  1st  input ?  --->  3.16
+What  is  the  result  of  power ?  --->  10000000
+What  is  the  gcd  of  2  numbers ?  --->  1
+What  is  the  factorial   of  1st  input ?  --->  10! 
+'''
+
+import math
+a = int(input("Enter 1st integer number : "))
+b = int(input("Enter 2nd integer number : "))
+print(f'{x + y})
+print(f'{x - y})
+print(f'{x * y})
+print(f'{x / y})
+print(f'{x % y})
+print(f'max{x} , {y} ) = {max(x,y)}')
+print(f'min{x} , {y} ) = {max(x,y)}')
+print(f'{x} ^ {y} = {x ** y}')
+print(f'sqrt({x}) = {math.sqrt(y)}')
+print(f"gcd({x} , {y}) = {math.gcd(x, y)}")
+print(f"fact({x}) = {math.factorial(x)}")
+input("Press any key to continue . . .")
+
+x = 25
+y = 'Hyd'
+x,y = y,x
+print("x=", x )
+print("y=" , y)
+
+a = int(input("Enter 1st input : " ))
+b = int(input("Enter 2st input : " ))
+print(a if a > b else b )
+
+
+a = int(input("Enter 1st input : "))
+b = int(input("Enter 2st input : "))
+c = int(input("Enter 3rd input : "))
+print(a if (a > b and b) else (b if b > c else c))
+
+a = "RAMA"
+b = "RAKESH"
+c = "RAJESH"
+print(a if (a> b and b) else (b if b > c else c))
+
+a = [10,20,15,18]
+b = [10,20,32,19]
+c = [10,20,25,17]
+print("a is largest" if a > b and a > c else ("b is largest" if b > c else "c is largest"))a
+
+a = int(input ("Enter 1st input : "))
+b = int(input ("Enter 2st input : "))
+print("result : a < b")
+
+a = int(input ("Enter 1st input : "))
+b = int(input ("Enter 2st input : "))
+print("result : a > b")
+
+a = int(input ("Enter 1st input : "))
+b = int(input ("Enter 2st input : "))
+print("result : a = b")
+
+
+
+
+
+
+
+

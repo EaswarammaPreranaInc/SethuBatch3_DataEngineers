@@ -1,0 +1,64 @@
+show databases;
+create database sudentdb;
+use sudentdb;
+select database();
+select now();
+select current_date();
+select current_time();
+select user();
+create table student_info ( id INT, Name VARCHAR(20));
+desc student_info;
+insert into student_info(id,name) values(1,'Ravi');
+insert into student_info(id,name) values(2,'Priya');
+ insert into student_info(name) values('Kiran');
+ insert into student_info(id,name) values(3,'Anil'),(4,'Neha');
+ select * from student_info;
+ create table employee(emp_id INT AUTO_INCREMENT PRIMARY KEY, emp_name VARCHAR(100), salary DECIMAL(10,2));
+ insert into employee(emp_name,salary) values('ram',10000),('sai',100000),('lakshmi',500000);
+ #insert into employee (emp_id,emp_name,salary) values (100,'bhagya',1000000);
+ select * from employee;
+ create table employee_auto(emp_id int auto_increment primary key, emp_name varchar(50)) auto_increment=500;
+ insert into employee_auto(emp_name) values ('ram'),('satya');
+ select * from employee_auto;
+ create table employee_default_test(emp_id int primary key, emp_name varchar(50), city varchar(50) default 'Hyderabad');
+ insert into employee_default_test(emp_id,emp_name,city)values(1,'ram','Banglore');
+  insert into employee_default_test(emp_id,emp_name)values(2,'ram');
+ select * from employee_default_test;
+ create table users_test(user_id int primary key,email varchar(50) unique, password varchar(50));
+ insert into users_test(user_id,email,password) values(23,'rm@gmail.com','rm#23'),(45,'yv@gmail.com','yv$45');
+ insert into users_test(user_id,email,password)values(29,'yv@gmail.com','yv&29');
+show errors;
+create table student_age_test(id int primary key,name varchar(50),age int check(age>=18));
+insert into student_age_test values(1,'ram',20);
+insert into student_age_test values(2,'priya',15);
+show errors;
+create table company_employees(emp_id int auto_increment primary key,
+    emp_code VARCHAR(10) NOT NULL UNIQUE,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50),
+    email VARCHAR(100) UNIQUE,
+    age INT CHECK (age >= 18 AND age <= 60),
+    salary DECIMAL(10,2) DEFAULT 30000 CHECK (salary >= 0),
+    department VARCHAR(50) NOT NULL,
+    joining_date DATE DEFAULT (CURRENT_DATE),
+    is_active BOOLEAN DEFAULT TRUE
+);
+insert into company_employees(emp_code, first_name, last_name, email, age, salary, department)values('e01','ram','kumar','kumar@gmail.com',25,50000,'hr'),('e02','ravi','kumar','rk@gmail.com',28,50000,'it'),('e03','rama','rao','rr@gmail.com',25,30000,'finance');
+select * from company_employees;
+select * from student_info;
+select emp_name, salary from employees;
+select * from employees where salary > 30000;
+select * from company_employees where is_active=true;
+select current_date;
+select current_time;
+select user;
+select studentdb();
+create table bonus_table(id int auto_increment primary key,email varchar(100) unique,age int check(age>=18),city varchar(50) default 'Bangalore');
+insert into bonus_table(email,age)values('rm@gmail.com',25),('km@gmail.com',28),('v@gmail.com',22),('sr@gmail.com',30),('ss@gmail.com',20);
+select*from bonus_table;
+create table product_orders (order_id INT AUTO_INCREMENT PRIMARY KEY,customer_name VARCHAR(100) NOT NULL,product_name VARCHAR(100) NOT NULL,quantity INT NOT NULL,price DECIMAL(10,2) NOT NULL,order_date DATE DEFAULT (CURRENT_DATE),is_delivered BOOLEAN DEFAULT FALSE);
+insert into product_orders (customer_name, product_name, quantity, price, order_date, is_delivered)VALUE('Ravi', 'laptop', 1, 5000.00, '2025-03-01', TRUE),('Priya', 'Mobile', 2, 2000.00, '2025-03-02', FALSE),('Kiran', 'Headphones', 3150.00, '2025-03-02', TRUE),('Anil', 'Keyboard', 2, 120000, '2025-03-03', FALSE),('Neha', 'Monitor', 1, 18000, '2025-03-03', TRUE);
+insert product_orders (customer_name, product_name, quantity, price)VALUES('Sita', 'laptop', 48000);
+select * from product_orders;
+select customer_name, product_name, price from product_orders;
+select *,(quantity * price) AS total_amount from product_orders;

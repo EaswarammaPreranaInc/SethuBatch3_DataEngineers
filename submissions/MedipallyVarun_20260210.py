@@ -1,0 +1,106 @@
+# float  object  demo  program (Home  work)
+a = 10.8
+print(a) # 10.8
+print(type(a)) # class 'int' 
+print(id(a)) # Address of object a
+b = 25. 
+print(b) # 25.0
+print(type(b)) # class 'float'
+c = .689
+print(c) # 0.689
+d = 3.4E2
+print(d) # 3.4 * 10^2
+print(type(d)) # class 'float'
+e = 9.62e-2
+print(e) # 9.62 * 10^-2
+print(9.8.2) # 9.8.2
+
+
+
+
+
+
+# complex object demo program
+a = 3 + 4j
+print(a) # 3+4j 
+print(type(a)) # class 'complex'
+print(id(a)) # address of a 
+print(a . real) # 3.0
+print(a . imag) # 4.0
+print(type(a . real)) # class 'float'
+print(type(a . imag)) # class 'float'
+
+
+
+
+
+# Find outputs (Home work)
+a = 6j
+print(a) # 6j
+print(type(a) # class 'complex'
+print(a.real) # 0.0
+print(a.imag) # 3.0
+print(5 + j6) # Error (imag should be after real)
+print(3 + 4i) # Error (i is not the imag)
+print(4+j) # 4+j
+print(4 + 1j) # 4+1j
+print(4 + 0j) # 4+0j
+
+
+
+
+
+# bool object demo program  (Home  work)
+a = True
+print(a) # True
+print(type(a)) # class 'bool'
+print(id(a)) # Address of object a
+b = False
+print(b) # False
+print(type(b)) # class 'bool'
+print(True + True) # 2
+print(True + False) # 1
+print(False + True) # 1
+print(False + False) # 0
+print(True + True + True) # 3
+print(25 + 10.8 + True) # 26.8
+print(True > False) # True
+print(True) # True
+print(False) # False
+print(true) # Error ( The 't' should be capital 'T')
+print(false) # Error ( The 'f' should be capital 'F')
+
+
+
+
+
+# Find  outputs (Home  work)
+a = 0O6247
+print(a) # 6*8^3 + 2*8^2 + 4*8^1 + 7*8^0 
+print(type(a)) # class 'int'
+print(id(a))  # Address of object a (let be 2000)
+b = 0o6247
+print(id(b))# Address of object a ( a and b are same because both are int class objects where it reuse)
+print(b) # 6*8^3 + 2*8^2 + 4*8^1 + 7*8^0 
+c = 3239
+print(c) # 3239
+print(id(c)) # class 'int'
+print(0o9248) # Error (the value should be only from 0 to 7, But we have 9 )
+
+
+
+
+# Find  outputs  (Home  work)
+a = 0XA7B9
+print(a) # 
+print(type(a))
+b = 0xBEEF
+print(b) 
+print(A7B9)  
+print('A7B9')
+print(0XBEER)
+print(0XHYD)
+print(0xA7G9B)
+
+
+

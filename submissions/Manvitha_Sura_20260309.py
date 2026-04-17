@@ -1,0 +1,19 @@
+'''
+Write  a  program  to  print  distinct  vowels  of  the  string  without  using  set
+
+1) Let  input  be   RaMA  rAo
+    What  is  the  output ?  ---> AO
+
+2) Hint  1:  Same  as   prog3e  with  minor  changes
+
+3) What  does  'hyd' . upper()  do ? --->  Returns  'HYD'
+'''
+
+a=input('enter any mixed case string: ')
+b=a.upper()
+c=''
+for i in b:
+    if i in 'AEIOU':
+        if i not in c:
+            c+=i
+print('distinct vowels: ',c)

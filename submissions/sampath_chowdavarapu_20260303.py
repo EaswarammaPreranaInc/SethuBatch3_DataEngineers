@@ -1,0 +1,120 @@
+#Write  a  program  to  search  for  'x'  in  fibonacci  series
+
+x=int(input('Enter a value:'))
+a=0
+b=1
+while(a<=x):
+    if a==x:
+        print('Found')
+        break
+    c=a+b
+    a=b
+    b=c
+else:
+    print('Not Found')
+
+
+
+'''
+Modify  following   program  with  walrus  operator
+
+Hint:  Combine  lines  8   and   9  to a  single  line  with   walrus  operator
+'''
+try:
+	sum =  ctr = 0
+	while  True:
+		x = eval(input('Enter input  (ctrl + z  to  stop)  :  '))
+		sum += x
+		ctr +=1
+except  EOFError:
+	try:
+		print(F'Average :   {sum / ctr}')
+	except  ZeroDivisionError:
+		print('Enter  at  least  one  input')
+except  (NameError , TypeError):
+	print('Input  can  not  be  string')
+
+
+
+
+'''
+Write  a  program  to  determine  command  line  input  is  even  number  or  odd  number
+'''
+import sys
+
+try:
+    a=[]
+    for x in argv[1:]:
+        a.append(eval(x))
+    	if x%2==0:
+            print('even number')
+        else:
+            print('odd number')
+except:
+    print('pls send an integer input')
+
+
+#Write  a  program  to  determine  average  of  command  line  inputs
+'''
+1) py   prog4.py   10.8   25   True   14.6   19   False   7.4
+    What  is  argv ?  --->  ['prog4.py' , '10.8' , '25' , 'True' , '14.6' , '19' , 'False' , '7.4']
+    What  is  list  'a'  ?  ---> 	[10.8 , 25 , True , 14.6 , 19 , False , 7.4]
+	How  to  determine  sum  of  list  elements ?  ---> sum(a)
+    How  to  determine  number  of  list  elements ?  ---> len(a)
+
+2) py   prog4.py
+    What  is  the  output ?  --->  Pls  send  number  inputs
+
+3) py   prog4.py  25   'Ten'
+    What  is  the  output  ?  --->  Pls  send  number  inputs
+'''
+
+
+import sys
+
+try:
+    a = []
+    for x in sys.argv[1:]:
+        a.append(eval(x))
+
+    print(sum(a) / len(a))
+
+except:
+    print("Pls send number inputs")
+
+
+'''
+Write  a  program  to  sort  command  line  inputs  in  ascending  order  and  descending  order
+
+1) py  prog5.py  10   20    15.8   5   12.6
+    What  is  argv ?  --->  ['prog5.py' , '10' , '20' , '15.8' , '5' , '12.6']
+    What  is  list  'a' ?  --->  [10 , 20 , 15.8 , 5 , 12.6]
+    How  to  sort  list  'a' ?  ---> sorted(a)
+    How  to  sort  list  'a'  in  descending  order  ?  ---> sorted(a , reverse = True)
+
+2) py  prog5.py   25   'Ten'
+    What  is  the  output ?  ---> Do  not  send  number  and  string  
+	
+3) py  prog5.py  
+    What  is  the  output ?  --->  Pls  send  inputs
+	
+3) py  prog5.py    'Hyd'  'Sec'  'Cyb'
+    What  are  the  outputs ?  --->   ['Cyb' , 'Hyd' , 'Sec']
+													   ['Sec' , 'Hyd' , 'Cyb']
+'''
+
+
+import sys 
+if(len(sys.argv)<=1):
+    print('pls send inputs')
+else:
+    try:
+        a=[]
+        for x in sys.argv[1:]:
+            a.append(eval(x))
+        print(sorted(a))
+        print(sorted(a,reverse=True))
+    except TypeError:
+        print('Do not send number and string')  
+    except NameError:
+        print('Do not send string inputs')  
