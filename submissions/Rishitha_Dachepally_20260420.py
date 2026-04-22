@@ -39,7 +39,6 @@ print('zip   object  in  the  form  of   dictionary :  ' ,  dict(z7))
 
 
 
-
 #  Find  outputs  (Home  work)
 import   time
 a = [ 'Empno' , 'Emp Name' , 'Salary']
