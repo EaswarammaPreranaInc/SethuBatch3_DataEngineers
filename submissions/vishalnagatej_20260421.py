@@ -188,15 +188,53 @@ while   True:
 
 #==================================================================================================================================
 
-#  Write  a  program  to  print  odd  numbers  between  1  and  20  with  filter  iterator
-
-import time
-a = range(1,21)
-filter = (lambda x : x % 2 == 1,a)
-
+# How  to  print  fliter  object  in  different  ways ?
+import   time
+a = [10 , 15 , 20 , 17 , 18 , 19 , 26]
+f1 = filter(lambda  x  :  x  %  2  ==  0 , a)
+print('Iterate  thru  filter  object  with   next   function')
 while True:
     try:
-        print(next(filter))
+        print(next(f1))     # How  to  iterate  thru  filter  object  with  next()  function
         time.sleep(1)
     except:
-        pass
+        break
+print('Iterate  thru  filter  object  with   for  loop')
+for i in f1:                # How  to  iterate  thru  filter  object  with  for  loop
+    print(i)
+print('Unpack  filter  object :  ' ,  *f1)
+print('filter  object  converted  to   list  :  ' ,  list(f1))
+
+#==================================================================================================================================
+
+#  Write  a  program  to  print  odd  numbers  between  1  and  20  with  filter  iterator
+
+# using lambda function
+a = filter(lambda x : x % 2 ==1 , range(1,21))
+print('odd numbers between 1 and 20')
+for i in a:
+    print(i)
+
+print()
+
+# using regular function
+def odd(a):
+    return a % 2 == 1
+
+a = range(1,21)
+b = filter(odd,a)
+for i in b:
+    print(i)
+
+#==================================================================================================================================
+
+'''
+Write  a  program  to  print  distinct  vowels  of  the  string  using  filter.
+Input  is  string  and  output  is  set
+'''
+
+a = input('Enter a mixed case string : ')
+b = a.upper()
+c = 'AEIOU'
+b = filter(lambda x : x in c , b)
+print(set(b))
