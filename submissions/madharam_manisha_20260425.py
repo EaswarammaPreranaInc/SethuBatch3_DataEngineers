@@ -126,7 +126,18 @@ What  is  the  regular  expression  for  the  above  rules ?  --->  (0|[+]91)?[6
 
 2) Which  function  should  be  used ?  --->  fullmatch()  function
 '''
+#(0|\+91)?[6-9][0-9]{9}
 
+import re
+
+pattern = r'(0|\+91)?[6-9][0-9]{9}'
+
+num = input("Enter mobile number: ")
+
+if re.fullmatch(pattern, num):
+    print("Valid")
+else:
+    print("Invalid")
 
 
 
@@ -159,14 +170,20 @@ h) Ts00PQ1234  ---> Invalid  becoz  circle  00  does  not  exist
 i) TS20RS1234 --->  Valid
 j) Ts25TR1234 --->   Valid
 
-What  is  the  regular  expression  for  the  above  rules ?  --->(?i)ts(0[1-9]|1[0-9]|2[0-9])[A-Za-z]{2}[0-9]{4}
+What  is  the  regular  expression  for  the  above  rules ?  --->(?i)ts(0[1-9]|1[0-9]|2[0-9])[A-Za-z]{2}[0-9]{4}'''
+
+import re
+
+pattern = r'(?i)ts(0[1-9]|1[0-9]|2[0-9])[A-Za-z]{2}[0-9]{4}'
+
+num = input("Enter vehicle number: ")
+
+if re.fullmatch(pattern, num):
+    print("Valid")
+else:
+    print("Invalid")
 
 
-
-
-
-
- '''
 
 '''
 Write  a  program  to  validate  date  i.e.  dd/mm/yyyy
@@ -196,7 +213,16 @@ Write  a  program  to  validate  date  i.e.  dd/mm/yyyy
 What  is  the  regular  expression  for  the  above  rules ?  --->(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[0-2])/[0-9]{4}
 '''
 
+import re
 
+pattern = r'(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[0-2])/[0-9]{4}'
+
+date = input("Enter date (dd/mm/yyyy): ")
+
+if re.fullmatch(pattern, date):
+    print("Valid")
+else:
+    print("Invalid")
 
 
 
@@ -218,13 +244,18 @@ Rules:
 
 What  is  the  regular  expression  for  the  above  rules ?  --->[A-Za-z ]+,[ ]*[A-Za-z ]+,[ ]*[A-Za-z ]+ - [0-9]{6}
 '''
+import re
+
+pattern = r'^[A-Za-z ]+,\s*[A-Za-z ]+,\s*[A-Za-z ]+\s*-\s*[0-9]{6}$'
+
+address = input("Enter address: ")
+
+if re.fullmatch(pattern, address):
+    print("Valid")
+else:
+    print("Invalid")
  
-
-
-
-
-
- '''
+'''
 Write  a  program  to  validate  credit card  number
 
 Rules:
@@ -236,3 +267,13 @@ Rules:
 
 What  is  the  regular  expression  for  the  above  rules ?  --->[456][0-9]{15}|[456][0-9]{3}(-[0-9]{4}){3}
 '''
+import re
+
+pattern = r'^(?:[456][0-9]{15}|[456][0-9]{3}(?:-[0-9]{4}){3})$'
+
+card = input("Enter credit card number: ")
+
+if re.fullmatch(pattern, card):
+    print("Valid")
+else:
+    print("Invalid")
