@@ -15,15 +15,15 @@ Hint :  Use  for  loop
 #  Find  outputs (Home  work)
 import  re
 string  =  'z7.Q-$2 b[9.a%6$G&k.%'
-print(re . findall ('[a-z]'  ,  string))  
+print(re . findall ('[a-z]'  ,  string))  # ['z','b','a','k']
 print()
-print(re . findall ('[0-9]'  ,  string))  
+print(re . findall ('[0-9]'  ,  string))  # ['7','2','9','6']
 print()
-print(re . findall ('[^A-Za-z0-9]'  ,  string))
+print(re . findall ('[^A-Za-z0-9]'  ,  string)) # ['.','-','$',' ','[','.','%','$','&','.','%']
 print()
-print(re . findall ('.'  ,  string))
+print(re . findall ('.'  ,  string))  # ['z','7','.','Q','-','$','2',' ','b','[','9','.','a','%','6','$','G','&','k','.','%']
 print()
-print(re . findall ('[.]'  ,  string))  
+print(re . findall ('[.]'  ,  string))  # ['.','.','.']
 print()
 print(re . findall ('[$]'  ,  string)) 
 print()
@@ -176,3 +176,4 @@ Rules:
 4) It  may  have  digits  in  a  group  of  4  separated  by  one  hyphen
 5) It  should  not  have  any  other  separator  like  _ ,  / , etc
 '''
+import re
