@@ -1,0 +1,43 @@
+name: Auto Approve PR
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  approve-and-merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Get PR creator
+        id: author
+        run: echo "AUTHOR=${{ github.actor }}" >> $GITHUB_OUTPUT
+
+      - name: Check student exists
+        id: check
+        run: |
+          author=${{ steps.author.outputs.AUTHOR }}
+          if grep -qx "$author" students.txt; then
+            echo "valid=true" >> $GITHUB_OUTPUT
+          else
+            echo "valid=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Approve PR
+        if: steps.check.outputs.valid == 'true'
+        uses: hmarr/auto-approve-action@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge PR
+        if: steps.check.outputs.valid == 'true'
+        uses: pascalgn/automerge-action@v0.15.6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
