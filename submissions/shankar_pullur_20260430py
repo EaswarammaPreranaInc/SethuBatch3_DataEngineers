@@ -1,0 +1,29 @@
+import oracledb
+conn = oracledb.connect(
+    user="system",
+    password="Admin@31",
+    dsn="localhost:1521/ORCL"
+)
+cursor = conn.cursor()
+n=int(input("enter the number of rows you want to insert : "))
+l=[]
+for i in range(n):
+    print(f"row {i+1}")
+    empno=int(input("enter the employee no : "))
+    empname=input("enter the employee name : ")
+    sal=int(input("enter the employee sal : "))
+    l.append((empno,empname,sal))
+try:
+    cursor.executemany("insert into emp2 values(:1,:2,:3)",l)
+    conn.commit()
+
+    cursor.execute("select * from emp2")
+    for i in cursor.description:
+        print(f"{i[0]:^10}",end="\t")
+    print()
+    for x in cursor:
+        for y in x:
+            print(f"{y:^10}",end="\t")
+        print()
+except:
+    print("Error")
