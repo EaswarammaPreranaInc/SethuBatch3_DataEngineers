@@ -2,9 +2,9 @@
 def  f1():
 	a = 3
 	if  a:
-		print(a)
-		a = a - 1
-		f1()
+		print(a) # 3 
+		a = a - 1 # 2
+		f1() 
 		print('Hello')
 		print('Hi')
 		print(a)
@@ -14,4 +14,22 @@ a = 3
 f1()
 print('End')
 
-# infinite 3 loop
+'''
+3
+2
+1
+Bye 
+Hello
+Hi
+0
+Bye 
+Hello
+Hi
+0
+Bye 
+Hello
+Hi
+0
+Bye 
+End
+'''
