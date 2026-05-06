@@ -52,7 +52,7 @@ except msc . errors . InternalError:
 import mysql . connector as msc
 
 try:
-    con = msc . connect(host = 'localhost' , database = 'PDBC' , user = 'root' , password = 'Oaditiya@160804')
+    con = msc . connect(host = 'localhost' , database = 'PDBC' , user = 'root' , password = '')
 
     cur = con.cursor()
 
