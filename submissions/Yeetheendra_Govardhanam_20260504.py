@@ -1,0 +1,604 @@
+'''
+1) # Multilevel inheritance demo program
+class A:
+	def m1(self):
+		print('class   A  method')
+class B(A):
+	def m1(self):
+		print('class  B   method')
+class C(B):
+	def m1(self):
+		print('class   C    method')
+class D(C):
+	def m1(self):
+		print('class   D   method')
+		# How to call method m1() of class C without creating another object
+		C.m1(self)
+		# How to call method m1() of class C in another way without creating another object
+		super().m1()
+		# How to call method m1() of class B in another way without creating another object
+		super(C, self).m1()
+		# How to call method m1() of class A in another way without creating another object
+		super(B, self).m1()
+		super(A, self).m1()
+		super(C) . m1()
+		super(D , D) . m1()
+# End of the class
+# How to call method m1() of class D
+D().m1()
+'''
+'''
+
+#2
+# Find outputs (Home work)
+class father:
+        def height(self):
+                print('Father Height')
+class mother:
+        def color(self):
+                print('Mother Color')
+class child(mother , father):
+        def qualification(self):
+                print('Child Qualification')
+# End of the class
+c = child()
+c.qualification() # Child Qualification
+c.color() # Mother Color
+c.height() # Father Height
+# c.m1() # Error as 'child' object has no attribute 'm1'
+'''
+'''
+3) # Find outputs
+class uncle:
+        def m1(self):
+                print('Uncle Method')
+class mother:
+        def m1(self):
+                print('Mother Method')
+class father:
+        def m1(self):
+                print('Father Method')
+class child(father , mother , uncle):
+        def m1(self):
+                print('Child Method')
+# End of the class
+c = child()
+c.m1() # Child Method
+'''
+'''
+4) # Find outputs
+class uncle:
+        def m1(self):
+                print('Uncle Method')
+class mother:
+        def m1(self):
+                print('Mother Method')
+class father:
+        def m1(self):
+                print('Father Method')
+class child(father , mother , uncle):
+	pass
+# End of the class
+c = child()
+c.m1() # Father Method
+'''
+'''
+5) # Find outputs
+class uncle:
+        def m1(self):
+                print('Uncle Method')
+class mother:
+        def m1(self):
+                print('Mother Method')
+class father:
+        pass
+class child(father , mother , uncle):
+        pass
+# End of the class
+c = child()
+c.m1() # Mother Method
+'''
+'''
+6) # Find outputs
+class uncle:
+        def m1(self):
+                print('Uncle Method')
+class mother:
+        pass
+class father:
+        pass
+class child(father , mother , uncle):
+        pass
+# End of the class
+c = child()
+c.m1() # Uncle Method
+'''
+'''
+7) # Find outputs
+class uncle:
+        pass
+class mother:
+        pass
+class father:
+        pass
+class child(father , mother , uncle):
+        pass
+# End of the class
+c = child()
+# c.m1() # Error as 'child' object has no attribute 'm1'
+'''
+'''
+8) # Identify Error
+class c1(c1):
+    pass
+# Error as name 'c1' is not defined
+'''
+'''
+9) # Find outputs
+class c1:
+	def m1(self):
+		print('Parent Method')
+class c1(c1):
+	def m1(self):
+		super() . m1()
+		print('Child Method')
+a = c1()
+a . m1()
+# Parent Method
+# Child Method
+'''
+'''
+10) # Identify Error
+class c1(c2): 
+	pass
+class c2(c1):
+	pass
+# Error as name 'c2' is not defined
+'''
+'''
+11) # Find outputs
+class c2:
+	def m1(self):
+		print('Parent Method')
+class c1(c2):
+	def m1(self):
+		super() . m1()
+		print('Child Method')
+class c2(c1):
+	def m1(self):
+		super() . m1()
+		print('Grand Child Method')
+a = c2()
+a . m1() # Parent Method <nextline> Child Method <nextline> Grand Child Method
+'''
+'''
+12) # Parent and child class constructors (Home work)
+class parent:
+	def _init_(self):
+		print('parent constructor')
+	def _del_(self):
+		print('parent destructor')
+class child(parent):
+	def _init_(self):
+		# How to call parent class constructor
+		super()._init_()
+		print('child constructor')
+	def _del_(self):
+		# How to call parent class destructor
+		super()._del_()
+		print('child destructor')
+# End of the class
+c = child()
+print('Bye') # Bye
+'''
+'''
+13) # Find outputs (Home work)
+class parent:
+	def _init_(self):
+		print('parent constructor')
+	def _del_(self):
+		print('parent destructor')
+class child(parent):
+	def _init_(self):
+		print('child constructor')
+	def _del_(self):
+		print('child destructor')
+# End of the class
+c = child()
+print('Bye') # Bye
+'''
+'''
+14) # Find outputs (Home work)
+class parent:
+	def _init_(self):
+		print('parent constructor')
+	def _del_(self):
+		print('parent destructor')
+class child(parent):
+	pass
+# End of the class
+c = child()
+print('Bye') # Bye
+'''
+'''
+15) # Parent and Child constructor demo program (Home work)
+class parent:
+	def _init_(self , a1 , b1):
+		self . a = a1
+		self . b = b1
+	def disp(self):
+		print(self . a , self . b , sep = '\t' , end = '\t')
+class child(parent):
+	def _init_(self , a2 = 0  , b2 = 0 , c2 = 0  , d2 = 0):
+		# How to call parent class constructor with a2 , b2
+		super()._init_(a2 , b2)
+		self . c = c2
+		self . d = d2
+	def disp(self):
+		# How to call parent class disp() method
+		super().disp()
+		print(self . c , self . d , sep = '\t')
+#end of the class
+x = child(10 , 20 , 30 , 40)
+y = child()
+print('Object x')
+x . disp()
+print('Object y')
+y . disp()
+# Object x # 10	20	30	40
+# Object y # 0	0	0	0
+'''
+'''
+16) # Find outputs (Home work)
+class parent:
+	x = 100
+	def _init_(self):
+		self . x = 10
+class child(parent):
+	def _init_(self):
+		super() . _init_()
+		self . y = 20
+	def disp(self):
+		# How to print static variable 'x'
+		print(parent.x)
+		# How to print static variable 'x' in another way
+		print(self.x)
+		# How to print static variable 'x' in one more way
+		print(super().x)
+		# How to print variable 'x' of object 'c'
+		print(self.x)
+		# How to print variable 'y' of object 'c'
+		print(self.y)
+# End of the class
+# How to call disp() method of child class
+child().disp()  # 100 <nextline> 100 <nextline> 100 <nextline>  100 <nextline> 20
+'''
+'''
+#17
+# Find outputs
+class parent:
+	x = 10
+	def _init_(self):
+		self . x = 20
+class child(parent):
+	def _init_(self):
+		self . x = 30
+		print(self . x)   
+		super() . _init_()
+	def disp(self):
+		print(self . x)    
+		print(super() . x) 
+# End of the class
+c = child()
+c . disp() # 10 <nextline> 10
+'''
+'''
+18) # Find outputs
+class parent:
+	# How to add static variable 'a' to parent class with value 10
+	a = 10
+	def _init_(self):
+		print('Parent constructor')
+		# How to add instance variable 'x' with value 30
+		self.x = 30
+	def m1(self):
+		print('Parent class instance method: ' , self.x)
+	@classmethod
+	def m2(cls):
+		print('Parent class "class" method: ' , cls.a)
+		print('Parent class "class" method: ' , parent.a)
+		print(self . a)  
+	@staticmethod
+	def m3():
+		print('Parent class static method : ' , parent.a)
+	def _del_(self):
+		print('parent destructor: ' , self.x)
+class child(parent):
+	# How to add static variable 'b' with value 20
+	b = 20
+	def _init_(self):
+		# How to call parent class constructor
+		super()._init_()
+		print('Child constructor')
+		# How to add instance variable 'y' with value 40
+		self.y = 40
+	def m1(self):
+		# How to call m1() method of parent class
+		super().m1()
+		print('Child class instance method' , self.y)
+	@classmethod
+	def m2(cls):
+		# How to call m2() method of parent class
+		super().m2()
+		# How to call m2() method of parent class in another way without creating another object
+		parent.m2()
+		cls . m2()  
+		self . m2() 
+		print('Child class "class" method')
+		print(parent.a)
+		print(cls.a)
+		print(parent.a)
+		print(child.a)
+		print(cls.b)
+		print(child.b)
+	@staticmethod
+	def m3():
+		# How to call m3() method of parent class
+		parent.m3()
+		# How to call m3() method of parent class in another way
+		parent.m3()
+		super() . m3()  
+		self . m3() 
+		cls . m3()  
+		print('child class static method' ,  parent.a)
+		print(parent.a)
+		print(child.b)
+	def _del_(self):
+		# How to call destructor of parent class
+		super()._del_()
+		print('child destructor' ,  self.y)
+#end of the class
+# How to call m2() method of child class
+# How to call m3() method of child class
+# How to call m1() method of child class # Reason is that, this program has many invalid references inside class bodies, and _init_/_del_ are not real special methods.
+'''
+'''
+#19
+# Find outputs
+class father:
+	def m1(self):
+		print('m1 method of Father class')
+class mother:
+	def m1(self):
+		print('m1 method of Mother class')
+class uncle:
+	def m1(self):
+		print('m1 method of Uncle class')
+class child(father , mother , uncle):
+	def m1(self):
+		print('m1 method of child class')
+		# How to call m1() method of father class without creating another object
+		father.m1(self)
+		# How to call m1() method of father class in another way without creating an object
+		super().m1()
+		# How to call m1() method of mother class without creating an object
+		mother.m1(self)
+		# How to call m1() method of uncle class without creating an object
+		uncle.m1(self)
+		super(uncle , self) . m1() 
+# End of the class
+print(child . _mro_)  
+# How to call m1() method of child class
+child().m1()
+print('Bye') # Error as type object 'child' has no attribute '_mro_'
+'''
+'''
+#20
+# Find outputs (Home work)
+class A:
+	def m1(self):
+		super() . m1() 
+		print('class A method')    
+class B:
+	def m1(self):
+		super() . m1()  
+		print('class B method') 
+class C:
+	def m1(self):
+		super() . m1() 
+		print('class C method') 
+class D:
+	def m1(self):
+		super() . m1()  
+		print('class D method')  
+class X(A , B):
+        def m1(self):
+                super() . m1()  
+                print('class X method') 
+class Y(B , C , D):
+        def m1(self):
+                super() . m1()  
+                print('class Y method') 
+class P(X , Y , C):
+        def m1(self):
+                super() . m1() 
+                print('class P method') 
+# End of the class
+print(P . mro())   
+obj = P()
+obj . m1()
+print('Bye')
+# [<class '__main__.P'>, <class '__main__.X'>, <class '__main__.A'>, <class '__main__.Y'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.D'>, <class 'object'>]
+# class A method
+# class X method
+# class B method
+# class Y method
+# class P method
+# Bye
+# Reason is that, the MRO is valid, but if any class in the chain calls super().m1() and the next class lacks m1, it eventually reaches object and would raise AttributeError in a strict run; here the chain resolves through the shown MRO sequence until completion.
+'''
+'''
+#21
+# Find outputs (Home work)
+class  D:
+    def _init_(self):
+        super() . _init_()  
+        print('class D constructor') 
+class  E:
+    def _init_(self):
+        super() . _init_()  
+        print('class E constructor') 
+class  F:
+    def _init_(self):
+        super() . _init_()  
+        print('class F constructor')  
+class  B(D , E):
+    def _init_(self):
+        super() . _init_()  
+        print('class B constructor')  
+class  C(D , E , F):
+    def _init_(self):
+        super() . _init_()  
+        print('class C constructor')  
+class  A(B , C):
+    def _init_(self):
+        super() . _init_()  
+        print('class A constructor') 
+# End  of  the  class
+print(A . mro())  
+obj = A()
+print('Bye')
+# [<class '__main__.A'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.D'>, <class '__main__.E'>, <class '__main__.F'>, <class 'object'>]
+# Bye
+# Reason is that, _init_ is not the special constructor name __init__, so no constructor body executes. [web:202][web:205]
+'''
+'''
+22) from p1 import mod1, mod2
+
+# How to print object 'x' of mod1 in package p1
+print(mod1.x)
+
+# How to call function f1() of mod1 in package p1
+mod1.f1()
+
+# How to call method m1() of class c1 in mod1 of package p1
+a = mod1.c1()
+a.m1()
+
+print()
+print()
+
+# How to print object 'x' of mod2 in package p1
+print(mod2.x)
+
+# How to call function f1() of mod2 in package p1
+mod2.f1()
+
+# How to call method m1() of class c1 in mod2 of package p1
+b = mod2.c1()
+b.m1()
+
+print(p1.mod1.x)
+print(x)
+'''
+'''
+23) from p1.mod1 import *
+
+# How to print object 'x' of mod1 in package p1
+print(x)
+
+# How to call function f1() of mod1 in package p1
+f1()
+
+# How to call method m1() of class c1 in mod1 of package p1
+a = c1()
+a.m1()
+
+print()
+print()
+
+from p1.mod2 import *
+
+# How to print object 'x' of mod2 in package p1
+print(x)
+
+# How to call function f1() of mod2 in package p1
+f1()
+
+# How to call method m1() of class c1 in mod2 of package p1
+b = c1()
+b.m1()
+
+print(p1.mod1.x)
+print(mod1.x)
+
+from p1 import mod1
+'''
+'''
+24) x = 30
+def f1():
+	print('Function  of  same  module')
+class c1:
+	def m1(self):
+		print('Method  of  class  c1  in same  module')
+from p1.mod1 import *
+from p1.mod2 import *
+print(x)
+f1()
+a = c1()
+a.m1()
+'''
+'''
+25) x = 30
+def f1():
+	print('Function  of  same  module')
+class c1:
+	def m1(self):
+		print('Method  of  class  c1  in same  module')
+from p1.mod2 import *
+from p1.mod1 import *
+print(x)
+f1()
+a = c1()
+a.m1()
+'''
+'''
+26) from p1.mod1 import *
+from p1.mod2 import *
+x = 30
+def f1():
+	print('Function  of  same  module')
+class c1:
+	def m1(self):
+		print('Method  of  class  c1  in same  module')
+print(x)
+f1()
+a = c1()
+a.m1()
+'''
+'''
+27) from p1 import mod1, mod2
+
+# How to print object 'x' of mod1 in package p1
+print(mod1.x)
+
+# How to call function f1() of mod1 in package p1
+mod1.f1()
+
+# How to call method m1() of class c1 in mod1 of package p1
+a = mod1.c1()
+a.m1()
+
+print()
+print()
+
+# How to print object 'x' of mod2 in package p1
+print(mod2.x)
+
+# How to call function f1() of mod2 in package p1
+mod2.f1()
+
+# How to call method m1() of class c1 in mod2 of package p1
+b = mod2.c1()
+b.m1()
+'''
