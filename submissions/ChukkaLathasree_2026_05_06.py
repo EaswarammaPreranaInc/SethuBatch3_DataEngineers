@@ -1,0 +1,51 @@
+# Save  in  any  file  of  cwd
+import  p1 . mod1
+print(p1.mod1.x)
+p1.mod1.f1()
+a = p1.mod1().c1()
+a.m1()
+print()
+print()
+print(p1.x)
+p1.f1()
+a = p1.c1()
+a.m1()
+# print(p1 . _init_ . x)  # Error because p1.__init__ is not imported in this program 
+# p1 . _init_ . f1()  # Error because p1.__init__ is not imported in this program
+# a = p1 . _init_ . c1() # Error because p1.__init__ is not imported in this program
+# Save  in  any  file  of  cwd
+from  p1   import  mod1
+print(mod1.x)
+mod1.f1()
+a = mod1.c1()
+a.m1()
+# print(p1 . x)  # Error because package p1 is not imported
+# print(p1 . _init_ . x)  # Error because p1.__init__ is not imported in the program
+# print(_init_ . x) # Error because __init__ is not imported in the program
+# Save  in  any  file  of  cwd
+from  p1 . mod1   import  *
+print(x)
+f1()
+a = c1()
+a.m1()
+# print(p1 . x)  #  Error because package p1 is not imported
+# print(p1 . _init_ . x)  # Error beacause p1.__init__ is not imported in the program
+# print(_init_ . x)  # Error __init__ is not imported in the program
+# from  p1  import  mod1 . * # Error cannot use dot operator in import clause
+# Save  in  any  file  of  cwd
+import p1.__init__
+print(p1.x)
+p1.f1()
+a = p1.c1()
+a.m1()
+print(p1.__init__.x)
+p1.__init__.f1()
+a = p1.__init__.c1()
+a.m1()
+# print(p1 . mod1 . x) # Error package p1 is not imported
+# Save  in  any  file  of  cwd
+import   p1 # Package p1 and statements are imported
+import  p1 . mod1 # Package p1.mod1 and statements are imported
+from   p1   import  mod1 # Module mod1 and statements are imported
+from   p1 . mod1  import   * # Members of the module p1.mod1 and statements are imported
+import  p1 . _init_ # Module p1.__init__ is imported
