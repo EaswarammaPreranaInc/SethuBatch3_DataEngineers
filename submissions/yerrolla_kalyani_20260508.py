@@ -6,28 +6,28 @@
 
 # 2) Refer  to  prog8
 # '''
-# from yerrolla_kalyani_20260507 import *
-# while True:
-# 	try:
-# 		obj_name=input("enter class name(number/string/exit):")
-# 		classname=eval(obj_name)
-# 		if classname==number:
-# 			a=[number(),number(),number()]
-# 			a[0].get()
-# 			a[1].get()
-# 			a[2].add(a[0],a[1])
-# 			a[2].display()
-# 		elif classname==string:
-# 			a=[string(),string(),string()]
-# 			a[0].get()
-# 			a[1].get()
-# 			a[2].add(a[0],a[1])
-# 			a[2].display()
-# 		elif classname==exit:
-# 			break
-# 		print("Good Bye")
-# 	except:
-# 		print("enter only (number/string/exit):")
+from yerrolla_kalyani_20260507 import *
+while True:
+	try:
+		obj_name=input("enter class name(number/string/exit):")
+		classname=eval(obj_name)
+		if classname==number:
+			a=[number(),number(),number()]
+			a[0].get()
+			a[1].get()
+			a[2].add(a[0],a[1])
+			a[2].display()
+		elif classname==string:
+			a=[string(),string(),string()]
+			a[0].get()
+			a[1].get()
+			a[2].add(a[0],a[1])
+			a[2].display()
+		elif classname==exit:
+			break
+		print("Good Bye")
+	except:
+		print("enter only (number/string/exit):")
 
 
 		
@@ -59,17 +59,17 @@ Write  a  program  to  reverse  a  string  using  stack
 5) Hint:  Reuse  stack  class  defined  in  prog1b.py  file  but  do  not  rewrite
 '''
 
-# from stack import *
-# result=""		#to store in reverse order we need an empty string 
-# s=stack()
-# string=input("Enter a string:")			# How  to  read  the  string
-# for x in string:
-# 	s.push(x)# How  to  push  each  char  of  the  string  into  the  stack
+from stack import *
+result=""		#to store in reverse order we need an empty string 
+s=stack()
+string=input("Enter a string:")			# How  to  read  the  string
+for x in string:
+	s.push(x)# How  to  push  each  char  of  the  string  into  the  stack
 	
-# while s.list:
-# 	poped_element=s.pop()      # How  to  remove   each  char  of  stack  and   concatenate  to  the  result
-# 	result+=poped_element       #How  to  remove   each  char  of  stack  and   concatenate  to  the  result
-# print('Reverse  string : '  ,result)
+while s.list:
+	poped_element=s.pop()      # How  to  remove   each  char  of  stack  and   concatenate  to  the  result
+	result+=poped_element       #How  to  remove   each  char  of  stack  and   concatenate  to  the  result
+print('Reverse  string : '  ,result)
 
 
 
