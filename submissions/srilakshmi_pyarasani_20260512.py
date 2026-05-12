@@ -135,5 +135,5 @@ def infix_to_prefix(infix):
     return prefix
 #  End  of  the  function
 infix = input('Enter  infix  expression  :  ')  
-postfix = convert(infix)  
-print('Postfix  expression :  ' , postfix)
+prefix = convert(infix)  
+print('Prefix  expression :  ' , prefix)
