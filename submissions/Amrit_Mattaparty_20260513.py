@@ -464,3 +464,91 @@ while True:
             print('Number of elements :', pq.size())
         case 7:
             break
+
+
+
+#12
+#  Write  functions  to  create  and  print  linked  list
+class node:
+    def __init__(self, x):
+        self.data = x
+        self.link = None
+    """
+    1) new = node(25)
+    2) object new ---> data = 25, link = None
+    """
+
+class linked_list:
+    def __init__(self):
+        self.first = None
+    """
+    1) a = linked_list()
+    2) object 'a' ---> first = None
+    """
+
+    def isempty(self):
+        return self.first is None
+    # a.isempty() ---> True / False
+
+    def disp(self):
+        if self.isempty():
+            print('Linked List is empty')
+        else:
+            p = self.first
+            while p is not None:
+                print(p.data, end='\t')
+                p = p.link
+            print()
+    # a.disp()
+
+    def append(self, new_node):
+        """Append a node object new_node to the list."""
+        if self.first is None:
+            # append to empty linked list
+            self.first = new_node
+            return
+        # append to non-empty linked list: walk to last and link
+        p = self.first
+        while p.link is not None:
+            p = p.link
+        p.link = new_node
+    # a.append(new_node)
+
+    def create(self, values):
+        """Create linked list from an iterable of values (appends in order)."""
+        for v in values:
+            self.append(node(v))
+    # a.create()
+
+# Helper functions (optional)
+def create_from_input(prompt='Enter values separated by space: '):
+    """Read a line of input, split by whitespace, convert tokens to int when possible,
+    otherwise keep as string. Returns list of values."""
+    raw = input(prompt).strip()
+    if not raw:
+        return []
+    vals = []
+    for tok in raw.split():
+        # try integer, then float, else keep string
+        try:
+            iv = int(tok)
+            vals.append(iv)
+            continue
+        except ValueError:
+            pass
+        try:
+            fv = float(tok)
+            vals.append(fv)
+            continue
+        except ValueError:
+            pass
+        vals.append(tok)
+    return vals
+
+a = linked_list()
+a.create([10, 20, 30])
+print('Linked List : ', end='')
+a.disp()   
+a.append(node(40))
+print('Linked List : ', end='')
+a.disp()
