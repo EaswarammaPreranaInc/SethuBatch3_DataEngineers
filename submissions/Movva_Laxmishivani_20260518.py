@@ -17,18 +17,21 @@ f = open(fname , 'w' , newline = '')
 create(f)
 f . close()'''
 import csv
-fname=input('Enter file name : ')
+def create(f):
+    w=csv.writer(f)
+    w.writerow(['EMP NO','EMP NAME','SALARY'])
+    rows=[]
+    n=eval(input('How Many Employees ? : '))
+    for i in range(n):
+        empno=eval(input('Enter Employee No : '))
+        ename=input('Enter Employee Name : ')
+        sal=eval(input('Enter Employee Salary : '))
+        rows.append([empno,ename,sal])
+    w.writerows(rows)
+    print(f'File {f.name} is created')
+fname=input('Enter filename : ')
 f=open(fname,'w',newline='')
-w=csv.writer(f)
-n=int(input('How many employees ? : '))
-rows=[['EMP NO','EMP NAME','SALARY']]
-for i in range(n):
-    empno=int(input('Enter Employee No : '))
-    ename=input('Enter Employee Name : ')
-    sal=int(input('Enter Employee Salary : '))
-    rows.append([empno,ename,sal])
-w.writerows(rows)
-print('File created successfully')
+create(f)
 f.close()
 
 # Write  a  program  to  print  csv  file
